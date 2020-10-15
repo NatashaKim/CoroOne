@@ -5,6 +5,10 @@
   <%= @post.name %>
 </p>
 
+<%= link_to(image_tag(@post.image.thumb.url, alt: 'Image'), @post.image.url, target: '_blank') if @post.image? %>
+<br>
+<%= link_to(image_tag(@post.image.small_thumb.url, alt: 'Image'), @post.image.url, target: '_blank') if @post.image? %>
+<br>
 <%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
 
 <p>

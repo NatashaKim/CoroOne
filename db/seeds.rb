@@ -1,21 +1,3 @@
-# post = Post.create(
-# 	name: "New Album",
-# 	title: "Bad Seeds",
-# 	author: "Nick Cave",
-# 	content: "Tracklist"
-# )
-
-# posts = [
-# 	["New Album", "The Bad Seeds", "Nick Cave", "Tracklist"]
-# ]
-#
-# post = Post.create(
-# 	name:    posts[0][0],
-# 	title:   posts[0][1],
-# 	author:  posts[0][2],
-# 	content: posts[0][3]
-# )
-
 Post.destroy_all
 puts "Destroyed everything you touch"
 
@@ -24,13 +6,15 @@ posts = [
   	name: "New Album",
   	title: "The Bad Seeds",
   	author: "Nick Cave",
-  	content: "Tracklist"
+  	content: "Tracklist",
+    image: File.open(Rails.root.join('public', 'images', 'pic-1.jpg'))
   },
   {
   	name: "Old Album",
   	title: "The Bad Seeds Old",
   	author: "Nick Cave Old Too",
-  	content: "Some Old Tracklist"
+  	content: "Some Old Tracklist",
+    image: open("https://in-sound.ru/upload/iblock/d85/d859aa8387fd5fcd7a933be2af91066b.jpg")
   }
 ]
 
