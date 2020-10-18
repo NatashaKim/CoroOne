@@ -1,9 +1,33 @@
 <% if notice %>
   <%= notice %>
 <% end %>
-<h3>Наташка-какашка</h3>
-<h1>About#index</h1>
-<p>Find me in app/views/about/index.html.erb</p>
-<h2>Узнать раньше всех о запуске проекта:</h2>
+
+<%= render 'navbar/navbarinner' %>
+<section class="about_first">
+  <%= image_tag("oblique_back.svg", :alt => "Фон") %>
+
+  <div class="about_first_info">
+    <div class="about_first_info_text">
+      <%= image_tag("know_share_chat.svg", :alt => "Узнавай, делись, общайся") %>
+      <p>Платформа, которая дает возможность быть в&nbsp;курсе новостей из&nbsp;мира видео-игр и&nbsp;следить за&nbsp;интересными проектами инди-разработчиков</p>
+    </div>
+    <div class="about_first_info_logo">
+      <%= image_tag("big_logo.svg", :alt => "Белый логотип") %>
+    </div>
+  </div>
+</section>
+
+<section class="about_second">
+  <%= image_tag("concept.svg", :alt => "Классные фигурки") %>
+  <div class="about_second_details">
+    <%= image_tag("group_of_figures.svg", :alt => "Классные фигурки") %>
+    <p></p>
+    <div class="two_circles">
+      <div class=""></div>
+      <div class=""></div>
+    </div>
+  </div>
+</section>
+
 <%= render "subscribers/form" %>
 <%= link_to "Blog", posts_path %>
