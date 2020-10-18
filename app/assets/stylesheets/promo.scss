@@ -21,14 +21,22 @@ body {
       width: 62.1vw;
     }
     .left {
-      width: 45vw;
+      width: 53vw;
       display: inline-block;
       vertical-align: top;
       padding: 5.6vw 0 0 4.7vw;
+      p {
+        font-size: 1.7vw;
+        line-height: 2.3vw;
+        margin-top: 1.8vw;
+      }
     }
     .right {
-      width: 49vw;
+      width: 40vw;
       display: inline-block;
+      img {
+        margin-top: 8vw;
+      }
     }
   }
 }
