@@ -1,6 +1,8 @@
 // Place all the styles related to the About controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+$mainColor: #CCFD38;
+
 body {
   background-image: url(screen_about.png);
   background-repeat: no-repeat;
@@ -57,7 +59,7 @@ body {
         flex-direction: column;
         justify-content: space-between;
         div {
-          background-color: #000;
+          background-color: $mainColor;
           width: 5vw;
           height: 5vw;
           border-radius: 5vw;
