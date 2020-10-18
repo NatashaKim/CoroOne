@@ -5,19 +5,26 @@
 //   font-family: "Progmatica-Book";
 //   src: url(/assets/Progmatica-Book.woff) format("woff");
 // }
+@mixin main_text {
+  p {
+    color: blue;
+    background-color: red;
+  }
+}
+
+$mainColor: #CCFD38;
+
 body {
   background-image: url(background_1.png);
   background-repeat: no-repeat;
   height: 500vw;
-  font-family:"Progmatica-Book";
   .first {
     position: relative;
-    height: 55vw;
+    height: 60vw;
     >img {
       position: absolute;
       margin-top: -5.2vw;
       z-index: -1;
-      opacity: 30%;
       width: 62.1vw;
     }
     .left {
@@ -30,12 +37,83 @@ body {
         line-height: 2.3vw;
         margin-top: 1.8vw;
       }
+      .start {
+        margin: 14.7vw 2vw 0 0.7vw;
+        display: flex;
+        img {
+          margin-right: 4vw;
+        }
+        a {
+          padding: 0.1vw 1.4vw;
+          border: 0.3vw solid black;
+          font-size: 2.6vw;
+          line-height: 4vw;
+          margin-top: 2vw;
+          border-radius: 3vw;
+          height: 4vw;
+        }
+      }
     }
     .right {
       width: 40vw;
       display: inline-block;
       img {
         margin-top: 8vw;
+      }
+    }
+  }
+  .second {
+    position: relative;
+    height: 66vw;
+    >img:first-child {
+      position: absolute;
+      z-index: -1;
+      opacity: 30%;
+    }
+    img:nth-child(2) {
+      position: absolute;
+      margin-left: 80vw;
+      transform: rotate(90deg);
+    }
+    .left {
+      width: 45vw;
+      display: inline-block;
+      vertical-align: top;
+      padding: 5.6vw 0 0 4.7vw;
+      img {
+        position: inherit;
+        z-index: 1;
+        margin-top: 4vw;
+      }
+      p {
+        margin-top: 3.2vw;
+        width: 44vw;
+        font-size: 1.8vw;
+        line-height: 2.3vw;
+      }
+    }
+    .right {
+      display: inline-block;
+      img {
+        width: 22.3vw;
+        margin-top: 17.5vw;
+      }
+    }
+    .bottom {
+      display: flex;
+      width: 92vw;
+      margin: 7vw;
+      justify-content: space-between;
+      margin-top: -6.5vw;
+      span {
+        font-size: 2vw;
+        line-height: 12vw;
+        width: 12vw;
+        height: 12vw;
+        border-radius: 50%;
+        border: 0.7vw solid $mainColor;
+        text-align: center;
+        z-index: -1;
       }
     }
   }
