@@ -1,5 +1,10 @@
-<nav style="background:#999; color:#fff;">
-  <h1>Logo</h1>
+<%= stylesheet_link_tag "navbarinner" %>
+<nav>
+  <%= image_tag("logo.svg", :alt => "логотип") %>
+  <div class="">
+    <%= link_to "О нас", about_path %>
+    <%= link_to "Публикации", posts_path %>
+    <%= link_to 'Создать пост', new_post_path %>
+    <a href="#email">Вливайся</a>   
+  </div>
 </nav>
-
-<%= link_to "About", about_path %>
