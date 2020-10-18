@@ -1,3 +1,65 @@
 // Place all the styles related to the About controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+body {
+  background-image: url(screen_about.png);
+  background-repeat: no-repeat;
+  font-family: "Circe";
+  opacity: 0.5;
+  background-size: 100vw;
+  position: relative;
+  .about_first {
+    position: relative;
+    >img {
+      width: 100vw;
+      margin-top: -5vw;
+    }
+    .about_first_info {
+      position: absolute;
+      top: 8vw;
+      left: 2vw;
+      display: flex;
+      flex-direction: row;
+      .about_first_info_text {
+        display: flex;
+        flex-direction: column;
+        >img {
+          width: 52vw;
+          margin-bottom: 1vw;
+        }
+        p {
+          font-size: 1.3vw;
+          width: 35vw;
+          line-height: 1.7vw;
+          margin-left: 1vw;
+        }
+      }
+      .about_first_info_logo {
+        img {
+          width: 58vw;
+          margin-left: -7vw;
+          margin-top: 7vw;
+        }
+      }
+
+    }
+  }
+  .about_second {
+     >img {
+
+     }
+     .about_second_details {
+       display: flex;
+       flex-direction: row;
+      .two_circles {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        div {
+          background-color: 
+        }
+      }
+     }
+  }
+
+}
