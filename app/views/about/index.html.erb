@@ -2,305 +2,338 @@
   <%= notice %>
 <% end %>
 
-<%= render 'navbar/navbarinner' %>
-<section class="about_first">
-  <%= image_tag("oblique_back.svg", :alt => "Фон") %>
+<div class="wrapper">
+  <%= render 'navbar/navbarinner' %>
+  <section class="about_first">
+    <%= image_tag("oblique_back.svg", :alt => "Фон") %>
 
-  <div class="about_first_info">
-    <div class="about_first_info_text">
-      <%= image_tag("know_share_chat.svg", :alt => "Узнавай, делись, общайся") %>
-      <p>Платформа, которая дает возможность быть в&nbsp;курсе новостей из&nbsp;мира видео-игр и&nbsp;следить за&nbsp;интересными проектами инди-разработчиков</p>
-    </div>
-    <div class="about_first_info_logo">
-      <%= image_tag("big_logo.svg", :alt => "Белый логотип") %>
-    </div>
-  </div>
-</section>
-
-<section class="about_second">
-  <%= image_tag("concept.svg", :alt => "Концепция") %>
-  <div class="about_second_details">
-    <%= image_tag("group_of_figures.svg", :alt => "Классные фигурки") %>
-    <p>Платформа для людей, увлеченных сферой гейм-дизайна,
-доступная профи и&nbsp;новичкам. Предоставляет возможность
-не&nbsp;только поделиться процессом содания своей игры, но
-и&nbsp;найти споносора для своего проекта. Сообществом регулярно
-формируется новостная лента, освещающая события
-из&nbsp;мира игр.</p>
-    <div class="two_circles">
-      <div class=""></div>
-      <div class=""></div>
-    </div>
-  </div>
-</section>
-
-<section class="about_third">
-  <%= image_tag("researches.svg", :alt => "Исследования") %>
-  <div class="about_third_details">
-    <div class="about_third_details_text">
-      <p>Мы&nbsp;провели 8&nbsp;интервью с&nbsp;предполагаемыми пользователями медиа-сервиса. Исследования помогли нам отказаться
-от&nbsp;нестоящих идей и&nbsp;выяснить потребности аудитории. Так мы&nbsp;поняли, каким образом должен быть разделен курируемый контент, узнали, что начинающим гемй-дизайнерам нужен отдельный форум для обсуждения концепций и&nbsp;кнопочка &laquo;спонсировать&raquo; в&nbsp;профиле.</p>
-      <p>Кроме того, мы&nbsp;добавили по&nbsp;желанию пользователей такие фичи, как сохранение понравившегося на&nbsp;своих доски, доваление интересных релизов в&nbsp;календдарик и&nbsp;кнопочку &laquo;прочитать позже&raquo;.
-Так&nbsp;же сделали простой поиск инди-разработчика по&nbsp;жанру игры или ассоциациямяи, связанными с&nbsp;его проектом.</p>
-    </div>
-    <div class="about_third_details_facts">
-
-      <div class="facts_first">
-        <h4>8</h4>
-        <h5>интервью</h5>
-        <div></div>
-        <h4>2</h4>
-        <h5 class="game-designer">гейм-дизайнера</h5>
+    <div class="about_first_info">
+      <div class="about_first_info_text">
+        <%= image_tag("know_share_chat.svg", :alt => "Узнавай, делись, общайся") %>
+        <p>Платформа, которая дает возможность быть в&nbsp;курсе новостей из&nbsp;мира видео-игр и&nbsp;следить за&nbsp;интересными проектами инди-разработчиков</p>
       </div>
-      <div class="facts_second">
-        <h4>4</h4>
-        <h5>геймера</h5>
-      </div>
-      <div class="facts_third">
-        <h4>2</h4>
-        <h5>инди-разработчика</h5>
+      <div class="about_first_info_logo">
+        <%= image_tag("big_logo.svg", :alt => "Белый логотип") %>
       </div>
     </div>
+  </section>
 
-</section>
+  <section class="about_second">
+    <%= image_tag("concept.svg", :alt => "Концепция") %>
+    <div class="about_second_details">
+      <%= image_tag("group_of_figures.svg", :alt => "Классные фигурки") %>
+      <p>Платформа для людей, увлеченных сферой гейм-дизайна,
+  доступная профи и&nbsp;новичкам. Предоставляет возможность
+  не&nbsp;только поделиться процессом содания своей игры, но
+  и&nbsp;найти споносора для своего проекта. Сообществом регулярно
+  формируется новостная лента, освещающая события
+  из&nbsp;мира игр.</p>
+      <div class="two_circles">
+        <div class=""></div>
+        <div class=""></div>
+      </div>
+    </div>
+  </section>
 
-<section class="about_fourth">
-  <%= image_tag("ca.svg", :alt => "Целевая аудитория") %>
-  <div class="about_fourth_details">
-     <div class="about_fourth_details_text">
-       <div class="about_fourth_details_text_main">
-         <h4>Основная ЦА</h4>
-         <p>Инди-разработчики (16-25 лет)<br>Геймеры (14-25 лет)</p>
-       </div>
-       <div class="about_fourth_details_text_add">
-         <h4>Косвенная Ца</h4>
-         <p>Гейм-дизайнеры<br>и&nbsp;инди-разработчики (30-45 лет)<br>Спонсоры</p>
-       </div>
-     </div>
-     <div class="about_fourth_details_person">
+  <section class="about_third">
+    <%= image_tag("researches.svg", :alt => "Исследования") %>
+    <div class="about_third_details">
+      <div class="about_third_details_text">
+        <p>Мы&nbsp;провели 8&nbsp;интервью с&nbsp;предполагаемыми пользователями медиа-сервиса. Исследования помогли нам отказаться
+  от&nbsp;нестоящих идей и&nbsp;выяснить потребности аудитории. Так мы&nbsp;поняли, каким образом должен быть разделен курируемый контент, узнали, что начинающим гемй-дизайнерам нужен отдельный форум для обсуждения концепций и&nbsp;кнопочка &laquo;спонсировать&raquo; в&nbsp;профиле.</p>
+        <p>Кроме того, мы&nbsp;добавили по&nbsp;желанию пользователей такие фичи, как сохранение понравившегося на&nbsp;своих доски, доваление интересных релизов в&nbsp;календдарик и&nbsp;кнопочку &laquo;прочитать позже&raquo;.
+  Так&nbsp;же сделали простой поиск инди-разработчика по&nbsp;жанру игры или ассоциациямяи, связанными с&nbsp;его проектом.</p>
+      </div>
+      <div class="about_third_details_facts">
 
-       <div class="card_of_person">
-        <div class="card_of_person_common">
-            <div class="card_of_person_main">
-              <h4>Даня</h4>
-              <h4 class="age">20</h4>
-              <div class="vertical"></div>
-            </div>
-            <%= image_tag("dan.svg", :alt => "Фото Дани") %>
+        <div class="facts_first">
+          <h4>8</h4>
+          <h5>интервью</h5>
+          <div></div>
+          <h4>2</h4>
+          <h5 class="game-designer">гейм-дизайнера</h5>
+        </div>
+        <div class="facts_second">
+          <h4>4</h4>
+          <h5>геймера</h5>
+        </div>
+        <div class="facts_third">
+          <h4>2</h4>
+          <h5>инди-разработчика</h5>
+        </div>
+      </div>
+
+  </section>
+
+  <section class="about_fourth">
+    <%= image_tag("ca.svg", :alt => "Целевая аудитория") %>
+    <div class="about_fourth_details">
+       <div class="about_fourth_details_text">
+         <div class="about_fourth_details_text_main">
+           <h4>Основная ЦА</h4>
+           <p>Инди-разработчики (16-25 лет)<br>Геймеры (14-25 лет)</p>
          </div>
-         <p class="small">Студент лингвистического факультета.<br> Играет в видео-игры 4-5 раза в неделю.<br>Непостоянный зароботок: 15 тыс. в месяц.<br> Пишет музыку. Считает игры искусством.</p>
-         <%= image_tag("gamer.svg", :alt => "Геймер") %>
-       </div>
-
-       <div id="green" class="card_of_person">
-        <div class="card_of_person_common green">
-            <div class="card_of_person_main">
-              <h4>Tаня</h4>
-              <h4 class="age">19</h4>
-              <div class="vertical"></div>
-            </div>
-            <%= image_tag("tanya.svg", :alt => "Фото Тани") %>
+         <div class="about_fourth_details_text_add">
+           <h4>Косвенная Ца</h4>
+           <p>Гейм-дизайнеры<br>и&nbsp;инди-разработчики (30-45 лет)<br>Спонсоры</p>
          </div>
-         <p class="small">Студент Строгановки, факультет<br>книжная графика. Разрабатывает<br>с друзьями развивающую игру для детей.<br>Работает репетитором, заработок около<br> 20 тыс. в месяц. В будущем видит себя<br>иллюстратором.</p>
-         <%= image_tag("lovers.svg", :alt => "Любитель") %>
        </div>
+       <div class="about_fourth_details_person">
 
-       <div class="card_of_person">
-        <div class="card_of_person_common Christina">
-            <div class="card_of_person_main">
-              <h4>Кристина</h4>
-              <h4 class="age">19</h4>
-              <div class="vertical"></div>
-            </div>
-            <%= image_tag("christina.svg", :alt => "Фото Кристины") %>
+         <div class="card_of_person">
+          <div class="card_of_person_common">
+              <div class="card_of_person_main">
+                <h4>Даня</h4>
+                <h4 class="age">20</h4>
+                <div class="vertical"></div>
+              </div>
+              <%= image_tag("dan.svg", :alt => "Фото Дани") %>
+           </div>
+           <p class="small">Студент лингвистического факультета.<br> Играет в видео-игры 4-5 раза в неделю.<br>Непостоянный зароботок: 15 тыс. в месяц.<br> Пишет музыку. Считает игры искусством.</p>
+           <%= image_tag("gamer.svg", :alt => "Геймер") %>
          </div>
-         <p class="small">Студентка профиля гейм-дизайн. Состоит<br> в клубе ролевых настольных игр, любит<br>путешествовать. В будущем видит себя<br>дизайнером и разработчиком в сфере игр.</p>
-         <%= image_tag("game_dis.svg", :alt => "Гейм-дизайнер") %>
+
+         <div id="green" class="card_of_person">
+          <div class="card_of_person_common green">
+              <div class="card_of_person_main">
+                <h4>Tаня</h4>
+                <h4 class="age">19</h4>
+                <div class="vertical"></div>
+              </div>
+              <%= image_tag("tanya.svg", :alt => "Фото Тани") %>
+           </div>
+           <p class="small">Студент Строгановки, факультет<br>книжная графика. Разрабатывает<br>с друзьями развивающую игру для детей.<br>Работает репетитором, заработок около<br> 20 тыс. в месяц. В будущем видит себя<br>иллюстратором.</p>
+           <%= image_tag("lovers.svg", :alt => "Любитель") %>
+         </div>
+
+         <div class="card_of_person">
+          <div class="card_of_person_common Christina">
+              <div class="card_of_person_main">
+                <h4>Кристина</h4>
+                <h4 class="age">19</h4>
+                <div class="vertical"></div>
+              </div>
+              <%= image_tag("christina.svg", :alt => "Фото Кристины") %>
+           </div>
+           <p class="small">Студентка профиля гейм-дизайн. Состоит<br> в клубе ролевых настольных игр, любит<br>путешествовать. В будущем видит себя<br>дизайнером и разработчиком в сфере игр.</p>
+           <%= image_tag("game_dis.svg", :alt => "Гейм-дизайнер") %>
+         </div>
        </div>
-     </div>
-     <%= image_tag("forms_for_ca.svg", :alt => "Целевая аудитория") %>
-  </div>
+       <%= image_tag("forms_for_ca.svg", :alt => "Целевая аудитория") %>
+    </div>
 
-</section>
+  </section>
 
 
-<section class="about_fifth">
-  <div class="stripe"></div>
-  <%= image_tag("user_stories.svg", :alt => "Юзер Сторис") %>
+  <section class="about_fifth">
+    <div class="stripe"></div>
+    <%= image_tag("user_stories.svg", :alt => "Юзер Сторис") %>
 
-  <div class="user_stories">
-    <h1 class="big_numbers">1</h1>
-    <div class="user_stories_text">
-      <div class="">
-        <h4 class="question">Кто?</h4>
-        <p>Геймер-любитель</p>
-      </div>
-      <div class="">
-        <h4 class="question">Что хочу?</h4>
-        <p>Хочу читать о любимых видео-играх</p>
-      </div>
-      <div class="">
-        <h4 class="question">Зачем?</h4>
-        <p>Чтобы лучше понимать их концепцию и легче проходить</p>
+    <div class="user_stories">
+      <h1 class="big_numbers">1</h1>
+      <div class="user_stories_text">
+        <div class="">
+          <h4 class="question">Кто?</h4>
+          <p>Геймер-любитель</p>
+        </div>
+        <div class="">
+          <h4 class="question">Что хочу?</h4>
+          <p>Хочу читать о любимых видео-играх</p>
+        </div>
+        <div class="">
+          <h4 class="question">Зачем?</h4>
+          <p>Чтобы лучше понимать их концепцию и легче проходить</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="user_stories user_stories_two">
-    <h1 class="big_numbers">2</h1>
-    <div class="user_stories_text">
-      <div class="">
-        <h4 class="question">Кто?</h4>
-        <p>Инди-разработчик</p>
-      </div>
-      <div class="">
-        <h4 class="question">Что хочу?</h4>
-        <p>Хочу делиться процессом создания игры</p>
-      </div>
-      <div class="">
-        <h4 class="question">Зачем?</h4>
-        <p>Чтобы расширить айдиторию и найти спонсоров</p>
+    <div class="user_stories user_stories_two">
+      <h1 class="big_numbers">2</h1>
+      <div class="user_stories_text">
+        <div class="">
+          <h4 class="question">Кто?</h4>
+          <p>Инди-разработчик</p>
+        </div>
+        <div class="">
+          <h4 class="question">Что хочу?</h4>
+          <p>Хочу делиться процессом создания игры</p>
+        </div>
+        <div class="">
+          <h4 class="question">Зачем?</h4>
+          <p>Чтобы расширить айдиторию и найти спонсоров</p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="user_stories user_stories_three">
-    <h1 class="big_numbers">3</h1>
-    <div class="user_stories_text">
-      <div class="">
-        <h4 class="question">Кто?</h4>
-        <p>Начинающий гейм-дизайнер</p>
-      </div>
-      <div class="">
-        <h4 class="question">Что хочу?</h4>
-        <p>Хочу обусждать свои идеи</p>
-      </div>
-      <div class="">
-        <h4 class="question">Зачем?</h4>
-        <p>Чтобы учиться и сделать лучший продукт</p>
+    <div class="user_stories user_stories_three">
+      <h1 class="big_numbers">3</h1>
+      <div class="user_stories_text">
+        <div class="">
+          <h4 class="question">Кто?</h4>
+          <p>Начинающий гейм-дизайнер</p>
+        </div>
+        <div class="">
+          <h4 class="question">Что хочу?</h4>
+          <p>Хочу обусждать свои идеи</p>
+        </div>
+        <div class="">
+          <h4 class="question">Зачем?</h4>
+          <p>Чтобы учиться и сделать лучший продукт</p>
+        </div>
       </div>
     </div>
-  </div>
 
-</section>
+  </section>
 
 
-<section class="about_sixth">
-  <%= image_tag("function.svg", :alt => "Функционал") %>
-  <div class="about_sixth_info">
-    <div class="about_sixth_info_m">
-      <div class="about_sixth_info_menu">
+  <section class="about_sixth">
+    <%= image_tag("function.svg", :alt => "Функционал") %>
+    <div class="about_sixth_info">
+      <div class="about_sixth_info_m">
+        <div class="about_sixth_info_menu">
+          <div class="about_item">
+              <%= image_tag("publication.svg", :alt => "Публикация") %>
+              <div class="about_sixth_info_menu_text">
+                <h6>Публикации</h6>
+                <p>Главная страница сервиса. Тут можно читать новости<br>
+    и статьи, смотреть посты инди-разработчиков, лайкать,<br>  комментировать и сохранять понравившееся</p>
+              </div>
+          </div>
+        </div>
+
         <div class="about_item">
-            <%= image_tag("publication.svg", :alt => "Публикация") %>
+            <%= image_tag("forum.svg", :alt => "Форум") %>
             <div class="about_sixth_info_menu_text">
-              <h6>Публикации</h6>
-              <p>Главная страница сервиса. Тут можно читать новости<br>
-  и статьи, смотреть посты инди-разработчиков, лайкать,<br>  комментировать и сохранять понравившееся</p>
+              <h6>Форум</h6>
+              <p>Любой разработчик может поделится идеей своей<br> концепции, спросить совет и получить фидбек как<br>
+    от профессионалов, так и от простых геймеров</p>
+            </div>
+        </div>
+
+        <div class="about_item">
+            <%= image_tag("create_post.svg", :alt => "Создание поста") %>
+            <div class="about_sixth_info_menu_text">
+              <h6>Создание публикации пользователем</h6>
+              <p>У каждого есть возможность создать пост, который<br> попадет в ленту на главной странице, или начать<br> обсуждение проекта</p>
+            </div>
+        </div>
+
+        <div class="about_item">
+            <%= image_tag("account.svg", :alt => "Аккаунт пользователя") %>
+            <div class="about_sixth_info_menu_text">
+              <h6>Аккаунт пользователя</h6>
+              <p>Тут хранится информация о пользователе, созданные<br>
+    им посты, подписки, сохранёнки и статьи с пометкой<br> «прочитать позже»</p>
+            </div>
+        </div>
+
+        <div class="about_item">
+            <%= image_tag("notifications.svg", :alt => "Уведомления") %>
+            <div class="about_sixth_info_menu_text">
+              <h6>Уведомления</h6>
+              <p>Сюда будут приходить лайки, комментраии, ответы<br> на комментарии и ответы с форума, а также<br> оповещалки
+    о новых подписчиках.</p>
             </div>
         </div>
       </div>
+      <%= image_tag("screens.svg", :alt => "Скрины") %>
+    </div>
+  </section>
 
-      <div class="about_item">
-          <%= image_tag("forum.svg", :alt => "Форум") %>
-          <div class="about_sixth_info_menu_text">
-            <h6>Форум</h6>
-            <p>Любой разработчик может поделится идеей своей<br> концепции, спросить совет и получить фидбек как<br>
-  от профессионалов, так и от простых геймеров</p>
-          </div>
-      </div>
 
-      <div class="about_item">
-          <%= image_tag("create_post.svg", :alt => "Создание поста") %>
-          <div class="about_sixth_info_menu_text">
-            <h6>Создание публикации пользователем</h6>
-            <p>У каждого есть возможность создать пост, который<br> попадет в ленту на главной странице, или начать<br> обсуждение проекта</p>
+  <section class="about_seventh">
+    <%= image_tag("mechanics.svg", :alt => "Механики") %>
+    <div class="about_seventh_common">
+      <div class="about_seventh_info">
+        <div class="blocks">
+          <div class="part_of_mechanics">
+            <p>Лайки</p>
           </div>
-      </div>
+        </div>
 
-      <div class="about_item">
-          <%= image_tag("account.svg", :alt => "Аккаунт пользователя") %>
-          <div class="about_sixth_info_menu_text">
-            <h6>Аккаунт пользователя</h6>
-            <p>Тут хранится информация о пользователе, созданные<br>
-  им посты, подписки, сохранёнки и статьи с пометкой<br> «прочитать позже»</p>
+        <div class="blocks"">
+          <div class="part_of_mechanics">
+            <p>Комментарии</p>
           </div>
-      </div>
+          <div class="part_of_mechanics">
+            <p>Ответы на комментарии</p>
+          </div>
+        </div>
 
-      <div class="about_item">
-          <%= image_tag("notifications.svg", :alt => "Уведомления") %>
-          <div class="about_sixth_info_menu_text">
-            <h6>Уведомления</h6>
-            <p>Сюда будут приходить лайки, комментраии, ответы<br> на комментарии и ответы с форума, а также<br> оповещалки
-  о новых подписчиках.</p>
+        <div class="blocks"">
+          <div class="part_of_mechanics">
+            <p>Коллекции</p>
           </div>
+        </div>
+
+        <div class="blocks"">
+          <div class="part_of_mechanics">
+            <p>Following</p>
+          </div>
+          <div class="part_of_mechanics">
+            <p>Подписка на теги</p>
+          </div>
+        </div>
+
+        <div class="blocks"">
+          <div class="part_of_mechanics">
+            <p>Поиск</p>
+          </div>
+          <div class="part_of_mechanics">
+            <p>Поисковой дайджест</p>
+          </div>
+          <div class="part_of_mechanics">
+            <p>Поисковая выдача</p>
+          </div>
+        </div>
+
+        <div class="blocks"">
+          <div class="part_of_mechanics">
+            <p>Сортировка</p>
+          </div>
+        </div>
+
+        <div class="blocks"">
+          <div class="part_of_mechanics">
+            <p>Контент для всех</p>
+          </div>
+        </div>
+
+
       </div>
     </div>
-    <%= image_tag("screens.svg", :alt => "Скрины") %>
-  </div>
-</section>
 
 
-<section class="about_seventh">
-  <%= image_tag("mechanics.svg", :alt => "Механики") %>
-  <div class="about_seventh_common">
-    <div class="about_seventh_info">
-      <div class="blocks">
-        <div class="part_of_mechanics">
-          <p>Лайки</p>
-        </div>
+  </section>
+
+  <%= stylesheet_link_tag "footerinner" %>
+
+  <footer>
+    <div class="left">
+      <%= image_tag("logo_footer.svg", :alt => "Лого") %>
+    </div>
+    <div class="right">
+      <div class="main_menu">
+        <%= link_to "О нас", about_path %>
+        <%= link_to "Публикации", posts_path %>
+        <%= link_to 'Создать пост', new_post_path %>
       </div>
 
-      <div class="blocks"">
-        <div class="part_of_mechanics">
-          <p>Комментарии</p>
-        </div>
-        <div class="part_of_mechanics">
-          <p>Ответы на комментарии</p>
-        </div>
+      <div class="about_sections">
+        <a href="#">Концепция</a>
+        <a href="#">Исследования</a>
+        <a href="#">Целевая аудитори</a>
+        <a href="#">User stories</a>
+        <a href="#">Функционал</a>
+        <a href="#">Механики</a>
       </div>
 
-      <div class="blocks"">
-        <div class="part_of_mechanics">
-          <p>Коллекции</p>
-        </div>
+      <div class="add">
+        <span>Ты с нами?</span>
+        <a href="#email">Вступить</a>
       </div>
-
-      <div class="blocks"">
-        <div class="part_of_mechanics">
-          <p>Following</p>
-        </div>
-        <div class="part_of_mechanics">
-          <p>Подписка на теги</p>
-        </div>
-      </div>
-
-      <div class="blocks"">
-        <div class="part_of_mechanics">
-          <p>Поиск</p>
-        </div>
-        <div class="part_of_mechanics">
-          <p>Поисковой дайджест</p>
-        </div>
-        <div class="part_of_mechanics">
-          <p>Поисковая выдача</p>
-        </div>
-      </div>
-
-      <div class="blocks"">
-        <div class="part_of_mechanics">
-          <p>Сортировка</p>
-        </div>
-      </div>
-
-      <div class="blocks"">
-        <div class="part_of_mechanics">
-          <p>Контент для всех</p>
-        </div>
-      </div>
-
 
     </div>
-  </div>
+  </footer>
 
-
-</section>
+</div>
