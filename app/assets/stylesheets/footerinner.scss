@@ -1,0 +1,58 @@
+footer  {
+  height: 26.5vw;
+  color: white;
+  background-color: black;
+  opacity: 1;
+  display: flex;
+  .left {
+    img {
+      margin: 12.3vw 0 0 1.5vw;
+    }
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    width: 79vw;
+    .main_menu {
+      align-self: flex-end;
+      width: 21.5vw;
+      display: flex;
+      margin: 3.3vw 2vw 1.4vw;
+      justify-content: space-between;
+      a {
+        color: white;
+        font-size: 1.2vw;
+      }
+    }
+    .about_sections {
+      border-top: 0.2vw solid white;
+      padding: 1.5vw 25vw 0 0;
+      display: flex;
+      justify-content: space-between;
+      a {
+        color: white;
+        font-size: 1.2vw;
+      }
+    }
+    .add {
+      margin: 8vw 2vw 0 3vw;
+      display: flex;
+      justify-content: space-between;
+      span {
+        font-size: 4.6vw;
+        line-height: 7vw;
+      }
+      a {
+        line-height: 4.8vw;
+        padding: 0.1vw 1.6vw;
+        border: 0.2vw solid white;
+        border-radius: 3vw;
+        color: white;
+        font-size: 2vw;
+        height: 4.7vw;
+        width: 10.7vw;
+        text-align: center;
+      }
+    }
+  }
+}

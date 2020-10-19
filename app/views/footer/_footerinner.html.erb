@@ -1,0 +1,29 @@
+<%= stylesheet_link_tag "footerinner" %>
+
+<footer>
+  <div class="left">
+    <%= image_tag("logo_footer.svg", :alt => "Лого") %>
+  </div>
+  <div class="right">
+    <div class="main_menu">
+      <%= link_to "О нас", about_path %>
+      <%= link_to "Публикации", posts_path %>
+      <%= link_to 'Создать пост', new_post_path %>
+    </div>
+
+    <div class="about_sections">
+      <a href="#">Концепция</a>
+      <a href="#">Исследования</a>
+      <a href="#">Целевая аудитори</a>
+      <a href="#">User stories</a>
+      <a href="#">Функционал</a>
+      <a href="#">Механики</a>
+    </div>
+
+    <div class="add">
+      <span>Ты с нами?</span>
+      <a href="#email">Вступить</a>   
+    </div>
+
+  </div>
+</footer>

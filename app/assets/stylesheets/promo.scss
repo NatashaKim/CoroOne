@@ -28,9 +28,9 @@
 $mainColor: #CCFD38;
 
 body {
-  // background-image: url(background_1.png);
+  background-image: url(background_1.png);
   background-repeat: no-repeat;
-  height: 300vw;
+  height: 330vw;
   opacity: 1;
   .first {
     position: relative;
@@ -239,7 +239,7 @@ body {
     }
   }
   .fifth {
-    height: 46vw;
+    height: 40.1vw;
     text-align: center;
     margin-top: 5.8vw;
     .field {
