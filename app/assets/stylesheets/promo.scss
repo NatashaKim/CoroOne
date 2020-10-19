@@ -28,7 +28,7 @@
 $mainColor: #CCFD38;
 
 body {
-  background-image: url(background_1.png);
+  // background-image: url(background_1.png);
   background-repeat: no-repeat;
   height: 330vw;
   opacity: 1;
@@ -52,7 +52,7 @@ body {
         margin-top: 1.8vw;
       }
       .start {
-        margin: 14.7vw 2vw 0 0.7vw;
+        margin: 11.7vw 2vw 0 0.7vw;
         display: flex;
         img {
           margin-right: 4vw;
@@ -72,7 +72,7 @@ body {
       width: 40vw;
       display: inline-block;
       img {
-        margin-top: 8vw;
+        margin-top: 4vw;
       }
     }
   }
