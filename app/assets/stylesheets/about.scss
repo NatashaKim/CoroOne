@@ -3,18 +3,40 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 $mainColor: #CCFD38;
 
+
+
 body {
+  box-sizing: border-box;
   background-image: url(screen_about.png);
   background-repeat: no-repeat;
   font-family: "Circe";
   opacity: 0.5;
   background-size: 100vw;
   position: relative;
+  p {
+    line-height: 1.7vw;
+    font-size: 1.3vw;
+  }
+  h5 {
+    font-weight: bold;
+    font-size: 2vw;
+  }
+  h4 {
+    font-weight: bold;
+    font-size: 3vw;
+  }
+  .small {
+    font-size: 0.85vw;
+    color: white;
+    line-height: 1.4vw;
+    margin-top: 2vw;
+  }
+
   .about_first {
     position: relative;
     >img {
-      width: 100vw;
-      margin-top: -5vw;
+      width: 101vw;
+      margin-top: -5.2vw;
     }
     .about_first_info {
       position: absolute;
@@ -30,9 +52,7 @@ body {
           margin-bottom: 1vw;
         }
         p {
-          font-size: 1.3vw;
           width: 35vw;
-          line-height: 1.7vw;
           margin-left: 1vw;
         }
       }
@@ -47,25 +67,262 @@ body {
     }
   }
   .about_second {
-     margin-top: -6vw;
+     margin-top: -7vw;
+     position: relative;
      >img {
-
+       margin-left: 6vw;
+       width: 40vw;
      }
      .about_second_details {
+       position: absolute;
+       height: 36vw;
        display: flex;
        flex-direction: row;
       .two_circles {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        height: 12vw;
+        margin-top: 9vw;
+        margin-left: 19vw;
         div {
           background-color: $mainColor;
-          width: 5vw;
-          height: 5vw;
+          width: 4.4vw;
+          height: 4.4vw;
           border-radius: 5vw;
         }
+        div:first-child {
+          margin-left: -6vw;
+        }
+      }
+      >img {
+        width: 39vw;
+        bottom: 0;
+      }
+      p {
+        width: 35vw;
+        margin-left: -2vw;
+        margin-top: 4vw;
       }
      }
+  }
+  .about_third {
+    margin-top: 34vw;
+    padding: 5.4vw;
+    >img {
+      width: 68vw;
+    }
+    .about_third_details {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .about_third_details_text {
+        width: 40vw;
+        display: flex;
+        flex-direction: column;
+        margin-left: 1vw;
+        margin-top: 8vw;
+      }
+      .about_third_details_facts {
+        background-image: url(forms_for_researches.svg);
+        background-repeat: no-repeat;
+        background-size: 35vw;
+        margin-top: 5.5vw;
+        position: relative;
+        width: 31vw;
+        height: 30vw;
+        padding: 2vw;
+        h4 {
+          font-weight: bold;
+          font-size: 3vw;
+          margin-top: 1vw;
+        }
+        h5 {
+          margin-top: -3vw;
+        }
+        .facts_first {
+          width: 17vw;
+          div {
+            height: 0.1vw;
+            background-color: #000;
+            margin-top: -2.4vw;
+            margin-bottom: 1.6vw;
+          }
+          .game-designer {
+            margin-top: -4.3vw;
+            margin-left: 2vw;
+          }
+        }
+        .facts_second {
+          margin-left: 9vw;
+          h4 {
+            margin-bottom: 10.7vw;
+          }
+          h5 {
+              margin-top: -2.7vw
+          }
+        }
+        .facts_third {
+          display: flex;
+          flex-direction: column;justify-content: flex-end;
+          margin-right: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-end;
+          margin-top: -1vw;
+        }
+      }
+    }
+  }
+  .about_fourth {
+    margin-left: 6vw;
+    margin-top: 6vw;
+    >img {
+      width: 79vw;
+    }
+    .about_fourth_details {
+      display: flex;
+      flex-direction: row;
+      .about_fourth_details_text {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3vw;
+        >div {
+          width: 20vw;
+        }
+        p {
+          line-height: 2vw;
+          margin-top: -2.5vw;
+        }
+        .about_fourth_details_text_add {
+          margin-top: -2vw;
+        }
+      }
+      .about_fourth_details_person {
+        margin-top: 13.5vw;
+        margin-left: 8vw;
+        display: flex;
+        flex-direction: row;
+      }
+      >img {
+        width: 17vw;
+        margin-left: -100vw;
+        margin-top: 31vw;
+      }
+      .card_of_person {
+         padding: 1vw 1vw 0.7vw 2vw;
+         width: 17vw;
+         height: 31.5vw;
+         background-color: #000;
+         border-radius: 2.5vw;
+         display: flex;
+         flex-direction: column;
+         margin-right: 2vw;
+         >img {
+           margin-top: 1vw;
+         }
+         .card_of_person_common {
+           display: flex;
+           flex-direction: row;
+           >img {
+             width: 14vw;
+             margin-left: -3vw;
+           }
+           .card_of_person_main {
+             display: flex;
+             flex-direction: column;
+             h4:first-child {
+               color: white;
+               margin-top: 1.5vw;
+               font-size: 2.4vw;
+             }
+             .age {
+               margin-top: -1.6vw;
+               color: white;
+               font-size: 2.4vw;
+             }
+             div {
+               background-color: white;
+               width: 3px;
+               height: 11vw;
+               margin-left: 0.2vw;
+               margin-top: -2.1vw;
+             }
+           }
+         }
+
+      }
+    }
+  }
+  .about_fifth {
+    margin-left: 6vw;
+    div.stripe {
+     background-color: #000;
+     height: 0.2vw;
+     width: 45vw;
+     right: 0;
+         margin-left: 60vw;
+     display: flex;
+     flex-direction: column;
+    }
+    >img {
+      margin-top: 5.3vw;
+      width: 65vw;
+    }
+    .user_stories {
+      width: 54vw;
+      margin-top: 4.2vw;
+      background-color: $mainColor;
+      border-radius: 15vw;
+      padding: 2vw 7vw;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 4vw;
+      margin-left: 11vw;
+      height: 9.5vw;
+      .big_numbers {
+        font-size: 7vw;
+        font-weight: bold;
+        margin-right: 2.6vw;
+        margin-top: 4.5vw;
+      }
+      .user_stories_text {
+        padding-left: 2vw;
+        height: 9vw;
+        display: flex;
+        flex-direction: column;
+        border-left: 3px solid #000;
+        div {
+          display: flex;
+          flex-direction: row;
+          align-items: baseline;
+          margin-top: -1.2vw;
+        }
+        div:not(:first-child) {
+            margin-top: -3.9vw;
+        }
+          .question {
+             font-size: 2vw;
+             margin-right: 1vw;
+          }
+        }
+      }
+      .user_stories_two {
+        background-color: white;
+        border: 3px solid #000;
+        margin-left: 33vw;
+      }
+      .user_stories_three {
+        margin-left: 21vw;
+      }
+    }
+  }
+  .about_sixth {
+    background-image: url(form_for_function.svg);
+    background-repeat: no-repeat;
+    width: 100vw;
+    padding: 8vw 6vw;
   }
 
 }
