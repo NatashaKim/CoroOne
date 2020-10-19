@@ -5,19 +5,33 @@
 //   font-family: "Progmatica-Book";
 //   src: url(/assets/Progmatica-Book.woff) format("woff");
 // }
-@mixin main_text {
-  p {
-    color: blue;
-    background-color: red;
-  }
+@mixin plan_mix {
+  margin-top: 2.8vw;
+  display: flex;
+  align-items: baseline;
+}
+
+@mixin span_mix {
+  font-size: 9.6vw;
+  font-weight: 800;
+  line-height: 11vw;
+  color: $mainColor;
+}
+
+@mixin p_mix {
+  align-self: center;
+  font-size: 1.3vw;
+  line-height: 1.9vw;
+  width: 21vw;
 }
 
 $mainColor: #CCFD38;
 
 body {
-  background-image: url(background_1.png);
+  // background-image: url(background_1.png);
   background-repeat: no-repeat;
-  height: 500vw;
+  height: 300vw;
+  opacity: 1;
   .first {
     position: relative;
     height: 60vw;
@@ -68,7 +82,6 @@ body {
     >img:first-child {
       position: absolute;
       z-index: -1;
-      opacity: 30%;
     }
     img:nth-child(2) {
       position: absolute;
@@ -114,6 +127,150 @@ body {
         border: 0.7vw solid $mainColor;
         text-align: center;
         z-index: -1;
+      }
+    }
+  }
+  .third {
+    height: 55vw;
+    margin-top: 22vw;
+    background-image: url(spot_3.svg);
+    background-repeat: no-repeat;
+    background-position: 62% 6%;
+    .left {
+      display: inline-block;
+      width: 50.5vw;
+      margin: 2.5vw 0 0 6.8vw;
+      >img {
+        margin-top: 4vw;
+      }
+    }
+    .right {
+      display: inline-block;
+      width: 42vw;
+      vertical-align: top;
+      >img {
+        margin-top: 4vw;
+      }
+      img:nth-child(2) {
+        margin-left: -3.5vw;
+      }
+    }
+  }
+  .fourth {
+    margin-top: 15.8vw;
+    height: 60vw;
+    .left {
+      display: inline-block;
+      vertical-align: top;
+      width: 38.5vw;
+      height: 56vw;
+      background-image: url(spot_4.svg);
+      background-repeat: no-repeat;
+      background-position: 0% 100%;
+      img {
+        width: 22.2vw;
+        margin: 6.8vw 0 0 11vw;
+      }
+    }
+    .right  {
+      display: inline-block;
+      margin-left: 5.2vw;
+      width: 55vw;
+      margin-top: -3.8vw;
+      .plan_1 {
+        @include plan-mix;
+        span {
+          @include span-mix;
+          line-height: 13vw;
+        }
+        p {
+          @include p-mix;
+          margin: 0.7vw 0 0 3.4vw;
+        }
+        img {
+          margin: 1vw 0 0 3.5vw;
+        }
+      }
+      .plan_2 {
+        @include plan-mix;
+            margin-top: 1.8vw;
+        span {
+          @include span-mix;
+        }
+        p {
+          @include p-mix;
+          margin: -1.5vw 0 0 2.3vw;
+        }
+        img {
+          margin: 0 0 0 4vw;
+        }
+      }
+      .plan_3 {
+        @include plan-mix;
+        align-items: flex-start;
+        span {
+          @include span-mix;
+        }
+        p {
+          @include p-mix;
+          margin: -2vw 0 0 2.7vw;
+        }
+        img {
+          margin: -2vw 0 0 7vw;
+        }
+      }
+      .plan_4 {
+        @include plan-mix;
+        margin-top: 2.9vw;
+        align-items: inherit;
+        span {
+          @include span-mix;
+          line-height: 9.5vw;
+        }
+        p {
+          @include p-mix;
+          align-items: inherit;
+          margin: -1.8vw 0 0 2.2vw;
+        }
+        img {
+          margin: 1.2vw 0 0 6.3vw;
+        }
+      }
+    }
+  }
+  .fifth {
+    height: 46vw;
+    text-align: center;
+    margin-top: 5.8vw;
+    .field {
+      background-color: $mainColor;
+      height: 20.5vw;
+      width: 58vw;
+      margin: 2.5vw auto;
+      border-radius: 2vw;
+      h4 {
+        font-weight: 400;
+        font-size: 1.7vw;
+        padding-top: 5.5vw;
+      }
+      .new_subscriber {
+        input:nth-child(2) {
+          width: 28vw;
+          height: 3vw;
+          margin: 1.5vw 2vw 0 3vw;
+          border-radius: 1vw;
+          border: 0.2vw solid black;
+          font-size: 1.5vw;
+        }
+        input:nth-child(3) {
+          width: 9vw;
+          height: 4vw;
+          border-radius: 2vw;
+          font-size: 1.5vw;
+          border: none;
+          background: black;
+          color: white;
+        }
       }
     }
   }

@@ -34,11 +34,58 @@
     <span>Обзоры</span>
     <span>Форум</span>
     <span>Коллекции</span>
-    <span>Календарь</span>  
+    <span>Календарь</span>
   </div>
 </section>
-<h1>Promo#index</h1>
-<p>Find me in app/views/promo/index.html.erb</p>
-<%= link_to "About", about_path %>
-<h2 id="email">Узнать раньше всех о запуске проекта:</h2>
-<%= render "subscribers/form" %>
+
+<section class="third">
+  <div class="left">
+    <%= image_tag("font_h3_1.svg", :alt => "Заголовки") %>
+    <%= image_tag("font_h3_2.svg", :alt => "Заголовки") %>
+    <%= image_tag("font_h3_3.svg", :alt => "Заголовки") %>
+  </div>
+  <div class="right">
+    <%= image_tag("font_h3_4.svg", :alt => "Заголовки") %>
+    <%= image_tag("font_h3_5.svg", :alt => "Заголовки") %>
+  </div>
+</section>
+
+<section class="fourth">
+  <div class="left">
+    <%= image_tag("iphone_2.png", :alt => "Экраны2") %>
+  </div>
+  <div class="right">
+    <div class="plan_1">
+      <span>1</span>
+      <p>Саздайте аккаут: так вы&nbsp;сможете получить доступ к&nbsp;форуму, ачивкам, коллекциям и&nbsp;другим функциям сервиса</p>
+      <%= image_tag("lamp.svg", :alt => "Лампа") %>
+    </div>
+
+    <div class="plan_2">
+      <span>2</span>
+      <p>Отметьте категории, на&nbsp;которые вы&nbsp;хотите подписаться: так мы&nbsp;сможем создать для вас персонализированную ленту</p>
+      <%= image_tag("book.svg", :alt => "Книга") %>
+    </div>
+
+    <div class="plan_3">
+      <span>3</span>
+      <p>Настройте аккаунт под себя: заполните свой профиль, выберите рижим, в&nbsp;котором вам комфортнее: темную или светлую тему</p>
+      <%= image_tag("theme.svg", :alt => "Темы") %>
+    </div>
+
+    <div class="plan_4">
+      <span>4</span>
+      <p>Разрешите медиа-сервису доступ к&nbsp;камере и&nbsp;галерее: так вы&nbsp;сможете создавать красочные посты и&nbsp;делиться ими с&nbsp;друзьями</p>
+      <%= image_tag("photo.svg", :alt => "Фото") %>
+    </div>
+  </div>
+</section>
+
+<section class="fifth">
+  <%= image_tag("font_h3_6.svg", :alt => "Заголовки") %>
+  <div class="field">
+    <%# <%= link_to "About", about_path %>
+    <h4 id="email">Узнать раньше всех о запуске проекта:</h4>
+    <%= render "subscribers/form" %>
+  </div>
+</section>
