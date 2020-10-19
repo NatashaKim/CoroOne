@@ -32,6 +32,26 @@ body {
     margin-top: 2vw;
   }
 
+  .about_item {
+    display: flex;
+    flex-direction: row;
+    margin-top: -1.7vw;
+    >img {
+      width: 5.4vw;
+      margin-right: 2vw;
+    }
+    .about_sixth_info_menu_text {
+      p {
+        margin-top: -2.5vw;
+      }
+    }
+  }
+
+  h6 {
+    font-size: 1.5vw;
+    font-weight: bold;
+  }
+
   .about_first {
     position: relative;
     >img {
@@ -255,6 +275,8 @@ body {
       }
     }
   }
+
+
   .about_fifth {
     margin-left: 6vw;
     div.stripe {
@@ -317,12 +339,68 @@ body {
         margin-left: 21vw;
       }
     }
-  }
-  .about_sixth {
-    background-image: url(form_for_function.svg);
-    background-repeat: no-repeat;
-    width: 100vw;
-    padding: 8vw 6vw;
-  }
+    .about_sixth {
+      background-image: url(form_for_function.svg);
+      background-repeat: no-repeat;
+      width: 1001%;
+      background-size: 101vw;
+      height: 100%;
+      margin-top: 8vw;
+      >img {
+        margin-left: 3vw;
+        width: 87vw;
+        margin-top: 12vw;
+      }
+        .about_sixth_info {
+          display: flex;
+          flex-direction: row;
+          >img {
+            width: 24vw;
+            margin-top: 15vw;
+          }
+          .about_sixth_info_m {
+            margin-right: 18vw;
+            margin-left: 3vw;
+            margin-top: 5vw;
+            border: 3px solid #000;
+            border-radius: 4vw;
+            background-color: white;
+            padding: 3vw 2.4vw;
+            .bout_sixth_info_menu {
+              display: flex;
+              flex-direction: column;
+            }
+          }
+        }
+    }
+    .about_seventh {
+      margin-top: -402vw;
+      margin-left: 6vw;
+      >img {
+      width: 47vw;
+      }
+      .about_seventh_common {
+        background-image: url(form_for_mechanics.svg);
+        background-repeat: no-repeat;
+        background-size: 94vw;
+        margin-top: 3vw;
+        .about_seventh_info {
+          display: flex;
+          flex-direction: column;
+          >div {
+            display: flex;
+            flex-direction: row;
+            .part_of_mechanics {
+              padding: 0vw 2vw;
+              border: 3px solid #000;
+              border-radius: 10vw;
+              p {
+                font-size: 1.7vw;
+              }
+            }
+          }
+        }
+      }
+    }
 
 }
