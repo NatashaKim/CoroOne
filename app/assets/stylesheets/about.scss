@@ -48,8 +48,8 @@ body {
   }
 
   h6 {
-    font-size: 1.5vw;
     font-weight: bold;
+    font-size: 1.4vw;
   }
 
   .about_first {
@@ -374,7 +374,7 @@ body {
         }
     }
     .about_seventh {
-      margin-top: -402vw;
+      margin-top: -200vw;
       margin-left: 6vw;
       >img {
       width: 47vw;
@@ -382,25 +382,62 @@ body {
       .about_seventh_common {
         background-image: url(form_for_mechanics.svg);
         background-repeat: no-repeat;
-        background-size: 94vw;
-        margin-top: 3vw;
+        background-size: 98vw;
+        margin-top: 6vw;
+        padding-top: 2vw;
+        height: 60vw;
         .about_seventh_info {
           display: flex;
           flex-direction: column;
-          >div {
+          div.blocks {
+            margin-bottom: 1.1vw;
             display: flex;
             flex-direction: row;
-            .part_of_mechanics {
-              padding: 0vw 2vw;
-              border: 3px solid #000;
-              border-radius: 10vw;
-              p {
-                font-size: 1.7vw;
-              }
+          }
+          div.blocks:first-child {
+            margin-left: 7vw;
+          }
+          div.blocks:nth-child(2){
+            margin-left: 31vw;
+            div {
+              margin-right: 10vw;
             }
+          }
+          div.blocks:nth-child(3){
+            margin-left: 25vw;
+          }
+          div.blocks:nth-child(4){
+            margin-left: 0vw;
+            div {
+              margin-right: 25vw;
+            }
+          }
+          div.blocks:nth-child(5){
+            margin-left: 16vw;
+            div:first-child {
+              margin-right: 19vw;
+            }
+            div:nth-child(2) {
+              margin-right: 4vw;
+            }
+          }
+          div.blocks:nth-child(6){
+            margin-left: 33vw;
+          }
+          div.blocks:nth-child(7){
+            margin-left: 14vw;
+          }
+          .part_of_mechanics {
+            padding: 0vw 1vw;
+            border: 0.2vw solid #000;
+            border-radius: 10vw;
+            p {
+              font-size: 1.7vw;
+              margin: 1.1vw;
+            }
+          }
           }
         }
       }
-    }
 
 }
