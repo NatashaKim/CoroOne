@@ -3,12 +3,52 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 $mainColor: #CCFD38;
 
+@mixin card_of_person_mix {
+  padding: 1vw 1vw 0.7vw 2vw;
+  width: 17vw;
+  height: 31.5vw;
+  border-radius: 2.5vw;
+  display: flex;
+  flex-direction: column;
+  margin-right: 2vw;
+}
+
+@mixin card_of_person_common_mix {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin card_of_person_main_mix {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin name {
+  color: white;
+  margin-top: 1.5vw;
+  font-size: 2.4vw;
+}
+
+@mixin age {
+  margin-top: -1.6vw;
+  color: white;
+  font-size: 2.4vw;
+}
+
+@mixin line {
+  background-color: white;
+  width: 3px;
+  height: 11vw;
+  margin-left: 0.2vw;
+  margin-top: -2.1vw;
+}
+
 
 
 body.about {
   box-sizing: border-box;
   font-family: "Circe";
-  opacity: 0.5;
+  // opacity: 0.5;
   background-size: 100vw;
   position: relative;
   height: 312.5vw;
@@ -27,7 +67,7 @@ body.about {
   .small {
     font-size: 0.85vw;
     color: white;
-    line-height: 1.4vw;
+    line-height: 1.2vw;
     margin-top: 2vw;
   }
 
@@ -233,48 +273,96 @@ body.about {
           margin-left: -100vw;
           margin-top: 31vw;
         }
-        .card_of_person {
-           padding: 1vw 1vw 0.7vw 2vw;
-           width: 17vw;
-           height: 31.5vw;
+        .card_of_person:first-child {
+           @include card_of_person_mix;
            background-color: #000;
-           border-radius: 2.5vw;
-           display: flex;
-           flex-direction: column;
-           margin-right: 2vw;
            >img {
-             margin-top: 1vw;
+             margin-top: 3vw;
+             width: 14vw;
            }
            .card_of_person_common {
-             display: flex;
-             flex-direction: row;
+             @include card_of_person_common_mix;
              >img {
                width: 14vw;
                margin-left: -3vw;
              }
              .card_of_person_main {
-               display: flex;
-               flex-direction: column;
+               @include card_of_person_main_mix;
                h4:first-child {
-                 color: white;
-                 margin-top: 1.5vw;
-                 font-size: 2.4vw;
+                 @include name;
                }
                .age {
-                 margin-top: -1.6vw;
-                 color: white;
-                 font-size: 2.4vw;
+                 @include age;
                }
                div {
-                 background-color: white;
-                 width: 3px;
-                 height: 11vw;
-                 margin-left: 0.2vw;
-                 margin-top: -2.1vw;
+                 @include line;
                }
              }
            }
+        }
 
+        .card_of_person:nth-child(2) {
+           @include card_of_person_mix;
+           background-color: $mainColor;
+           >img {
+             margin-top: 0.7vw;
+              margin-left: -0.5vw;
+              width: 17.5vw;
+           }
+           .card_of_person_common {
+             @include card_of_person_common_mix;
+             >img {
+               width: 14vw;
+               margin-left: -3vw;
+             }
+             .card_of_person_main {
+               @include card_of_person_main_mix;
+               h4:first-child {
+                 @include name;
+                 color: black;
+               }
+               .age {
+                 @include age;
+                 color: black;
+               }
+               div {
+                 @include line;
+                 background-color: black;
+               }
+             }
+           }
+           p {
+             color: black;
+           }
+        }
+
+
+        .card_of_person:nth-child(3) {
+           @include card_of_person_mix;
+           background-color: #000;
+           >img {
+             margin-top: 0.5vw;
+             width: 17vw;
+           }
+           .card_of_person_common {
+             @include card_of_person_common_mix;
+             >img {
+               width: 14vw;
+               margin-left: -8vw;
+             }
+             .card_of_person_main {
+               @include card_of_person_main_mix;
+               h4:first-child {
+                 @include name;
+               }
+               .age {
+                 @include age;
+               }
+               div {
+                 @include line;
+               }
+             }
+           }
         }
       }
     }
