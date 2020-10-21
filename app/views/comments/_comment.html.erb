@@ -1,13 +1,15 @@
+<div class="comment_content">
+	<p>
+		<b>Комментатор:</b>
+		<%= comment.commenter %>
+	</p>
+	<p>
+		<b>Текст:</b>
+		<%= comment.body %>
+	</p>
+</div>
 <p>
-	<b>Commenter:</b>
-	<%= comment.commenter %>
-</p>
-<p>
-	<b>Comment:</b>
-	<%= comment.body %>
-</p>
-<p>
-	<%= link_to 'Destroy Comment', [comment.post, comment],
-								:confirm => 'Are you sure?',
+	<%= link_to 'Удалить комментарий', [comment.post, comment],
+								:confirm => 'Вы уверены?',
 								:method => :delete %>
 </p>

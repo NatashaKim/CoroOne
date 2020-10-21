@@ -214,7 +214,79 @@ body.new_post {
 body.show_body {
   height: auto;
   .wrapper_show {
-    width: 70vw;
+    width: 50vw;
     margin: 0 auto;
+    > p:first-child {
+      font-size: 1.5vw;
+      color: gray;
+      text-align: center;
+      margin-top: 5vw;
+    }
+    > p:nth-child(2) {
+      font-size: 2.4vw;
+      width: 40vw;
+      text-align: center;
+      margin: 0 auto;
+      font-weight: bold;
+      line-height: 3vw;
+    }
+    img {
+      margin-top: 2vw;
+    }
+    .narrow {
+      width: 50vw;
+      margin: 0 auto;
+      margin-bottom: 5vw;
+      > p:first-child {
+        font-size: 1.3vw;
+        line-height: 2vw;
+        margin-bottom: 3vw;
+      }
+      > p:nth-child(2) {
+        width: 10vw;
+        font-size: 1.1vw;
+        font-weight: bold;
+        border-top: 0.2vw solid;
+        padding-top: 1vw;
+      }
+        h2 {
+        margin-top: 4.5vw;
+        padding: 1.5vw 0;
+        border-top: 0.1vw solid gray;
+        border-bottom: 0.1vw solid gray;
+        font-size: 1.8vw;
+        }
+
+        .new_comment {
+          .field {
+            font-size: 1vw;
+          }
+          .field {
+            font-size: 1vw;
+            textarea {
+              border-color: gray;
+              border-radius: 0.5vw;
+            }
+          }
+          .actions {
+            input {
+              border-style: none;
+              background-color: #CCFD38;
+              height: 2vw;
+              font-size: 1vw;
+              line-height: 2vw;
+              border-radius: 2vw;
+              width: 12vw;
+              text-align: center;
+              margin-top: 0.8vw;
+              font-family: "Circe";
+            }
+          }
+        }
+
+        a {
+          font-size: 1vw;
+        }
+    }
   }
 }

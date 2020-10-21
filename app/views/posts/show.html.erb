@@ -4,35 +4,38 @@
   <div class="wrapper_show">
 
     <p>
-      <strong>Тег:</strong>
+      <strong></strong>
       <%= @post.name %>
     </p>
 
     <p>
-      <strong>Название:</strong>
+      <strong></strong>
       <%= @post.title %>
     </p>
 
     <%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
 
-    <p>
-      <strong>Контент:</strong>
-      <%= @post.content %>
-    </p>
+     <div class="narrow">
 
-    <p>
-    	<strong>Автор:</strong>
-    	<%= @post.author %>
-    </p>
+      <p>
+        <strong></strong>
+        <%= @post.content %>
+      </p>
 
-    <h2>Комментарии</h2>
-    <%= render @post.comments %>
+      <p>
+      	<strong></strong>
+      	<%= @post.author %>
+      </p>
 
-    <h2>Добавить комментарий:</h2>
-    <%= render "comments/form" %>
+      <h2>Комментарии</h2>
+      <%= render @post.comments %>
 
-    <%= link_to 'Edit', edit_post_path(@post) %> |
-    <%= link_to 'Back', posts_path %>
+      <h2>Добавить комментарий:</h2>
+      <%= render "comments/form" %>
+
+      <%= link_to 'Редактировать', edit_post_path(@post) %> |
+      <%= link_to 'Назад', posts_path %>
+    </div>
   </div>
   <%= render 'footer/footerinner' %>
 </body>

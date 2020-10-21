@@ -1,6 +1,6 @@
 <%= form_for([@post, @post.comments.build]) do |f| %>
 	<div class="field">
-		<%= f.label :commenter %><br />
+		<%= f.label "Комментатор" %><br />
 		<%= f.text_field :commenter %>
 	</div>
 	<div class="field">
@@ -8,6 +8,6 @@
 		<%= f.text_area :body %>
 	</div>
 		<div class="actions">
-		<%= f.submit %>
+		<%= f.submit "Создать комментарий" %>
 	</div>
 <% end %>
