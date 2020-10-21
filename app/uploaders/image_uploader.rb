@@ -12,9 +12,9 @@ class ImageUploader < CarrierWave::Uploader::Base
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
-  process resize_to_fit: [800, 800]
+  process resize_to_fit: [900, 600]
   version :thumb do
-     process resize_to_fill: [350, 350]
+     process resize_to_fill: [375, 250]
   end
 
   version :small_thumb, from_version: :thumb do

@@ -5,7 +5,13 @@
 
 @font-face {
   font-family: "Circe";
-  src: url("Extra-Bold.woff") format("woff");
+  src: url("Circe-ExtraBold.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Circe";
+  src: url("Circe-Light.woff") format("woff");
 }
 
 body {

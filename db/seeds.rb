@@ -3,18 +3,25 @@ puts "Destroyed everything you touch"
 
 posts = [
   {
-  	name: "New Album",
-  	title: "The Bad Seeds",
-  	author: "Nick Cave",
-  	content: "Tracklist",
-    image: File.open(Rails.root.join('public', 'images', 'pic-1.jpg'))
+  	name: "О компаниях",
+  	title: "Ветераны Blizzard открыли студию, которая займется  стратегиями",
+  	author: "Руслан Присекин",
+  	content: "Стратегии в реальном времени — не самый популярный ныне жанр, блокбастеры выходят не часто.",
+    image: File.open(Rails.root.join('public', 'images', 'seed_img_1.jpg'))
   },
   {
-  	name: "Old Album",
-  	title: "The Bad Seeds Old",
-  	author: "Nick Cave Old Too",
-  	content: "Some Old Tracklist",
-    image: open("https://in-sound.ru/upload/iblock/d85/d859aa8387fd5fcd7a933be2af91066b.jpg")
+  	name: "Анонсы",
+  	title: "Трейлер к выходу Amnesia: rebirth — сиквела The dark descent",
+  	author: "Андрей Маковеев",
+  	content: "В релиз отправилась Amnesia: Rebirth — очередной хоррор от мастеров жанра из Frictional Games.",
+    image: File.open(Rails.root.join('public', 'images', 'seed_img_2.jpg'))
+  },
+  {
+  	name: "Обновления",
+  	title: "Для Starfield полностью переписали систему анимаций",
+  	author: "Геннадий Воробьев",
+  	content: "Bethesda Game Studios не раскрывает официальных подробностей о Starfield.",
+    image: File.open(Rails.root.join('public', 'images', 'seed_img_3.jpg'))
   }
 ]
 

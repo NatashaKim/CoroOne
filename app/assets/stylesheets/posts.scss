@@ -1,62 +1,114 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@font-face {
+  font-family: "Circe";
+  src: url("Circe-ExtraBold.woff") format("woff");
+}
 
-// body {
-//   background-color: #F3F3F3;
-//   h1 {
-//     margin: 5vw -5vw;
-//     padding-left: 5vw;
-//     font-size: 2.5vw;
-//     height: 5vw;
-//     vertical-align: middle;
-//     line-height: 5vw;
-//     background-color: white;
-//     color: #2B2D61;
-//   }
-//   table {
-//     width: 90vw;
-//     thead {
-//       display: none;
-//     }
-//     tbody {
-//       tr {
-//         padding: 2vw;
-//         margin: -2vw;
-//         margin-bottom: 3vw;
-//         background-color: white;
-//         display: flex;
-//         flex-wrap: wrap;
-//         td:first-child {
-//           width: 100vw;
-//         }
-//         td:nth-child(2) {
-//           width: 100vw;
-//           font-size: 2vw;
-//           margin: 1vw 0;
-//           color: #2B2D61;
-//         }
-//         td:nth-child(3) {
-//           width: 100vw;
-//           font-size: 1.5vw;
-//           margin-bottom: 2vw;
-//         }
-//       }
-//     }
-//   }
-//   > a {
-//     background-color: #2B2D61;
-//     color: white;
-//     font-size: 2vw;
-//     margin: -2vw;
-//     padding: 1vw;
-//     text-decoration: none;
-//     border-radius: 2vw;
-//   }
-// }
-//
-//
-// strong {
-//   color: green;
-//   display: inline-block;
-// }
+@mixin flex_mix {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@mixin card_mix {
+  .info {
+    display: flex;
+    flex-direction: column;
+    .posts_img {
+      height: 17.3vw;
+      margin-bottom: 0.8vw;
+    }
+    .name {
+      font-size: 1.2vw;
+      color: gray;
+    }
+    .title {
+      margin-top: 0.8vw;
+      font-size: 1.5vw;
+      font-weight: bolder;
+      line-height: 2vw;
+    }
+    .content {
+      font-size: 1.4vw;
+      line-height: 2vw;
+    }
+  }
+  .action {
+    display: flex;
+    flex-direction: row;
+    font-size: 1vw;
+    width: 16vw;
+    margin-top: 1.2vw;
+    justify-content: space-between;
+    div {
+      a {
+        color: gray;
+      }
+    }
+  }
+
+}
+
+body.posts {
+  box-sizing: border-box;
+  height: auto;
+  .wrapper_posts {
+    margin: 6vw 4.7vw;
+    img {
+      margin-bottom: 3vw;
+    }
+    .main_section {
+      padding-top: 5vw;
+      border-top: 0.2vw solid black;
+      .table_hidden{
+        display: none;
+      }
+      .posts_cards{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 5vw;
+
+
+
+        .one_card:nth-of-type(3n+1) {
+          width : 26vw;
+          border-right: 0.2vw solid;
+          padding-right: 3vw;
+          @include flex_mix;
+          @include card_mix;
+        }
+
+
+        .one_card:nth-of-type(3n-1) {
+          width: 26vw;
+          margin: 0 auto;
+          @include flex_mix;
+          @include card_mix;
+        }
+
+
+        .one_card:nth-of-type(3n) {
+          width: 26vw;
+          padding-left: 3vw;
+          border-left: 0.2vw solid;
+          @include flex_mix;
+          @include card_mix;
+        }
+      }
+    }
+    .new_post_link {
+      a {
+        background-color: #CCFD38;
+        height: 4vw;
+        font-size: 1.7vw;
+        line-height: 4vw;
+        border-radius: 2vw;
+        width: 15vw;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}
