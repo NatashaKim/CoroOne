@@ -210,3 +210,11 @@ body.new_post {
     }
   }
 }
+
+body.show_body {
+  height: auto;
+  .wrapper_show {
+    width: 70vw;
+    margin: 0 auto;
+  }
+}
