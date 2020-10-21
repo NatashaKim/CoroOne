@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Тег:</strong>
   <%= @post.name %>
 </p>
 
@@ -12,24 +12,24 @@
 <%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Название:</strong>
   <%= @post.title %>
 </p>
 
 <p>
-	<strong>Author:</strong>
+	<strong>Автор:</strong>
 	<%= @post.author %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong>Контент:</strong>
   <%= @post.content %>
 </p>
 
-<h2>Comments</h2>
+<h2>Комментарии</h2>
 <%= render @post.comments %>
 
-<h2>Add a comment:</h2>
+<h2>Добавить комментарий:</h2>
 <%= render "comments/form" %>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |

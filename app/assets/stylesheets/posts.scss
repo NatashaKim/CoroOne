@@ -53,6 +53,7 @@
 
 body.posts {
   box-sizing: border-box;
+  font-family: "Circe";
   height: auto;
   .wrapper_posts {
     margin: 6vw 4.7vw;
@@ -108,6 +109,103 @@ body.posts {
         width: 15vw;
         display: block;
         text-align: center;
+      }
+    }
+  }
+}
+
+
+body.new_post {
+  box-sizing: border-box;
+  font-family: "Circe";
+  height: auto;
+  .new_post_wrapper {
+    .new_post_card{
+      width: 46vw;
+      margin: 5vw auto;
+      background-color: white;
+      border-radius: 2vw;
+      padding: 3vw;
+      border: 1.2vw solid #CCFD38;
+      h1 {
+        font-size: 3vw;
+      }
+      form{
+        margin-top: 3vw;
+        .form_body {
+          display: flex;
+          .text_form {
+            display: flex;
+            flex-direction: column;
+            .field {
+              width: 20vw;
+              margin-bottom: 3vw;
+              label {
+                color: gray;
+              }
+              input {
+                border-style: none;
+                border-bottom: 0.1vw solid gray;
+                width: 19vw;
+              }
+            }
+            .field {
+              textarea {
+                width: 19vw;
+                height: 5vw;
+                color: lightgray;
+                border-color: gray;
+                margin-top: 0.5vw;
+                border-radius: 0.5vw;
+              }
+            }
+          }
+          .img_form {
+            width: 21vw;
+            height: 28.3vw;
+            border-radius: 2vw;
+            margin-left: 5vw;
+            margin-top: -4.9vw;
+            background-color: lightgray;
+            div {
+              text-align: center;
+              img {
+                width: 12vw;
+                margin-top: 5vw;
+              }
+              label {
+                font-size: 1.5vw;
+                font-weight: bold;
+                color: white;
+              }
+              input {
+                text-align: center;
+                width: 12vw;
+                color: white;
+              }
+            }
+          }
+        }
+        .actions {
+          input {
+            background-color: #CCFD38;
+            border-style: none;
+            float: right;
+            background-color: #CCFD38;
+            height: 4vw;
+            font-size: 1.7vw;
+            line-height: 4vw;
+            border-radius: 2vw;
+            width: 15vw;
+            display: block;
+            text-align: center;
+            margin-top: -0.8vw;
+            font-family: "Circe";
+          }
+        }
+      }
+      a {
+        font-size: 1.7vw;
       }
     }
   }
