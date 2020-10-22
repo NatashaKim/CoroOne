@@ -147,13 +147,14 @@ body.new_post {
                 border-style: none;
                 border-bottom: 0.1vw solid gray;
                 width: 19vw;
+                font-family: 'Circe';
               }
             }
             .field {
               textarea {
                 width: 19vw;
                 height: 5vw;
-                color: lightgray;
+                font-family: 'Circe';
                 border-color: gray;
                 margin-top: 0.5vw;
                 border-radius: 0.5vw;
@@ -205,7 +206,7 @@ body.new_post {
         }
       }
       a {
-        font-size: 1.7vw;
+        font-size: 1.4vw;
       }
     }
   }
@@ -287,6 +288,114 @@ body.show_body {
         a {
           font-size: 1vw;
         }
+    }
+  }
+}
+
+
+
+
+body.edit_post {
+  box-sizing: border-box;
+  font-family: "Circe";
+  height: auto;
+  .edit_post_wrapper {
+    .edit_post_card{
+      width: 46vw;
+      margin: 5vw auto;
+      background-color: white;
+      border-radius: 2vw;
+      padding: 3vw;
+      border: 1.2vw solid #CCFD38;
+      h1 {
+        font-size: 3vw;
+      }
+      form{
+        margin-top: 3vw;
+        .form_body {
+          display: flex;
+          .text_form {
+            display: flex;
+            flex-direction: column;
+            .field {
+              width: 20vw;
+              margin-bottom: 3vw;
+              label {
+                color: gray;
+              }
+              input {
+                border-style: none;
+                border-bottom: 0.1vw solid gray;
+                width: 19vw;
+                font-family: 'Circe';
+              }
+            }
+            .field {
+              textarea {
+                width: 19vw;
+                height: 5vw;
+                border-color: gray;
+                margin-top: 0.5vw;
+                border-radius: 0.5vw;
+                font-family: 'Circe';
+              }
+            }
+          }
+          .img_form {
+            width: 21vw;
+            height: 28.3vw;
+            border-radius: 2vw;
+            margin-left: 5vw;
+            margin-top: -4.9vw;
+            background-color: white;
+            div {
+              text-align: center;
+              img {
+                // display: none;
+              }
+              label {
+                font-size: 1.5vw;
+                font-weight: bold;
+                color: white;
+                display: none;
+              }
+
+              a {
+                img {
+                  width: 22vw;
+                  margin-top: -12vw;
+                  margin-left: -2vw;
+                }
+              }
+              input {
+                text-align: center;
+                width: 12vw;
+                color: white;
+              }
+            }
+          }
+        }
+        .actions {
+          input {
+            background-color: #CCFD38;
+            border-style: none;
+            float: right;
+            background-color: #CCFD38;
+            height: 4vw;
+            font-size: 1.7vw;
+            line-height: 4vw;
+            border-radius: 2vw;
+            width: 15vw;
+            display: block;
+            text-align: center;
+            margin-top: -0.8vw;
+            font-family: "Circe";
+          }
+        }
+      }
+      a {
+        font-size: 1.4vw;
+      }
     }
   }
 }

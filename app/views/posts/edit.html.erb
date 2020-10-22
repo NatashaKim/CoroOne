@@ -1,6 +1,14 @@
-<h1>Editing Post</h1>
+<body class="edit_post">
+   <%= render 'navbar/navbarinner' %>
+   <div class="edit_post_wrapper">
+     <div class="edit_post_card">
+      <h1>Редактирование</h1>
 
-<%= render 'form', post: @post %>
+      <%= render 'form', post: @post %>
 
-<%= link_to 'Show', @post %> |
-<%= link_to 'Back', posts_path %>
+      <%= link_to 'Открыть', @post %> |
+      <%= link_to 'Назад', posts_path %>
+    </div>
+  </div>
+  <%= render 'footer/footerinner' %>
+</body>
