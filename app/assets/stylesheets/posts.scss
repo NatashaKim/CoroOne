@@ -46,6 +46,11 @@
       a {
         color: gray;
       }
+      a:hover {
+        background-color: black;
+        border-radius: 2vw;
+        padding: 0.2vw;
+      }
     }
   }
 
@@ -109,6 +114,10 @@ body.posts {
         width: 15vw;
         display: block;
         text-align: center;
+      }
+      a:hover {
+        background-color: black;
+
       }
     }
   }

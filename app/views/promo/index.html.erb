@@ -7,7 +7,7 @@
     <p>*А если какая-то не найдется, мы поможем <br> тебе сделать её самому</p>
 
     <div class="start">
-      <%= image_tag("arrow.svg", :alt => "Стрелка") %>
+      <%= image_tag("arrow.svg", :class => "goods_floating", :alt => "Стрелка") %>
       <a href="#">Начнем!</a>
     </div>
 
@@ -91,3 +91,6 @@
 </section>
 
 <%= render 'footer/footerinner' %>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js"></script>
+<script src="promo.js"></script>
