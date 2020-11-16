@@ -1,15 +1,18 @@
 <div class="comment_content">
 	<p>
-		<b>Комментатор:</b>
-		<%= comment.commenter %>
+	  <b>Комментатар:</b>
+	  <%= User.find(comment.user_id).username %>
 	</p>
 	<p>
 		<b>Текст:</b>
 		<%= comment.body %>
 	</p>
 </div>
-<p>
-	<%= link_to 'Удалить комментарий', [comment.post, comment],
-								:confirm => 'Вы уверены?',
-								:method => :delete %>
-</p>
+
+<% if user_signed_in? && current_user.id == comment.user_id  %>
+	<p>
+	  <%= link_to 'Destroy Comment', [comment.post, comment],
+	               :confirm => 'Are you sure?',
+	               :method => :delete %>
+	</p>
+<% end %>

@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_13_173211) do
+ActiveRecord::Schema.define(version: 2020_11_16_055815) do
+
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string "data_file_name", null: false
+    t.string "data_content_type"
+    t.integer "data_file_size"
+    t.string "type", limit: 30
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["type"], name: "index_ckeditor_assets_on_type"
+  end
 
   create_table "comments", force: :cascade do |t|
     t.string "commenter"
@@ -18,7 +28,9 @@ ActiveRecord::Schema.define(version: 2020_10_13_173211) do
     t.integer "post_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id", null: false
     t.index ["post_id"], name: "index_comments_on_post_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -29,6 +41,8 @@ ActiveRecord::Schema.define(version: 2020_10_13_173211) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "author"
     t.string "image"
+    t.integer "user_id", null: false
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "subscribers", force: :cascade do |t|
@@ -37,5 +51,20 @@ ActiveRecord::Schema.define(version: 2020_10_13_173211) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "username"
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
   add_foreign_key "comments", "posts"
+  add_foreign_key "comments", "users"
+  add_foreign_key "posts", "users"
 end
