@@ -21,6 +21,8 @@
             <div class="title"><%= post.title %></div>
             <div class="content"><%= post.content.html_safe %></div>
           </div>
+          <div><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></div>
+          <div><%= post.comments.count %> <%= (post.comments.count) == 1 ? 'Comment' : 'Commentes'%></div>
           <div class="action">
             <div><%= link_to 'Открыть', post %></div>
             <div><%= link_to 'Редактировать', edit_post_path(post) %></div>

@@ -1,31 +1,12 @@
-@font-face {
-  font-family: "Circe";
-  src: url("Circe-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Circe";
-  src: url("Circe-ExtraBold.woff") format("woff");
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "Circe";
-  src: url("Circe-Light.woff") format("woff");
-}
-
 body {
-  // background-color: #fff;
+  background-color: #fff;
   color: #333;
-  // margin: 33px;
-  margin: 0vw;
-}
+  margin: 33px; }
 
 body, p, ol, ul, td {
-  font-family: "Circe";
+  font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
-  line-height: 18px;
-  box-sizing: border-box;}
+  line-height: 18px; }
 
 pre {
   background-color: #eee;
@@ -33,11 +14,10 @@ pre {
   font-size: 11px; }
 
 a {
-  color: #000;
-  text-decoration: none;}
+  color: #000; }
 
-// a:visited {
-//   color: #666; }
+a:visited {
+  color: #666; }
 
 a:hover {
   color: #fff;
