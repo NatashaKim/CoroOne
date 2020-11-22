@@ -7,7 +7,12 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    if params.has_key?(:category)
+      @category = Category.find_by_name(params[:category])
+      @posts = Post.where(category: @category)
+    else
+      @posts = Post.all
+    end
   end
 
   # GET /posts/1
@@ -72,7 +77,7 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:name, :title, :author, :content, :image)
+      params.require(:post).permit(:name, :title, :author, :content, :image, :category_id)
     end
 
     # layout 'posts'
