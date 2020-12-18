@@ -1,5 +1,5 @@
-Post.destroy_all
-puts "Destroyed everything you touch"
+#Post.destroy_all
+#puts "Destroyed everything you touch"
 
 # posts = [
 #   {
@@ -36,3 +36,14 @@ puts "Destroyed everything you touch"
 # post = Post.create(posts[0])
 
 # puts "Some magic just create a #{ post.name } with id #{ post.id }!"
+
+
+# post_types=[
+#   {    name: "portfolio"  },
+#   {    name: "reviews"  },
+#
+# ]
+# post_types.each do |pt|
+#   r=PostType.create(pt)
+#   puts "Some magic just create a #{ r.name } with id #{ r.id }!"
+# end
