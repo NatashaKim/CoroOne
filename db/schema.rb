@@ -3,7 +3,7 @@
 # incrementally modify your database, and then regenerate this schema definition.
 #
 # This file is the source Rails uses to define your schema when running `rails
-# db:schema:load`. When creating a new database, `rails db:schema:load` tends to
+# db:schema:load`. When creating a new database, rails db:schema:load tends to
 # be faster and is potentially less error prone than running all of your
 # migrations from scratch. Old migrations may fail to apply correctly if those
 # migrations use external dependencies or application code.
@@ -104,6 +104,7 @@ ActiveRecord::Schema.define(version: 2020_12_16_183540) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "username"
     t.boolean "admin", default: false
+
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
