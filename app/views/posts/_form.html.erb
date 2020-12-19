@@ -23,6 +23,7 @@
       <div class="field">
           <%= form.label :category_id %>
           <%= form.select :category_id, Category.pluck(:name, :id) %>
+          <%= form.hidden_field :post_type_id, value: PostType.find_by_name("news").id %>
       </div>
 
       <div class="field">

@@ -25,6 +25,11 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  def newshit
+    @posts = Post.all
+  end
+
+
   # GET /posts/1/edit
   def edit
   end
@@ -77,7 +82,7 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:name, :title, :author, :content, :image, :category_id)
+      params.require(:post).permit(:name, :title, :author, :content, :image, :category_id, :post_type_id)
     end
 
     # layout 'posts'

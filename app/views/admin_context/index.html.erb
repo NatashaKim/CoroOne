@@ -1,0 +1,82 @@
+<%= render 'navbar/navbarleft' %>
+
+<body>
+
+  <div class="wrapper_posts">
+<!--
+    <%= image_tag("news.svg", :alt => "Новости") %>
+    <h2>All Categories</h2>
+    <% Category.all.each do |cat| %>
+    	<%= link_to cat.name, posts_path(category: cat.name) %> <br>
+    <% end %>
+    <br>
+
+    <div class="main_section">
+      <div class="table_hidden">
+          <span>Name</span>
+          <span>Category</span>
+          <span>Title</span>
+          <span>Author</span>
+          <span>Content</span>
+      </div>
+
+<% @pt.each do |pt| %>
+Тут стоит тип поста:<%= pt.name %><br>
+<% end %>
+
+<% if @hascat %>
+  <% @cat.each do |blabla| %>
+    Тут стоит категория: <%= blabla.name %><br>
+  <% end %>
+<% end %>
+
+      <div class="posts_cards">
+        <% @posts.each do |post| %>
+<%= post.name %>
+ <%= post.category.name %>
+ <%= post.post_type ? post.post_type.name : 'нетути'%>
+ <%= post.likes.count %>
+-->
+
+<div class="new_post_link">
+  <%= link_to 'Создать пост', new_post_path %>
+  <%= link_to 'New Category', new_category_path %>
+</div>
+
+<table>
+  <thead>
+    <tr>
+       <!-- <th>Name</th> -->
+       <th>Title</th>
+       <th>Author</th>
+       <th>Category</th>
+       <!-- <th>Content</th> -->
+       <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+    <tr>
+      <!-- <td  class="posts_img"><%= link_to(image_tag(post.image.thumb.url, alt: 'Image'), post.image.url, target: '_blank') if post.image? %></td> -->
+      <!-- <td class="name"><span><%= post.name %></span></td> -->
+      <td class="title"><span><%= post.title %></span></td>
+      <td class="author"><span><%= post.author %></span></td>
+      <td class="category.name"><span><%= post.category.name %></span></td>
+      <!-- <td class="content"><span><%= post.content.html_safe %></span></td> -->
+      <td><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></td>
+      <td><%= post.comments.count %> <%= (post.comments.count) == 1 ? 'Comment' : 'Commentes'%></td>
+      <td><%= link_to 'Открыть', post %></td>
+      <td><%= link_to 'Редактировать', edit_post_path(post) %></td>
+      <td><%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  </tbody>
+</table>
+
+
+        <% end %>
+      </div>
+    <!-- </div> -->
+
+  <!-- </div> -->
+</body>
