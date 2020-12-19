@@ -1,597 +1,376 @@
 // Place all the styles related to the About controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-$mainColor: #CCFD38;
-
-@mixin card_of_person_mix {
-  padding: 1vw 1vw 0.7vw 2vw;
-  width: 17vw;
-  height: 31.5vw;
-  border-radius: 2.5vw;
-  display: flex;
-  flex-direction: column;
-  margin-right: 2vw;
+@font-face {
+  font-family: "RedRing";
+  src: url("RedRing-Regular.woff") format("woff");
+  font-weight: normal;
 }
 
-@mixin card_of_person_common_mix {
+@font-face {
+  font-family: "RedRing";
+  src: url("RedRing-Medium.woff") format("woff");
+  font-weight: bold;
+}
+
+//@font-face {
+  //font-family: "RedRing";
+//  src: url("RedRing-Light.woff") format("woff");
+//  font-weight: lighter;
+//}
+
+$mainColor: #F5F6FF;
+
+p,
+h1,
+h2,
+span {
+  color: $mainColor;
+  font-family: "RedRing", sans-serif;
+}
+
+h1 {
+  font-size: 10vw;
+  font-weight: bold;
+  margin-bottom: 13vw;
+}
+
+h2 {
+  font-size: 6.4vw;
+  font-weight: normal;
+  margin-bottom: 8vw;
+}
+
+span {
+  font-size: 1.7vw;
+  line-height: 4vw;
+}
+
+@mixin small {
+  font-size: 1.7vw;
+  line-height: 4.7vw;
+  font-weight: lighter;
+}
+
+@mixin medium {
+  font-size: 2vw;
+  line-height: 5.5vw;
+  font-weight: bold;
+}
+
+.img_one_of_two {
+  display: flex;
+  flex-direction: column;
+}
+
+.img_two_of_two {
+  width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
-@mixin card_of_person_main_mix {
-  display: flex;
-  flex-direction: column;
-}
-
-@mixin name {
-  color: white;
-  margin-top: 1.5vw;
-  font-size: 2.4vw;
-}
-
-@mixin age {
-  margin-top: -1.6vw;
-  color: white;
-  font-size: 2.4vw;
-}
-
-@mixin line {
-  background-color: white;
-  width: 3px;
-  height: 11vw;
-  margin-left: 0.2vw;
-  margin-top: -2.1vw;
-}
-
-
-
-body.about {
-  box-sizing: border-box;
-  font-family: "Circe";
-  // opacity: 0.5;
-  background-size: 100vw;
-  position: relative;
-  height: 312.5vw;
-  p {
-    line-height: 1.7vw;
-    font-size: 1.3vw;
+@mixin two_img {
+  div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    img {
+      @include small_image;
+    }
   }
-  h5 {
-    font-weight: bold;
+}
+
+@mixin span_underphoto {
+  margin-top: 5vw;
+}
+
+.big_shift {
+  margin-left: 17vw;
+}
+
+@mixin maintext_text {
+  margin-bottom: 5vw;
+}
+
+@mixin maintext_afterbigphoto {
+  margin-top: 18vw;
+}
+
+@mixin maintext {
+  @media (max-width: 475px) {
     font-size: 2vw;
+    line-height: 5.5vw;
+    font-weight: normal;
+    font-family: "RedRing", sans-serif;
   }
-  h4 {
-    font-weight: bold;
-    font-size: 3vw;
+  @media (max-width: 768px) {
+    font-size: 20vw;
+    line-height: 30vw;
+    font-weight: normal;
+    font-family: "RedRing", sans-serif;
   }
-  .small {
-    font-size: 0.85vw;
-    color: white;
-    line-height: 1.2vw;
-    margin-top: 2vw;
-  }
+}
 
-  .wrapper {
-    overflow-x: hidden;
-    // background-image: url(background_2.png);
-    height: 313vw;
-    .about_item {
-      display: flex;
-      flex-direction: row;
-      margin-top: -1.7vw;
-      >img {
-        width: 5.4vw;
-        margin-right: 2vw;
-      }
-      .about_sixth_info_menu_text {
-        p {
-          margin-top: -2.5vw;
+@mixin maintext_abovephoto {
+  margin-bottom: 11vw;
+}
+
+@mixin maintext_beforephoto {
+  margin-bottom: 15vw;
+}
+
+@mixin last_object {
+  margin-bottom: 35vw;
+}
+
+@mixin lastest_object {
+  margin-bottom: 45vw;
+}
+
+@mixin big_image {
+  width: 100%;
+}
+
+@mixin small_image {
+  width: 47.5%;
+}
+
+@mixin image_underimage {
+  margin-top: 4.5vw;
+}
+
+
+@mixin maintext_logo {
+  margin-top: 4vw;
+  margin-bottom: 16vw;
+}
+
+@mixin addedtext {
+  font-size: 1.8vw;
+  line-height: 4.8vw;
+  font-weight: normal;
+}
+
+@mixin lighter {
+  font-weight: lighter;
+}
+
+  body.about {
+    //background-image: url(IphoneStyle.png);
+    box-sizing: border-box;
+    font-family: "RedRing", sans-serif;
+    opacity: 1;
+    background-color: #1C1C1E;
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: -1;
+    margin: 5vw;
+    height: 312.5vw;
+    .logo {
+      div.logo_concept {
+        div.concept {
+          p.first_text {
+             font-size: 2.5vw;
+             line-height: 5.5vw;
+             font-weight: bold;
+             margin-bottom: 8vw;
+          }
+          p.big_shift {
+            @include maintext_text;
+            @include lighter;
+            font-size: 2vw;
+            line-height: 5.5vw;
+            margin-bottom: 33vw;
+          }
         }
-      }
-    }
-
-    h6 {
-      font-weight: bold;
-      font-size: 1.4vw;
-    }
-
-    .about_first {
-      position: relative;
-      >img {
-        width: 101vw;
-        margin-top: -5.2vw;
-      }
-      .about_first_info {
-        position: absolute;
-        top: 8vw;
-        left: 2vw;
-        display: flex;
-        flex-direction: row;
-        .about_first_info_text {
+        p {
+          @include maintext_text;
+          @include maintext;
+        }
+        p.beforephoto {
+          @include maintext_beforephoto;
+          @include maintext;
+        }
+        div.logo_blocks {
           display: flex;
           flex-direction: column;
-          >img {
-            width: 52vw;
-            margin-bottom: 1vw;
-          }
-          p {
-            width: 35vw;
-            margin-left: 1vw;
-          }
-        }
-        .about_first_info_logo {
           img {
-            width: 58vw;
-            margin-left: -7vw;
-            margin-top: 7vw;
+            @include big_image;
+          }
+          p.pp {
+            @include maintext_logo;
+            @include maintext;
+            font-size: 2vw;
           }
         }
-
-      }
-    }
-    .about_second {
-       margin-top: -7vw;
-       position: relative;
-       >img {
-         margin-left: 6vw;
-         width: 40vw;
-       }
-       .about_second_details {
-         position: absolute;
-         height: 36vw;
-         display: flex;
-         flex-direction: row;
-        .two_circles {
+        div.logo_blocks_smalllogo {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
-          height: 12vw;
-          margin-top: 9vw;
-          margin-left: 19vw;
-          div {
-            background-color: $mainColor;
-            width: 4.4vw;
-            height: 4.4vw;
-            border-radius: 5vw;
+          img {
+            width: 68%;
           }
-          div:first-child {
-            margin-left: -6vw;
+          p.pp {
+            @include maintext_logo;
+            @include maintext;
+            font-size: 2vw;
           }
         }
-        >img {
-          width: 39vw;
-          bottom: 0;
+      }
+
+      div.logo_design {
+        h2 {}
+        p.above_photo {
+          @include maintext_abovephoto;
+          @include maintext;
         }
+        img {
+          @include big_image;
+        }
+        p.under_photo {
+          @include maintext_abovephoto;
+          @include maintext_afterbigphoto;
+          @include maintext;
+        }
+        div.logo_design_img {
+          display: flex;
+          flex-direction: column;
+          @include two_img;
+          >img {
+            @include big_image;
+            @include image_underimage;
+            @include last_object;
+          }
+        }
+      }
+
+      div.logo_field {
+        h2 {}
         p {
-          width: 35vw;
-          margin-left: -2vw;
-          margin-top: 4vw;
+          @include maintext;
+          @include maintext_abovephoto;
         }
-       }
-    }
-    .about_third {
-      margin-top: 34vw;
-      padding: 5.4vw;
-      >img {
-        width: 68vw;
+        img {
+          @include big_image;
+        }
+        p.under_photo {
+          @include maintext_afterbigphoto;
+        }
+        @include last_object;
       }
-      .about_third_details {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        .about_third_details_text {
-          width: 40vw;
-          display: flex;
-          flex-direction: column;
-          margin-left: 1vw;
-          margin-top: 8vw;
-        }
-        .about_third_details_facts {
-          background-image: url(forms_for_researches.svg);
-          background-repeat: no-repeat;
-          background-size: 35vw;
-          margin-top: 5.5vw;
-          position: relative;
-          width: 31vw;
-          height: 30vw;
-          padding: 2vw;
-          h4 {
-            font-weight: bold;
-            font-size: 3vw;
-            margin-top: 1vw;
-          }
-          h5 {
-            margin-top: -3vw;
-          }
-          .facts_first {
-            width: 17vw;
-            div {
-              height: 0.1vw;
-              background-color: #000;
-              margin-top: -2.4vw;
-              margin-bottom: 1.6vw;
-            }
-            .game-designer {
-              margin-top: -4.3vw;
-              margin-left: 2vw;
-            }
-          }
-          .facts_second {
-            margin-left: 9vw;
-            h4 {
-              margin-bottom: 10.7vw;
-            }
-            h5 {
-                margin-top: -2.7vw
-            }
-          }
-          .facts_third {
-            display: flex;
-            flex-direction: column;justify-content: flex-end;
-            margin-right: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-end;
-            margin-top: -1vw;
-          }
-        }
-      }
-    }
-    .about_fourth {
-      margin-left: 6vw;
-      margin-top: 6vw;
-      >img {
-        width: 79vw;
-      }
-      .about_fourth_details {
-        display: flex;
-        flex-direction: row;
-        .about_fourth_details_text {
-          display: flex;
-          flex-direction: column;
-          margin-top: 3vw;
-          >div {
-            width: 20vw;
-          }
-          p {
-            line-height: 2vw;
-            margin-top: -2.5vw;
-          }
-          .about_fourth_details_text_add {
-            margin-top: -2vw;
-          }
-        }
-        .about_fourth_details_person {
-          margin-top: 13.5vw;
-          margin-left: 8vw;
-          display: flex;
-          flex-direction: row;
-        }
-        >img {
-          width: 17vw;
-          margin-left: -100vw;
-          margin-top: 31vw;
-        }
-        .card_of_person:first-child {
-           @include card_of_person_mix;
-           background-color: #000;
-           >img {
-             margin-top: 3vw;
-             width: 14vw;
-           }
-           .card_of_person_common {
-             @include card_of_person_common_mix;
-             >img {
-               width: 14vw;
-               margin-left: -3vw;
-             }
-             .card_of_person_main {
-               @include card_of_person_main_mix;
-               h4:first-child {
-                 @include name;
-               }
-               .age {
-                 @include age;
-               }
-               div {
-                 @include line;
-               }
-             }
-           }
-        }
 
-        .card_of_person:nth-child(2) {
-           @include card_of_person_mix;
-           background-color: $mainColor;
-           >img {
-             margin-top: 0.7vw;
-              margin-left: -0.5vw;
-              width: 17.5vw;
-           }
-           .card_of_person_common {
-             @include card_of_person_common_mix;
-             >img {
-               width: 14vw;
-               margin-left: -3vw;
-             }
-             .card_of_person_main {
-               @include card_of_person_main_mix;
-               h4:first-child {
-                 @include name;
-                 color: black;
-               }
-               .age {
-                 @include age;
-                 color: black;
-               }
-               div {
-                 @include line;
-                 background-color: black;
-               }
-             }
-           }
-           p {
-             color: black;
-           }
+      div.examples_of_using {
+        h2{}
+        p {
+          @include maintext;
+          @include maintext_abovephoto;
         }
-
-
-        .card_of_person:nth-child(3) {
-           @include card_of_person_mix;
-           background-color: #000;
-           >img {
-             margin-top: 0.5vw;
-             width: 17vw;
-           }
-           .card_of_person_common {
-             @include card_of_person_common_mix;
-             >img {
-               width: 14vw;
-               margin-left: -8vw;
-             }
-             .card_of_person_main {
-               @include card_of_person_main_mix;
-               h4:first-child {
-                 @include name;
-               }
-               .age {
-                 @include age;
-               }
-               div {
-                 @include line;
-               }
-             }
-           }
-        }
-      }
-    }
-
-
-    .about_fifth {
-      margin-left: 6vw;
-      height: 80vw;
-      div.stripe {
-       background-color: #000;
-       height: 0.2vw;
-       width: 45vw;
-       right: 0;
-           margin-left: 60vw;
-       display: flex;
-       flex-direction: column;
-      }
-      >img {
-        margin-top: 5.3vw;
-        width: 65vw;
-      }
-      .user_stories {
-        width: 54vw;
-        margin-top: 4.2vw;
-        background-color: $mainColor;
-        border-radius: 15vw;
-        padding: 2vw 7vw;
-        display: flex;
-        flex-direction: row;
-        margin-bottom: 4vw;
-        margin-left: 11vw;
-        height: 9.5vw;
-        .big_numbers {
-          font-size: 7vw;
-          font-weight: bold;
-          margin-right: 2.6vw;
-          margin-top: 4.5vw;
-        }
-        .user_stories_text {
-          padding-left: 2vw;
-          height: 9vw;
-          display: flex;
-          flex-direction: column;
-          border-left: 3px solid #000;
+        div.img_one_of_two {
           div {
-            display: flex;
-            flex-direction: row;
-            align-items: baseline;
-            margin-top: -1.2vw;
-          }
-          div:not(:first-child) {
-              margin-top: -3.9vw;
-          }
-            .question {
-               font-size: 2vw;
-               margin-right: 1vw;
-            }
-          }
-        }
-        .user_stories_two {
-          background-color: white;
-          border: 3px solid #000;
-          margin-left: 33vw;
-        }
-        .user_stories_three {
-          margin-left: 21vw;
-        }
-      }
-      .about_sixth {
-        background-image: url(form_for_function.svg);
-        background-repeat: no-repeat;
-        background-size: 101vw;
-        height: 110vw;
-        margin-top: 8vw;
-        >img {
-          margin-left: 3vw;
-          width: 87vw;
-          margin-top: 12vw;
-        }
-          .about_sixth_info {
-            display: flex;
-            flex-direction: row;
-            >img {
-              width: 24vw;
-              margin-top: 15vw;
-            }
-            .about_sixth_info_m {
-              margin-right: 18vw;
-              margin-left: 3vw;
-              margin-top: 5vw;
-              border: 3px solid #000;
-              border-radius: 4vw;
-              background-color: white;
-              padding: 3vw 2.4vw;
-              .bout_sixth_info_menu {
-                display: flex;
-                flex-direction: column;
-              }
-            }
-          }
-      }
-      .about_seventh {
-        margin-left: 6vw;
-        height: 75vw;
-        >img {
-        width: 47vw;
-        }
-        .about_seventh_common {
-          background-image: url(form_for_mechanics.svg);
-          background-repeat: no-repeat;
-          background-size: 98vw;
-          margin-top: 6vw;
-          padding-top: 2vw;
-          height: 60vw;
-          .about_seventh_info {
-            display: flex;
-            flex-direction: column;
-            div.blocks {
-              margin-bottom: 1.1vw;
-              display: flex;
-              flex-direction: row;
-            }
-            div.blocks:first-child {
-              margin-left: 7vw;
-            }
-            div.blocks:nth-child(2){
-              margin-left: 31vw;
-              div {
-                margin-right: 10vw;
-              }
-            }
-            div.blocks:nth-child(3){
-              margin-left: 25vw;
-            }
-            div.blocks:nth-child(4){
-              margin-left: 0vw;
-              div {
-                margin-right: 25vw;
-              }
-            }
-            div.blocks:nth-child(5){
-              margin-left: 16vw;
-              div:first-child {
-                margin-right: 19vw;
-              }
-              div:nth-child(2) {
-                margin-right: 4vw;
-              }
-            }
-            div.blocks:nth-child(6){
-              margin-left: 33vw;
-            }
-            div.blocks:nth-child(7){
-              margin-left: 14vw;
-            }
-            .part_of_mechanics {
-              padding: 0vw 1vw;
-              border: 0.2vw solid #000;
-              border-radius: 10vw;
-              p {
-                font-size: 1.7vw;
-                margin: 1.1vw;
-              }
-            }
-            }
-          }
-        }
-        footer  {
-          height: 26.5vw;
-          color: white;
-          background-color: black;
-          opacity: 1;
-          display: flex;
-          margin-top: -8vw;
-          .left {
             img {
-              margin: 12.3vw 0 0 1.5vw;
+              @include big_image;
+            }
+            span {
+              @include span_underphoto;
+            }
+            img:last-of-type {
+              @include image_underimage;
             }
           }
-          .right {
-            display: flex;
-            flex-direction: column;
-            width: 79vw;
-            .main_menu {
-              align-self: flex-end;
-              width: 21.5vw;
-              display: flex;
-              margin: 3.3vw 2vw 1.4vw;
-              justify-content: space-between;
-              a {
-                color: white;
-                font-size: 1.2vw;
-              }
+
+        }
+        div.img_two_of_two {
+          @include image_underimage;
+          width: 100%;
+          justify-content: space-between;
+          div {
+            width: 47.5%;
+            img {
+              @include big_image;
             }
-            .about_sections {
-              border-top: 0.2vw solid white;
-              padding: 1.5vw 25vw 0 0;
-              display: flex;
-              justify-content: space-between;
-              a {
-                color: white;
-                font-size: 1.2vw;
-              }
+            span {
+              @include span_underphoto;
             }
-            .add {
-              margin: 8vw 2vw 0 3vw;
-              display: flex;
-              justify-content: space-between;
-              span {
-                font-size: 4.6vw;
-                line-height: 7vw;
-              }
-              a {
-                line-height: 4.8vw;
-                padding: 0.1vw 1.6vw;
-                border: 0.2vw solid white;
-                border-radius: 3vw;
-                color: white;
-                font-size: 2vw;
-                height: 4.7vw;
-                width: 10.7vw;
-                text-align: center;
-              }
+          }
+          @include lastest_object;
+        }
+
+      }
+    }
+
+    section.typography {
+      h1 {}
+      h2 {}
+      p {
+        @include maintext;
+        @include maintext_abovephoto;
+      }
+      div.two_fonts {
+        display: flex;
+        flex-direction:column;
+      }
+      div.kinds_of_fonts {
+        p.medium {
+          @include medium;
+          margin-bottom: 5vw;
+        }
+        img {
+          width: 70%;
+          @include maintext_abovephoto;
+        }
+      }
+      div.our_font {
+        img {
+          @include big_image;
+          @include last_object;
+        }
+      }
+
+      div.ratios {
+        h2 {}
+        >p {
+          @include maintext;
+          @include maintext_abovephoto;
+        }
+        div.img_one_of_two {
+          div {
+            p {}
+            img {
+              @include big_image;
+            }
+            p.small {
+              @include maintext_abovephoto;
+              @include lighter;
             }
           }
         }
+        @include last_object;
+      }
 
-  }
+    }
+
+    section.composition {
+      h1 {}
+      h2 {}
+      p {
+        @include maintext;
+        @include maintext_abovephoto;
+      }
+    }
 
 
+
+
+
+
+
+
+
+}
+
+
+@media (max-width: 768px) {
 
 }
