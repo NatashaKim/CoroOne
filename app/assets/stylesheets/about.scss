@@ -19,33 +19,6 @@
 //  font-weight: lighter;
 //}
 
-$mainColor: #F5F6FF;
-
-p,
-h1,
-h2,
-span {
-  color: $mainColor;
-  font-family: "RedRing", sans-serif;
-}
-
-h1 {
-  font-size: 10vw;
-  font-weight: bold;
-  margin-bottom: 13vw;
-}
-
-h2 {
-  font-size: 6.4vw;
-  font-weight: normal;
-  margin-bottom: 8vw;
-}
-
-span {
-  font-size: 1.7vw;
-  line-height: 4vw;
-}
-
 @mixin small {
   font-size: 1.7vw;
   line-height: 4.7vw;
@@ -58,16 +31,20 @@ span {
   font-weight: bold;
 }
 
-.img_one_of_two {
-  display: flex;
-  flex-direction: column;
+@mixin h1 {
+  font-size: 10vw;
+  font-weight: bold;
+  margin-bottom: 13vw;
+  color: $mainColor;
+  font-family: "RedRing", sans-serif;
 }
 
-.img_two_of_two {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+@mixin h2 {
+  font-size: 6.4vw;
+  font-weight: normal;
+  margin-bottom: 8vw;
+  color: $mainColor;
+  font-family: "RedRing", sans-serif;
 }
 
 @mixin two_img {
@@ -82,7 +59,7 @@ span {
   }
 }
 
-@mixin span_underphoto {
+@mixin p_underphoto {
   margin-top: 5vw;
 }
 
@@ -99,18 +76,11 @@ span {
 }
 
 @mixin maintext {
-  @media (max-width: 475px) {
     font-size: 2vw;
     line-height: 5.5vw;
     font-weight: normal;
     font-family: "RedRing", sans-serif;
-  }
-  @media (max-width: 768px) {
-    font-size: 20vw;
-    line-height: 30vw;
-    font-weight: normal;
-    font-family: "RedRing", sans-serif;
-  }
+    color: white;
 }
 
 @mixin maintext_abovephoto {
@@ -157,6 +127,22 @@ span {
   font-weight: lighter;
 }
 
+.img_one_of_two {
+  display: flex;
+  flex-direction: column;
+}
+
+.img_two_of_two {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+$mainColor: #F5F6FF;
+
+
+
   body.about {
     //background-image: url(IphoneStyle.png);
     box-sizing: border-box;
@@ -169,198 +155,228 @@ span {
     z-index: -1;
     margin: 5vw;
     height: 312.5vw;
-    .logo {
-      div.logo_concept {
-        div.concept {
-          p.first_text {
-             font-size: 2.5vw;
-             line-height: 5.5vw;
-             font-weight: bold;
-             margin-bottom: 8vw;
+    div.wrapper {
+      position: relative;
+      .logo {
+        div.logo_concept {
+          div.concept {
+            p.first_text {
+               font-size: 2.5vw;
+               line-height: 5.5vw;
+               font-weight: bold;
+               margin-bottom: 8vw;
+            }
+            p.big_shift {
+              @include maintext_text;
+              @include lighter;
+              font-size: 2vw;
+              line-height: 5.5vw;
+              margin-bottom: 33vw;
+            }
           }
-          p.big_shift {
+          h1 {
+            @include h1;
+          }
+          h2 {
+            @include h2;
+          }
+          p {
             @include maintext_text;
-            @include lighter;
-            font-size: 2vw;
-            line-height: 5.5vw;
-            margin-bottom: 33vw;
+            @include maintext;
+          }
+          p.beforephoto {
+            @include maintext_beforephoto;
+            @include maintext;
+          }
+          div.logo_blocks {
+            display: flex;
+            flex-direction: column;
+            img {
+              @include big_image;
+            }
+            p.pp {
+              @include maintext_logo;
+              @include maintext;
+            }
+          }
+          div.logo_blocks_smalllogo {
+            display: flex;
+            flex-direction: column;
+            img {
+              width: 68%;
+            }
+            p.pp {
+              @include maintext_logo;
+              @include maintext;
+            }
           }
         }
-        p {
-          @include maintext_text;
-          @include maintext;
-        }
-        p.beforephoto {
-          @include maintext_beforephoto;
-          @include maintext;
-        }
-        div.logo_blocks {
-          display: flex;
-          flex-direction: column;
+
+        div.logo_design {
+          h2 {
+            @include h2
+          }
+          p.above_photo {
+            @include maintext_abovephoto;
+            @include maintext;
+          }
           img {
             @include big_image;
           }
-          p.pp {
-            @include maintext_logo;
+          p.under_photo {
+            @include maintext_abovephoto;
+            @include maintext_afterbigphoto;
             @include maintext;
-            font-size: 2vw;
+          }
+          div.logo_design_img {
+            display: flex;
+            flex-direction: column;
+            @include two_img;
+            >img {
+              @include big_image;
+              @include image_underimage;
+              @include last_object;
+            }
           }
         }
-        div.logo_blocks_smalllogo {
-          display: flex;
-          flex-direction: column;
-          img {
-            width: 68%;
+
+        div.logo_field {
+          h2 {
+            @include h2
           }
-          p.pp {
-            @include maintext_logo;
+          p {
             @include maintext;
-            font-size: 2vw;
+            @include maintext_abovephoto;
           }
+          img {
+            @include big_image;
+          }
+          p.under_photo {
+            @include maintext_afterbigphoto;
+          }
+          @include last_object;
+        }
+
+        div.examples_of_using {
+          h2{
+            @include h2
+          }
+          p {
+            @include maintext;
+            @include maintext_abovephoto;
+          }
+          div.img_one_of_two {
+            div {
+              img {
+                @include big_image;
+              }
+              p {
+                @include p_underphoto;
+              }
+              img:last-of-type {
+                @include image_underimage;
+              }
+              p:last-of-type {
+                @include p_underphoto;
+              }
+            }
+
+          }
+          div.img_two_of_two {
+            @include image_underimage;
+            width: 100%;
+            justify-content: space-between;
+            div {
+              width: 47.5%;
+              img {
+                @include big_image;
+              }
+              span {
+                @include p_underphoto;
+              }
+            }
+            @include lastest_object;
+          }
+
         }
       }
 
-      div.logo_design {
-        h2 {}
-        p.above_photo {
-          @include maintext_abovephoto;
+      section.typography {
+        h1 {
+          @include h1;
+        }
+        h2 {
+          @include h2;
+        }
+        p {
           @include maintext;
-        }
-        img {
-          @include big_image;
-        }
-        p.under_photo {
           @include maintext_abovephoto;
-          @include maintext_afterbigphoto;
-          @include maintext;
         }
-        div.logo_design_img {
+        div.two_fonts {
           display: flex;
-          flex-direction: column;
-          @include two_img;
-          >img {
+          flex-direction:column;
+        }
+        div.kinds_of_fonts {
+          p.medium {
+            @include medium;
+            margin-bottom: 5vw;
+          }
+          img {
+            width: 70%;
+            @include maintext_abovephoto;
+          }
+        }
+        div.our_font {
+          img {
             @include big_image;
-            @include image_underimage;
             @include last_object;
           }
         }
-      }
 
-      div.logo_field {
-        h2 {}
-        p {
-          @include maintext;
-          @include maintext_abovephoto;
-        }
-        img {
-          @include big_image;
-        }
-        p.under_photo {
-          @include maintext_afterbigphoto;
-        }
-        @include last_object;
-      }
-
-      div.examples_of_using {
-        h2{}
-        p {
-          @include maintext;
-          @include maintext_abovephoto;
-        }
-        div.img_one_of_two {
-          div {
-            img {
-              @include big_image;
-            }
-            span {
-              @include span_underphoto;
-            }
-            img:last-of-type {
-              @include image_underimage;
+        div.ratios {
+          h2 {
+              @include h2;
+          }
+          >p {
+            @include maintext;
+            @include maintext_abovephoto;
+          }
+          div.img_one_of_two {
+            div {
+              p {}
+              img {
+                @include big_image;
+              }
+              p.small {
+                @include maintext_abovephoto;
+                @include lighter;
+              }
             }
           }
-
-        }
-        div.img_two_of_two {
-          @include image_underimage;
-          width: 100%;
-          justify-content: space-between;
-          div {
-            width: 47.5%;
-            img {
-              @include big_image;
-            }
-            span {
-              @include span_underphoto;
-            }
-          }
-          @include lastest_object;
-        }
-
-      }
-    }
-
-    section.typography {
-      h1 {}
-      h2 {}
-      p {
-        @include maintext;
-        @include maintext_abovephoto;
-      }
-      div.two_fonts {
-        display: flex;
-        flex-direction:column;
-      }
-      div.kinds_of_fonts {
-        p.medium {
-          @include medium;
-          margin-bottom: 5vw;
-        }
-        img {
-          width: 70%;
-          @include maintext_abovephoto;
-        }
-      }
-      div.our_font {
-        img {
-          @include big_image;
           @include last_object;
         }
+
       }
 
-      div.ratios {
-        h2 {}
-        >p {
+      section.composition {
+        h1 {
+          @include h1;
+        }
+        h2 {
+          @include h2;
+        }
+        div.elements {
+          div {}
+        }
+        p {
           @include maintext;
           @include maintext_abovephoto;
         }
-        div.img_one_of_two {
-          div {
-            p {}
-            img {
-              @include big_image;
-            }
-            p.small {
-              @include maintext_abovephoto;
-              @include lighter;
-            }
-          }
-        }
-        @include last_object;
       }
 
+
+
     }
-
-    section.composition {
-      h1 {}
-      h2 {}
-      p {
-        @include maintext;
-        @include maintext_abovephoto;
-      }
-    }
-
-
 
 
 
@@ -372,5 +388,8 @@ span {
 
 
 @media (max-width: 768px) {
+
+
+
 
 }
