@@ -12,6 +12,18 @@
     <%= f.text_field :username, autocomplete: "username" %>
   </div>
 
+  <div class="img_form">
+
+  <div>
+    <%= image_tag("photo_form_white.svg", :alt => "Фото") %>
+    <%= f.label "Добавьте изображение" %>
+    <%= link_to(image_tag(:image.thumb.url, alt: 'Image'), :image.url, target: '_blank') if :image? %>
+    <br>
+    <%= f.file_field :image %>
+  </div>
+
+  </div>
+
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>

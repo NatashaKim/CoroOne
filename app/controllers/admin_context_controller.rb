@@ -7,6 +7,7 @@ class AdminContextController < ApplicationController
     @categories = Category.all
     @users = User.all
     @pt=PostType.all
+    @user = User.find(current_user.id)
 
     @hascat=params.has_key?(:somefilter)
     if @hascat

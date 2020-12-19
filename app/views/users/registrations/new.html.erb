@@ -16,6 +16,18 @@
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
+  <div class="img_form">
+
+      <div>
+        <%= image_tag("photo_form_white.svg", :alt => "Фото") %>
+        <%= form.label "Добавьте изображение" %>
+        <%= link_to(image_tag(:image.thumb.url, alt: 'Image'), :image.url, target: '_blank') if :image? %>
+        <br>
+        <%= form.file_field :image %>
+      </div>
+
+  </div>
+
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
