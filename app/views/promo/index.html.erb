@@ -92,7 +92,10 @@
 </section>
 
 <%= link_to "Пользователи", users_path %>
-<%= link_to "Админка", admin_context_path %>
+
+<% if user_signed_in? %>
+<%= link_to "Админка", admin_context_path %> |
+<% end %>
 
 <%= render 'footer/footerinner' %>
 

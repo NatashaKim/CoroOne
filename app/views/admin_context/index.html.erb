@@ -1,10 +1,9 @@
 <%= render 'navbar/navbarleft' %>
-Админка
 
 <body>
 
   <div class="wrapper_posts">
-
+<!--
     <%= image_tag("news.svg", :alt => "Новости") %>
     <h2>All Categories</h2>
     <% Category.all.each do |cat| %>
@@ -37,34 +36,47 @@
  <%= post.category.name %>
  <%= post.post_type ? post.post_type.name : 'нетути'%>
  <%= post.likes.count %>
+-->
 
-        <!-- <div class="one_card">
-          <div class="info">
-            <div  class="posts_img"><%= link_to(image_tag(post.image.thumb.url, alt: 'Image'), post.image.url, target: '_blank') if post.image? %></div>
-            <div class="name"><%= post.name %></div>
-            <div class="category.name"><%= post.category.name %></div>
-            <div class="title"><%= post.title %></div>
-            <div class="content"><%= post.content.html_safe %></div>
-          </div>
-          <div><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></div>
-          <div><%= post.comments.count %> <%= (post.comments.count) == 1 ? 'Comment' : 'Commentes'%></div>
-          <div class="action">
-            <div><%= link_to 'Открыть', post %></div>
-            <div><%= link_to 'Редактировать', edit_post_path(post) %></div>
-            <div><%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-          </div>
-        </div> -->
+<div class="new_post_link">
+  <%= link_to 'Создать пост', new_post_path %>
+  <%= link_to 'New Category', new_category_path %>
+</div>
+
+<table>
+  <thead>
+    <tr>
+       <!-- <th>Name</th> -->
+       <th>Title</th>
+       <th>Author</th>
+       <th>Category</th>
+       <!-- <th>Content</th> -->
+       <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+
+
+    <tr>
+      <!-- <td  class="posts_img"><%= link_to(image_tag(post.image.thumb.url, alt: 'Image'), post.image.url, target: '_blank') if post.image? %></td> -->
+      <!-- <td class="name"><span><%= post.name %></span></td> -->
+      <td class="title"><span><%= post.title %></span></td>
+      <td class="author"><span><%= post.author %></span></td>
+      <td class="category.name"><span><%= post.category.name %></span></td>
+      <!-- <td class="content"><span><%= post.content.html_safe %></span></td> -->
+      <td><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></td>
+      <td><%= post.comments.count %> <%= (post.comments.count) == 1 ? 'Comment' : 'Commentes'%></td>
+      <td><%= link_to 'Открыть', post %></td>
+      <td><%= link_to 'Редактировать', edit_post_path(post) %></td>
+      <td><%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  </tbody>
+</table>
+
 
         <% end %>
       </div>
-    </div>
+    <!-- </div> -->
 
-    <br>
-
-    <div class="new_post_link">
-      <%= link_to 'Создать пост', new_post_path %>
-      <%= link_to 'New Category', new_category_path %>
-    </div>
-
-  </div>
+  <!-- </div> -->
 </body>
