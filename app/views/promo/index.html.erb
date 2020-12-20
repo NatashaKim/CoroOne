@@ -1,95 +1,164 @@
 <%= render 'navbar/navbarinner' %>
+<body class="promo">
 
-<section class="first">
-  <%= image_tag("spot_header.svg", :alt => "Пятно1") %>
-  <div class="left">
+<div class="wrapper">
+  <section class="begining">
+    <div class="begin">
+      <%= image_tag("imgcover1.svg", :alt => "Логотип") %>
+      <%= image_tag("cover1.svg", :alt => "Логотип") %>
+      <div class="begin_text">
+        <h1>Найдутся любые&nbsp;игры</h1>
+        <p>**А&nbsp;если какая-то не&nbsp;найдется, мы&nbsp;поможем тебе сделать её&nbsp;самому</p>
+        <button type="button" name="button">Вступить</button>
+      </div>
+    </div>
+    <div class="about">
+      <p>CoroOne&nbsp;&mdash; медиа-сервис, созданный специально для комьюнити геймеров
+и&nbsp;разработчиков. Мы&nbsp;верим в&nbsp;то, что именно обьединившись, любители видеоигр и&nbsp;гейм-дизайнеры смогут воплотить все самые смелые идеи и&nbsp;фантазии.</p>
+    </div>
+    <div class="advantages">
+      <div class="advantage">
+          <%= image_tag("logographik.svg", :alt => "Логотип") %>
+          <h3>Публикации</h3>
+          <p>Узнавайте актуальные новости, читайте статьи о&nbsp;жизни разработчиков, смотрите обзоры на&nbsp;новые и&nbsp;культовые игры</p>
+      </div>
+      <div class="advantage">
+          <%= image_tag("thing2.svg", :alt => "Логотип") %>
+          <h3>Публикации</h3>
+          <p>Участвуйте в&nbsp;обсуждениях концепции визуала: предлагайте свои идеи и&nbsp;получайте фидбек от&nbsp;других пользователей</p>
+      </div>
+      <div class="advantage">
+          <%= image_tag("thing3.svg", :alt => "Логотип") %>
+          <h3>Публикации</h3>
+          <p>Отгадывайте загадки, делитесь прогрессом по&nbsp;своему проекту и&nbsp;получайте за&nbsp;это ачивки и&nbsp;баллы для продвижения профиля</p>
+      </div>
+    </div>
+  </section>
 
-    <%= image_tag("font_h1.svg", :alt => "Заголовок") %>
-    <p>*А если какая-то не найдется, мы поможем <br> тебе сделать её самому</p>
+  <section class="defenition">
+    <h2>Почему CoroOne?</h2>
+    <div class="defenition_block">
+      <div class="defenition_text">
+        <div class="defenition_text_th">
+          <h4>Вежливость</h4>
+          <p>Модераторы CoroOne тщательно следят за&nbsp;тем, чтобы в&nbsp;обсуждениях появлялась только обьективная критика, а&nbsp;в&nbsp;случае конфликтов помогают решить разногласия</p>
+        </div>
+        <div class="defenition_text_th">
+          <h4>Вдохновение</h4>
+          <p>Наблюдайте за&nbsp;тем, как создается инди-игра в&nbsp;реальном времени. Учитесь и&nbsp;черпайте идеи.</p>
+        </div>
+        <div class="defenition_text_th">
+          <h4>Поддержка</h4>
+          <p>Забыли чит-код? Не&nbsp;получается докрутить концепцию? Задайте вопрос и&nbsp;вам обязательно помогут</p>
+        </div>
+        <div class="defenition_text_last">
+          <h4>Мотивация</h4>
+          <p>Участвуйте в&nbsp;рейтинге инди-проектов. Мы&nbsp;создаем еженедельный список самых активных разработчиков, чтобы помочь вам найти спонсоров.</p>
+        </div>
+      </div>
+      <%= image_tag("defimage.svg", :alt => "Логотип") %>
+    </div>
+  </section>
 
-    <div class="start">
-      <%= image_tag("arrow.svg", :class => "goods_floating", :alt => "Стрелка") %>
-      <a href="#">Начнем!</a>
+
+  <section class="category">
+    <%= image_tag("defendimage.svg", :alt => "Логотип") %>
+    <div class="category_13">
+      <div class="category_13_text">
+        <h4>На&nbsp;любой вкус и&nbsp;цвет</h4>
+        <p>Именно столько категорий статей вы&nbsp;сможете найти в&nbsp;CoroOne. Анонсы, релизы, чит-коды, обзоры и&nbsp;многое другое в&nbsp;одном месте.</p>
+      </div>
+      <div class="category_13_img">
+        <%= image_tag("13.svg", :alt => "Логотип") %>
+        <%= image_tag("category.svg", :alt => "Логотип") %>
+      </div>
+    </div>
+    <div class="category_kinds">
+      <div class="first_part">
+        <div class="kind_of_category">
+          <p>аркады</p>
+        </div>
+        <div class="kind_of_category">
+          <p>головоломки</p>
+        </div>
+        <div class="kind_of_category">
+          <p>симуляторы</p>
+        </div>
+        <div class="kind_of_category">
+          <p>стратегии</p>
+        </div>
+      </div>
+      <div class="second_part">
+        <div class="kind_of_category">
+          <p>приключения</p>
+        </div>
+        <div class="kind_of_category">
+          <p>ролевые</p>
+        </div>
+        <div class="kind_of_category">
+          <p>спортивные</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fichi_for_desctop">
+
+  </section>
+
+  <section class="fichi_for_mobile">
+    <div class="first_fich">
+      <div class="first_fich_img">
+        <%= image_tag("firstfich.svg", :alt => "Логотип") %>
+      </div>
+      <div class="first_fich_text">
+        <p>Участвуйте в&nbsp;рейтинге инди-проектов. CoroOne формирует еженедельный список самых активных разработчиков, чтобы помочь вам найти спонсоров.</p>
+      </div>
     </div>
 
-  </div>
-
-  <div class="right">
-    <%= image_tag("camel.svg", :alt => "Верблюд") %>
-  </div>
-</section>
-
-<section class="second">
-  <%= image_tag("spot_2.svg", :alt => "Пятно2") %>
-  <%= image_tag("arrow.svg", :alt => "Стрелка2") %>
-  <div class="left">
-    <%= image_tag("font_h2.svg", :alt => "Медиа сервис для...") %>
-    <p>Первая платформа объединяющая инди-разработчиков и&nbsp;любителей видео-игр.</p>
-  </div>
-  <div class="right">
-    <%= image_tag("iphone.png", :alt => "Экран") %>
-  </div>
-  <div class="bottom">
-    <span>Новости</span>
-    <span>Статьи</span>
-    <span>Обзоры</span>
-    <span>Форум</span>
-    <span>Коллекции</span>
-    <span>Календарь</span>
-  </div>
-</section>
-
-<section class="third">
-  <div class="left">
-    <%= image_tag("font_h3_1.svg", :alt => "Заголовки") %>
-    <%= image_tag("font_h3_2.svg", :alt => "Заголовки") %>
-    <%= image_tag("font_h3_3.svg", :alt => "Заголовки") %>
-  </div>
-  <div class="right">
-    <%= image_tag("font_h3_4.svg", :alt => "Заголовки") %>
-    <%= image_tag("font_h3_5.svg", :alt => "Заголовки") %>
-  </div>
-</section>
-
-<section class="fourth">
-  <div class="left">
-    <%= image_tag("iphone_2.png", :alt => "Экраны2") %>
-  </div>
-  <div class="right">
-    <div class="plan_1">
-      <span>1</span>
-      <p>Саздайте аккаут: так вы&nbsp;сможете получить доступ к&nbsp;форуму, ачивкам, коллекциям и&nbsp;другим функциям сервиса</p>
-      <%= image_tag("lamp.svg", :alt => "Лампа") %>
+    <div class="second_fich">
+      <div class="second_fich_img">
+        <%= image_tag("secondfich.svg", :alt => "Логотип") %>
+      </div>
+      <div class="second_fich_text">
+        <p>Геймификация и&nbsp;ачивки прямо в&nbsp;интерфейсе. Отгадывай загадки, узнавай интересные факты из&nbsp;мира видео-игр, получай баллы.</p>
+      </div>
     </div>
 
-    <div class="plan_2">
-      <span>2</span>
-      <p>Отметьте категории, на&nbsp;которые вы&nbsp;хотите подписаться: так мы&nbsp;сможем создать для вас персонализированную ленту</p>
-      <%= image_tag("book.svg", :alt => "Книга") %>
+    <div class="third_fich">
+      <div class="third_fich_img">
+        <%= image_tag("thirdfich.svg", :alt => "Логотип") %>
+      </div>
+      <div class="third_fich_text">
+        <p>Участвуйте в&nbsp;рейтинге инди-проектов. CoroOne формирует еженедельный список самых активных разработчиков, чтобы помочь вам найти спонсоров.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="plan_3">
-      <span>3</span>
-      <p>Настройте аккаунт под себя: заполните свой профиль, выберите рижим, в&nbsp;котором вам комфортнее: темную или светлую тему</p>
-      <%= image_tag("theme.svg", :alt => "Темы") %>
+  <section class="sell">
+    <div class="sellback">
+      <%= image_tag("sell_back.svg", :alt => "Логотип") %>
     </div>
-
-    <div class="plan_4">
-      <span>4</span>
-      <p>Разрешите медиа-сервису доступ к&nbsp;камере и&nbsp;галерее: так вы&nbsp;сможете создавать красочные посты и&nbsp;делиться ими с&nbsp;друзьями</p>
-      <%= image_tag("photo.svg", :alt => "Фото") %>
+    <div class="sellback_info">
+      <div class="sellback_text">
+        <h3>Присоединяйся к&nbsp;нашему дружному коммьюнити</h3>
+        <p>Вступайете в&nbsp;наше сообщество на&nbsp;сайте или скачивайте наше приложение CoroOne в&nbsp;Google play и&nbsp;App Store</p>
+        <button class="sell_button" type="button" name="button">Вступить</button>
+      </div>
+      <div class="sellback_text_img">
+        <%= image_tag("peopleimg.svg", :alt => "Логотип") %>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="fifth">
-  <%= image_tag("font_h3_6.svg", :alt => "Заголовки") %>
-  <div class="field">
-    <%# <%= link_to "About", about_path %>
-    <h4 id="email">Узнать раньше всех о запуске проекта:</h4>
-    <%= render "subscribers/form" %>
-  </div>
-</section>
+
+
+
+
+ </div>
+
+</body>
+<%= render 'footer/footerinner' %>
 
 <%= link_to "Пользователи", users_path %>
 
@@ -97,7 +166,6 @@
 <%= link_to "Админка", admin_context_path %> |
 <% end %>
 
-<%= render 'footer/footerinner' %>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js"></script>
 <script src="promo.js"></script>

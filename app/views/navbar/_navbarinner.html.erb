@@ -1,10 +1,34 @@
 <%= stylesheet_link_tag "navbarinner" %>
 <nav>
-  <%= image_tag("logo.svg", :alt => "логотип") %>
-  <div class="">
-    <%= link_to "О нас", about_path %>
-    <%= link_to "Публикации", posts_path %>
-    <%= link_to 'Создать пост', new_post_path %>
-    <a href="#email">Вступить</a>   
+  <div class="high_width">
+    <div class="graphiklogo">
+        <%= image_tag("logographik.svg", :alt => "логотип") %>
+    </div>
+    <div class="fontlogo">
+        <%= image_tag("bluelogo.svg", :alt => "логотип") %>
+    </div>
+
+    <div class="">
+      <div class="">
+        <%= link_to "О нас", about_path %>
+        <%= link_to "Преимущества", posts_path %>
+        <%= link_to 'Контакты', new_post_path %>
+        <a href="#email">Вступить</a>
+      </div>
+      <div class="menul">
+        <%= image_tag("menu.svg", :alt => "логотип") %>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu_mobile">
+    <div class="cancel">
+      <%= image_tag("menu.svg", :alt => "логотип") %>
+    </div>
+    <div class="menu_mobile_th">
+      <%= link_to "О нас", about_path %>
+      <%= link_to "Преимущества", posts_path %>
+      <%= link_to 'Контакты', new_post_path %>
+    </div>
   </div>
 </nav>
