@@ -1,82 +1,130 @@
-<%= render 'navbar/navbarleft' %>
-
 <body>
+  <%= render 'navbar/navbarleft' %>
+  <div class="please">
 
   <div class="wrapper_posts">
-<!--
-    <%= image_tag("news.svg", :alt => "Новости") %>
-    <h2>All Categories</h2>
-    <% Category.all.each do |cat| %>
-    	<%= link_to cat.name, posts_path(category: cat.name) %> <br>
-    <% end %>
+
+      <div class="new_post_link">
+        <%= link_to 'Создать пост', new_post_path %>
+      </div>
+      <h1>Публикации</h1>
+
+      <table>
+        <thead>
+          <tr>
+             <th>Title</th>
+             <th>Author</th>
+             <th>Category</th>
+             <th colspan="4"></th>
+          </tr>
+        </thead>
+        <tbody>
+
+        <% @posts.each do |post| %>
+          <tr>
+            <td><%= link_to post.title, post %></td>
+            <td class="author"><span><%= post.author %></span></td>
+            <td class="category.name"><span><%= post.category.name %></span></td>
+            <td><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></td>
+            <td><%= post.comments.count %> <%= (post.comments.count) == 1 ? 'Comment' : 'Commentes'%></td>
+            <td><%= link_to 'Редактировать', edit_post_path(post) %></td>
+            <td><%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+
+
+          <% end %>
+        </tbody>
+      </table>
+
+    </div>
+
     <br>
 
-    <div class="main_section">
-      <div class="table_hidden">
-          <span>Name</span>
-          <span>Category</span>
-          <span>Title</span>
-          <span>Author</span>
-          <span>Content</span>
-      </div>
+    <div class="wrapper_categories">
+      <%= link_to 'Создать категорию', new_category_path %>
+      <br>
+      <h1>Категории</h1>
 
-<% @pt.each do |pt| %>
-Тут стоит тип поста:<%= pt.name %><br>
-<% end %>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Display in navbar</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-<% if @hascat %>
-  <% @cat.each do |blabla| %>
-    Тут стоит категория: <%= blabla.name %><br>
-  <% end %>
-<% end %>
+        <tbody>
+          <% @categories.each do |category| %>
+            <tr>
+              <td><%= category.name %></td>
+              <td><%= category.description %></td>
+              <td><%= category.display_in_navbar %></td>
+              <td><%= link_to 'Show', category %></td>
+              <td><%= link_to 'Edit', edit_category_path(category) %></td>
+              <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
 
-      <div class="posts_cards">
-        <% @posts.each do |post| %>
-<%= post.name %>
- <%= post.category.name %>
- <%= post.post_type ? post.post_type.name : 'нетути'%>
- <%= post.likes.count %>
--->
+    </div>
 
-<div class="new_post_link">
-  <%= link_to 'Создать пост', new_post_path %>
-  <%= link_to 'New Category', new_category_path %>
+
+    <div class="wrapper_user">
+      <h1>Пользователи</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Username</th>
+            <% if user_signed_in? && current_user.admin == true %>
+              <td>Admin</td>
+            <% end %>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td><%= user.id %></td>
+              <td><%= link_to user.email, user %></td>
+              <td><%= user.username %></td>
+              <% if user_signed_in? && current_user.admin == true %>
+              <td><%= user.admin %></td>
+              <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
 </div>
 
-<table>
-  <thead>
-    <tr>
-       <!-- <th>Name</th> -->
-       <th>Title</th>
-       <th>Author</th>
-       <th>Category</th>
-       <!-- <th>Content</th> -->
-       <th colspan="3"></th>
-    </tr>
-  </thead>
-  <tbody>
 
 
-    <tr>
-      <!-- <td  class="posts_img"><%= link_to(image_tag(post.image.thumb.url, alt: 'Image'), post.image.url, target: '_blank') if post.image? %></td> -->
-      <!-- <td class="name"><span><%= post.name %></span></td> -->
-      <td class="title"><span><%= post.title %></span></td>
-      <td class="author"><span><%= post.author %></span></td>
-      <td class="category.name"><span><%= post.category.name %></span></td>
-      <!-- <td class="content"><span><%= post.content.html_safe %></span></td> -->
-      <td><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></td>
-      <td><%= post.comments.count %> <%= (post.comments.count) == 1 ? 'Comment' : 'Commentes'%></td>
-      <td><%= link_to 'Открыть', post %></td>
-      <td><%= link_to 'Редактировать', edit_post_path(post) %></td>
-      <td><%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-    </tr>
-  </tbody>
-</table>
 
 
-        <% end %>
-      </div>
-    <!-- </div> -->
 
-  <!-- </div> -->
+      <!--
+          <%= image_tag("news.svg", :alt => "Новости") %>
+          <h2>All Categories</h2>
+          <% Category.all.each do |cat| %>
+          	<%= link_to cat.name, posts_path(category: cat.name) %> <br>
+          <% end %>
+          <br>
+
+
+            <% @pt.each do |pt| %>
+            Тут стоит тип поста:<%= pt.name %><br>
+            <% end %>
+
+            <% if @hascat %>
+              <% @cat.each do |blabla| %>
+                Тут стоит категория: <%= blabla.name %><br>
+              <% end %>
+            <% end %>
+
+      -->
 </body>

@@ -4,6 +4,7 @@
 <% if user_signed_in? && current_user.admin == true %>
   <p>Admin <%= @user.admin %></p>
 <% end %>
+КАРТИНКА: <%= image_tag(@user.image.url, alt: 'Image') if @user.image? %>
 Followers <%= @user.followers.count %>
 Following <%= link_to @user.followees.count, following_path %>
 <br>
