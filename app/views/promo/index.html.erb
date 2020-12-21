@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <%= render 'navbar/navbarinner' %>
 <body class="promo">
 
@@ -13,7 +14,7 @@
       </div>
     </div>
     <div class="about">
-      <p>CoroOne&nbsp;&mdash; медиа-сервис, созданный специально для комьюнити геймеров
+      <p>CoroOne&nbsp;&mdash; медиа-сервис, созданный<br> специально для комьюнити геймеров
 и&nbsp;разработчиков. Мы&nbsp;верим в&nbsp;то, что именно обьединившись, любители видеоигр и&nbsp;гейм-дизайнеры смогут воплотить все самые смелые идеи и&nbsp;фантазии.</p>
     </div>
     <div class="advantages">
@@ -56,12 +57,20 @@
           <p>Участвуйте в&nbsp;рейтинге инди-проектов. Мы&nbsp;создаем еженедельный список самых активных разработчиков, чтобы помочь вам найти спонсоров.</p>
         </div>
       </div>
-      <%= image_tag("defimage.svg", :alt => "Логотип") %>
+      <div class="big_format">
+        <%= image_tag("defimage1920.svg", :alt => "Лг") %>
+      </div>
+      <div class="small_format">
+          <%= image_tag("defimage.svg", :alt => "Логотип") %>
+      </div>
+
+
     </div>
   </section>
 
 
   <section class="category">
+    <div class="circle"></div>
     <%= image_tag("defendimage.svg", :alt => "Логотип") %>
     <div class="category_13">
       <div class="category_13_text">
@@ -103,7 +112,19 @@
   </section>
 
   <section class="fichi_for_desctop">
-
+    <div class="fichi_for_desctop_img">
+      <div class="fichi_for_desctop_li">
+        <div class="fichi_for_desctop_li_text">
+          <p>Участвуйте в&nbsp;рейтинге инди-проектов. CoroOne формирует еженедельный список самых активных разработчиков, чтобы помочь вам найти спонсоров.</p>
+        </div>
+        <div class="fichi_for_desctop_li_text_s">
+          <p>Геймификация и&nbsp;ачивки прямо в&nbsp;интерфейсе. Отгадывай загадки, узнавай интересные факты из&nbsp;мира видео-игр, получай баллы.</p>
+        </div>
+        <div class="fichi_for_desctop_li_text">
+          <p>Участвуйте в&nbsp;рейтинге инди-проектов. CoroOne формирует еженедельный список самых активных разработчиков, чтобы помочь вам найти спонсоров.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section class="fichi_for_mobile">

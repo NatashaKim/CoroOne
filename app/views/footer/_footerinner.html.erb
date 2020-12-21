@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <%= stylesheet_link_tag "footerinner" %>
 
 <footer>
@@ -8,7 +9,7 @@
   </div>
   <div class="footer_info">
     <div class="footer_help">
-      <p>Остались вопросы?<br> Пишите нам в&nbsp;телеграм:</p>
+      <p>Остались вопросы? Пишите нам в&nbsp;телеграм:</p>
       <p>+7 933 676 56 16</p>
     </div>
     <div class="footer_sites">
@@ -22,7 +23,12 @@
     </div>
   </div>
   <div class="added_info">
-    <%= image_tag("graylogo.svg", :alt => "Логотип") %>
+    <div class="small_logo">
+      <%= image_tag("graylogo.svg", :alt => "Логотип") %>
+    </div>
+    <div class="big_logo">
+        <%= image_tag("big_graylogo.svg", :alt => "Логотип") %>
+    </div>
     <div class="added_info_added">
        <p>CoroOne</p>
        <p>2020</p>

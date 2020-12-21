@@ -1,3 +1,4 @@
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <%= stylesheet_link_tag "navbarinner" %>
 <nav>
   <div class="high_width">
@@ -8,12 +9,11 @@
         <%= image_tag("bluelogo.svg", :alt => "логотип") %>
     </div>
 
-    <div class="">
-      <div class="">
-        <%= link_to "О нас", about_path %>
-        <%= link_to "Преимущества", posts_path %>
-        <%= link_to 'Контакты', new_post_path %>
-        <a href="#email">Вступить</a>
+    <div class="menu_info">
+      <div class="menu_info_th">
+        <%= link_to "о нас", about_path %>
+        <%= link_to "преимущества", posts_path %>
+        <%= link_to 'контакты', new_post_path %>
       </div>
       <div class="menul">
         <%= image_tag("menu.svg", :alt => "логотип") %>
