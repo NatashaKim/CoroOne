@@ -7,6 +7,12 @@
       <% if user_signed_in? && current_user.admin == true %>
         <td>Admin</td>
       <% end %>
+      <% if user_signed_in? && current_user.admin == true %>
+        <td>Moderator</td>
+      <% end %>
+      <% if user_signed_in? && current_user.admin == true %>
+        <td>Developer</td>
+      <% end %>
     </tr>
   </thead>
 
@@ -17,7 +23,13 @@
         <td><%= link_to user.email, user %></td>
         <td><%= user.username %></td>
         <% if user_signed_in? && current_user.admin == true %>
-        <td><%= user.admin %></td>
+          <td><%= user.admin %></td>
+        <% end %>
+        <% if user_signed_in? && current_user.admin == true %>
+          <td><%= user.ismoderator %></td>
+        <% end %>
+        <% if user_signed_in? && current_user.admin == true %>
+          <td><%= user.isdeveloper %></td>
         <% end %>
       </tr>
     <% end %>

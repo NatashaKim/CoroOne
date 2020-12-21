@@ -15,4 +15,17 @@ class User < ApplicationRecord
   has_many :followers, through: :following_users
 
   mount_uploader :image, ImageUploader
+
+
+#   after_save :toggle_admin
+#
+#   private
+#
+#       def toggle_admin
+#         if self.admin == true
+#           self.toggle!(:admin)
+#         end
+#       end
+#
+#
 end

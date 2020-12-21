@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+before_action :set_user, only: [:show, :edit, :update, :destroy]
+
   def index
     @users = User.all
   end
@@ -11,6 +13,22 @@ class UsersController < ApplicationController
       @favorites = @user.favorites.all
     else
         render file: 'public/404', status: 404, formats: [:html]
+    end
+  end
+
+  def edit
+    render 'users/edit'
+  end
+
+  def update
+    respond_to do |format|
+      if @user.update(user_params)
+        format.html { redirect_to @user, notice: 'Пользователь was successfully переназначен.' }
+        format.json { render :show, status: :ok, location: @user }
+      else
+        format.html { render :edit }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -43,6 +61,17 @@ class UsersController < ApplicationController
       render actions: :show
       @following = @user.followees.all
     end
+  end
+
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_user
+      @user = User.find(params[:id])
+    end
+  # Only allow a list of trusted parameters through.
+  def user_params
+    params.require(:user).permit(:username, :email, :image, :admin, :ismoderator, :isdeveloper, :password)
   end
 
 end

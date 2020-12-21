@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :users
+  post 'users/:id/edit', to: "users#update"
   post 'users/:id/follow', to: "users#follow", as: "follow_user"
   post 'users/:id/unfollow', to: "users#unfollow", as: "unfollow_user"
   # get 'about/index'
@@ -36,6 +37,7 @@ end
 
   get 'users', to: 'users#index'
   get 'users/:id' => 'users#show'
+  get 'users/:id/edit' => 'users#edit'
   delete 'users/:id', to: 'users#destroy'
   get 'users/:id/following', :to => "users#following", :as => :following
   # root 'posts#index'
