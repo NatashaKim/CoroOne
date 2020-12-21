@@ -1,11 +1,21 @@
 <%= stylesheet_link_tag "navbarleft" %>
 <nav class="navleft">
-  <div>
-    КАРТИНКА: <%= image_tag(@user.image.url, alt: 'Image') if @user.image? %>
-    <td><%= @user.username %></td>
-    <%= link_to "О нас", about_path %>
-    <%= link_to "Публикации", posts_path %>
-    <%= link_to 'Создать пост', new_post_path %>
-    <a href="#email">Вступить</a>
+  <div class="top">
+    <div class="user_info">
+      <div class=""><%= image_tag(@user.image.url, alt: 'Image') if @user.image? %></div>
+      <span class=""><%= @user.username %></span>
+      <span><%= @user.email %></span>
+    </div>
+    <div class="nav_content">
+      <%= link_to "О нас", about_path %>
+      <%= link_to "Публикации", posts_path %>
+      <%= link_to 'Создать пост', new_post_path %>
+    </div>
   </div>
+
+  <div class="user_action">
+    <%= link_to 'Account', current_user %>
+    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+  </div>
+
 </nav>

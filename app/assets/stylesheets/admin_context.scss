@@ -1,47 +1,220 @@
+@font-face {
+  font-family: "RedRing";
+  src: url("RedRing-Regular.woff") format("woff");
+  font-weight: normal;
+}
+
+@mixin table_mix {
+  table {
+    table-layout: fixed;
+    width: 100%;
+    float: left;
+    font-size: 1vw;
+    margin: 0;
+    text-align: left;
+    align-self: flex-start;
+    margin-bottom: 4vw;
+    td {
+      background-color: #FFF;
+      border-color: #F2F2F2;
+      border-style: solid;
+      border-width: 0 0 1px !important;
+      padding: 1.5vw 1vw 1.5vw 0;
+      a {
+        border: 0;
+        padding: 0;
+      }
+      span {
+        display:block;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        align-items: flex-start;
+        text-align: left;
+      }
+      img {
+        width: 1.7vw;
+        float: left;
+        margin-top: -0.1vw;
+        margin-right: 0.2vw;
+      }
+      div {
+        vertical-align: middle;
+        text-align: center;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@mixin create_button_mix {
+  .hey {
+    display: block;
+    margin-top: 5vw;
+    padding: 0.7vw 1.5vw;
+    width: fit-content;
+    background-color: #9896AE;
+    color: #F5F6FF;
+    font-size: 1vw;
+    border-radius: 2vw;
+    float: right;
+    &:hover{
+      background-color: #04005E;
+    }
+  }
+}
+
+
+@mixin button_and_list_mix {
+  .hey {
+    display: block;
+    margin-top: 5vw;
+    padding: 0.7vw 1.5vw;
+    width: fit-content;
+    background-color: #9896AE;
+    color: #F5F6FF;
+    font-size: 1vw;
+    border-radius: 2vw;
+    float: right;
+    &:hover {
+       background-color: #04005E;
+    }
+  }
+
+ .button_and_list {
+  position: relative;
+  &:hover {
+    ul {
+      visibility: visible;
+      background-color: white;
+      box-shadow: 0 0 0.4vw rgba(0,0,0,0.3);
+      list-style-type: none;
+      margin-top: 4.2vw;
+      width: 9.5vw;
+      height: 7vw;
+      padding: 1vw 1.5vw 2vw;
+      border-radius: 2vw;
+      align-items: center;
+      align-self: center;
+      margin-right: 0.3vw;
+    }
+    li {
+      font-size: 1vw;
+      line-height: 2vw;
+      a {
+        &:hover {
+          background-color: white;
+          color: #04005E;
+        }
+      }
+    }
+  }
+  ul {
+    visibility: hidden;
+    position: absolute;
+    top: 3.5vw;
+    height: 3vw;
+    right: 0;
+  }
+ }
+}
+
+
+@mixin wrapper_all {
+  width: inherit;
+  margin-bottom: 4vw;
+}
+
 body.admin_context {
+  font-family: "RedRing";
   margin: 0;
   height: 100vw;
   box-sizing: border-box;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
     .please {
       overflow-x: hidden;
-      width: 85vw;
+      width: 74vw;
       height: 100vw;
-      display: inline-block;
+      display: flex;
+      flex-flow: column;
+      margin-left: 18vw;
+      margin-right: 8vw;
     .wrapper_posts{
-      margin-left: 5vw;
-      width: 90vw;
-      .new_post_link {
-        width: 100vw;
+       @include wrapper_all;
+      .create {
+        width: inherit;
+        height: 8.5vw;
+        width: inherit;
+        @include button_and_list_mix;
       }
+      .filters {
+        width: inherit;
+        height: 4vw;
+      }
+      @include table_mix;
       table {
-        table-layout: fixed;
-        width: 80vw;
-        float: left;
-        font-size: 1vw;
-        margin: 0;
-        text-align: left;
-        align-self: flex-start;
-        td {
-          background-color: #FFF;
-          border-color: #F2F2F2;
-          border-style: solid;
-          border-width: 0 0 1px !important;
-          max-width: 416px;
+        thead th:nth-child(1) {
+          width: 15vw;
+        }
+        thead th:nth-child(2) {
+          width: 11vw;
+        }
+        thead th:nth-child(3) {
+          width: 7vw;
+        }
+        thead th:nth-child(4) {
+          width: 9vw;
+        }
+        thead th:nth-child(5) {
+          width: 4.5vw;
+        }
+        thead th:nth-child(6) {
+          width: 4.5vw;
+        }
+        thead th:nth-child(7) {
+          width: 13vw;
+        }
+        thead th:nth-child(8) {
+          width: 3.5vw;
+        }
+        thead th:nth-child(9) {
           width: 3vw;
-          padding: 0 5px 7px 0;
-          a {
-            border: 0;
-            padding: 0;
-          }
-          span {
-            display:block;
-            white-space:nowrap;
-            overflow:hidden;
-            text-overflow:ellipsis;
-            align-items: flex-start;
-            text-align: left;
-          }
+        }
+      }
+    }
+    .wrapper_categories {
+      @include wrapper_all;
+      .create {
+        width: inherit;
+        height: 8.5vw;
+        width: inherit;
+        @include create_button_mix;
+      }
+      .filters {
+        width: inherit;
+        height: 4vw;
+      }
+      @include table_mix;
+      table {
+        thead th:nth-child(1) {
+          width: 11vw;
+        }
+        thead th:nth-child(2) {
+          width: 9vw;
+        }
+        thead th:nth-child(3) {
+          width: 24vw;
+        }
+        thead th:nth-child(4) {
+          width: 16vw;
+        }
+        thead th:nth-child(5) {
+          width: 3.5vw;
+        }
+        thead th:nth-child(6) {
+          width: 3vw;
         }
       }
     }

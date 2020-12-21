@@ -4,7 +4,22 @@
      <div class="edit_post_card">
       <h1>Редактирование</h1>
 
-      <%= render 'form', post: @post %>
+
+    <% if @post.post_type.name == "news" %>
+        <%= render 'formnews', post: @post %>
+      <% elsif @post.post_type.name == "discussion" %>
+            <%= render 'formdiscussion', post: @post %>
+      <% elsif @post.post_type.name == "portfolio" %>
+            <%= render 'formportfolio', post: @post %>
+      <% elsif @post.post_type.name == "reviews" %>
+            <%= render 'formreviews', post: @post %>
+      <% elsif @post.post_type.name == "articles" %>
+            <%= render 'formarticles', post: @post %>
+      <% elsif @post.post_type.name == "events" %>
+            <%= render 'formevents', post: @post %>
+      <% else %>
+        <%= render 'formpuzzles', post: @post %>
+    <% end %>
 
       <%= link_to 'Открыть', @post %> |
       <%= link_to 'Назад', posts_path %>

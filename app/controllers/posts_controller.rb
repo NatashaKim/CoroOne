@@ -23,12 +23,54 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
+    @post.post_type = PostType.find_by_name("news")
   end
 
-  def newshit
-    @posts = Post.all
+  def newnews
+    @post = Post.new
+    @post.post_type = PostType.find_by_name("news")
+    @categories = ["Обновления","О компаниях"]
+    render 'newnews'
   end
 
+  def newarticles
+    @post = Post.new
+    @post.post_type = PostType.find_by_name("articles")
+    @categories = ["Факты","Советы","Чит-коды"]
+    render 'newarticles'
+  end
+
+  def newreviews
+    @post = Post.new
+    @post.post_type = PostType.find_by_name("reviews")
+    @categories = ["Действие","Симулятор","Стратегия","Ролевая игра","Приключения","Головоломка"]
+    render 'newreviews'
+  end
+
+  def newpuzzles
+    @post = Post.new
+    @post.post_type = PostType.find_by_name("puzzles")
+    render 'newpuzzles'
+  end
+
+  def newdiscussion
+    @post = Post.new
+    @post.post_type = PostType.find_by_name("discussion")
+    render 'newdiscussion'
+  end
+
+  def newportfolio
+    @post = Post.new
+    @post.post_type = PostType.find_by_name("portfolio")
+    render 'newportfolio'
+  end
+
+  def newevents
+    @post = Post.new
+    @post.post_type = PostType.find_by_name("events")
+    @categories = ["Анонсы","Релизы"]
+    render 'newevents'
+  end
 
   # GET /posts/1/edit
   def edit

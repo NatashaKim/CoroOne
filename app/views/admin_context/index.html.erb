@@ -4,18 +4,31 @@
 
   <div class="wrapper_posts">
 
-      <div class="new_post_link">
-        <%= link_to 'Создать пост', new_post_path %>
+      <div class="create">
+        <div class="button_and_list">
+          <span class="hey">Создать публикацию</span>
+          <ul>
+            <li><%= link_to 'Создать новость', newnews_posts_path %></li>
+            <li><%= link_to 'Создать событие', newevents_posts_path %></li>
+            <li><%= link_to 'Создать статью', newarticles_posts_path %></li>
+            <li><%= link_to 'Создать обзор', newreviews_posts_path %></li>
+          </ul>
+        </div>
       </div>
       <h1>Публикации</h1>
-
+      <div class="filters"></div>
       <table>
         <thead>
           <tr>
-             <th>Title</th>
-             <th>Author</th>
-             <th>Category</th>
-             <th colspan="4"></th>
+             <th>Заголовок</th>
+             <th>Автор</th>
+             <th>Категории</th>
+             <th>Опубликовано</th>
+             <th>Активность</th>
+             <th></th>
+             <th></th>
+             <th>Действия</th>
+             <th></th>
           </tr>
         </thead>
         <tbody>
@@ -25,10 +38,12 @@
             <td><%= link_to post.title, post %></td>
             <td class="author"><span><%= post.author %></span></td>
             <td class="category.name"><span><%= post.category.name %></span></td>
-            <td><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></td>
-            <td><%= post.comments.count %> <%= (post.comments.count) == 1 ? 'Comment' : 'Commentes'%></td>
-            <td><%= link_to 'Редактировать', edit_post_path(post) %></td>
-            <td><%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><span><%= post.created_at.mday %>.<%= post.created_at.month %>.<%= post.created_at.year %></span></td>
+            <td><%= image_tag("like_icon.svg", :alt => "like") %><div><%= post.likes.count %></div></td>
+            <td><%= image_tag("comment_icon.svg", :alt => "comment") %><div><%= post.comments.count %></div></td>
+            <td><%= image_tag("favorite_icon.svg", :alt => "like") %><div><%= post.favorites.count %></div></td>
+            <td><%= link_to image_tag("edit_icon.svg"), edit_post_path(post) %></td>
+            <td><%= link_to image_tag("delete_icon.svg"), post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
 
 
@@ -41,29 +56,32 @@
     <br>
 
     <div class="wrapper_categories">
-      <%= link_to 'Создать категорию', new_category_path %>
-      <br>
+      <div class="create">
+        <%= link_to 'Создать категорию', new_category_path, class: "hey" %>
+      </div>
       <h1>Категории</h1>
 
       <table>
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Display in navbar</th>
-            <th colspan="3"></th>
+            <th>Категория</th>
+            <th>Раздел</th>
+            <th>Описание</th>
+            <th>Дата создания</th>
+            <th>Действия</th>
+            <th></th>
           </tr>
         </thead>
 
         <tbody>
           <% @categories.each do |category| %>
             <tr>
-              <td><%= category.name %></td>
-              <td><%= category.description %></td>
-              <td><%= category.display_in_navbar %></td>
-              <td><%= link_to 'Show', category %></td>
-              <td><%= link_to 'Edit', edit_category_path(category) %></td>
-              <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><span><%= link_to category.name, category %></span></td>
+              <td><span><%= category.post_type.name %></span></td>
+              <td><span><%= category.description %></span></td>
+              <td><span><%= category.created_at.mday %>.<%= category.created_at.month %>.<%= category.created_at.year %></span></td>
+              <td><%= link_to image_tag("edit_icon.svg"), edit_category_path(category) %></td>
+              <td><%= link_to image_tag("delete_icon.svg"), category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
           <% end %>
         </tbody>

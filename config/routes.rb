@@ -13,6 +13,13 @@ Rails.application.routes.draw do
 resources :posts do
     collection do
       get :newshit
+      get :newarticles
+      get :newnews
+      get :newpuzzles
+      get :newreviews
+      get :newdiscussion
+      get :newportfolio
+      get :newevents
     end
     resources :comments
     resources :likes

@@ -2,6 +2,9 @@
 <p>Email <%= @user.email %></p>
 <p>Username <%= @user.username %></p>
 <% if user_signed_in? && current_user.admin == true %>
+  <p>Moderator <%= @user.ismoderator %></p>
+<% end %>
+<% if user_signed_in? && current_user.admin == true %>
   <p>Admin <%= @user.admin %></p>
 <% end %>
 КАРТИНКА: <%= image_tag(@user.image.url, alt: 'Image') if @user.image? %>

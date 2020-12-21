@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_19_133007) do
+ActiveRecord::Schema.define(version: 2020_12_20_231911) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 2020_12_19_133007) do
     t.boolean "display_in_navbar", default: true
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "post_type_id"
+    t.index ["post_type_id"], name: "index_categories_on_post_type_id"
   end
 
   create_table "ckeditor_assets", force: :cascade do |t|
@@ -105,10 +107,12 @@ ActiveRecord::Schema.define(version: 2020_12_19_133007) do
     t.string "username"
     t.boolean "admin", default: false
     t.string "image"
+    t.boolean "ismoderator", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "categories", "post_types"
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
   add_foreign_key "favorites", "posts"

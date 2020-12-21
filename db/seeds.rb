@@ -39,8 +39,7 @@
 
 
 # post_types=[
-#   {    name: "articles"  },
-#   {    name: "puzzles"  },
+#   {    name: "events"  },
 #
 # ]
 # post_types.each do |pt|
