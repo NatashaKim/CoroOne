@@ -23,12 +23,14 @@
 
   <div class="menu_mobile">
     <div class="cancel">
-      <%= image_tag("menu.svg", :alt => "логотип") %>
+      <%= image_tag("clear.svg", :alt => "логотип") %>
     </div>
     <div class="menu_mobile_th">
-      <%= link_to "О нас", about_path %>
-      <%= link_to "Преимущества", posts_path %>
-      <%= link_to 'Контакты', new_post_path %>
+      <div class="">
+        <%= link_to "О нас", about_path %>
+        <%= link_to "Преимущества", posts_path %>
+        <%= link_to 'Контакты', new_post_path %>
+      </div>
     </div>
   </div>
 </nav>
