@@ -1,58 +1,177 @@
-footer  {
-  height: 26.5vw;
-  color: white;
-  background-color: black;
-  opacity: 1;
-  display: flex;
-  .left {
-    img {
-      margin: 12.3vw 0 0 1.5vw;
+@media (max-width: 1920px) {
+  footer  {
+    margin: 5vw;
+    div.footer_menu {
+      margin-bottom: 4vw;
+      margin-top: 3vw;
+      display: flex;
+      flex-direction: row;
+      a {
+        font-size: 1.4vw;
+        color: #9896AE;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 6vw;
+      }
+    }
+    div.footer_info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: -2vw;
+      color: #9896AE;
+      div.footer_help {
+        width: 30vw;
+        margin-bottom: 12vw;
+        p {
+          font-size: 1.4vw;
+          line-height: 2vw;
+          margin-bottom: 2vw;
+        }
+      }
+      div.footer_sites {
+        width: 32vw;
+        p {
+          font-size: 1.4vw;
+          line-height: 2vw;
+          margin-bottom: 3vw;
+        }
+        div.footer_sites_th {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          img {
+            width: 6vw;
+          }
+        }
+      }
+    }
+    div.added_info {
+      width: 100%;
+      color: #9896AE;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      div.small_logo {
+        display: none;
+        img {
+          display: none;
+        }
+      }
+      div.big_logo {
+        img {
+          display: block;
+          width: 40vw;
+        }
+      }
+      div.added_info_added {
+        margin-top: 6vw;
+        display: flex;
+        flex-direction: row;
+        p {
+          font-size: 1.4vw;
+          margin-right: 3vw;
+        }
+        p:last-child {
+          font-size: 1.4vw;
+          margin-right: 0vw;
+        }
+      }
     }
   }
-  .right {
-    display: flex;
-    flex-direction: column;
-    width: 79vw;
-    .main_menu {
-      align-self: flex-end;
-      width: 21.5vw;
+
+}
+
+@media (max-width: 1440px) {
+  footer {
+     div.footer_menu {
+       margin-top: -2vw;
+       margin-bottom: 3vw;
+     }
+  }
+}
+
+@media (max-width: 768px) {
+  footer  {
+    margin: 5vw;
+    div.footer_menu {
+      margin-bottom: 10vw;
+      margin-top: 15vw;
       display: flex;
-      margin: 3.3vw 2vw 1.4vw;
-      justify-content: space-between;
+      flex-direction: row;
       a {
-        color: white;
-        font-size: 1.2vw;
+        font-size: 3.8vw;
+        color: #9896AE;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 10vw;
       }
     }
-    .about_sections {
-      border-top: 0.2vw solid white;
-      padding: 1.5vw 25vw 0 0;
+    div.footer_info {
+      margin-bottom: 16vw;
+      color: #9896AE;
       display: flex;
-      justify-content: space-between;
-      a {
-        color: white;
-        font-size: 1.2vw;
+      flex-direction: column;
+      div.footer_help {
+        width: 75vw;
+        margin-bottom: 8vw;
+        p {
+          font-size: 3.6vw;
+          line-height: 5.8vw;
+          margin-bottom: 4vw;
+        }
+      }
+      div.footer_sites {
+        p {
+          width: 75vw;
+          font-size: 3.6vw;
+          line-height: 5.8vw;
+          margin-bottom: 6vw;
+        }
+        div.footer_sites_th {
+          width: 90vw;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          img {
+            width: 16vw;
+          }
+        }
       }
     }
-    .add {
-      margin: 8vw 2vw 0 3vw;
+    div.added_info {
+      width: 100%;
+      color: #9896AE;
       display: flex;
+      flex-direction: row;
       justify-content: space-between;
-      span {
-        font-size: 4.6vw;
-        line-height: 7vw;
+      div.small_logo {
+        display: block;
+        img {
+          display: block;
+          width: 40vw;
+        }
       }
-      a {
-        line-height: 4.8vw;
-        padding: 0.1vw 1.6vw;
-        border: 0.2vw solid white;
-        border-radius: 3vw;
-        color: white;
-        font-size: 2vw;
-        height: 4.7vw;
-        width: 10.7vw;
-        text-align: center;
+      div.big_logo {
+        img {
+          display: none;
+        }
+      }
+
+      div.added_info_added {
+        margin-top: 6vw;
+        display: flex;
+        flex-direction: row;
+        p {
+          font-size: 3.4vw;
+          margin-right: 3vw;
+        }
+        p:last-child {
+          font-size: 3.4vw;
+          margin-right: 0vw;
+        }
       }
     }
   }
+
 }
