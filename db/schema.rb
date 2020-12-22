@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_22_171346) do
+ActiveRecord::Schema.define(version: 2020_12_22_215000) do
 
   create_table "answers", force: :cascade do |t|
     t.text "option"
@@ -92,7 +92,7 @@ ActiveRecord::Schema.define(version: 2020_12_22_171346) do
     t.string "author"
     t.string "image"
     t.integer "user_id", null: false
-    t.integer "category_id", null: false
+    t.integer "category_id"
     t.integer "post_type_id"
     t.index ["category_id"], name: "index_posts_on_category_id"
     t.index ["post_type_id"], name: "index_posts_on_post_type_id"

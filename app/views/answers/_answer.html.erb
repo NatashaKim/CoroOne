@@ -1,0 +1,13 @@
+<p>
+	<b>Answer:</b>
+	<%= answer.option %>
+</p>
+<p>
+	<b>Correctness:</b>
+	<%= answer.correctness %>
+</p>
+<p>
+	<%= link_to 'Destroy Answer', [answer.post, answer],
+								:confirm => 'Are you sure?',
+								:method => :delete %>
+</p>

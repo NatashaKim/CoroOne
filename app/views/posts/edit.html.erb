@@ -19,7 +19,13 @@
             <%= render 'formevents', post: @post %>
       <% else %>
         <%= render 'formpuzzles', post: @post %>
+        <% if @post.id? %>
+            <h2>Add answer:</h2>
+              <%= render "answers/form" %>
+        <% end %>
     <% end %>
+
+
 
       <%= link_to 'Открыть', @post %> |
       <%= link_to 'Назад', posts_path %>
