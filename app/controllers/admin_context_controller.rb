@@ -6,6 +6,7 @@ class AdminContextController < ApplicationController
     @posts = Post.all
     @categories = Category.all
     @users = User.all
+    @comments = Comment.all
     @pt=PostType.all
     @user = User.find(current_user.id)
 

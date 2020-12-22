@@ -218,5 +218,43 @@ body.admin_context {
         }
       }
     }
+    .wrapper_users {
+      @include wrapper_all;
+      @include table_mix;
+      table {
+        thead th:nth-child(1) {
+          width: 10vw;
+        }
+        thead th:nth-child(2) {
+          width: 4vw;
+        }
+        .role {
+          width: 9vw;
+        }
+        thead th:nth-child(4) {
+          width: 13vw;
+        }
+        thead th:nth-child(5) {
+          width: 14vw;
+        }
+        thead th:nth-child(6) {
+          width: 9vw;
+        }
+        thead th:nth-child(7) {
+          width: 7vw;
+        }
+        td {
+          img {
+            width: 2.7vw;
+            border-radius: 50%;
+            margin: -0.5vw 1vw -0.5vw 0;
+          }
+        }
+      }
+    }
+    .wrapper_comments {
+      @include wrapper_all;
+      @include table_mix;
+    }
   }
 }

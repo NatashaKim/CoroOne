@@ -2,7 +2,7 @@
 <nav class="navleft">
   <div class="top">
     <div class="user_info">
-      <div class=""><%= image_tag(@user.image.url, alt: 'Image') if @user.image? %></div>
+      <div class=""><%= image_tag(@user.image.small_thumb.url, alt: 'Image') if @user.image? %></div>
       <span class=""><%= @user.username %></span>
       <span><%= @user.email %></span>
     </div>

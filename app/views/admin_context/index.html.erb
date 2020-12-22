@@ -90,34 +90,84 @@
     </div>
 
 
-    <div class="wrapper_user">
+    <div class="wrapper_users">
       <h1>Пользователи</h1>
       <table>
         <thead>
           <tr>
+            <th>Пользователь</th>
             <th>ID</th>
-            <th>Email</th>
-            <th>Username</th>
             <% if user_signed_in? && current_user.admin == true %>
-              <td>Admin</td>
+              <th class="role">Статус</th>
             <% end %>
+            <th>Почта</th>
+            <th>Создан</th>
+            <th>Действия</th>
+            <th></th>
           </tr>
         </thead>
 
         <tbody>
           <% @users.each do |user| %>
             <tr>
+              <td><%= image_tag(user.image.thumb.url, alt: 'Image') if user.image? %><span><%= user.username %></span></td>
               <td><%= user.id %></td>
-              <td><%= link_to user.email, user %></td>
-              <td><%= user.username %></td>
               <% if user_signed_in? && current_user.admin == true %>
-              <td><%= user.admin %></td>
+                <% if user.admin == true %>
+                  <td>Админ</td>
+                <% elsif user.ismoderator == true %>
+                  <td>Модератор</td>
+                <% elsif user.isdeveloper == true %>
+                  <td>Разработчик</td>
+                <% else %>
+                  <td>Пользователь</td>
+                <% end %>
               <% end %>
+              <td><span><%= link_to user.email, user %></span></td>
+              <td><span><%= user.created_at.mday %>.<%= user.created_at.month %>.<%= user.created_at.year %><span/></td>
+              <td><%= link_to 'Переназначить', edit_user_path(user) %></td>
+              <td><%= link_to "Заблокировать", user, method: :delete, data: { confirm: "Are you sure?" } %></td>
             </tr>
           <% end %>
         </tbody>
       </table>
     </div>
+
+
+    <div class="wrapper_comments">
+      <h1>Комментарии</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Комментарий</th>
+            <th>Пользователь</th>
+            <th>В ответ на</th>
+            <th>Раздел</th>
+            <th>Создан</th>
+            <th>Действия</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @comments.each do |comment| %>
+            <tr>
+              <td><span><%= link_to comment.body %></span></td>
+              <td><span><%= User.find(comment.user_id).username %></span></td>
+              <td><span><%= Post.find(comment.post_id).title %></span></td>
+              <td><span><%= Post.find(comment.post_id).post_type.name %></span></td>
+              <td><span><%= comment.created_at.mday %>.<%= comment.created_at.month %>.<%= comment.created_at.year %></span></td>
+              <td><%= link_to image_tag("edit_icon.svg"), [comment.post, comment],
+          	               :method => :edit %></td>
+              <td><%= link_to image_tag("delete_icon.svg"), [comment.post, comment],
+          	               :confirm => 'Are you sure?',
+          	               :method => :delete %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
 </div>
 
 
