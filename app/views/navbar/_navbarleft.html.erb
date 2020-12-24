@@ -2,13 +2,17 @@
 <nav class="navleft">
   <div class="top">
     <div class="user_info">
-      <div class=""><%= image_tag(@user.image.small_thumb.url, alt: 'Image') if @user.image? %></div>
-      <span class=""><%= @user.username %></span>
-      <span><%= @user.email %></span>
+      <div class=""><%= image_tag(current_user.image.small_thumb.url, alt: 'Image') if current_user.image? %></div>
+      <span class=""><%= current_user.username %></span>
+      <span><%= current_user.email %></span>
     </div>
     <div class="nav_content">
       <%= link_to "Посты", admin_context_path(posts: "") %>
+      <%= link_to "Кураторский контент", admin_context_path(curatorposts: "") %>
+      <%= link_to "Посты пользователей", admin_context_path(posts: "", post_type: "portfolio") %>
+      <%= link_to "Обсуждения", admin_context_path(posts: "", post_type: "discussions") %>
       <%= link_to "Категории", admin_context_path(categories: "") %>
+      <%= link_to "Загадки", admin_context_path(posts: "", post_type: "puzzles") %>
       <%= link_to "Пользователи", admin_context_path(users: "") %>
       <%= link_to "Комментарии", admin_context_path(comments: "") %>
     </div>

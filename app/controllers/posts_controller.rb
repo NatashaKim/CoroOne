@@ -15,6 +15,12 @@ class PostsController < ApplicationController
     end
   end
 
+  #def current_user
+  #  return unless session[:user_id]
+  #  @current_user ||= User.find(session[:user_id])
+  #end
+
+
   # GET /posts/1
   # GET /posts/1.json
   def show
