@@ -159,6 +159,10 @@
   margin-top: 4vw;
 }
 
+@mixin text_underm {
+  margin-top: 2vw;
+}
+
 @mixin h1m {
   font-size: 3vw;
   font-weight: bold;
@@ -1163,10 +1167,11 @@ $dark: #04005E;
               p {
                 @include p_underphotom;
               }
-              img:last-child {
+              img:last-of-type {
+                margin-top: 0vw;
                 margin-right: 3vw;
                 margin-bottom: 0vw;
-                width: 30vw;
+                width: 24.3vw;
               }
               p:last-of-type {
                 @include p_underphotom;
