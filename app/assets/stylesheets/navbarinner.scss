@@ -23,6 +23,9 @@
           }
         }
         div.menu_info {
+          display: flex;
+          flex-direction: row;
+          align-items: baseline;
           padding: 0vw;
           div.menu_info_th{
             padding: 0vw;
@@ -34,14 +37,22 @@
               text-decoration: none;
               color: #04005E;
               display: inline-flex;
-              margin-right: 6vw;
+              margin-right: 4vw;
               &a:hover {
                 color: #03003D;
                 text-decoration: underline;
               }
             }
             a:last-child {
-              margin-right: 0vw;
+              margin-right: 6vw;
+            }
+          }
+          div.registration {
+            a {
+              text-decoration: none;
+              color: #04005E;
+              display: inline-flex;
+              margin-right: 1vw;
             }
           }
           div.menul {
@@ -50,6 +61,7 @@
             }
           }
         }
+        }
 
        }
        div.menu_mobile {
@@ -57,7 +69,7 @@
        }
       }
 
-  }
+
 }
 
 @media (max-width: 1024px) {
@@ -123,6 +135,9 @@
               margin-right: 0vw;
             }
           }
+          div.registration {
+            display: none;
+          }
           div.menul {
             img {
               display: block;
@@ -134,13 +149,14 @@
           }
          }
 
+
         }
         div.menu_mobile {
           z-index: 2;
           top: 0;
           position: fixed;
           opacity: 1;
-          display: block;
+          display: none;
           width: 104vw;
           height: 100vh;
           background-color: #04005E;

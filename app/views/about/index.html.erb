@@ -2,8 +2,42 @@
   <%= notice %>
 <% end %>
 
+<%= render 'navbar/navbarinner' %>
+<section class="menu">
+  <div class="menu_th">
+    <h5>Логотип</h5>
+    <p >Общие сведения</p>
+    <p>Построение</p>
+    <p>Охранное поле</p>
+    <p>Примеры использования</p>
+  </div>
+  <div class="menu_th">
+    <h5>Типографика</h5>
+    <p>Шрифты</p>
+    <p>Соотношения</p>
+  </div>
+  <div class="menu_th">
+    <h5>Композиция</h5>
+    <p>Элементы</p>
+    <p>Построение сетки</p>
+    <p>Форматы</p>
+    <p>Правила компановки</p>
+  </div>
+  <div class="menu_th">
+    <h5>Цвета</h5>
+    <p>Основные</p>
+    <p>Дополнительный</p>
+    <p>Правила использования</p>
+  </div>
+  <div class="menu_th">
+    <h5>Носители</h5>
+    <p>Базовые</p>
+    <p>Цифровые</p>
+    <p>Сувенирные</p>
+  </div>
+
+</section>
 <div class="wrapper">
-  <%= render 'navbar/navbarinner' %>
   <section class="logo">
     <div class="logo_concept">
       <div class="concept">
@@ -138,7 +172,7 @@
          <%= image_tag("el1.svg", :alt => "элементы") %>
        </div>
        <div class="elements_el_things">
-         <p>Текси и логотип</p>
+         <p>Текст и логотип</p>
          <%= image_tag("el2.svg", :alt => "элементы") %>
        </div>
        <div class="elements_el_things">
@@ -146,9 +180,372 @@
          <%= image_tag("el3.svg", :alt => "элементы") %>
        </div>
      </div>
-
    </div>
- </section>
+   <div class="designing_grid">
+     <h2>Построение сетки</h2>
+     <p>Шестиколонник</p>
+     <div class="designing_grid_field">
+        <div class="designing_grid_th">
+           <p class="designing_grid_header">1. Определить микромодуль, построить сетку</p>
+           <%= image_tag("comp1.svg", :alt => "элементы") %>
+           <p>Рассчет паратетров сетки начинается с&nbsp;объявления микромодуля (в&nbsp;ширину листа укладывается 96&nbsp;значений).</p>
+        </div>
+        <div class="designing_grid_th">
+           <p class="designing_grid_header">2. Выделить модули</p>
+           <%= image_tag("comp2.svg", :alt => "элементы") %>
+           <p>Дальнейшие значения рассчитываются по&nbsp;следующим параметрам: ширина колонки&nbsp;&mdash; 13&nbsp;микромодулей, мехколонник&nbsp;&mdash; 2, нижний и&nbsp;боковые марджины&nbsp;&mdash; 4, верхний&nbsp;&mdash; 6.</p>
+        </div>
+        <div class="designing_grid_th">
+           <p class="designing_grid_header">3. Построить сетку бейзлайнов (опционально)</p>
+           <%= image_tag("comp3.svg", :alt => "элементы") %>
+           <p>В&nbsp;качестве бейзлайнов используются горизонтали сетки микромодулей</p>
+        </div>
+        <div class="designing_grid_th">
+           <p class="designing_grid_header">4. Для больших форматов используется двенадцатиколонник</p>
+           <%= image_tag("comp4.svg", :alt => "элементы") %>
+           <p>В&nbsp;усложненной сетке увеличивается количество колонок, но&nbsp;все соотношения сохраняются.</p>
+        </div>
+     </div>
+   </div>
+   <div class="formats">
+     <h2>Форматы</h2>
+     <div class="formats_big_one">
+       <div class="formats_one">
+         <div class="formats_one1">
+              <%= image_tag("format1.svg", :alt => "элементы") %>
+              <p>Инстаграм, иконки, мерч</p>
+         </div>
+         <div class="formats_one2">
+             <%= image_tag("format2.svg", :alt => "элементы") %>
+             <p>Документация, постеры, печатные издания</p>
+         </div>
+       </div>
+       <div class="formats_two">
+         <div class="formats_two1">
+              <%= image_tag("format3.svg", :alt => "элементы") %>
+              <p>Документация (листы A4 и A5), визитки</p>
+         </div>
+         <div class="formats_two2">
+              <%= image_tag("format4.svg", :alt => "элементы") %>
+              <p>Баннер, письмо (горизонтальное)</p>
+         </div>
+       </div>
+       <div class="formats_three">
+         <%= image_tag("format5.svg", :alt => "элементы") %>
+         <p>Лендинг, уличная реклама</p>
+       </div>
+     </div>
+   </div>
+   <div class="layout_rules">
+      <h2>Правила компановки</h2>
+      <p>1. Форма должна превалировать над текстом</p>
+      <div class="layout_rules_one">
+          <%= image_tag("layout_rules1.svg", :alt => "элементы") %>
+          <%= image_tag("layout_rules2.svg", :alt => "элементы") %>
+      </div>
+      <p>2. Форма и&nbsp;текст стремятся занять как можно больше места&nbsp;&mdash; примагничиваются к&nbsp;полям и&nbsp;встают по&nbsp;диагонали</p>
+      <div class="layout_rules_two">
+        <%= image_tag("layout_rules3.svg", :alt => "элементы") %>
+        <%= image_tag("layout_rules4.svg", :alt => "элементы") %>
+      </div>
+      <%= image_tag("layout_rules5.svg", :alt => "элементы") %>
+   </div>
+</section>
+
+
+<section class="colors">
+  <h1>Цвета</h1>
+  <h2>Основные цвета</h2>
+  <p class="colors_about">Сервис сочетает в&nbsp;себе спокойные и&nbsp;приглушенные цвета (Navy blue и&nbsp;Mineral), отражающие дружелюбие и&nbsp;такт, и&nbsp;яркие (Zelda green и&nbsp;Neon blue), отражающие энтузиазм.</p>
+  <div class="colors_colors">
+     <div class="colors_part_one">
+       <div class="colors_one">
+          <p class="colorname">Navy blue</p>
+          <%= image_tag("navyblue.svg", :alt => "элементы") %>
+          <p>#04005E</p>
+       </div>
+       <div class="colors_one">
+          <p class="colorname">Neon blue</p>
+          <%= image_tag("neonblue.svg", :alt => "элементы") %>
+          <p>#75FEFA</p>
+       </div>
+     </div>
+     <div class="colors_part_one">
+       <div class="colors_one">
+          <p class="colorname">Mineral</p>
+          <%= image_tag("mineral.svg", :alt => "элементы") %>
+          <p>#9896AE</p>
+       </div>
+       <div class="colors_one">
+          <p class="colorname">Zelda green</p>
+          <%= image_tag("zeldagreen.svg", :alt => "элементы") %>
+          <p>#C1F52F</p>
+       </div>
+     </div>
+  </div>
+  <h2>Дополнительный цвет</h2>
+  <p class="added_color">Сервис сочетает в&nbsp;себе спокойные и&nbsp;приглушенные цвета (Navy blue и&nbsp;Mineral), отражающие дружелюбие и&nbsp;такт, и&nbsp;яркие (Zelda green и&nbsp;Neon blue), отражающие энтузиазм.</p>
+  <div class="colors_five">
+     <p class="colorname">Ice white</p>
+     <%= image_tag("icewhite.svg", :alt => "элементы") %>
+     <p>#F5F6FF</p>
+  </div>
+  <div class="using_rules">
+    <h2>Правила использования</h2>
+    <p class="using_rules_p">Zelda green и&nbsp;Mineral&nbsp;&mdash; наиболее часто используемые в&nbsp;айдентике цвета. Для акцентов применяются Space blue и&nbsp;Navy blue. Ice white используется точечно.</p>
+    <div class="using_rules_colors">
+        <div class="using_rules_colors">
+          <p>45%</p>
+          <div class="green color_block">
+
+          </div>
+        </div>
+        <div class="using_rules_colors">
+          <p>27%</p>
+          <div class="gray color_block">
+
+          </div>
+        </div>
+        <div class="using_rules_colors">
+          <p>13%</p>
+          <div class="darkblue color_block">
+
+          </div>
+        </div>
+        <div class="using_rules_colors">
+          <p>9%</p>
+          <div class="neonblue color_block">
+
+          </div>
+        </div>
+        <div class="using_rules_colors">
+          <p>4%</p>
+          <div class="white color_block">
+
+          </div>
+        </div>
+    </div>
+    <p class="colorpairs_p">Цветовые пары</p>
+    <div class="colorpairs">
+      <div class="colorpairs">
+        <div class="colorpair">
+          <%= image_tag("spacesatellite.svg", :alt => "элементы") %>
+          <p>Space  satellite</p>
+        </div>
+        <div class="colorpair">
+          <%= image_tag("silentbomb.svg", :alt => "элементы") %>
+          <p>Silent bomb</p>
+        </div>
+        <div class="colorpair">
+          <%= image_tag("ggcouple.svg", :alt => "элементы") %>
+          <p>GG couple</p>
+        </div>
+      </div>
+      <div class="colorpairs">
+        <div class="colorpair">
+          <%= image_tag("wildisle.svg", :alt => "элементы") %>
+          <p>Wild isle</p>
+        </div>
+        <div class="colorpair">
+          <%= image_tag("arcticcold.svg", :alt => "элементы") %>
+          <p>Artic cold</p>
+        </div>
+        <div class="colorpair">
+          <%= image_tag("poisonflower.svg", :alt => "элементы") %>
+          <p>Poison flower</p>
+        </div>
+      </div>
+    </div>
+    <p class="colorpairs_p">Примеры неправильных сочетаний</p>
+    <div class="false_using">
+        <div class="false_using_one">
+          <%= image_tag("false_using1.svg", :alt => "элементы") %>
+          <%= image_tag("false_using2.svg", :alt => "элементы") %>
+          <%= image_tag("false_using3.svg", :alt => "элементы") %>
+        </div>
+        <div class="false_using_two">
+          <%= image_tag("false_using4.svg", :alt => "элементы") %>
+        </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="graphik">
+  <h1>Графика</h1>
+  <h2>Основные графические элементы</h2>
+  <p class="graphik_about">Основные элементы составлены из&nbsp;нескольких простых фигур (2-5 кругов со&nbsp;&laquo;стяжками&raquo;), в&nbsp;определенной степени симметричны и&nbsp;преимущественно показываются в&nbsp;крупном формате.</p>
+  <div class="graphik_part">
+     <div class="graphik">
+       <%= image_tag("charmomile.svg", :alt => "элементы") %>
+       <p>Charmomile</p>
+     </div>
+     <div class="graphik">
+       <%= image_tag("molecule.svg", :alt => "элементы") %>
+       <p>Molecule</p>
+     </div>
+     <div class="graphik">
+       <%= image_tag("atom.svg", :alt => "элементы") %>
+       <p>Atom</p>
+     </div>
+  </div>
+  <h2>Дополнительные графические элементы</h2>
+  <p class="graphik_about" >Дополнительные элементы нужны в&nbsp;основном для сувенирной продукции. В&nbsp;большинстве случаев они ставятся враспор или служат в&nbsp;качестве элементов паттерна.</p>
+  <div class="graphik_part">
+     <div class="graphik">
+       <%= image_tag("rush.svg", :alt => "элементы") %>
+       <p>Rush</p>
+     </div>
+     <div class="graphik">
+       <%= image_tag("arrows.svg", :alt => "элементы") %>
+       <p>Arrow</p>
+     </div>
+     <div class="graphik">
+       <%= image_tag("hut.svg", :alt => "элементы") %>
+       <p>Hut</p>
+     </div>
+  </div>
+  <h2>Скрины из игр</h2>
+  <p class="screen_about1">Визуал, взятый из&nbsp;видеоигр,&nbsp;&mdash; важнейший элемент айдентики. Чтобы сохранить индивидуальность каждой игры, не&nbsp;следует прибегать к&nbsp;дополнительным фильтрам: важно сохранить узнаваемость источника.</p>
+  <p class="screen_about2">Скрины с&nbsp;наличием одного/двух основных цветов</p>
+  <div class="screens_part_one">
+    <div class="screen1">
+      <%= image_tag("screen1.svg", :alt => "элементы") %>
+      <div class="screen1_colors">
+        <div class="screen1_color1"></div>
+        <div class="screen1_color2"></div>
+      </div>
+    </div>
+    <div class="screen2">
+      <%= image_tag("screen2.svg", :alt => "элементы") %>
+      <div class="screen2_color"></div>
+    </div>
+    <div class="screen3">
+      <%= image_tag("screen3.svg", :alt => "элементы") %>
+      <div class="screen3_color"></div>
+    </div>
+  </div>
+  <p>Скрины, контрастные по&nbsp;отношению к&nbsp;тону фона</p>
+  <div class="screens_part_two">
+    <div class="screen4">
+      <%= image_tag("screen4.svg", :alt => "элементы") %>
+      <div class="screen4_color"></div>
+    </div>
+    <div class="screen5">
+      <%= image_tag("screen5.svg", :alt => "элементы") %>
+      <div class="screen5_color"></div>
+    </div>
+    <div class="screen6">
+      <%= image_tag("screen6.svg", :alt => "элементы") %>
+      <div class="screen6_color"></div>
+    </div>
+  </div>
+  <h2>Правила расстановки</h2>
+  <p>Есть два основных правила, по&nbsp;которым строится весь стиль бренда: расстановка фигур в&nbsp;распор по&nbsp;сеткеи&nbsp;увеличение фигур по&nbsp;максимому с&nbsp;вылезанием за&nbsp;границы сетки.</p>
+  <p class="comp_rules_p">Фигуры занимают максимум места, оставаясь в&nbsp;рамках сетки</p>
+  <div class="composition_rules">
+    <div class="composition_rules_one">
+       <%= image_tag("comprul1.svg", :alt => "элементы") %>
+       <%= image_tag("comprul2.svg", :alt => "элементы") %>
+    </div>
+    <div class="composition_rules_two">
+       <%= image_tag("comprul3.svg", :alt => "элементы") %>
+       <%= image_tag("comprul4.svg", :alt => "элементы") %>
+       <%= image_tag("comprul5.svg", :alt => "элементы") %>
+    </div>
+  </div>
+  <p class="composition_rules_three_p">Фигуры увеличиваются, кропятся и&nbsp;зарезаются на&nbsp;1/2 или 1/4 круглого элемента</p>
+  <div class="composition_rules_three">
+    <%= image_tag("comprul6.svg", :alt => "элементы") %>
+  </div>
+  <div class="graphik_work">
+    <h2>Работа с графикой</h2>
+    <p class="graphik_work_p">Вариант 1</p>
+    <p class="graphik_work_p_p">Фигуры служат маской для фотографий и&nbsp;скринов
+из&nbsp;игр. Выбирав цветовую пару, мы&nbsp;определяем один цвет фоном, а&nbsp;потом подбираем картинку, на&nbsp;которой присутсвует второй цвет из&nbsp;пары.</p>
+    <div class="variant_one">
+      <div class="variant_one1">
+          <%= image_tag("variant1.svg", :alt => "элементы") %>
+          <div class="variant_one1_colors">
+            <div class="color1"></div>
+            <div class="color2"></div>
+          </div>
+      </div>
+      <div class="variant_one1">
+          <%= image_tag("variant2.svg", :alt => "элементы") %>
+          <div class="variant_one1_colors">
+            <div class="color3"></div>
+            <div class="color4"></div>
+          </div>
+      </div>
+    </div>
+    <p>Вариант 2</p>
+    <p>Если нет возможности подобрать картинку с&nbsp;цветом из&nbsp;пары, то&nbsp;можно выбирать изображение
+по&nbsp;принципу контрастности: фон и&nbsp;изображение должны хорошо различаться по&nbsp;тону или яркости.</p>
+    <div class="variant_two">
+      <%= image_tag("variant3.svg", :alt => "элементы") %>
+      <%= image_tag("variant4.svg", :alt => "элементы") %>
+    </div>
+  </div>
+</section>
+
+
+<section class="carriers">
+  <h1>Носители</h1>
+  <h2>Базовые</h2>
+  <p>Для базовых носителей преимущественно используюся простые формы, а&nbsp;также цвета Zelda green и&nbsp;Mineral.</p>
+  <div class="base_carriers">
+    <%= image_tag("photo1.svg", :alt => "элементы") %>
+    <div class="base_carriers_th">
+      <%= image_tag("photo2.svg", :alt => "элементы") %>
+      <%= image_tag("photo3.svg", :alt => "элементы") %>
+    </div>
+    <%= image_tag("photo4.svg", :alt => "элементы") %>
+  </div>
+  <h2>Цифровые</h2>
+  <p>В&nbsp;качестве цифровых носителей выступают посты
+и&nbsp;сториз в&nbsp;Instagram, а&nbsp;также обложки к&nbsp;видео
+на&nbsp;YouTube</p>
+  <p>YouTube</p>
+  <%= image_tag("youtube_comp.svg", :alt => "элементы") %>
+  <div class="instruction_one">
+    <p>1. Для чистых графических обложек испульзуются 2&nbsp;стандартные цветовые пары: Space blue + Navy blue и&nbsp;Mineral Zelda green + Mineral.</p>
+    <div class="instruction_one_img">
+       <%= image_tag("instruction1.svg", :alt => "элементы") %>
+       <%= image_tag("instruction2.svg", :alt => "элементы") %>
+    </div>
+  </div>
+  <div class="instruction_two">
+    <p>1. Для чистых графических обложек испульзуются 2&nbsp;стандартные цветовые пары: Space blue + Navy blue и&nbsp;Mineral Zelda green + Mineral.</p>
+    <div class="instruction_two_img">
+       <%= image_tag("instruction3.svg", :alt => "элементы") %>
+    </div>
+  </div>
+  <p>Instagram</p>
+  <%= image_tag("insta.svg", :alt => "элементы") %>
+  <div class="instruction_three">
+    <p>1. Посты, насышенные графикой, должны перемежаться плашками с&nbsp;текстами в&nbsp;двух основных цветовых сочетаниях.</p>
+    <div class="instruction_three_img">
+       <%= image_tag("instruction4.svg", :alt => "элементы") %>
+       <%= image_tag("instruction5.svg", :alt => "элементы") %>
+    </div>
+  </div>
+  <div class="instruction_four">
+    <p>1. Посты, насышенные графикой, должны перемежаться плашками с&nbsp;текстами в&nbsp;двух основных цветовых сочетаниях.</p>
+    <div class="instruction_four_img">
+       <%= image_tag("instruction6.svg", :alt => "элементы") %>
+       <%= image_tag("instruction7.svg", :alt => "элементы") %>
+    </div>
+  </div>
+  <h2>Рекламные плакаты</h2>
+  <div class="img_advertise">
+    <%= image_tag("advertise1.svg", :alt => "элементы") %>
+    <%= image_tag("advertise2.svg", :alt => "элементы") %>
+  </div>
+  <%= image_tag("advertise3.svg", :alt => "элементы") %>
+</section>
+
+
 
 
 
