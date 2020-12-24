@@ -3,12 +3,18 @@ class AdminContextController < ApplicationController
 
 
   def index
-    @posts = Post.all
     @categories = Category.all
     @users = User.all
     @comments = Comment.all
     @pt=PostType.all
     @user = User.find(current_user.id)
+
+    if params.has_key?(:category)
+      @category = Category.find_by_name(params[:category])
+      @posts = Post.where(category: @category)
+    else
+      @posts = Post.all
+    end
 
 if params.has_key?(:posts)
   @whatcontenttoshow = "show-posts"

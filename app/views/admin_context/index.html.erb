@@ -19,6 +19,14 @@
       </div>
       <h1>Публикации</h1>
       <div class="filters">
+        <div class="button_and_list_filters">
+          <span class="drop_down_button">Категории &#9660</span>
+          <ul>
+          <% Category.all.each do |cat| %>
+            <li><%= link_to cat.name, admin_context_path(posts: "", category: cat.name) %></li>
+          <% end %>
+          </ul>
+        </div>
       </div>
       <table>
         <thead>
