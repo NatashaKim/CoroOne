@@ -34,6 +34,7 @@
             align-items: center;
             font-size: 1.2vw;
             a {
+              font-size: 1.2vw;
               text-decoration: none;
               color: #04005E;
               display: inline-flex;
@@ -49,6 +50,7 @@
           }
           div.registration {
             a {
+              font-size: 1.2vw;
               text-decoration: none;
               color: #04005E;
               display: inline-flex;
@@ -107,7 +109,7 @@
   body {
     box-sizing: content-box;
     nav {
-      margin-top: -2vw;
+      margin-top: 0vw;
       div.high_width {
         width: 90vw;
         height: 5vw;

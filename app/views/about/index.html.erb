@@ -2,14 +2,14 @@
   <%= notice %>
 <% end %>
 
-<%= render 'navbar/navbarinner' %>
+
 <section class="menu">
   <div class="menu_th">
     <h5>Логотип</h5>
     <p >Общие сведения</p>
     <p>Построение</p>
     <p>Охранное поле</p>
-    <p>Примеры использования</p>
+    <p>Примеры</p>
   </div>
   <div class="menu_th">
     <h5>Типографика</h5>
@@ -38,6 +38,48 @@
 
 </section>
 <div class="wrapper">
+  <nav>
+    <div class="high_width">
+      <div class="graphiklogo">
+          <%= link_to(image_tag("logographik2.svg"), promo_path) %>
+      </div>
+      <div class="fontlogo">
+          <%= link_to(image_tag("greenlogo.svg"), promo_path) %>
+      </div>
+
+      <div class="menu_info">
+        <div class="menu_info_th">
+          <%= link_to "о нас", about_path %>
+          <%= link_to "преимущества", posts_path %>
+          <%= link_to 'контакты', new_post_path %>
+        </div>
+        <div class="registration">
+          <% if user_signed_in? %>
+            <%= link_to 'Account', current_user %> <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to 'Sign In', new_user_session_path %>  <%= link_to 'Sign Up', new_user_registration_path %>
+          <% end %>
+        </div>
+        <div class="menul">
+          <%= image_tag("menu2.svg", :alt => "логотип") %>
+          <div class="menu_mobile">
+            <div class="cancel">
+              <%= image_tag("clear.svg", :alt => "логотип") %>
+            </div>
+            <div class="menu_mobile_th">
+              <div class="">
+                <%= link_to "О нас", about_path %>
+                <%= link_to "Преимущества", posts_path %>
+                <%= link_to 'Контакты', new_post_path %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </nav>
   <section class="logo">
     <div class="logo_concept">
       <div class="concept">
@@ -56,7 +98,7 @@
 
       <div class="logo_blocks">
         <%= image_tag("logo2.svg", :alt => "Логотип") %>
-        <p class="pp big_shift">На&nbsp;большинстве форматов задействуется типографический логотип без дискриптора.</p>
+        <p class="pp big_shift s">На&nbsp;большинстве форматов задействуется типографический логотип без дискриптора.</p>
       </div>
 
       <div class="logo_blocks_smalllogo ">
@@ -479,7 +521,7 @@
           </div>
       </div>
     </div>
-    <p>Вариант 2</p>
+    <p class="vary2">Вариант 2</p>
     <p>Если нет возможности подобрать картинку с&nbsp;цветом из&nbsp;пары, то&nbsp;можно выбирать изображение
 по&nbsp;принципу контрастности: фон и&nbsp;изображение должны хорошо различаться по&nbsp;тону или яркости.</p>
     <div class="variant_two">
@@ -506,7 +548,7 @@
   <p>В&nbsp;качестве цифровых носителей выступают посты
 и&nbsp;сториз в&nbsp;Instagram, а&nbsp;также обложки к&nbsp;видео
 на&nbsp;YouTube</p>
-  <p>YouTube</p>
+  <p class="youtube">YouTube</p>
   <%= image_tag("youtube_comp.svg", :alt => "элементы") %>
   <div class="instruction_one">
     <p>1. Для чистых графических обложек испульзуются 2&nbsp;стандартные цветовые пары: Space blue + Navy blue и&nbsp;Mineral Zelda green + Mineral.</p>
@@ -521,7 +563,7 @@
        <%= image_tag("instruction3.svg", :alt => "элементы") %>
     </div>
   </div>
-  <p>Instagram</p>
+  <p class="youtube">Instagram</p>
   <%= image_tag("insta.svg", :alt => "элементы") %>
   <div class="instruction_three">
     <p>1. Посты, насышенные графикой, должны перемежаться плашками с&nbsp;текстами в&nbsp;двух основных цветовых сочетаниях.</p>
