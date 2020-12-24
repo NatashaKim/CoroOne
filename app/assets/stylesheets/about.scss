@@ -180,6 +180,35 @@
   margin-bottom: 2.6vw;
 }
 
+@mixin last_objectm {
+   margin-bottom: 15vw;
+}
+
+@mixin lastest_objectm {
+  margin-bottom: 23vw;
+}
+
+@mixin maintext_abovephotom {
+  margin-bottom: 7vw;
+}
+
+@mixin maintext_beforephotom {
+  margin-bottom: 9vw;
+}
+
+@mixin maintext_afterbigphotom {
+  margin-top: 7vw;
+}
+
+@mixin p_underphotom {
+  margin-top: 2vw;
+}
+
+@mixin small_text {
+  font-size: 1.2vw;
+  line-height: 2vw;
+}
+
 $mainColor: #F5F6FF;
 $white: #F5F6FF;
 $green: #C1F52F;
@@ -316,7 +345,7 @@ $dark: #04005E;
             @include maintext;
             @include maintext_abovephoto;
           }
-          div.img_one_of_two {
+          div.img_one_of_twot {
             div {
               img {
                 @include big_image;
@@ -333,7 +362,7 @@ $dark: #04005E;
             }
 
           }
-          div.img_two_of_two {
+          div.img_two_of_twot {
             @include image_underimage;
             width: 100%;
             justify-content: space-between;
@@ -1012,7 +1041,6 @@ $dark: #04005E;
               margin-bottom: 4vw;
             }
             p.big_shift {
-              @include maintext_text;
               @include lighter;
               font-size: 1.2vw;
               line-height: 2.4vw;
@@ -1036,198 +1064,247 @@ $dark: #04005E;
           }
           div.logo_blocks {
             @include row;
-              @include big_image;
+            img {
+                width: 40%;
             }
             p.pp {
               @include maintext_logo;
-              @include maintext;
+              @include maintextm;
+              margin-left: 10vw;
+              margin-bottom: 9vw;
             }
           }
           div.logo_blocks_smalllogo {
-            display: flex;
-            flex-direction: column;
+            @include last_objectm;
+            @include row;
             img {
-              width: 68%;
+              width: 40%;
             }
             p.pp {
               @include maintext_logo;
-              @include maintext;
+              @include maintextm;
+              margin-left: 10vw;
+              margin-bottom: 9vw;
             }
           }
         }
 
         div.logo_design {
           h2 {
-            @include h2
+            @include h2m;
           }
           p.above_photo {
-            @include maintext_abovephoto;
-            @include maintext;
+            @include maintext_abovephotom;
+            @include maintextm;
           }
           img {
             @include big_image;
           }
           p.under_photo {
-            @include maintext_abovephoto;
-            @include maintext_afterbigphoto;
-            @include maintext;
+            @include maintext_abovephotom;
+            @include maintext_afterbigphotom;
+            @include maintextm;
           }
           div.logo_design_img {
-            display: flex;
-            flex-direction: column;
-            @include two_img;
-            >img {
-              @include big_image;
-              @include image_underimage;
-              @include last_object;
+            margin-top: 0vw;
+            @include last_objectm;
+            @include row;
+            align-items: baseline;
+            div.logo_design_img_two {
+              img {
+                width: 23vw;
+                height: 23.3vw;
+                margin-right: 2vw;
+              }
+            }
+            img {
+              margin-top: 0vw;
+              width: 23vw;
             }
           }
         }
 
         div.logo_field {
+          margin-top: -29vw;
           h2 {
-            @include h2
+            @include h2m;
           }
           p {
-            @include maintext;
-            @include maintext_abovephoto;
+            @include maintextm;
+            @include maintext_abovephotom;
           }
           img {
             @include big_image;
           }
           p.under_photo {
-            @include maintext_afterbigphoto;
+            @include maintext_afterbigphotom;
           }
-          @include last_object;
+          @include last_objectm;
         }
 
         div.examples_of_using {
           h2{
-            @include h2
+            @include h2m;
           }
           p {
-            @include maintext;
-            @include maintext_abovephoto;
+            @include maintextm;
+            @include maintext_abovephotom;
           }
-          div.img_one_of_two {
+          div.img_one_of_twot {
+            @include row;
+            width: 70%;
             div {
+              display: flex;
+              flex-direction: column;
               img {
-                @include big_image;
+                margin-bottom: 0vw;
+                width: 24vw;
               }
               p {
-                @include p_underphoto;
+                @include p_underphotom;
               }
-              img:last-of-type {
-                @include image_underimage;
+              img:last-child {
+                margin-right: 3vw;
+                margin-bottom: 0vw;
+                width: 30vw;
               }
               p:last-of-type {
-                @include p_underphoto;
+                @include p_underphotom;
               }
             }
 
           }
-          div.img_two_of_two {
-            @include image_underimage;
-            width: 100%;
+          div.img_one_of_twot:first-child {
+            div.img_one_of_two:last-child {
+              img {
+                width: 28vw;
+              }
+            }
+          }
+          div.img_two_of_twot:last-child {
+            @include row;
+            margin-top: -2vw;
+            width: 70%;
             justify-content: space-between;
             div {
-              width: 47.5%;
+              display: flex;
+              flex-direction: column;
+
               img {
                 @include big_image;
+                margin-bottom: 0vw;
               }
               span {
                 @include p_underphoto;
               }
             }
-            @include lastest_object;
+            @include lastest_objectm;
           }
 
         }
+
       }
+
 
       section.typography {
         h1 {
-          @include h1;
+          @include h1m;
         }
         h2 {
-          @include h2;
+          @include h2m;
         }
         p {
-          @include maintext;
-          @include maintext_abovephoto;
+          @include maintextm;
+          @include maintext_abovephotom;
         }
         div.two_fonts {
-          display: flex;
-          flex-direction:column;
+          @include row;
         }
         div.kinds_of_fonts {
           p.medium {
             @include medium;
-            margin-bottom: 5vw;
+            margin-bottom: 2vw;
           }
           img {
-            width: 70%;
-            @include maintext_abovephoto;
+            width: 32vw;
+            @include maintext_abovephotom;
           }
         }
         div.our_font {
           img {
             @include big_image;
-            @include last_object;
+            @include last_objectm;
           }
         }
 
         div.ratios {
           h2 {
-              @include h2;
+              @include h2m;
           }
           >p {
-            @include maintext;
-            @include maintext_abovephoto;
+            @include maintextm;
+            @include maintext_abovephotom;
           }
           div.img_one_of_two {
+            @include row;
             div {
-              p {}
+              margin-right: 3vw;
+              p {
+                width: 34vw;
+              }
               img {
-                @include big_image;
+                width: 34vw;
+                margin-bottom: 2vw;
               }
               p.small {
-                @include maintext_abovephoto;
+                margin-top: 0vw;
                 @include lighter;
               }
             }
           }
-          @include last_object;
+          @include last_objectm;
         }
 
       }
 
       section.composition {
-        h1 {
-          @include h1;
-        }
-        h2 {
-          @include h2;
-        }
         div.elements {
-          @include last_object;
-          div.elements_el_things {
-            @include maintext_abovephoto;
-            p {
-              margin-bottom: 3vw;
-            }
-            img {
-              @include big_image
+          h1 {
+            @include h1m;
+          }
+          h2 {
+            @include h2m;
+          }
+          div.elements_el {
+            @include row;
+            @include last_objectm;
+            div.elements_el_things {
+              margin-right: 2vw;
+              @include maintext_abovephotom;
+              p {
+                margin-bottom: 3vw;
+              }
+              img {
+                @include big_image;
+              }
             }
           }
+          p {
+            @include maintextm;
+            @include maintext_abovephotom;
+          }
         }
-        p {
-          @include maintext;
-          @include maintext_abovephoto;
-        }
+
         div.designing_grid {
-          @include last_object;
+          @include last_objectm;
+          h2 {
+            @include h2m;
+          }
+          p {
+            @include maintextm;
+          }
           div.designing_grid_field {
+            margin-top: -7vw;
             margin-left: 8vw;
             div.designing_grid_th {
               p.designing_grid_header {
@@ -1235,53 +1312,62 @@ $dark: #04005E;
               }
               img {
                 width: 100%;
+                margin-bottom: 1vw;
               }
               p:last-child {
-                @include text_above;
-                @include maintext_abovephoto;
+                width: 60%;
+                @include small_text;
+                @include maintext_abovephotom;
               }
             }
           }
         }
         div.formats {
+          h2 {
+            @include h2m;
+          }
           div.formats_big_one {
             div.formats_one {
-               @include maintext_abovephoto;
+               @include maintext_abovephotom;
                width: 100%;
                @include row;
                div {
                  img {
-                   width: 90%;
+                   width: 34vw;
+                   margin-bottom: 0vw;
                  }
                  p {
-                   @include text_under;
+                   @include text_underm;
+                   @include small_text;
                    width: 90%;
                  }
                }
             }
           }
           div.formats_two {
+             @include row;
              div {
-               @include maintext_abovephoto;
+               @include maintext_abovephotom;
                img {
-                 @include big_image;
+                 width: 34vw;
+                 margin-bottom: 0vw;
                }
              }
           }
           div.formats_three {
-            @include last_object;
+            @include last_objectm;
             img {
               @include big_image;
             }
           }
         }
         div.layout_rules {
-          @include lastest_object;
+          @include lastest_objectm;
           p {
             @include text_above;
           }
           div.layout_rules_one {
-            @include maintext_beforephoto;
+            @include maintext_beforephotom;
             img {
               @include big_image;
             }
@@ -1308,22 +1394,22 @@ $dark: #04005E;
       section.colors {
         color: $white;
         h1 {
-          @include h1;
+          @include h1m;
         }
         h2 {
-          @include h2;
+          @include h2m;
         }
         p {
-          @include maintext;
+          @include maintextm;
         }
         p.colors_about {
-          @include maintext_abovephoto;
+          @include maintext_abovephotom;
         }
         div.colors_colors {
            display: flex;
            flex-direction: column;
            div.colors_part_one {
-             @include maintext_abovephoto;
+             @include maintext_abovephotom;
              @include row;
              justify-content: space-between;
              div.colors_one {
@@ -1339,14 +1425,14 @@ $dark: #04005E;
              }
            }
            div.colors_part_one:last-child {
-             @include last_object;
+             @include last_objectm;
            }
         }
         p.added_color {
-          @include maintext_abovephoto;
+          @include maintext_abovephotom;
         }
         div.colors_five {
-          @include last_object;
+          @include last_objectm;
           p.colorname {
             @include text_above;
           }
@@ -1359,10 +1445,10 @@ $dark: #04005E;
         }
         div.using_rules {
           p.using_rules_p {
-            @include maintext_abovephoto;
+            @include maintext_abovephotom;
           }
           div.using_rules_colors {
-            @include maintext_abovephoto;
+            @include maintext_abovephotom;
             @include row;
             div.using_rules_colors {
               display: flex;
@@ -1397,7 +1483,7 @@ $dark: #04005E;
             }
           }
           p.colorpairs_p {
-            @include maintext_abovephoto;
+            @include maintext_abovephotom;
           }
           div.colorpairs {
             display: flex;
@@ -1415,14 +1501,14 @@ $dark: #04005E;
               }
             }
             div.colorpairs:last-child {
-              @include maintext_abovephoto;
+              @include maintext_abovephotom;
             }
           }
           p.colorpairs_p {
-             @include maintext_abovephoto;
+             @include maintext_abovephotom;
           }
           div.false_using {
-            @include lastest_object;
+            @include lastest_objectm;
             display: flex;
             flex-direction: column;
             div.false_using_one {
@@ -1442,19 +1528,19 @@ $dark: #04005E;
       }
       section.graphik {
         h1 {
-          @include h1;
+          @include h1m;
         }
         h2 {
-          @include h2;
+          @include h2m;
         }
         p {
-          @include maintext;
+          @include maintextm;
         }
         p.graphik_about {
-          @include maintext_abovephoto;
+          @include maintext_abovephotom;
         }
         div.graphik_part {
-          @include last_object;
+          @include last_objectm;
           @include row;
           div.graphik {
             display: flex;
@@ -1472,10 +1558,10 @@ $dark: #04005E;
           }
         }
         p.screen_about1 {
-          @include maintext_beforephoto;
+          @include maintext_beforephotom;
         }
         p.screen_about2 {
-          @include maintext_abovephoto;
+          @include maintext_abovephotom;
         }
         div.screens_part_one {
            display: flex;
@@ -1524,10 +1610,10 @@ $dark: #04005E;
                }
              }
              p {
-               @include maintext_abovephoto
+               @include maintext_abovephotom;
              }
              div.screens_part_two {
-               @include last_object;
+               @include last_objectm;
                display: flex;
                flex-direction: column;
                div.screen4 {
@@ -1593,7 +1679,7 @@ $dark: #04005E;
                 @include text_above;
              }
              div.composition_rules_three {
-                @include last_object;
+                @include last_objectm;
                 img {
                   @include big_image;
                 }
@@ -1603,7 +1689,7 @@ $dark: #04005E;
                   margin-bottom: 6vw;
                 }
                 p.graphik_work_p_p {
-                  @include maintext_abovephoto;
+                  @include maintext_abovephotom;
                 }
                 div.variant_one {
                   display: flex;
@@ -1650,7 +1736,7 @@ $dark: #04005E;
                   }
                 }
                 div.variant_two {
-                  @include lastest_object;
+                  @include lastest_objectm;
                   display: flex;
                   flex-direction: column;
                   img {
@@ -1663,22 +1749,22 @@ $dark: #04005E;
            }
            section.carriers {
              h1 {
-               @include h1;
+               @include h1m;
              }
              h2 {
-               @include h2;
+               @include h2m;
              }
              p {
-               @include  maintext_abovephoto;
-               @include maintext;
+               @include  maintext_abovephotom;
+               @include maintextm;
              }
              p:first-child {
-               @include maintext_abovephoto;
+               @include maintext_abovephotom;
              }
              div.base_carriers {
                img {
                  margin-bottom: 5vw;
-                 @include big_image
+                 @include big_image;
                }
                div.base_carriers_th {
                  @include row;
@@ -1722,7 +1808,7 @@ $dark: #04005E;
                }
              }
              div.instruction_four {
-               @include lastest_object;
+               @include lastest_objectm;
                display: flex;
                flex-direction: column;
                div.instruction_four_img {
@@ -1731,8 +1817,8 @@ $dark: #04005E;
                    @include small_image;
                  }
                }
-             }
            }
+
            div.img_advertise {
              display: flex;
              flex-direction: column;
@@ -1745,7 +1831,8 @@ $dark: #04005E;
              @include big_image;
              margin-bottom: 5vw;
            }
+       }
+    }
+  }
 
-      }
-    
 }
