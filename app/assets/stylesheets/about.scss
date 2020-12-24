@@ -1338,7 +1338,7 @@ $dark: #04005E;
                @include row;
                div {
                  img {
-                   width: 34vw;
+                   width: 34.3vw;
                    margin-bottom: 0vw;
                  }
                  p {
@@ -1350,11 +1350,12 @@ $dark: #04005E;
             }
           }
           div.formats_two {
+             margin-top: -5vw;
              @include row;
              div {
                @include maintext_abovephotom;
                img {
-                 width: 34vw;
+                 width: 34.3vw;
                  margin-bottom: 0vw;
                }
                p {
@@ -1365,9 +1366,9 @@ $dark: #04005E;
              }
           }
           div.formats_three {
+            margin-top: -12vw;
             @include last_objectm;
             img {
-              @include big_image;
               margin-bottom: 0vw;
             }
             p {
@@ -1384,27 +1385,41 @@ $dark: #04005E;
           @include lastest_objectm;
           p {
             @include text_above;
+            @include small_text;
           }
           div.layout_rules_one {
+            width: 94%;
+            align-items: flex-start;
+            @include row;
             @include maintext_beforephotom;
             img {
-              @include big_image;
+              margin-right: 3vw;
             }
             img:first-child {
-              @include text_above;
+              width: 28vw;
             }
             img:last-child {
               margin-bottom: 0vw;
+              width: 34vw;
             }
           }
+          p {
+            width: 60%;
+          }
           div.layout_rules_two {
+
+            width: 86%;
+            @include row;
+            align-items: flex-start;
             img {
-              @include big_image;
+              margin-right: 3vw;
+              width: 28vw;
               @include text_above;
             }
           }
           img {
-            @include big_image;
+            width: 70%;
+            margin-top: -1vw;
             margin-bottom: 0vw;
           }
 
@@ -1425,21 +1440,24 @@ $dark: #04005E;
           @include maintext_abovephotom;
         }
         div.colors_colors {
-           display: flex;
-           flex-direction: column;
+           @include row;
            div.colors_part_one {
              @include maintext_abovephotom;
              @include row;
+             width: 50%;
              justify-content: space-between;
              div.colors_one {
+                margin-right: 3vw;
                 p.colorname {
-                  @include text_above;
+                  margin-bottom: 2vw;
                 }
                 img {
-                  width: 43vw;
+                  width: 15vw;
+                  margin-bottom: 1vw;
                 }
                 p:last-child {
-                  margin-top: 2vw;
+                  @include small_text;
+                  margin-top: 0vw;
                 }
              }
            }
@@ -1453,13 +1471,15 @@ $dark: #04005E;
         div.colors_five {
           @include last_objectm;
           p.colorname {
-            @include text_above;
+            margin-bottom: 2vw;
           }
           img {
-            width: 43vw;
+            width: 15vw;
+            margin-bottom: 1vw;
           }
           p:last-child {
-            margin-top: 2vw;
+            @include small_text;
+            margin-top: 0vw;
           }
         }
         div.using_rules {
@@ -1470,33 +1490,33 @@ $dark: #04005E;
             @include maintext_abovephotom;
             @include row;
             div.using_rules_colors {
+              width: 100%;
               display: flex;
               flex-direction: column;
               p {
-                font-size: 3vw;
-                margin-bottom: 1vw;
+                @include small_text
               }
               div.color_block {
-                height: 15vw;
+                height: 10vw;
               }
               div.green {
-                width: 36vw;
+                width: 28vw;
                 background-color: $green;
               }
               div.gray {
-                width: 25vw;
+                width: 19vw;
                 background-color: $gray;
               }
               div.darkblue {
-                width: 15vw;
+                width: 13vw;
                 background-color: #04005E;
               }
               div.neonblue {
-                width: 9vw;
+                width: 7vw;
                 background-color: $blue;
               }
               div.white {
-                width: 5vw;
+                width: 3vw;
                 background-color: $white;
               }
             }
@@ -1505,17 +1525,20 @@ $dark: #04005E;
             @include maintext_abovephotom;
           }
           div.colorpairs {
-            display: flex;
-            flex-direction: column;
+            @include row;
             div.colorpairs {
               margin-bottom: 8vw;
               @include row;
               div.colorpair {
                 img {
-                  width: 27vw;
+                  width: 9.4vw;
+                  margin-right: 3vw;
+                  margin-bottom: 0vw;
                 }
                 p {
-                  margin-top: 2vw;
+                  @include small_text;
+                  width: 100%;
+                  margin-top: 1vw;
                 }
               }
             }
@@ -1529,17 +1552,18 @@ $dark: #04005E;
           div.false_using {
             @include lastest_objectm;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             div.false_using_one {
-              @include text_above;
+              margin-bottom: 0vw;
               @include row;
               img {
-                width: 27vw;
+                width: 9.4vw;
+                margin-right: 3vw;
               }
             }
             div.false_using_two {
               img {
-                width: 27vw;
+                width: 9.4vw;
               }
             }
           }
@@ -1559,6 +1583,7 @@ $dark: #04005E;
           @include maintext_abovephotom;
         }
         div.graphik_part {
+          align-items: baseline;
           @include last_objectm;
           @include row;
           div.graphik {
@@ -1568,11 +1593,11 @@ $dark: #04005E;
             align-items: baseline;
             width: 22vw;
             img {
-               width: 20vw;
+               width: 16vw;
+               margin-bottom: 3vw;
             }
             p {
               margin: 0 auto;
-              @include text_under;
             }
           }
         }
@@ -1583,48 +1608,52 @@ $dark: #04005E;
           @include maintext_abovephotom;
         }
         div.screens_part_one {
-           display: flex;
-           flex-direction: column;
+           @include row;
            div.screen1,
            div.screen2,
            div.screen3 {
              display: flex;
              flex-direction: column;
              img {
-               @include big_image;
-               @include text_above;
+               width: 22vw;
+               margin-right: 3vw;
+               margin-bottom: 2vw;
              }
            }
            div.screen1 {
-             margin-bottom: 20vw;
+             margin-bottom: 13vw;
              div.screen1_colors {
+               width: 22vw;
                @include row;
                div.screen1_color1 {
                  width: 50%;
-                 height: 15vw;
+                 height: 5vw;
                  background-color: $dark;
                }
                div.screen1_color2 {
                  width: 50%;
-                 height: 15vw;
+                 height: 5vw;
                  background-color: $blue;
                }
              }
            }
            div.screen2 {
-             margin-bottom: 20vw;
+             margin-bottom: 13vw;
                div.screen2_color {
-                 width: 100%;
-                 height: 15vw;
+                 width: 22vw;
+                 height: 5vw;
                  background-color: $green;
                }
              }
              div.screen3 {
-               margin-bottom: 30vw;
+               margin-bottom: 13vw;
                  div.screen3_color {
-                   width: 100%;
-                   height: 15vw;
+                   width: 22vw;
+                   height: 5vw;
                    background-color: $blue;
+                 }
+                 img {
+                   margin-right: 0vw;
                  }
                }
              }
@@ -1632,42 +1661,41 @@ $dark: #04005E;
                @include maintext_abovephotom;
              }
              div.screens_part_two {
-               @include last_objectm;
-               display: flex;
-               flex-direction: column;
+               margin-bottom: 0vw;
+               @include row;
                div.screen4 {
                  margin-bottom: 20vw;
                    img {
-                     @include big_image;
-                     @include text_above;
+                     width: 22vw;
+                     margin-bottom: 2vw;
                    }
                    div.screen4_color {
                      width: 100%;
-                     height: 15vw;
+                     height: 5vw;
                      background-color: $dark;
                    }
                 }
                 div.screen5 {
                   margin-bottom: 20vw;
                     img {
-                      @include big_image;
-                      @include text_above;
+                      width: 22vw;
+                      margin-bottom: 2vw;
                     }
                     div.screen5_color {
                       width: 100%;
-                      height: 15vw;
+                      height: 5vw;
                       background-color: $green;
                     }
                  }
                  div.screen6 {
                    margin-bottom: 20vw;
                    img {
-                     @include big_image;
-                     @include text_above;
+                     width: 22vw;
+                     margin-bottom: 2vw;
                    }
                    div.screen6_color {
                      width: 100%;
-                     height: 15vw;
+                     height: 5vw;
                      background-color: $gray;
                    }
                   }
@@ -1677,20 +1705,20 @@ $dark: #04005E;
              }
              div.composition_rules {
                div.composition_rules_one {
-                 margin-bottom: 5vw;
+                 margin-bottom: -1.3vw;
                  @include row;
                  img:first-child {
                    width: 37%;
                  }
                  img:last-child {
-                   width: 57%;
+                   width: 58%;
                  }
                }
                div.composition_rules_two {
-                 margin-bottom: 20vw;
+                 margin-bottom: 15vw;
                  @include row;
                  img {
-                   width: 29%;
+                   width: 30.2%;
                  }
                }
              }
@@ -1705,14 +1733,14 @@ $dark: #04005E;
              }
              div.graphik_work {
                 p.graphik_work_p {
-                  margin-bottom: 6vw;
+                  margin-bottom: 2vw;
                 }
                 p.graphik_work_p_p {
                   @include maintext_abovephotom;
                 }
                 div.variant_one {
-                  display: flex;
-                  flex-direction: column;
+                  @include row;
+                  width: 80%;
                   div.variant_one1 {
                     margin-bottom: 20vw;
                     img {
@@ -1723,12 +1751,12 @@ $dark: #04005E;
                       @include row;
                       div.color1 {
                         width: 100%;
-                        height: 15vw;
+                        height: 5vw;
                         background-color: $dark;
                       }
                       div.color2 {
                         width: 100%;
-                        height: 15vw;
+                        height: 5vw;
                         background-color: $blue;
                       }
                     }
@@ -1743,13 +1771,13 @@ $dark: #04005E;
                       @include row;
                       div.color3 {
                         width: 100%;
-                        height: 15vw;
-                        background-color: $dark;
+                        height: 5vw;
+                        background-color: $gray;
                       }
                       div.color4 {
                         width: 100%;
-                        height: 15vw;
-                        background-color: $blue;
+                        height: 5vw;
+                        background-color: $green;
                       }
                     }
                   }
