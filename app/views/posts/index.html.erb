@@ -23,7 +23,7 @@
         <div class="one_card">
           <div class="info">
             <div  class="posts_img"><%= link_to(image_tag(post.image.thumb.url, alt: 'Image'), post.image.url, target: '_blank') if post.image? %></div>
-            <div class="name"><%= post.name %></div>
+            <!-- <div class="name"><%#= post.name %></div> -->
             <div class="category.name"><span>
               <% if post.category_id? %>
               <%= post.category.name %>
@@ -31,8 +31,8 @@
             <div class="title"><%= post.title %></div>
             <div class="content"><%= post.content.html_safe %></div>
           </div>
-          <div><%= post.likes.count %> <%= (post.likes.count) == 1 ? 'Like' : 'Likes'%></div>
-          <div><%= post.comments.count %> <%= (post.comments.count) == 1 ? 'Comment' : 'Commentes'%></div>
+          <div><%#= post.likes.count %> <%#= (post.likes.count) == 1 ? 'Like' : 'Likes'%></div>
+          <div><%#= post.comments.count %> <%#= (post.comments.count) == 1 ? 'Comment' : 'Commentes'%></div>
           <div class="action">
             <div><%= link_to 'Открыть', post %></div>
             <div><%= link_to 'Редактировать', edit_post_path(post) %></div>

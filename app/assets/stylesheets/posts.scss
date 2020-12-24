@@ -126,16 +126,18 @@ body.posts {
 
 body.new_post {
   box-sizing: border-box;
-  font-family: "Circe";
   height: auto;
+  font-family: "RedRing";
+  margin: 0;
+  overflow-x: hidden;
   .new_post_wrapper {
+    overflow-x: hidden;
+    width: 74vw;
+    display: flex;
+    flex-flow: column;
+    margin-left: 18vw;
+    margin-right: 8vw;
     .new_post_card{
-      width: 46vw;
-      margin: 5vw auto;
-      background-color: white;
-      border-radius: 2vw;
-      padding: 3vw;
-      border: 1.2vw solid #CCFD38;
       h1 {
         font-size: 3vw;
       }
