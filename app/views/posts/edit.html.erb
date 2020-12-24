@@ -1,5 +1,4 @@
 <body class="edit_post">
-   <%= render 'navbar/navbarinner' %>
    <div class="edit_post_wrapper">
      <div class="edit_post_card">
       <h1>Редактирование</h1>
@@ -19,11 +18,16 @@
             <%= render 'formevents', post: @post %>
       <% else %>
         <%= render 'formpuzzles', post: @post %>
+        <% if @post.id? %>
+            <h2>Add answer:</h2>
+              <%= render "answers/form" %>
+        <% end %>
     <% end %>
+
+
 
       <%= link_to 'Открыть', @post %> |
       <%= link_to 'Назад', posts_path %>
     </div>
   </div>
-  <%= render 'footer/footerinner' %>
 </body>

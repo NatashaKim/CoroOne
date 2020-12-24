@@ -1,7 +1,9 @@
 <body>
   <%= render 'navbar/navbarleft' %>
   <div class="please">
+<%= @whatcontenttoshow %>
 
+<% if @whatcontenttoshow == "show-posts" %>
   <div class="wrapper_posts">
 
       <div class="create">
@@ -16,7 +18,8 @@
         </div>
       </div>
       <h1>Публикации</h1>
-      <div class="filters"></div>
+      <div class="filters">
+      </div>
       <table>
         <thead>
           <tr>
@@ -37,7 +40,11 @@
           <tr>
             <td><%= link_to post.title, post %></td>
             <td class="author"><span><%= post.author %></span></td>
-            <td class="category.name"><span><%= post.category.name %></span></td>
+            <td class="category.name"><span>
+              <% if post.category_id? %>
+              <%= post.category.name %>
+              <% end %>
+            </span></td>
             <td><span><%= post.created_at.mday %>.<%= post.created_at.month %>.<%= post.created_at.year %></span></td>
             <td><%= image_tag("like_icon.svg", :alt => "like") %><div><%= post.likes.count %></div></td>
             <td><%= image_tag("comment_icon.svg", :alt => "comment") %><div><%= post.comments.count %></div></td>
@@ -52,9 +59,10 @@
       </table>
 
     </div>
+<% end %>
 
     <br>
-
+<% if @whatcontenttoshow == "show-categories" %>
     <div class="wrapper_categories">
       <div class="create">
         <%= link_to 'Создать категорию', new_category_path, class: "hey" %>
@@ -88,8 +96,9 @@
       </table>
 
     </div>
+<% end %>
 
-
+<% if @whatcontenttoshow == "show-users" %>
     <div class="wrapper_users">
       <h1>Пользователи</h1>
       <table>
@@ -132,8 +141,9 @@
         </tbody>
       </table>
     </div>
+<% end %>
 
-
+<% if @whatcontenttoshow == "show-comments" %>
     <div class="wrapper_comments">
       <h1>Комментарии</h1>
       <table>
@@ -167,8 +177,8 @@
         </tbody>
       </table>
     </div>
-
-</div>
+  </div>
+<% end %>
 
 
 

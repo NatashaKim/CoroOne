@@ -24,7 +24,10 @@
           <div class="info">
             <div  class="posts_img"><%= link_to(image_tag(post.image.thumb.url, alt: 'Image'), post.image.url, target: '_blank') if post.image? %></div>
             <div class="name"><%= post.name %></div>
-            <div class="category.name"><%= post.category.name %></div>
+            <div class="category.name"><span>
+              <% if post.category_id? %>
+              <%= post.category.name %>
+              <% end %></span></div>
             <div class="title"><%= post.title %></div>
             <div class="content"><%= post.content.html_safe %></div>
           </div>

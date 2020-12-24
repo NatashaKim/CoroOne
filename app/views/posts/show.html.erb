@@ -7,11 +7,12 @@
       <%= @post.name %>
     </p>
 
+<% if @post.category_id? %>
     <p>
       <strong>Category:</strong>
       <%= @post.category.name %>
     </p>
-
+<% end %>
     <p>
       <strong></strong>
       <%= @post.title %>
@@ -36,7 +37,7 @@
 
       <% pre_like = @post.likes.find { |like| like.user_id == current_user.id} %>
       <% if user_signed_in? %>
-        
+
         <% if pre_like %>
           <%= button_to 'Unlike', post_like_path(@post, pre_like), method: :delete %>
         <% else %>
@@ -60,6 +61,9 @@
       <% else %>
         <p>Please <%= link_to 'login', new_user_session_path %> or <%= link_to 'register', new_user_registration_path %> to comment.</p>
       <% end %>
+
+      <h2>Comments</h2>
+        <%= render @post.answers %>
 
       <% if user_signed_in? %>
       <%= link_to 'Редактировать', edit_post_path(@post) %> |
