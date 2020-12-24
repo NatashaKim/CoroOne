@@ -1333,7 +1333,7 @@ $dark: #04005E;
           }
           div.formats_big_one {
             div.formats_one {
-               @include maintext_abovephotom;
+               margin-bottom: 0vw;
                width: 100%;
                @include row;
                div {
@@ -1357,16 +1357,30 @@ $dark: #04005E;
                  width: 34vw;
                  margin-bottom: 0vw;
                }
+               p {
+                 @include text_underm;
+                 @include small_text;
+                 width: 90%;
+               }
              }
           }
           div.formats_three {
             @include last_objectm;
             img {
               @include big_image;
+              margin-bottom: 0vw;
+            }
+            p {
+              @include text_underm;
+              @include small_text;
+              width: 90%;
             }
           }
         }
         div.layout_rules {
+          h2 {
+            @include h2m;
+          }
           @include lastest_objectm;
           p {
             @include text_above;
