@@ -9,11 +9,21 @@ class AdminContextController < ApplicationController
     @pt=PostType.all
     @user = User.find(current_user.id)
 
+    @posts = Post.all
+
+    if params.has_key?(:post_type)
+      @pt = PostType.find_by_name(params[:post_type])
+      @posts = @posts.where(post_type: @pt)
+    end
+
     if params.has_key?(:category)
       @category = Category.find_by_name(params[:category])
-      @posts = Post.where(category: @category)
-    else
-      @posts = Post.all
+      @posts = @posts.where(category: @category)
+    end
+
+    if params.has_key?(:user)
+      @user = User.find_by_username(params[:user])
+      @posts = @posts.where(user: @user)
     end
 
 if params.has_key?(:posts)

@@ -210,6 +210,8 @@ body.admin_context {
       }
       .filters {
         width: inherit;
+        display: flex;
+        flex-direction: row;
         height: 7vw;
         @include filters_list_mix;
       }

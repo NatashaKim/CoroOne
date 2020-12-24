@@ -20,10 +20,26 @@
       <h1>Публикации</h1>
       <div class="filters">
         <div class="button_and_list_filters">
+          <span class="drop_down_button">Разделы &#9660</span>
+          <ul>
+          <% PostType.all.each do |pt| %>
+            <li><%= link_to pt.name, admin_context_path(posts: "", post_type: pt.name) %></li>
+          <% end %>
+          </ul>
+        </div>
+        <div class="button_and_list_filters">
           <span class="drop_down_button">Категории &#9660</span>
           <ul>
           <% Category.all.each do |cat| %>
             <li><%= link_to cat.name, admin_context_path(posts: "", category: cat.name) %></li>
+          <% end %>
+          </ul>
+        </div>
+        <div class="button_and_list_filters">
+          <span class="drop_down_button">Авторы &#9660</span>
+          <ul>
+          <% User.all.each do |users| %>
+            <li><%= link_to users.username, admin_context_path(posts: "", user: users.username) %></li>
           <% end %>
           </ul>
         </div>
@@ -190,27 +206,4 @@
 
 
 
-
-
-
-      <!--
-          <%= image_tag("news.svg", :alt => "Новости") %>
-          <h2>All Categories</h2>
-          <% Category.all.each do |cat| %>
-          	<%= link_to cat.name, posts_path(category: cat.name) %> <br>
-          <% end %>
-          <br>
-
-
-            <% @pt.each do |pt| %>
-            Тут стоит тип поста:<%= pt.name %><br>
-            <% end %>
-
-            <% if @hascat %>
-              <% @cat.each do |blabla| %>
-                Тут стоит категория: <%= blabla.name %><br>
-              <% end %>
-            <% end %>
-
-      -->
 </body>
