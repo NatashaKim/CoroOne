@@ -1,0 +1,40 @@
+<%= form_with model: @user do |f| %>
+<h1>A</h1>
+
+<% if @user.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this post_type from being saved:</h2>
+
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+<% if signed_in? %>
+  <% if current_user.admin? %>
+    <h3> Click to Switch On/Off Admin
+    <%= f.check_box :admin %></h3>
+  <% end %>
+<% end %>
+
+<% if signed_in? %>
+  <% if current_user.admin? %>
+    <h3> Click to Switch On/Off Moderator
+    <%= f.check_box :ismoderator %></h3>
+  <% end %>
+<% end %>
+
+<% if signed_in? %>
+  <% if current_user.admin? %>
+    <h3> Click to Switch On/Off Developer
+    <%= f.check_box :isdeveloper %></h3>
+  <% end %>
+<% end %>
+<div class="actions">
+  <%= f.submit "Да"%>
+</div>
+<% end %>

@@ -12,6 +12,27 @@
     <%= f.text_field :username, autocomplete: "username" %>
   </div>
 
+  <% if signed_in? %>
+    <% if current_user.admin? %>
+      <h3> Click to Switch On/Off Admin
+      <%= f.check_box :admin %></h3>
+    <% end %>
+  <% end %>
+
+  <% if signed_in? %>
+    <% if current_user.admin? %>
+      <h3> Click to Switch On/Off Moderator
+      <%= f.check_box :ismoderator %></h3>
+    <% end %>
+  <% end %>
+
+  <% if signed_in? %>
+    <% if current_user.admin? %>
+      <h3> Click to Switch On/Off Developer
+      <%= f.check_box :isdeveloper %></h3>
+    <% end %>
+  <% end %>
+
   <div class="img_form">
 
   <div>

@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :users
+  post 'users/:id/edit', to: "users#update"
+  post 'users/:id/delete', to: "users#delite"
   post 'users/:id/follow', to: "users#follow", as: "follow_user"
   post 'users/:id/unfollow', to: "users#unfollow", as: "unfollow_user"
   # get 'about/index'
@@ -21,6 +23,7 @@ resources :posts do
       get :newportfolio
       get :newevents
     end
+    resources :answers
     resources :comments
     resources :likes
     resources :favorites
@@ -36,8 +39,11 @@ end
 
   get 'users', to: 'users#index'
   get 'users/:id' => 'users#show'
+  get 'users/:id/edit' => 'users#edit'
   delete 'users/:id', to: 'users#destroy'
   get 'users/:id/following', :to => "users#following", :as => :following
+
+  # delete 'comments/:id', to: 'comments#destroy'
   # root 'posts#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
