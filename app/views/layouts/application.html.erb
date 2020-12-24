@@ -19,7 +19,47 @@
   <% end %>
 
     <div class="top_menu">
+      <nav>
+        <div class="high_width">
+          <div class="graphiklogo">
+              <%= image_tag("logographik.svg", :alt => "логотип") %>
+          </div>
+          <div class="fontlogo">
+              <%= image_tag("bluelogo.svg", :alt => "логотип") %>
+          </div>
 
+          <div class="menu_info">
+            <div class="menu_info_th">
+              <%= link_to "о нас", about_path %>
+              <%= link_to "преимущества", posts_path %>
+              <%= link_to 'контакты', new_post_path %>
+            </div>
+            <div class="registration">
+              <% if user_signed_in? %>
+                <%= link_to 'Account', current_user %> <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+              <% else %>
+                <%= link_to 'Sign In', new_user_session_path %>  <%= link_to 'Sign Up', new_user_registration_path %>
+              <% end %>
+            </div>
+            <div class="menul">
+              <%= image_tag("menu.svg", :alt => "логотип") %>
+            </div>
+          </div>
+        </div>
+
+        <div class="menu_mobile">
+          <div class="cancel">
+            <%= image_tag("clear.svg", :alt => "логотип") %>
+          </div>
+          <div class="menu_mobile_th">
+            <div class="">
+              <%= link_to "О нас", about_path %>
+              <%= link_to "Преимущества", posts_path %>
+              <%= link_to 'Контакты', new_post_path %>
+            </div>
+          </div>
+        </div>
+      </nav>
     </div>
     <%= yield %>
   </body>
