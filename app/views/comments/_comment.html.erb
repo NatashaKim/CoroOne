@@ -1,17 +1,21 @@
 <div class="comment_content">
-	<%#= image_tag(User.image.small_thumb.url, alt: 'Image') if User.image? %>
-	<span>
-	  <%= User.find(comment.user_id).username %>
-	</span>
-	<p>
-		<%= comment.body %>
-	</p>
+	<%= image_tag(User.find(comment.user_id).image.small_thumb.url, alt: 'Image') if User.find(comment.user_id).image? %>
+	<div class="info_and_text">
+		<span>
+			<%= User.find(comment.user_id).username %>
+		</span>
+		<p>
+			<%= comment.body %>
+		</p>
+		<div class="sub">
+			<span><%= comment.created_at %></span>
+			<% if user_signed_in? && current_user.id == comment.user_id  %>
+				<span>
+				  <%= link_to 'Destroy Comment', [comment.post, comment],
+				               :confirm => 'Are you sure?',
+				               :method => :delete %>
+				</span>
+			<% end %>
+		</div>
+	</div>
 </div>
-
-<% if user_signed_in? && current_user.id == comment.user_id  %>
-	<p>
-	  <%= link_to 'Destroy Comment', [comment.post, comment],
-	               :confirm => 'Are you sure?',
-	               :method => :delete %>
-	</p>
-<% end %>

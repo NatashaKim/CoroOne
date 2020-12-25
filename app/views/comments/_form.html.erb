@@ -1,6 +1,6 @@
 <%= form_for([@post, @post.comments.build]) do |f| %>
 	<div class="field">
-	    <%= current_user.username %>
+			<%= image_tag(current_user.image.small_thumb.url, alt: 'Image') if current_user.image? %>
 	</div>
 	<div class="field">
 		<%= f.text_area :body %>
