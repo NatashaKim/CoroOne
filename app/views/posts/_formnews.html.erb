@@ -2,7 +2,7 @@
   <% if post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
-
+      
       <ul>
         <% post.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -17,7 +17,7 @@
     <div class="text_form">
 
       <div class="field">
-        <%= form.label "Теги" %>
+        <%= form.label "Название" %>
         <%= form.text_field :name %>
       </div>
 
@@ -29,7 +29,7 @@
       </div>
 
       <div class="field">
-        <%= form.label "Название" %>
+        <%= form.label "Заголовок" %>
         <%= form.text_field :title %>
       </div>
 

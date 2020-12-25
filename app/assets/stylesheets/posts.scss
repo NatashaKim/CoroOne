@@ -132,11 +132,10 @@ body.new_post {
   overflow-x: hidden;
   .new_post_wrapper {
     overflow-x: hidden;
-    width: 74vw;
+    width: 50vw;
     display: flex;
     flex-flow: column;
-    margin-left: 18vw;
-    margin-right: 8vw;
+    margin: 9vw 7vw 7vw 19vw;
     .new_post_card{
       h1 {
         font-size: 3vw;
@@ -145,79 +144,103 @@ body.new_post {
         margin-top: 3vw;
         .form_body {
           display: flex;
-          .text_form {
-            display: flex;
-            flex-direction: column;
+          flex-direction: column;
             .field {
-              width: 20vw;
+              width: 50vw;
               margin-bottom: 3vw;
               label {
-                color: gray;
+                margin: 1vw auto;
+                font-size: 1.3vw;
+                text-align: left;
+                font-weight: bold;
               }
               input {
                 border-style: none;
-                border-bottom: 0.1vw solid gray;
-                width: 19vw;
-                font-family: 'Circe';
+                border-radius: 0.3vw;
+                width: 50vw;
+                height: 2.5vw;
+                background-color: #F4F2F2;
               }
             }
             .field {
-              textarea {
-                width: 19vw;
-                height: 5vw;
-                font-family: 'Circe';
-                border-color: gray;
-                margin-top: 0.5vw;
-                border-radius: 0.5vw;
+              select {
+                border-style: none;
+                text-align: left;
+                align-items: flex-start;
+                white-space: nowrap;
+                align-self: flex-start;
+                font-family: 'RedRing';
               }
             }
-          }
-          .img_form {
-            width: 21vw;
-            height: 28.3vw;
-            border-radius: 2vw;
-            margin-left: 5vw;
-            margin-top: -4.9vw;
-            background-color: lightgray;
-            div {
-              text-align: center;
+            .carrier-wave-field {
+              margin-bottom: 3vw;
+              label {
+                margin: 1vw auto;
+                font-size: 1.3vw;
+                text-align: left;
+                font-weight: bold;
+              }
               img {
                 width: 12vw;
                 margin-top: 5vw;
               }
-              label {
-                font-size: 1.5vw;
-                font-weight: bold;
-                color: white;
-              }
-              input {
-                text-align: center;
-                width: 12vw;
-                color: white;
+              .how {
+                padding:5px 10px;
+                background:#F4F2F2;
+                border:1px solid #F4F2F2;
+                position:relative;
+                color:#9896AE;
+                border-radius:2px;
+                text-align:center;
+                vertical-align: middle;
+                width: 10vw;
+                height: 2.5vw;
+                line-height: 2.5vw;
+                cursor:pointer;
+                input {
+                  text-align: center;
+                  width: 13vw;
+                  color: #9896AE;
+                  font-family: 'RedRing';
+                  opacity: 0%;
+                  position: absolute;
+                  z-index: 1000;
+                  cursor: pointer;
+                  right: 0;
+                  top: 0;
+                  height: 100%;
+                  font-size: 24px;
+                  width: 100%;
+                }
+                .hide_file input {
+                  color: red;
+                }
               }
             }
-          }
         }
         .actions {
           input {
-            background-color: #CCFD38;
             border-style: none;
-            float: right;
-            background-color: #CCFD38;
-            height: 4vw;
-            font-size: 1.7vw;
-            line-height: 4vw;
-            border-radius: 2vw;
-            width: 15vw;
             display: block;
-            text-align: center;
-            margin-top: -0.8vw;
-            font-family: "Circe";
+            margin-top: 5vw;
+            padding: 0.7vw 1.5vw;
+            width: fit-content;
+            background-color: #9896AE;
+            color: #F5F6FF;
+            font-size: 1vw;
+            border-radius: 2vw;
+            float: right;
+            &:hover {
+               background-color: #04005E;
+            }
           }
         }
       }
       a {
-        font-size: 1.4vw;
+        font-size: 1vw;
+        margin-top: 5.7vw;
+        position: inherit;
+        display: block;
       }
     }
   }
