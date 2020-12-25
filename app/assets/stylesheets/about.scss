@@ -2017,15 +2017,17 @@ $dark: #04005E;
         position: fixed;
         top: 15vw;
         left: 5vw;
-        &:hover {
-          p {
-            display: block;
-            font-size: 1.2vw;
-            color: $white;
-            margin-bottom: 2vw;
-          }
-        }
         div.menu_th {
+          &:hover {
+              p {
+                display: block;
+                font-size: 1.2vw;
+                color: $white;
+                width: 20vw;
+                margin-bottom: 0.7vw;
+                margin-left: 2vw;
+              }
+            }
           h5 {
             font-size: 1.6vw;
             color: $white;
@@ -2035,6 +2037,7 @@ $dark: #04005E;
             display: none;
           }
         }
+
       }
       nav {
         margin-left: -5vw;
@@ -2046,6 +2049,9 @@ $dark: #04005E;
           justify-content: space-between;
           z-index: 1;
           position: fixed;
+          &:hover {
+            background-color: #1C1C1E;
+          }
           div.graphiklogo {
             display: none;
             img {

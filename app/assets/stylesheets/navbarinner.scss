@@ -43,9 +43,9 @@
               color: #04005E;
               display: inline-flex;
               margin-right: 4vw;
-              &a:hover {
+              &:hover {
                 color: #03003D;
-                text-decoration: underline;
+                text-decoration: none;
                 background-color: #C1F52F;
               }
             }
@@ -60,7 +60,7 @@
               color: #04005E;
               display: inline-flex;
               margin-right: 1vw;
-              &a:hover {
+              &:hover {
                 color: #03003D;
                 text-decoration: underline;
                 background-color: #C1F52F;
