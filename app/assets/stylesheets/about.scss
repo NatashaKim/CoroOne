@@ -791,8 +791,8 @@ $dark: #04005E;
                     width: 20vw;
                   }
                   p {
-                    margin: 0 auto;
-                    @include text_underimg;
+                    margin: 4vw auto;
+
                   }
                 }
               }
@@ -1724,6 +1724,7 @@ $dark: #04005E;
                 margin-top: 12vw;
               }
               div.screens_part_one {
+                @include img_aftertext;
                 display: flex;
                 flex-direction: row;
                 div.screen1_color1,
@@ -1734,7 +1735,7 @@ $dark: #04005E;
                 }
                 img {
                   @include big_image;
-                  margin-bottom: 5vw;
+                  margin-bottom: 3vw;
                 }
                 div.screen1 {
                   margin-bottom: 16vw;
@@ -1770,7 +1771,7 @@ $dark: #04005E;
               }
               div.screens_part_two {
                 @include img_aftertext;
-                @include last_objectm;
+                margin-bottom: 0vw;
                 display: flex;
                 flex-direction: row;
                 div.screen4 {
@@ -1779,11 +1780,11 @@ $dark: #04005E;
                   div.screen4_color {
                     background-color: $dark;
                     width: 100%;
-                    height: 15vw;
+                    height: 6vw;
                   }
                   img {
                     @include big_image;
-                    margin-bottom: 5vw;
+                    margin-bottom: 3vw;
                   }
                 }
                 div.screen5 {
@@ -1792,11 +1793,11 @@ $dark: #04005E;
                   div.screen5_color {
                     background-color: $green;
                     width: 100%;
-                    height: 15vw;
+                    height: 6vw;
                   }
                   img {
                     @include big_image;
-                    margin-bottom: 5vw;
+                    margin-bottom: 3vw;
                   }
                 }
                 div.screen6 {
@@ -1805,11 +1806,11 @@ $dark: #04005E;
                   div.screen6_color {
                     background-color: $gray;
                     width: 100%;
-                    height: 15vw;
+                    height: 6vw;
                   }
                   img {
                     @include big_image;
-                    margin-bottom: 5vw;
+                    margin-bottom: 3vw;
                   }
                 }
 
@@ -1827,7 +1828,7 @@ $dark: #04005E;
                     margin-right: 3vw;
                    }
                    img {
-                     width: 43.3vw;
+                     width: 434.3vw;
                    }
                  }
                  div.composition_rules_two {
@@ -1835,7 +1836,7 @@ $dark: #04005E;
                    display: flex;
                    flex-direction: row;
                    img {
-                     width: 28vw;
+                     width: 22vw;
                      margin-right: 3vw;
                    }
                    img:last-child {
@@ -1844,7 +1845,7 @@ $dark: #04005E;
                  }
               }
               div.composition_rules_three {
-                @include last_object;
+                @include last_objectm;
                 img {
                   @include big_image;
                 }
@@ -1853,13 +1854,13 @@ $dark: #04005E;
                  div.variant_one {
                    @include img_aftertext;
                    display: flex;
-                   flex-direction: column;
+                   flex-direction: row;
                     div.variant_one1 {
                       margin-bottom: 20vw;
                       display: flex;
                       flex-direction: column;
                       img {
-                         @include big_image;
+                         width: 28vw;
                          margin-bottom: 5vw;
                       }
                       div.variant_one1_colors {
@@ -1867,20 +1868,20 @@ $dark: #04005E;
                         flex-direction: row;
                         div.color1 {
                           background-color: $dark;
-                          width: 50%;
-                          height: 15vw;
+                          width: 14vw;
+                          height: 6vw;
                         }
                         div.color2 {
                           background-color: $blue;
-                          width: 50%;
-                          height: 15vw;
+                          width: 14vw;
+                          height: 6vw;
                         }
                       }
                     }
                     div.variant_one1 {
                       margin-bottom: 20vw;
                       display: flex;
-                      flex-direction: column;
+                      flex-direction: row;
                       img {
                          @include big_image;
                          margin-bottom: 5vw;
@@ -1891,23 +1892,24 @@ $dark: #04005E;
                         div.color3 {
                           background-color: $gray;
                           width: 50%;
-                          height: 15vw;
+                          height: 6vw;
                         }
                         div.color4 {
                           background-color: $green;
                           width: 50%;
-                          height: 15vw;
+                          height: 6vw;
                         }
                       }
                     }
                  }
                  div.variant_two {
-                   @include lastest_object;
+                   @include lastest_objectm;
                    @include img_aftertext;
                    display: flex;
-                   flex-direction: column;
+                   flex-direction: row;
                    img {
-                     @include big_image;
+                     width: 24vw;
+                     margin-right: 8vw;
                      margin-bottom: 5vw;
                    }
                  }
@@ -1916,7 +1918,7 @@ $dark: #04005E;
             section.carriers {
               padding-bottom: 30vw;
               div.base_carriers {
-                margin-bottom: 20vw;
+                margin-bottom: 0vw;
                 img {
                   @include big_image;
                 }
@@ -1926,7 +1928,7 @@ $dark: #04005E;
                   display: flex;
                   flex-direction: row;
                   img {
-                    width: 43.3vw;
+                    width: 34.3vw;
                   }
                   img:first-child {
                     margin-right: 3vw;
@@ -1935,7 +1937,7 @@ $dark: #04005E;
               }
               p.youtube {
                 margin-top: 12vw;
-                @include text_above;
+                @include text_abovem;
               }
               img {
                 @include big_image;
@@ -1944,30 +1946,33 @@ $dark: #04005E;
                 margin-bottom: 13vw;
                 @include img_aftertext;
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
                 div.instruction_one_img {
-                   @include text_underimg;
+                   @include text_underimgm;
                    display: flex;
                    flex-direction: row;
                    img {
-                      width: 43.3vw;
+                      width: 18vw;
                    }
                    img:first-child {
+                     margin-left: 5vw;
                      margin-right: 3vw;
                    }
                 }
               }
               div.instruction_two {
-                margin-bottom: 30vw;
+                margin-bottom: 20vw;
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
                 p {
                   margin-top:  0vw;
+                  width: 28vw;
                 }
                 div.instruction_two_img {
-                  @include text_underimg;
-                  img{
-                     width: 43.3vw;
+                  @include text_underimgm;
+                  img {
+                    margin-left: 5vw;
+                     width: 18vw;
                   }
                 }
               }
@@ -1975,42 +1980,55 @@ $dark: #04005E;
                 margin-bottom: 13vw;
                 @include img_aftertext;
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
+                justify-content: space-between;
+                p {
+                  width: 28vw;
+                }
                 div.instruction_three_img {
-                  @include text_underimg;
+                  @include text_underimgm;
                   display: flex;
                   flex-direction: row;
                   img {
-                     width: 43.3vw;
+                     width: 18vw;
                   }
                   img:first-child {
                     margin-right: 3vw;
+                    margin-left: 5vw;
                   }
                 }
               }
               div.instruction_four {
-                @include last_object;
+                @include last_objectm;
                 @include img_aftertext;
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
+                justify-content: space-between;
+                p {
+                  width: 28vw;
+                }
                 div.instruction_four_img {
-                  @include text_underimg;
+                  @include text_underimgm;
                   display: flex;
                   flex-direction: row;
                   img {
-                     width: 43.3vw;
+                     width: 18vw;
                   }
                   img:first-child {
                     margin-right: 3vw;
+                    margin-left: 5vw;
                   }
                 }
               }
               div.img_advertise {
                 display: flex;
-                flex-direction: column;
+                flex-direction: row;
                 img {
-                  @include big_image;
+                  width: 34.3vw;
                   margin-bottom: 5vw;
+                }
+                img:first-child {
+                  margin-right: 3vw;
                 }
               }
 
