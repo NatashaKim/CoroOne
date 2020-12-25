@@ -1,25 +1,32 @@
 <body class="edit_post">
+  <%= render 'navbar/navbarleft' %>
    <div class="edit_post_wrapper">
      <div class="edit_post_card">
       <h1>Редактирование</h1>
 
 
     <% if @post.post_type.name == "news" %>
-        <%= render 'formnews', post: @post %>
+        <%= render 'form', post: @post %>
       <% elsif @post.post_type.name == "discussion" %>
             <%= render 'formdiscussion', post: @post %>
       <% elsif @post.post_type.name == "portfolio" %>
             <%= render 'formportfolio', post: @post %>
       <% elsif @post.post_type.name == "reviews" %>
-            <%= render 'formreviews', post: @post %>
+            <%= render 'form', post: @post %>
       <% elsif @post.post_type.name == "articles" %>
-            <%= render 'formarticles', post: @post %>
+            <%= render 'form', post: @post %>
       <% elsif @post.post_type.name == "events" %>
             <%= render 'formevents', post: @post %>
       <% else %>
-        <%= render 'formpuzzles', post: @post %>
+        <%= render 'form', post: @post %>
         <% if @post.id? %>
-            <h2>Add answer:</h2>
+            <h2>Добавить ответ:</h2>
+              <%= render "answers/form" %>
+            <h2>Добавить ответ:</h2>
+              <%= render "answers/form" %>
+            <h2>Добавить ответ:</h2>
+              <%= render "answers/form" %>
+            <h2>Добавить ответ:</h2>
               <%= render "answers/form" %>
         <% end %>
     <% end %>

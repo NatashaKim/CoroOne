@@ -1,8 +1,9 @@
 <body class="new_post">
+  <%= render 'navbar/navbarleft' %>
   <div class="new_post_wrapper">
     <div class="new_post_card">
       <h1>Создание статьи</h1>
-      <%= render 'formarticles', post: @post %>
+      <%= render 'form', post: @post %>
       <%= link_to 'Назад', posts_path %>
     </div>
   </div>
