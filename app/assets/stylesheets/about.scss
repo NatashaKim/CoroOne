@@ -65,8 +65,8 @@
   }
 }
 
-@mixin p_underphoto {
-  margin-top: 5vw;
+@mixin p_abovephoto {
+  margin-bottom: 3vw;
 }
 
 .big_shift {
@@ -501,9 +501,392 @@ $dark: #04005E;
                 }
 
               }
+              div.ratios {
+                @include lastest_object;
+                div.img_one_of_two {
+                  display: flex;
+                  flex-direction: column;
+                  div {
+                    display: flex;
+                    flex-direction: column;
+                    img {
+                      @include big_image;
+                      @include img_aftertext;
+                    }
+                    p {
+                      @include text_underimg;
+                    }
+                  }
+                }
+              }
             }
+            section.composition {
+              div.elements {
+                div.elements_el {
+                  @include last_object;
+                  display: flex;
+                  flex-direction: column;
+                   div.elements_el_things {
+                     @include img_aftertext;
+                     display: flex;
+                     flex-direction: column;
+                     p {
 
-       }
+                     }
+                     img {
+                       @include big_image;
+                     }
+                   }
+                }
+              }
+              div.designing_grid {
+                @include last_object;
+                div.designing_grid_field {
+                  margin-left: 7vw;
+                  div.designing_grid_th {
+                    @include maintext_afterbigphoto;
+                    p.designing_grid_header {
+                      @include p_abovephoto;
+                    }
+                    img {
+                      @include big_image;
+                    }
+                    p:last-child {
+                      @include text_underimg;
+                    }
+                  }
+                }
+              }
+              div.formats {
+                div.formats_big_one {
+                  div.formats_one {
+                    @include img_aftertext;
+                    display: flex;
+                    flex-direction: row;
+                    div.formats_one1,
+                    div.formats_one2 {
+                      img {
+                        width: 43.3vw;
+                      }
+                      p {
+                        font-size: 2.5vw;
+                        line-height: 4vw;
+                        @include text_underimg;
+                      }
+                    }
+                    div.formats_one1{
+                      margin-right: 3vw;
+                    }
+                  }
+                  div.formats_two {
+                    @include img_aftertext;
+                    display: flex;
+                    flex-direction: row;
+                    div.formats_two1,
+                    div.formats_two2 {
+                      img {
+                        width: 43.3vw;
+                      }
+                      p {
+                        font-size: 2.5vw;
+                        line-height: 4vw;
+                        @include text_underimg;
+                      }
+                    }
+                    div.formats_two1{
+                      margin-right: 3vw;
+                    }
+                  }
+                  div.formats_three {
+                    @include last_object;
+                    @include img_aftertext;
+                    img {
+                      @include big_image;
+                    }
+                    p {
+                      @include text_underimg;
+                    }
+                  }
+                }
+              }
+              div.layout_rules {
+                @include lastest_object;
+                div.layout_rules_one {
+                  @include maintext_beforephoto;
+                  display: flex;
+                  flex-direction: column;
+                  img {
+                    @include text_underimg;
+                    @include big_image;
+                    margin-bottom: 5vw;
+                  }
+                }
+                div.layout_rules_two {
+                  margin-bottom: 5vw;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: flex-start;
+                  img {
+                    width: 43.3vw;
+                    @include text_underimg;
+                  }
+                  img:first-child {
+                    margin-right: 3vw;
+                  }
+                }
+                img {
+                   width: 70%;
+                }
+              }
+            }
+            section.colors {
+              div.colors_colors {
+                @include last_object;
+                display: flex;
+                flex-direction: column;
+                div.colors_part_one {
+                  margin-top: 3vw;
+                  @include img_aftertext;
+                  display: flex;
+                  flex-direction: row;
+                   div.colors_one {
+                     margin-right: 3vw;
+                     p.colorname {
+                       @include text_above;
+                     }
+                     img {
+                      width: 43.3vw;
+                     }
+                     p:last-child {
+                       @include text_underimg;
+                     }
+                   }
+                }
+              }
+              div.colors_five {
+                @include last_object;
+                @include img_aftertext;
+                p.colorname {
+                  @include text_above;
+                }
+                img {
+                 width: 43.3vw;
+                }
+                p:last-child {
+                  @include text_underimg;
+                }
+              }
+              div.using_rules {
+                 div.using_rules_colors {
+                   @include last_object;
+                   @include img_aftertext;
+                   display: flex;
+                   flex-direction: row;
+                   div.using_rules_color {
+                     display: flex;
+                     flex-direction: column;
+                     p {
+                       margin-bottom: 1vw;
+                     }
+                     div.color_block {
+                       height: 15vw;
+                     }
+                     div.green {
+                       background-color: $green;
+                       width: 36vw;
+                     }
+                     div.gray {
+                       background-color: $gray;
+                       width: 28vw;
+                     }
+                     div.darkblue {
+                       background-color: $dark;
+                       width: 13vw;
+                     }
+                     div.neonblue {
+                       background-color: $blue;
+                       width: 9vw;
+                     }
+                     div.white {
+                       background-color: $white;
+                       width: 3vw;
+                     }
+                   }
+                 }
+                 div.colorpairss {
+                   display: flex;
+                   flex-direction: column;
+                   div.colorpairs {
+                     @include img_aftertext;
+                     display: flex;
+                     flex-direction: row;
+                     div.colorpair {
+                        p {
+
+                        }
+                        img {
+                          width: 27.4vw;
+                          margin-right: 3vw;
+                          @include text_underimg;
+                        }
+                     }
+                   }
+                   div.colorpairs:last-child {
+                     @include maintext_beforephoto;
+                   }
+                 }
+                 div.false_using {
+                   @include lastest_object;
+                   @include img_aftertext;
+                   display: flex;
+                   flex-direction: column;
+                   div.false_using_one {
+                     margin-bottom: 3vw;
+                     display: flex;
+                     flex-direction: row;
+                     img {
+                       width: 27.4vw;
+                       margin-right: 3vw;
+                     }
+                   }
+                   div.false_using_two {
+                     img {
+                       width: 27.4vw;
+                       margin-right: 3vw;
+                     }
+                   }
+                 }
+              }
+            }
+            section.graphik {
+              div.graphik_part {
+                @include last_object;
+                @include maintext_afterbigphoto;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                justify-content: space-between;
+                div.graphik {
+                  display: flex;
+                  flex-direction: column;
+                  img {
+                    width: 20vw;
+                  }
+                  p {
+                    margin: 0 auto;
+                    @include text_underimg;
+                  }
+                }
+              }
+              p.screen_about2 {
+                margin-top: 12vw;
+              }
+              div.screens_part_one {
+                display: flex;
+                flex-direction: column;
+                div.screen1_color1,
+                div.screen1_color2,
+                div.screen2_color,
+                div.screen3_color {
+                  height: 15vw;
+                }
+                img {
+                  @include big_image;
+                  margin-bottom: 5vw;
+                }
+                div.screen1 {
+                  margin-bottom: 22vw;
+                  div.screen1_colors {
+                    display: flex;
+                    flex-direction: row;
+                    div.screen1_color1 {
+                      background-color: $dark;
+                      width: 50%;
+                    }
+                    div.screen1_color2 {
+                      background-color: $blue;
+                      width: 50%;
+                    }
+                  }
+                }
+                div.screen2 {
+                  margin-bottom: 22vw;
+                  div.screen2_color {
+                    background-color: $green;
+                    width: 100%;
+                  }
+                }
+                div.screen3 {
+                  margin-bottom: 22vw;
+                  div.screen3_color {
+                    background-color: $blue;
+                    width: 100%;
+                  }
+                }
+              }
+              div.screens_part_two {
+                @include img_aftertext;
+                @include last_object;
+                display: flex;
+                flex-direction: column;
+                div.screen4 {
+                  margin-bottom: 22vw;
+                  div.screen4_color {
+                    background-color: $dark;
+                    width: 100%;
+                    height: 15vw;
+                  }
+                  img {
+                    @include big_image;
+                    margin-bottom: 5vw;
+                  }
+                }
+                div.screen5 {
+                  margin-bottom: 22vw;
+                  div.screen5_color {
+                    background-color: $green;
+                    width: 100%;
+                    height: 15vw;
+                  }
+                  img {
+                    @include big_image;
+                    margin-bottom: 5vw;
+                  }
+                }
+                div.screen6 {
+                  margin-bottom: 22vw;
+                  div.screen6_color {
+                    background-color: $gray;
+                    width: 100%;
+                    height: 15vw;
+                  }
+                  img {
+                    @include big_image;
+                    margin-bottom: 5vw;
+                  }
+                }
+
+              }
+              p.comp_rules_p {
+                margin-top: 12vw;
+              }
+              div.composition_rules {
+                 div.composition_rules_one {
+                   display: flex;
+                   flex-direction: row;
+                   align-items: flex-start;
+                   img:first-child {
+                    margin-right: 3vw;
+                   }
+                   img {
+                     width: 43.3vw;
+                   }
+                 }
+              }
+            }
+          }
+
+
 
   }
 }
