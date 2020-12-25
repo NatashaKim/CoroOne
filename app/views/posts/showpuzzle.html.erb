@@ -44,13 +44,13 @@
         <% end %>
       </div>
 
-      <div class="comments">
+
         <h2>Ответы</h2>
           <%= render @post.answers %>
         <% if user_signed_in? %>
         <%= link_to 'Редактировать', edit_post_path(@post) %> |
         <% end %>
         <%= link_to 'Назад', admin_context_path(curatorposts: "") %>
-      </div>
+
   </div>
 </body>
