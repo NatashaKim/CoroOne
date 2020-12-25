@@ -133,6 +133,13 @@
   font-weight: lighter;
 }
 
+@mixin text_underimg {
+  margin-top: 3vw;
+}
+
+@mixin img_aftertext {
+  margin-top: 8vw;
+}
 .img_one_of_two {
   display: flex;
   flex-direction: column;
@@ -155,11 +162,9 @@
   margin-bottom: 4vw;
 }
 
-@mixin text_under {
-  margin-top: 4vw;
-}
 
-@mixin text_underm {
+
+@mixin text_underimgm {
   margin-top: 2vw;
 }
 
@@ -233,30 +238,272 @@ $dark: #04005E;
     background-size: 100vw;
     background-repeat: no-repeat;
     position: relative;
+    color: $white;
     z-index: -1;
     height: 312.5vw;
+    padding: 5vw;
     margin: 0px;
-    nav {
-      margin-left: -5vw;
-      margin-top: -2vw;
-      div.high_width {
-        width: 90vw;
-        height: 5vw;
-        display: flex;
-        justify-content: space-between;
-        z-index: 1;
-        position: fixed;
-        padding: -5vw;
-        div.graphiklogo {
-          display: block;
-          img {
-            width: 10vw;
-          }
-        }
-        div.fontlogo {
-          img {
-            display: none;
-          }
-        }
-        div.menu_info {
-  
+       p {
+         @include maintext;
+       }
+       h1 {
+         @include h1;
+       }
+       h2 {
+         @include h2;
+       }
+       p.small_text {
+         @include small_text;
+       }
+       section.menu {
+        display: none;
+       }
+       div.wrapper {
+         nav {
+           margin-left: -5vw;
+           margin-top: 0vw;
+           div.high_width {
+             width: 90vw;
+             height: 5vw;
+             display: flex;
+             justify-content: space-between;
+             z-index: 1;
+             position: fixed;
+             div.graphiklogo {
+               display: block;
+               img {
+                 width: 10vw;
+               }
+             }
+             div.fontlogo {
+               img {
+                 display: none;
+               }
+             }
+             div.menu_info {
+               padding: 0vw;
+               div.menu_info_th{
+                 display: none;
+                 a:last-child {
+                   margin-right: 0vw;
+                 }
+               }
+               div.registration {
+                 display: none;
+               }
+               div.menul {
+                 img {
+                   display: block;
+                   width: 7vw;
+                   &:hover .menu_mobile {
+                     opacity: 1;
+                   }
+                 }
+               }
+              }
+
+
+             }
+             div.menu_mobile {
+               z-index: 2;
+               top: 0;
+               position: fixed;
+               opacity: 1;
+               display: none;
+               width: 104vw;
+               height: 100vh;
+               background-color: #04005E;
+               div.cancel {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: flex-end;
+                  width: 90vw;
+                  padding: 5vw;
+                  img {
+                    color: #75FEFA;
+                    width:   10vw;
+                    &:hover .menu_mobile {
+                      opacity: 0;
+                    }
+                  }
+               }
+               div.menu_mobile_th {
+                 width: 100vw;
+                 div {
+                   height: 100vh;
+                   width: 100vw;
+                   position: absolute;
+                   top: 0;
+                   display: flex;
+                   flex-direction: column;
+                   justify-content: center;
+                   align-items: center;
+                   margin: 0 auto;
+                   a {
+                    text-decoration: none;
+                    font-size: 8vw;
+                    color: #75FEFA;
+                    margin-bottom: 8vw;
+                  }
+                }
+               }
+             }
+
+            }
+            section.logo {
+              padding-top: 20vw;
+               div.logo_concept {
+                 div.concept {
+                   @include last_object;
+                   p.first_text {
+                     font-size: 4.5vw;
+                     line-height: 7vw;
+                     margin-bottom:  9vw;
+                   }
+                   p.big_shift {
+                     font-size: 2vw;
+                     line-height: 6vw;
+                   }
+                 }
+                 div.logo_blocks {
+                    img {
+
+                      @include big_image;
+                      @include maintext_afterbigphoto;
+                    }
+                    p {
+                      @include text_underimg;
+                    }
+                 }
+                 div.s {
+                   p {
+                     margin-top: -4vw;
+                   }
+                 }
+                 div.logo_blocks_smalllogo {
+                   @include last_object;
+                   img {
+                     width: 70%;
+                     @include maintext_afterbigphoto;
+                     }
+                     p {
+                       @include text_underimg;
+                       @include maintext_abovephoto;
+                     }
+                 }
+               }
+               div.logo_design {
+                  img {
+                    @include big_image;
+                    @include img_aftertext;
+                    @include maintext_beforephoto;
+                  }
+                  div.logo_design_img {
+                     @include last_object;
+                     display: flex;
+                     flex-direction: column;
+                     div.logo_design_img_two {
+                       @include big_image;
+                       display: flex;
+                       flex-direction: row;
+                       img {
+                         width: 43.3vw;
+                         @include img_aftertext;
+                         margin-bottom: 3vw;
+                       }
+                       img:first-child {
+                         margin-right: 3vw;
+                       }
+                     }
+                     img {
+                       margin-top: 0vw;
+                       @include big_image;
+                     }
+                  }
+               }
+               div.logo_field {
+                 @include last_object;
+                  img {
+                    @include big_image;
+                    @include img_aftertext;
+                    @include maintext_beforephoto;
+                  }
+
+               }
+               div.examples_of_using {
+                  div.img_one_of_twot {
+                    @include img_aftertext;
+                    display: flex;
+                    flex-direction: row;
+                    div.img_one_of_two {
+                      display: flex;
+                      flex-direction: column;
+                        img {
+                          width: 43.3vw;
+                        }
+                        img:first-child {
+                          margin-right: 3vw;
+                        }
+                        p.small_text {
+                          font-size: 2.5vw;
+                          line-height: 4vw;
+                          @include text_underimg;
+                        }
+                      }
+                    }
+                    div.img_two_of_twot {
+                      @include lastest_object;
+                      @include img_aftertext;
+                      display: flex;
+                      flex-direction: row;
+                      div.img_one_of_two {
+                        display: flex;
+                        flex-direction: column;
+                          img {
+                            width: 43.3vw;
+                          }
+                          img:first-child {
+                            margin-right: 3vw;
+                          }
+                          p.small_text {
+                            font-size: 2.5vw;
+                            line-height: 4vw;
+                            @include text_underimg;
+                          }
+                        }
+                      }
+
+
+               }
+
+            }
+
+            section.typography {
+              div.fonts {
+                @include last_object;
+                div.two_fonts {
+                  div.kinds_of_fonts {
+                     p {
+                       @include maintext_afterbigphoto;
+                     }
+                     img {
+                       width: 70%;
+                     }
+                  }
+                }
+                div.kinds_of_fonts {
+                   p {
+                     @include maintext_afterbigphoto;
+                   }
+                   img {
+                     width: 70%;
+                   }
+                }
+
+              }
+            }
+
+       }
+
+  }
+}
