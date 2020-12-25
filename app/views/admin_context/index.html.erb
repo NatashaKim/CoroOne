@@ -18,7 +18,7 @@
           </ul>
         </div>
       </div>
-      <h1>Публикации</h1>
+      <h1>Кураторский контент</h1>
       <div class="filters">
         <div class="button_and_list_filters">
           <span class="drop_down_button">Разделы &#9660</span>
@@ -94,7 +94,7 @@
 
       <div class="create">
       </div>
-      <h1>Публикации</h1>
+      <h1>Посты пользователей</h1>
       <div class="filters">
         <div class="button_and_list_filters">
           <span class="drop_down_button">Разделы &#9660</span>
@@ -168,17 +168,8 @@
   <div class="wrapper_posts">
 
       <div class="create">
-        <div class="button_and_list">
-          <span class="hey">Создать публикацию</span>
-          <ul>
-            <li><%= link_to 'Создать новость', newnews_posts_path %></li>
-            <li><%= link_to 'Создать событие', newevents_posts_path %></li>
-            <li><%= link_to 'Создать статью', newarticles_posts_path %></li>
-            <li><%= link_to 'Создать обзор', newreviews_posts_path %></li>
-          </ul>
-        </div>
       </div>
-      <h1>Публикации</h1>
+      <h1>Обсуждения</h1>
       <div class="filters">
         <div class="button_and_list_filters">
           <span class="drop_down_button">Разделы &#9660</span>
@@ -295,8 +286,6 @@
 
 
 
-
-    <br>
 <% if @whatcontenttoshow == "show-categories" %>
     <div class="wrapper_categories">
       <div class="create">
@@ -335,6 +324,7 @@
 
 <% if @whatcontenttoshow == "show-users" %>
     <div class="wrapper_users">
+      <div class="create"></div>
       <h1>Пользователи</h1>
       <table>
         <thead>
@@ -380,6 +370,7 @@
 
 <% if @whatcontenttoshow == "show-comments" %>
     <div class="wrapper_comments">
+      <div class="create"></div>
       <h1>Комментарии</h1>
       <table>
         <thead>
