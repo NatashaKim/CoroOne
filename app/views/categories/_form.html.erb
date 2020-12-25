@@ -10,25 +10,23 @@
       </ul>
     </div>
   <% end %>
+  <div class="form_body">
 
-  <div class="field">
-    <%= form.label "Название" %>
-    <%= form.text_field :name %>
-  </div>
+    <div class="field">
+      <%= form.label "Название" %>
+      <%= form.text_field :name %>
+    </div>
 
-  <div class="field">
-    <%= form.label "Раздел" %>
-    <%= form.select :post_type_id, PostType.pluck(:name, :id) %>
-  </div>
+    <div class="field">
+      <%= form.label "Раздел" %>
+      <%= form.select :post_type_id, PostType.pluck(:name, :id) %>
+    </div>
 
-  <div class="field">
-    <%= form.label "Описание" %>
-    <%= form.text_area :description %>
-  </div>
+    <div class="field">
+      <%= form.label "Описание" %>
+      <%= form.cktext_area :content %>
+    </div>
 
-  <div class="field">
-    <%= form.label "Отображать в меню" %>
-    <%= form.check_box :display_in_navbar %>
   </div>
 
   <div class="actions">
