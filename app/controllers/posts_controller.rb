@@ -24,6 +24,11 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    if @post.post_type.name == "puzzles"
+      render 'showpuzzle'
+    else
+      render 'show'
+    end
   end
 
   # GET /posts/new

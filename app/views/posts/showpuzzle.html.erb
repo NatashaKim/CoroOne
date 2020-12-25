@@ -1,0 +1,58 @@
+<body class="show_body">
+  <div class="wrapper_show">
+    <div class="narrow">
+      <% if @post.category_id? %>
+          <span>
+            <%= @post.category.name %>
+          </span>
+      <% end %>
+      <h1>
+        <%= @post.title %>
+      </h1>
+
+      <%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
+        <p>
+          <strong></strong>
+          <%= @post.content.html_safe %>
+        </p>
+      </div>
+
+      <div class="activity">
+
+        <%= image_tag("like_icon.svg", :alt => "like") %><%= @post.likes.count %>
+        <%= image_tag("favorite_icon.svg", :alt => "like") %><%= @post.favorites.count %>
+        <p>
+        	<strong></strong>
+        	<%#= @post.user_id %>
+        </p>
+
+        <% pre_like = @post.likes.find { |like| like.user_id == current_user.id} %>
+        <% if user_signed_in? %>
+
+          <% if pre_like %>
+            <%= button_to 'Unlike', post_like_path(@post, pre_like), method: :delete %>
+          <% else %>
+          <%= button_to 'Like', post_likes_path(@post), method: :post %>
+          <% end %>
+
+          <% pre_favorite = @post.favorites.find { |favorite| favorite.user_id == current_user.id} %>
+          <% if pre_favorite %>
+              <%= button_to 'Remove from Favorite', post_favorite_path(@post, pre_favorite), method: :delete %>
+          <% else %>
+              <%= button_to 'Add to Favorite', post_favorites_path(@post), method: :post %>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="comments">
+        <h2>Ответы</h2>
+          <%= render @post.answers %>
+
+        <% if user_signed_in? %>
+        <%= link_to 'Редактировать', edit_post_path(@post) %> |
+        <% end %>
+        <%= link_to 'Назад', admin_context_path(curatorposts: "") %>
+      </div>
+  </div>
+  <%= render 'footer/footerinner' %>
+</body>

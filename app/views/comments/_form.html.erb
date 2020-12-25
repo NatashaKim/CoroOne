@@ -1,6 +1,6 @@
 <%= form_for([@post, @post.comments.build]) do |f| %>
 	<div class="field">
-	    <%= current_user.email %>
+	    <%= current_user.username %>
 	</div>
 	<div class="field">
 		<%= f.text_area :body %>

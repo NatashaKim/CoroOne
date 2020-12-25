@@ -1,56 +1,53 @@
 <body class="show_body">
-  <%= render 'navbar/navbarinner' %>
   <div class="wrapper_show">
-
-    <p>
-      <strong></strong>
-      <%= @post.name %>
-    </p>
-
-<% if @post.category_id? %>
-    <p>
-      <strong>Category:</strong>
-      <%= @post.category.name %>
-    </p>
-<% end %>
-    <p>
-      <strong></strong>
-      <%= @post.title %>
-    </p>
-
-    <%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
-
-     <div class="narrow">
-
-      <p>
-        <strong></strong>
-        <%= @post.content.html_safe %>
-      </p>
-
-      <p><%= @post.likes.count %> <%= (@post.likes.count) == 1 ? 'Like' : 'Likes'%></p>
-      <p><%= @post.favorites.count %> <%= (@post.favorites.count) == 1 ? 'Favorite' : 'Favorites'%></p>
-
-      <p>
-      	<strong></strong>
-      	<%= @post.user_id %>
-      </p>
-
-      <% pre_like = @post.likes.find { |like| like.user_id == current_user.id} %>
-      <% if user_signed_in? %>
-
-        <% if pre_like %>
-          <%= button_to 'Unlike', post_like_path(@post, pre_like), method: :delete %>
-        <% else %>
-          <%= button_to 'Like', post_likes_path(@post), method: :post %>
-        <% end %>
-
-        <% pre_favorite = @post.favorites.find { |favorite| favorite.user_id == current_user.id} %>
-        <% if pre_favorite %>
-            <%= button_to 'Remove from Favorite', post_favorite_path(@post, pre_favorite), method: :delete %>
-        <% else %>
-            <%= button_to 'Add to Favorite', post_favorites_path(@post), method: :post %>
-        <% end %>
+    <div class="narrow">
+      <% if @post.category_id? %>
+          <span>
+            <%= @post.category.name %>
+          </span>
       <% end %>
+      <h1><%= @post.title %></h1>
+      <span class="small"><%= @post.created_at %></span> · <span class="small"><%= @post.author %></span>
+      <%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
+        <p>
+          <strong></strong>
+          <%= @post.content.html_safe %>
+        </p>
+      </div>
+
+      <div class="activity">
+        <div class="count">
+          <span><%= @post.likes.count %></span>
+          <span><%= @post.favorites.count %></span>
+        </div>
+
+        <p>
+        	<strong></strong>
+        	<%#= @post.user_id %>
+        </p>
+
+        <% pre_like = @post.likes.find { |like| like.user_id == current_user.id} %>
+        <% if user_signed_in? %>
+          <div class="like">
+          <% if pre_like %>
+            <%= button_to '', post_like_path(@post, pre_like), method: :delete %>
+          <% else %>
+            <%= button_to '', post_likes_path(@post), method: :post %>
+          <% end %>
+          </div>
+
+          <div class="favorite">
+          <% pre_favorite = @post.favorites.find { |favorite| favorite.user_id == current_user.id} %>
+          <% if pre_favorite %>
+              <%= button_to '', post_favorite_path(@post, pre_favorite), method: :delete %>
+          <% else %>
+              <%= button_to '', post_favorites_path(@post), method: :post %>
+          <% end %>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="comments">
 
       <h2>Комментарии</h2>
       <%= render @post.comments %>
@@ -62,14 +59,10 @@
         <p>Please <%= link_to 'login', new_user_session_path %> or <%= link_to 'register', new_user_registration_path %> to comment.</p>
       <% end %>
 
-      <h2>Comments</h2>
-        <%= render @post.answers %>
-
       <% if user_signed_in? %>
       <%= link_to 'Редактировать', edit_post_path(@post) %> |
       <% end %>
-      <%= link_to 'Назад', admin_context_path %>
-    </div>
+      <%= link_to 'Назад', admin_context_path(curatorposts: "") %>
+      </div>
   </div>
-  <%= render 'footer/footerinner' %>
 </body>
