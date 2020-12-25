@@ -65,8 +65,8 @@
   }
 }
 
-@mixin p_underphoto {
-  margin-top: 5vw;
+@mixin p_abovephoto {
+  margin-bottom: 3vw;
 }
 
 .big_shift {
@@ -501,8 +501,185 @@ $dark: #04005E;
                 }
 
               }
+              div.ratios {
+                @include lastest_object;
+                div.img_one_of_two {
+                  display: flex;
+                  flex-direction: column;
+                  div {
+                    display: flex;
+                    flex-direction: column;
+                    img {
+                      @include big_image;
+                      @include img_aftertext;
+                    }
+                    p {
+                      @include text_underimg;
+                    }
+                  }
+                }
+              }
             }
+            section.composition {
+              div.elements {
+                div.elements_el {
+                  @include last_object;
+                  display: flex;
+                  flex-direction: column;
+                   div.elements_el_things {
+                     @include img_aftertext;
+                     display: flex;
+                     flex-direction: column;
+                     p {
 
+                     }
+                     img {
+                       @include big_image;
+                     }
+                   }
+                }
+              }
+              div.designing_grid {
+                @include last_object;
+                div.designing_grid_field {
+                  margin-left: 7vw;
+                  div.designing_grid_th {
+                    @include maintext_afterbigphoto;
+                    p.designing_grid_header {
+                      @include p_abovephoto;
+                    }
+                    img {
+                      @include big_image;
+                    }
+                    p:last-child {
+                      @include text_underimg;
+                    }
+                  }
+                }
+              }
+              div.formats {
+                div.formats_big_one {
+                  div.formats_one {
+                    @include img_aftertext;
+                    display: flex;
+                    flex-direction: row;
+                    div.formats_one1,
+                    div.formats_one2 {
+                      img {
+                        width: 43.3vw;
+                      }
+                      p {
+                        font-size: 2.5vw;
+                        line-height: 4vw;
+                        @include text_underimg;
+                      }
+                    }
+                    div.formats_one1{
+                      margin-right: 3vw;
+                    }
+                  }
+                  div.formats_two {
+                    @include img_aftertext;
+                    display: flex;
+                    flex-direction: row;
+                    div.formats_two1,
+                    div.formats_two2 {
+                      img {
+                        width: 43.3vw;
+                      }
+                      p {
+                        font-size: 2.5vw;
+                        line-height: 4vw;
+                        @include text_underimg;
+                      }
+                    }
+                    div.formats_two1{
+                      margin-right: 3vw;
+                    }
+                  }
+                  div.formats_three {
+                    @include last_object;
+                    @include img_aftertext;
+                    img {
+                      @include big_image;
+                    }
+                    p {
+                      @include text_underimg;
+                    }
+                  }
+                }
+              }
+              div.layout_rules {
+                @include lastest_object;
+                div.layout_rules_one {
+                  @include maintext_beforephoto;
+                  display: flex;
+                  flex-direction: column;
+                  img {
+                    @include text_underimg;
+                    @include big_image;
+                    margin-bottom: 5vw;
+                  }
+                }
+                div.layout_rules_two {
+                  margin-bottom: 5vw;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: flex-start;
+                  img {
+                    width: 43.3vw;
+                    @include text_underimg;
+                  }
+                  img:first-child {
+                    margin-right: 3vw;
+                  }
+                }
+                img {
+                   width: 70%;
+                }
+              }
+            }
+            section.colors {
+              div.colors_colors {
+                @include last_object;
+                display: flex;
+                flex-direction: column;
+                div.colors_part_one {
+                  margin-top: 3vw;
+                  @include img_aftertext;
+                  display: flex;
+                  flex-direction: row;
+                   div.colors_one {
+                     margin-right: 3vw;
+                     p.colorname {
+                       @include text_above;
+                     }
+                     img {
+                      width: 43.3vw;
+                     }
+                     p:last-child {
+                       @include text_underimg;
+                     }
+                   }
+                }
+              }
+              div.colors_five {
+                @include last_object;
+                @include img_aftertext;
+                p.colorname {
+                  @include text_above;
+                }
+                img {
+                 width: 43.3vw;
+                }
+                p:last-child {
+                  @include text_underimg;
+                }
+              }
+              div.using_rules {
+                 div.using_rules_colors 
+              }
+            }
        }
 
   }
