@@ -68,19 +68,19 @@ $green: #C1F52F;
         div.begin {
           width: 100%;
           img:first-child {
-            top: 15vw;
+            top: 7vw;
             width: 98vw;
           }
           img {
             position: absolute;
-            top: 11vw;
+            top: 3vw;
             z-index: -1;
             width: 100%;
           }
           div.begin_text {
             padding: 4vw;
-            margin: 31vw auto 0 auto;
-            @include last_object_1920;
+            margin: 26vw auto 0 auto;
+            margin-bottom: 18vw;
             width: 76%;
             h1 {
               color: $green;
@@ -122,7 +122,7 @@ $green: #C1F52F;
           }
         }
         div.about {
-          @include last_object;
+          margin-bottom: 17vw;
           padding: 5vw;
           p {
             width: 66%;
@@ -340,7 +340,7 @@ $green: #C1F52F;
       }
 
       section.fichi_for_desctop {
-        padding: 15vw 5vw;
+        padding: 5vw 5vw;
         width: 91vw;
         background-color: $mainColor;
         div.fichi_for_desctop_img {

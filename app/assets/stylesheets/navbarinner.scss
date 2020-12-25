@@ -5,13 +5,17 @@
     nav {
       margin-top: -2vw;
       div.high_width {
+        top: 0;
         width: 90vw;
         height: 5vw;
         display: flex;
         justify-content: space-between;
-        padding: 0 5vw;
+        padding: 3vw 5vw 0vw 5vw;
         z-index: 1;
         position: fixed;
+        &:hover {
+          background-color: #C1F52F;
+        }
         div.graphiklogo {
           display: none;
         }
@@ -19,7 +23,7 @@
           padding: 0vw;
           img {
             display: block;
-            width: 12vw;
+            width: 16vw;
           }
         }
         div.menu_info {
@@ -42,6 +46,7 @@
               &a:hover {
                 color: #03003D;
                 text-decoration: underline;
+                background-color: #C1F52F;
               }
             }
             a:last-child {
@@ -55,6 +60,11 @@
               color: #04005E;
               display: inline-flex;
               margin-right: 1vw;
+              &a:hover {
+                color: #03003D;
+                text-decoration: underline;
+                background-color: #C1F52F;
+              }
             }
           }
           div.menul {
