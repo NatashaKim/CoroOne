@@ -63,8 +63,8 @@
 
         <% @posts.each do |post| %>
           <tr>
-            <td><%= link_to post.title, post %></td>
-            <td class="author"><span><%= post.user.username %></span></td>
+            <td><span><%= link_to post.title, post %></span></td>
+            <td class="author"><span><%= post.author %></span></td>
             <td class="category.name"><span>
               <% if post.category_id? %>
               <%= post.category.name %>
@@ -124,9 +124,9 @@
       <table>
         <thead>
           <tr>
-             <th>Заголовок</th>
-             <th>Автор</th>
-             <th>Категории</th>
+             <th>Название</th>
+             <th>Пользователь</th>
+             <th>Вид</th>
              <th>Опубликовано</th>
              <th>Активность</th>
              <th></th>
@@ -139,13 +139,13 @@
 
         <% @posts.each do |post| %>
           <tr>
-            <td><%= link_to post.title, post %></td>
+            <td><span><%= link_to post.name, post %></span></td>
             <td class="author"><span><%= post.user.username %></span></td>
-            <td class="category.name"><span>
-              <% if post.category_id? %>
-              <%= post.category.name %>
-              <% end %>
-            </span></td>
+            <td><% if post.user.isdeveloper? %>
+            Лента
+            <% else %>
+            Личное
+            <% end %></td>
             <td><span><%= post.created_at.mday %>.<%= post.created_at.month %>.<%= post.created_at.year %></span></td>
             <td><%= image_tag("like_icon.svg", :alt => "like") %><div><%= post.likes.count %></div></td>
             <td><%= image_tag("comment_icon.svg", :alt => "comment") %><div><%= post.comments.count %></div></td>
@@ -200,7 +200,7 @@
         <thead>
           <tr>
              <th>Заголовок</th>
-             <th>Автор</th>
+             <th>Пользователь</th>
              <th>Категории</th>
              <th>Опубликовано</th>
              <th>Активность</th>

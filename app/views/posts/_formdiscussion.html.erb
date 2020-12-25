@@ -12,24 +12,15 @@
   <% end %>
 
   <div class="form_body">
-    <h1>Обсуждение</h1>
 
-    <div class="text_form">
 
       <div class="field">
-        <%= form.label "Теги" %>
+        <%= form.label "Название" %>
         <%= form.text_field :name %>
       </div>
 
       <div class="field">
-          <%= form.label :category_id %>
-          <%= form.select :category_id, Category.where(post_type_id: post.post_type.id).pluck(:name, :id) %>
-
-          <%= form.hidden_field :post_type_id, value: post.post_type.id %>
-      </div>
-
-      <div class="field">
-        <%= form.label "Название" %>
+        <%= form.label "Заголовок" %>
         <%= form.text_field :title %>
       </div>
 
@@ -39,28 +30,26 @@
       </div>
 
       <div class="field">
-        <%= form.label "Контент" %>
+        <%= form.label "Вопрос" %>
         <%= form.cktext_area :content %>
       </div>
 
+      <div class="carrier-wave-field">
+
+          <%= form.label "Обложка публикации" %>
+          <div class="how">
+            Выберите файл
+            <%= link_to(image_tag(@post.image.thumb.url, alt: 'Image'), @post.image.url, target: '_blank') if @post.image? %>
+            <%= form.file_field :image, {class: 'hide_file'} %>
+          </div>
+
+      </div>
+
     </div>
-
-    <div class="img_form">
-
-        <div>
-          <%= image_tag("photo_form_white.svg", :alt => "Фото") %>
-          <%= form.label "Добавьте изображение" %>
-          <%= link_to(image_tag(@post.image.thumb.url, alt: 'Image'), @post.image.url, target: '_blank') if @post.image? %>
-          <br>
-          <%= form.file_field :image %>
-        </div>
-
-    </div>
-
-  </div>
+  <%= form.hidden_field :post_type_id, value: post.post_type.id %>
 
   <div class="actions">
-    <%= form.submit "Создать пост"%>
+    <%= form.submit "Опубликовать "%>
   </div>
 
 <% end %>

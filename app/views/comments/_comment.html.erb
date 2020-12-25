@@ -1,10 +1,9 @@
 <div class="comment_content">
-	<p>
-	  <b>Комментатор:</b>
+	<%#= image_tag(User.image.small_thumb.url, alt: 'Image') if User.image? %>
+	<span>
 	  <%= User.find(comment.user_id).username %>
-	</p>
+	</span>
 	<p>
-		<b>Текст:</b>
 		<%= comment.body %>
 	</p>
 </div>
