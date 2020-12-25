@@ -7,7 +7,7 @@
       <span><%= current_user.email %></span>
     </div>
     <div class="nav_content">
-      <%= link_to "Посты", admin_context_path(posts: "") %>
+      <%#= link_to "Посты", admin_context_path(posts: "") %>
       <%= link_to "Кураторский контент", admin_context_path(curatorposts: "") %>
       <%= link_to "Посты пользователей", admin_context_path(posts: "", post_type: "portfolio") %>
       <%= link_to "Обсуждения", admin_context_path(posts: "", post_type: "discussions") %>
