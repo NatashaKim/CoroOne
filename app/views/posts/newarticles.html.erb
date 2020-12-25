@@ -4,7 +4,7 @@
     <div class="new_post_card">
       <h1>Создание статьи</h1>
       <%= render 'form', post: @post %>
-      <%= link_to 'Назад', posts_path %>
+      <%= link_to 'Назад', admin_context_path(curatorposts: "") %>
     </div>
   </div>
 </body>

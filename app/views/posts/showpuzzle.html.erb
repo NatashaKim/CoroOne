@@ -23,7 +23,7 @@
         <%= image_tag("favorite_icon.svg", :alt => "like") %><%= @post.favorites.count %>
         <p>
         	<strong></strong>
-        	<%#= @post.user_id %>
+        	<%= @post.user_id %>
         </p>
 
         <% pre_like = @post.likes.find { |like| like.user_id == current_user.id} %>
@@ -47,12 +47,10 @@
       <div class="comments">
         <h2>Ответы</h2>
           <%= render @post.answers %>
-
         <% if user_signed_in? %>
         <%= link_to 'Редактировать', edit_post_path(@post) %> |
         <% end %>
         <%= link_to 'Назад', admin_context_path(curatorposts: "") %>
       </div>
   </div>
-  <%= render 'footer/footerinner' %>
 </body>

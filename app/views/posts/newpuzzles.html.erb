@@ -4,7 +4,7 @@
     <div class="new_post_card">
       <h1>Создание загадки</h1>
       <%= render 'formpuzzles', post: @post %>
-      <%= link_to 'Назад', posts_path %>
+      <%= link_to 'Назад', admin_context_path(posts: "", post_type: "puzzles") %>
     </div>
   </div>
 </body>
