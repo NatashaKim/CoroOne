@@ -133,6 +133,13 @@
   font-weight: lighter;
 }
 
+@mixin text_underimg {
+  margin-top: 3vw;
+}
+
+@mixin img_aftertext {
+  margin-top: 8vw;
+}
 .img_one_of_two {
   display: flex;
   flex-direction: column;
@@ -155,11 +162,9 @@
   margin-bottom: 4vw;
 }
 
-@mixin text_under {
-  margin-top: 4vw;
-}
 
-@mixin text_underm {
+
+@mixin text_underimgm {
   margin-top: 2vw;
 }
 
@@ -346,16 +351,156 @@ $dark: #04005E;
 
             }
             section.logo {
+              padding-top: 20vw;
                div.logo_concept {
                  div.concept {
+                   @include last_object;
                    p.first_text {
-
+                     font-size: 4.5vw;
+                     line-height: 7vw;
+                     margin-bottom:  9vw;
                    }
-                   p.big_text {
-
+                   p.big_shift {
+                     font-size: 2vw;
+                     line-height: 6vw;
                    }
                  }
+                 div.logo_blocks {
+                    img {
+
+                      @include big_image;
+                      @include maintext_afterbigphoto;
+                    }
+                    p {
+                      @include text_underimg;
+                    }
+                 }
+                 div.s {
+                   p {
+                     margin-top: -4vw;
+                   }
+                 }
+                 div.logo_blocks_smalllogo {
+                   @include last_object;
+                   img {
+                     width: 70%;
+                     @include maintext_afterbigphoto;
+                     }
+                     p {
+                       @include text_underimg;
+                       @include maintext_abovephoto;
+                     }
+                 }
                }
+               div.logo_design {
+                  img {
+                    @include big_image;
+                    @include img_aftertext;
+                    @include maintext_beforephoto;
+                  }
+                  div.logo_design_img {
+                     @include last_object;
+                     display: flex;
+                     flex-direction: column;
+                     div.logo_design_img_two {
+                       @include big_image;
+                       display: flex;
+                       flex-direction: row;
+                       img {
+                         width: 43.3vw;
+                         @include img_aftertext;
+                         margin-bottom: 3vw;
+                       }
+                       img:first-child {
+                         margin-right: 3vw;
+                       }
+                     }
+                     img {
+                       margin-top: 0vw;
+                       @include big_image;
+                     }
+                  }
+               }
+               div.logo_field {
+                 @include last_object;
+                  img {
+                    @include big_image;
+                    @include img_aftertext;
+                    @include maintext_beforephoto;
+                  }
+
+               }
+               div.examples_of_using {
+                  div.img_one_of_twot {
+                    @include img_aftertext;
+                    display: flex;
+                    flex-direction: row;
+                    div.img_one_of_two {
+                      display: flex;
+                      flex-direction: column;
+                        img {
+                          width: 43.3vw;
+                        }
+                        img:first-child {
+                          margin-right: 3vw;
+                        }
+                        p.small_text {
+                          font-size: 2.5vw;
+                          line-height: 4vw;
+                          @include text_underimg;
+                        }
+                      }
+                    }
+                    div.img_two_of_twot {
+                      @include lastest_object;
+                      @include img_aftertext;
+                      display: flex;
+                      flex-direction: row;
+                      div.img_one_of_two {
+                        display: flex;
+                        flex-direction: column;
+                          img {
+                            width: 43.3vw;
+                          }
+                          img:first-child {
+                            margin-right: 3vw;
+                          }
+                          p.small_text {
+                            font-size: 2.5vw;
+                            line-height: 4vw;
+                            @include text_underimg;
+                          }
+                        }
+                      }
+
+
+               }
+
+            }
+
+            section.typography {
+              div.fonts {
+                @include last_object;
+                div.two_fonts {
+                  div.kinds_of_fonts {
+                     p {
+                       @include maintext_afterbigphoto;
+                     }
+                     img {
+                       width: 70%;
+                     }
+                  }
+                }
+                div.kinds_of_fonts {
+                   p {
+                     @include maintext_afterbigphoto;
+                   }
+                   img {
+                     width: 70%;
+                   }
+                }
+
+              }
             }
 
        }
