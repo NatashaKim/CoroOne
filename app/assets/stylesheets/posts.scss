@@ -56,6 +56,103 @@
 
 }
 
+@mixin post_form {
+  margin-top: 3vw;
+  .form_body {
+    display: flex;
+    flex-direction: column;
+      .field {
+        width: 50vw;
+        margin-bottom: 3vw;
+        label {
+          margin: 1vw auto;
+          font-size: 1.3vw;
+          text-align: left;
+          font-weight: bold;
+        }
+        input {
+          border-style: none;
+          border-radius: 0.3vw;
+          width: 50vw;
+          height: 2.5vw;
+          background-color: #F4F2F2;
+          padding-left: 1vw;
+        }
+      }
+      .carrier-wave-field {
+        margin-bottom: 3vw;
+        height: fit-content;
+        label {
+          margin: 1vw auto;
+          font-size: 1.3vw;
+          text-align: left;
+          font-weight: bold;
+        }
+        img {
+          width: 16vw;
+          margin-top: 5vw;
+        }
+        .how {
+          padding:5px 10px;
+          background:#F4F2F2;
+          border:1px solid #F4F2F2;
+          position:relative;
+          color:#9896AE;
+          border-radius:2px;
+          text-align:center;
+          vertical-align: middle;
+          width: 10vw;
+          height: 2.5vw;
+          line-height: 2.5vw;
+          cursor:pointer;
+          input {
+            text-align: center;
+            width: 13vw;
+            color: #9896AE;
+            font-family: 'RedRing';
+            opacity: 0%;
+            position: absolute;
+            z-index: 1000;
+            cursor: pointer;
+            right: 0;
+            top: 0;
+            height: 100%;
+            font-size: 24px;
+            width: 100%;
+          }
+        }
+      }
+      .field {
+        select {
+          border-style: none;
+          text-align: left;
+          align-items: flex-start;
+          white-space: nowrap;
+          align-self: flex-start;
+          font-family: 'RedRing';
+          background-color: white;
+        }
+      }
+  }
+  .actions {
+    input {
+      border-style: none;
+      display: block;
+      margin-top: 5vw;
+      padding: 0.7vw 1.5vw;
+      width: fit-content;
+      background-color: #9896AE;
+      color: #F5F6FF;
+      font-size: 1vw;
+      border-radius: 2vw;
+      float: right;
+      &:hover {
+         background-color: #04005E;
+      }
+    }
+  }
+}
+
 body.posts {
   box-sizing: border-box;
   font-family: "Circe";
@@ -141,100 +238,7 @@ body.new_post {
         font-size: 3vw;
       }
       form{
-        margin-top: 3vw;
-        .form_body {
-          display: flex;
-          flex-direction: column;
-            .field {
-              width: 50vw;
-              margin-bottom: 3vw;
-              label {
-                margin: 1vw auto;
-                font-size: 1.3vw;
-                text-align: left;
-                font-weight: bold;
-              }
-              input {
-                border-style: none;
-                border-radius: 0.3vw;
-                width: 50vw;
-                height: 2.5vw;
-                background-color: #F4F2F2;
-              }
-            }
-            .field {
-              select {
-                border-style: none;
-                text-align: left;
-                align-items: flex-start;
-                white-space: nowrap;
-                align-self: flex-start;
-                font-family: 'RedRing';
-              }
-            }
-            .carrier-wave-field {
-              margin-bottom: 3vw;
-              label {
-                margin: 1vw auto;
-                font-size: 1.3vw;
-                text-align: left;
-                font-weight: bold;
-              }
-              img {
-                width: 12vw;
-                margin-top: 5vw;
-              }
-              .how {
-                padding:5px 10px;
-                background:#F4F2F2;
-                border:1px solid #F4F2F2;
-                position:relative;
-                color:#9896AE;
-                border-radius:2px;
-                text-align:center;
-                vertical-align: middle;
-                width: 10vw;
-                height: 2.5vw;
-                line-height: 2.5vw;
-                cursor:pointer;
-                input {
-                  text-align: center;
-                  width: 13vw;
-                  color: #9896AE;
-                  font-family: 'RedRing';
-                  opacity: 0%;
-                  position: absolute;
-                  z-index: 1000;
-                  cursor: pointer;
-                  right: 0;
-                  top: 0;
-                  height: 100%;
-                  font-size: 24px;
-                  width: 100%;
-                }
-                .hide_file input {
-                  color: red;
-                }
-              }
-            }
-        }
-        .actions {
-          input {
-            border-style: none;
-            display: block;
-            margin-top: 5vw;
-            padding: 0.7vw 1.5vw;
-            width: fit-content;
-            background-color: #9896AE;
-            color: #F5F6FF;
-            font-size: 1vw;
-            border-radius: 2vw;
-            float: right;
-            &:hover {
-               background-color: #04005E;
-            }
-          }
-        }
+        @include post_form;
       }
       a {
         font-size: 1vw;
@@ -327,108 +331,49 @@ body.show_body {
 }
 
 
-
-
 body.edit_post {
   box-sizing: border-box;
-  font-family: "Circe";
   height: auto;
+  font-family: "RedRing";
+  margin: 0;
+  overflow-x: hidden;
   .edit_post_wrapper {
+    overflow-x: hidden;
+    width: 50vw;
+    display: flex;
+    flex-flow: column;
+    margin: 9vw 7vw 7vw 19vw;
     .edit_post_card{
-      width: 46vw;
-      margin: 5vw auto;
-      background-color: white;
-      border-radius: 2vw;
-      padding: 3vw;
-      border: 1.2vw solid #CCFD38;
       h1 {
         font-size: 3vw;
       }
-      form{
-        margin-top: 3vw;
+      form {
+        @include post_form;
         .form_body {
-          display: flex;
-          .text_form {
-            display: flex;
-            flex-direction: column;
-            .field {
-              width: 20vw;
-              margin-bottom: 3vw;
-              label {
-                color: gray;
-              }
-              input {
-                border-style: none;
-                border-bottom: 0.1vw solid gray;
-                width: 19vw;
-                font-family: 'Circe';
-              }
-            }
-            .field {
-              textarea {
-                width: 19vw;
-                height: 5vw;
-                border-color: gray;
-                margin-top: 0.5vw;
-                border-radius: 0.5vw;
-                font-family: 'Circe';
-              }
-            }
-          }
-          .img_form {
-            width: 21vw;
-            height: 28.3vw;
-            border-radius: 2vw;
-            margin-left: 5vw;
-            margin-top: -4.9vw;
-            background-color: white;
-            div {
-              text-align: center;
-              img {
-                // display: none;
-              }
-              label {
-                font-size: 1.5vw;
-                font-weight: bold;
-                color: white;
-                display: none;
-              }
-
+          .carrier-wave-field {
+            height: 20vw;
+            .how {
               a {
+                top: 2vw;
+                left: -1vw;
+                position: absolute;
+                margin: 0;
                 img {
-                  width: 22vw;
-                  margin-top: -12vw;
-                  margin-left: -2vw;
+                  top: 2vw;
+                  left: -1vw;
+                  position: absolute;
+                  margin: 0;
                 }
               }
-              input {
-                text-align: center;
-                width: 12vw;
-                color: white;
-              }
             }
-          }
-        }
-        .actions {
-          input {
-            background-color: #CCFD38;
-            border-style: none;
-            float: right;
-            background-color: #CCFD38;
-            height: 4vw;
-            font-size: 1.7vw;
-            line-height: 4vw;
-            border-radius: 2vw;
-            width: 15vw;
-            display: block;
-            text-align: center;
-            margin-top: -0.8vw;
-            font-family: "Circe";
           }
         }
       }
       a {
-        font-size: 1.4vw;
+        font-size: 1vw;
+        margin-top: 5.7vw;
+        position: inherit;
+        display: inline-block;
       }
     }
   }
