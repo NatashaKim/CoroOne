@@ -45,19 +45,11 @@
 
       </div>
 
-
-        <div class="field">
-            <%= form.label :category_id %>
-
-            <%= form.select :category_id, Category.where(post_type_id: post.post_type.id).pluck(:name, :id) %>
-            <%= form.hidden_field :post_type_id, value: post.post_type.id %>
-        </div>
-
     </div>
-
+<%= form.hidden_field :post_type_id, value: post.post_type.id %>
 
   <div class="actions">
-    <%= form.submit "Опубликовать"%>
+    <%= form.submit "Опубликовать "%>
   </div>
 
 <% end %>

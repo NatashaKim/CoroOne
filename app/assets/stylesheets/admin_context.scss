@@ -282,6 +282,11 @@ body.admin_context {
     }
     .wrapper_users {
       @include wrapper_all;
+      .create {
+        width: inherit;
+        height: 8.5vw;
+        width: inherit;
+      }
       @include table_mix;
       table {
         thead th:nth-child(1) {
@@ -316,6 +321,11 @@ body.admin_context {
     }
     .wrapper_comments {
       @include wrapper_all;
+      .create {
+        width: inherit;
+        height: 8.5vw;
+        width: inherit;
+      }
       @include table_mix;
     }
   }
