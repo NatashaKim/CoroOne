@@ -22,19 +22,13 @@
         <% if @post.id? %>
             <h2>Добавить ответ:</h2>
               <%= render "answers/form" %>
-            <h2>Добавить ответ:</h2>
-              <%= render "answers/form" %>
-            <h2>Добавить ответ:</h2>
-              <%= render "answers/form" %>
-            <h2>Добавить ответ:</h2>
-              <%= render "answers/form" %>
         <% end %>
     <% end %>
 
 
 
       <%= link_to 'Открыть', @post %> |
-      <%= link_to 'Назад', posts_path %>
+      <%= link_to 'Назад', admin_context_path(curatorposts: "") %>
     </div>
   </div>
 </body>

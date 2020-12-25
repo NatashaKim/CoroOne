@@ -246,6 +246,52 @@ body.admin_context {
         }
       }
     }
+    .wrapper_portfolio{
+       @include wrapper_all;
+      .create {
+        width: inherit;
+        height: 8.5vw;
+        width: inherit;
+        }
+      .filters {
+        width: inherit;
+        display: flex;
+        flex-direction: row;
+        height: 7vw;
+        @include filters_list_mix;
+      }
+      @include table_mix;
+      table {
+        thead th:nth-child(1) {
+          width: 11vw;
+        }
+        thead th:nth-child(2) {
+          width: 11vw;
+        }
+        thead th:nth-child(3) {
+          width: 7vw;
+        }
+        thead th:nth-child(4) {
+          width: 11vw;
+        }
+        thead th:nth-child(5) {
+          width: 4.5vw;
+        }
+        thead th:nth-child(6) {
+          width: 4.5vw;
+        }
+        thead th:nth-child(7) {
+          width: 13vw;
+        }
+        thead th:nth-child(8) {
+          width: 3.5vw;
+        }
+        thead th:nth-child(9) {
+          width: 3vw;
+        }
+      }
+    }
+
     .wrapper_categories {
       @include wrapper_all;
       .create {

@@ -90,7 +90,7 @@
 
 
 <% if @whatcontenttoshow == "show-portfolio" %>
-  <div class="wrapper_posts">
+  <div class="wrapper_portfolio">
 
       <div class="create">
       </div>
@@ -164,7 +164,7 @@
 
 
 
-<% if @whatcontenttoshow == "show-discussions" %>
+<% if @whatcontenttoshow == "show-discussion" %>
   <div class="wrapper_posts">
 
       <div class="create">
@@ -214,7 +214,7 @@
 
         <% @posts.each do |post| %>
           <tr>
-            <td><%= link_to post.title, post %></td>
+            <td><span><%= link_to post.title, post %></span></td>
             <td class="author"><span><%= post.user.username %></span></td>
             <td class="category.name"><span>
               <% if post.category_id? %>
