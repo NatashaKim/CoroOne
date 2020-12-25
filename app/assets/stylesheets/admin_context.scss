@@ -183,7 +183,7 @@
 body.admin_context {
   font-family: "RedRing";
   margin: 0;
-  height: 100vw;
+  height: fit-content;
   box-sizing: border-box;
   overflow-x: hidden;
   display: flex;
@@ -191,7 +191,7 @@ body.admin_context {
     .please {
       // overflow-x: hidden;
       width: 74vw;
-      height: 100vw;
+      height: fit-content;
       display: flex;
       flex-flow: column;
       margin-left: 18vw;
