@@ -29,9 +29,10 @@
         <span>Подписки: <%= link_to @user.followees.count, following_path %></span>
       </div>
 
-
-      <p>ID <%= @user.id %></p>
-      <p>Email <%= @user.email %></p>
+      <div class="general">
+        <p>ID <%= @user.id %></p>
+        <p>Email <%= @user.email %></p>
+      </div>
     </div>
 
     In favorites <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Post' : 'Posts'%>
