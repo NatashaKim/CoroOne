@@ -239,8 +239,9 @@ body.new_post {
     width: 50vw;
     display: flex;
     flex-flow: column;
-    margin: 9vw 7vw 7vw 19vw;
+    margin: 0 7vw 7vw 19vw;
     .new_post_card{
+      margin-top: 9vw;
       h1 {
         font-size: 3vw;
       }
@@ -260,13 +261,20 @@ body.new_post {
 body.show_body {
   font-family: "RedRing";
   height: auto;
+  margin: 0;
   .wrapper_show {
+    margin-top: 9vw;
     width: 50vw;
     margin: 0 auto;
+    width: 74vw;
+    height: fit-content;
+    display: flex;
+    flex-flow: column;
+    margin-left: 19vw;
+    margin-right: 7vw;
     .narrow {
       width: 50vw;
-      margin: 0 auto;
-      margin-bottom: 5vw;
+      margin: 5vw auto;
       span {
         font-size: 1.5vw;
         color: gray;
@@ -274,6 +282,7 @@ body.show_body {
       }
       h1 {
         font-size: 2.4vw;
+        margin-top:0;
         width: 40vw;
         font-weight: bold;
         line-height: 3vw;
@@ -298,12 +307,12 @@ body.show_body {
       .count {
         span:first-of-type {
           position: absolute;
-          top: 0.4vw;
+          top: 1.4vw;
           left: 2.2vw;
         }
         span:nth-of-type(2) {
           position: absolute;
-          top: 0.4vw;
+          top: 1.4vw;
           left: 6.5vw;
         }
       }
