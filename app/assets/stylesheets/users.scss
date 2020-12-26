@@ -100,13 +100,51 @@ body.show_user_body {
         margin: 0.7vw;
         font-weight: bold;
       }
+      span {
+        display: block;
+        margin-bottom: 0.5vw;
+      }
+      a {
+        margin-bottom: 4vw;
+        display: block;
+      }
       .follow {
-        // border-top: 0.1vw solid, #9896AE;
-        // border-bottom: : 0.1vw solid, #9896AE;
+        height: 5vw;
+        align-self: center;
+        line-height: 5vw;
+        width: fit-content;
+        border-top: 0.1vw solid #9896AE;
+        height: fit-content;
+        span {
+          display: inline-block;
+          height: 5vw;
+          a {
+          margin: 0;
+          height: fit-content;
+          font-size: 2vw;
+          }
+        }
       }
       .general {
-        // border-bottom: : 0.1vw solid, #9896AE;
+        width: fit-content;
+        align-self: center;
+        border-top: 0.1vw solid #9896AE;
+        border-bottom: 0.1vw solid #9896AE;
+        padding: 1vw;
+        p {
+          font-size: 1.5vw;
+          font-weight: normal;
+        }
       }
     }
+    .in_favorites {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5vw;
+    }
+    a {
+    text-align: center;
+    }
   }
+  margin-bottom: 2vw;
 }
