@@ -309,6 +309,9 @@ $dark: #04005E;
        section.menu {
         display: none;
        }
+       a {
+         color: $white;
+       }
        nav {
          margin-left: -5vw;
          margin-top: 0vw;
@@ -392,7 +395,7 @@ $dark: #04005E;
                 }
                }
              }
-            }
+
 
 
            }
@@ -441,7 +444,7 @@ $dark: #04005E;
              }
            }
 
-          }
+
        div.wrapper {
 
             section.logo {
@@ -1166,7 +1169,7 @@ $dark: #04005E;
           }
 
 
-
+   }
 
 }
 
@@ -2990,7 +2993,6 @@ $dark: #04005E;
             }
           }
 
-
-
+      }
+   }
   }
-}
