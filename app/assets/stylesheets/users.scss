@@ -1,3 +1,72 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+body.edit_user {
+  box-sizing: border-box;
+  height: auto;
+  font-family: "RedRing";
+  margin: 0;
+  overflow-x: hidden;
+  .edit_user_wrapper {
+    overflow-x: hidden;
+    width: 50vw;
+    display: flex;
+    flex-flow: column;
+    margin: 9vw 7vw 7vw 19vw;
+    .edit_user_card{
+      h1 {
+        font-size: 2.3vw;
+      }
+      form{
+        span {
+          margin: 1vw auto;
+          font-size: 1.3vw;
+          text-align: left;
+          font-weight: bold;
+          display: block;
+        }
+        a {
+          margin: 0;
+          border-style: none;
+          border-radius: 0.3vw;
+          width: 50vw;
+          height: 2.5vw;
+          background-color: #F4F2F2;
+          padding-left: 1vw;
+          display: block;
+          line-height: 2.4vw;
+          font-weight: normal;
+          margin-bottom: 3vw;
+        }
+      }
+      h3 {
+        font-weight: normal;
+        font-size: 1.2vw;
+      }
+      .actions {
+        input {
+          border-style: none;
+          display: block;
+          margin-top: 5vw;
+          padding: 0.7vw 1.5vw;
+          width: fit-content;
+          background-color: #9896AE;
+          color: #F5F6FF;
+          font-size: 1vw;
+          border-radius: 2vw;
+          float: right;
+          &:hover {
+             background-color: #04005E;
+          }
+        }
+      }
+      a {
+        font-size: 1vw;
+        margin-top: 5.7vw;
+        position: inherit;
+        display: inline-block;
+      }
+    }
+  }
+}
