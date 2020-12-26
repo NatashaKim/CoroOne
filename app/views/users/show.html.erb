@@ -1,5 +1,4 @@
-<p>ID <%= @user.id %></p>
-<p>Email <%= @user.email %></p>
+<%= image_tag(@user.image.url, alt: 'Image') if @user.image? %>
 <p>Username <%= @user.username %></p>
 <% if user_signed_in? && current_user.admin == true %>
   <p>Moderator <%= @user.ismoderator %></p>
@@ -7,16 +6,6 @@
 <% if user_signed_in? && current_user.admin == true %>
   <p>Admin <%= @user.admin %></p>
 <% end %>
-КАРТИНКА: <%= image_tag(@user.image.url, alt: 'Image') if @user.image? %>
-Followers <%= @user.followers.count %>
-Following <%= link_to @user.followees.count, following_path %>
-<br>
-
-In favorites <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Post' : 'Posts'%>
-<% @posts.each do |post| %>
-  <br><%= link_to post.title, post %>
-<% end %>
-
 <% if user_signed_in? && @user.id == current_user.id %>
     <%= link_to 'Edit Profile', edit_user_registration_path %>
 <% elsif user_signed_in? && current_user.admin == true %>
@@ -28,3 +17,14 @@ In favorites <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Po
 <% else %>
 <%# можно добавить кнопку для регистрации или что-нибудь ещё  %>
 <% end%>
+Подписчики: <%= @user.followers.count %>
+Подписки: <%= link_to @user.followees.count, following_path %>
+<br>
+
+<p>ID <%= @user.id %></p>
+<p>Email <%= @user.email %></p>
+
+In favorites <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Post' : 'Posts'%>
+<% @posts.each do |post| %>
+  <br><%= link_to post.title, post %>
+<% end %>

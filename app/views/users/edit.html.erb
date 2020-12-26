@@ -1,40 +1,51 @@
-<%= form_with model: @user do |f| %>
-<h1>Переназначить пользователя</h1>
+<body class="edit_user">
+  <%= render 'navbar/navbarleft' %>
+   <div class="edit_user_wrapper">
+     <div class="edit_user_card">
+      <%= form_with model: @user do |f| %>
+      <h1>Изменить роль</h1>
+      <span>E-mail</span><%= link_to @user.email, @user %>
+      <span>Username</span><span><%= link_to @user.username, @user %></span>
 
-<% if @user.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this post_type from being saved:</h2>
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this post_type from being saved:</h2>
 
-    <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
       <% end %>
-    </ul>
+
+
+      <% if signed_in? %>
+        <% if current_user.admin? %>
+          <h3> Администратор
+          <%= f.check_box :admin %></h3>
+        <% end %>
+      <% end %>
+
+      <% if signed_in? %>
+        <% if current_user.admin? %>
+          <h3> Модератор
+          <%= f.check_box :ismoderator %></h3>
+        <% end %>
+      <% end %>
+
+      <% if signed_in? %>
+        <% if current_user.admin? %>
+          <h3> Разработчик
+          <%= f.check_box :isdeveloper %></h3>
+        <% end %>
+      <% end %>
+      <div class="actions">
+        <%= f.submit "Да"%>
+      </div>
+      <% end %>
+      <%= link_to 'Открыть', @user %> |
+      <%= link_to 'Назад', admin_context_path(users: "") %>
+    </div>
   </div>
-<% end %>
-
-
-<% if signed_in? %>
-  <% if current_user.admin? %>
-    <h3> Click to Switch On/Off Admin
-    <%= f.check_box :admin %></h3>
-  <% end %>
-<% end %>
-
-<% if signed_in? %>
-  <% if current_user.admin? %>
-    <h3> Click to Switch On/Off Moderator
-    <%= f.check_box :ismoderator %></h3>
-  <% end %>
-<% end %>
-
-<% if signed_in? %>
-  <% if current_user.admin? %>
-    <h3> Click to Switch On/Off Developer
-    <%= f.check_box :isdeveloper %></h3>
-  <% end %>
-<% end %>
-<div class="actions">
-  <%= f.submit "Да"%>
-</div>
-<% end %>
+</body>

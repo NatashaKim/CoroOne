@@ -208,6 +208,9 @@ body.admin_context {
           left: auto;
         }
       }
+      h1 {
+        font-size: 2.3vw;
+      }
       .filters {
         width: inherit;
         display: flex;
@@ -252,6 +255,9 @@ body.admin_context {
         width: inherit;
         height: 8.5vw;
         width: inherit;
+        }
+        h1 {
+          font-size: 2.3vw;
         }
       .filters {
         width: inherit;
@@ -300,6 +306,9 @@ body.admin_context {
         width: inherit;
         @include create_button_mix;
       }
+      h1 {
+        font-size: 2.3vw;
+      }
       .filters {
         width: inherit;
         height: 4vw;
@@ -332,6 +341,9 @@ body.admin_context {
         width: inherit;
         height: 8.5vw;
         width: inherit;
+      }
+      h1 {
+        font-size: 2.3vw;
       }
       @include table_mix;
       table {
@@ -371,6 +383,9 @@ body.admin_context {
         width: inherit;
         height: 8.5vw;
         width: inherit;
+      }
+      h1 {
+        font-size: 2.3vw;
       }
       @include table_mix;
     }
