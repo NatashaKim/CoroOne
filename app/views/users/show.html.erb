@@ -5,16 +5,16 @@
       <%= image_tag(@user.image.url, alt: 'Image') if @user.image? %>
       <p><%= @user.username %></p>
       <% if user_signed_in? && @user.admin == true %>
-        <p>Администратор</p>
+        <span>Администратор</span>
       <% end %>
       <% if user_signed_in? && @user.ismoderator == true %>
-        <p>Модератор</p>
+        <span>Модератор</span>
       <% end %>
       <% if user_signed_in? && @user.isdeveloper == true %>
-        <p>Разработчик</p>
+        <span>Разработчик</span>
       <% end %>
       <% if user_signed_in? && @user.id == current_user.id %>
-          <%= link_to 'Edit Profile', edit_user_registration_path %>
+          <%= link_to 'Редактировать профиль', edit_user_registration_path %>
       <% elsif user_signed_in? && current_user.admin == true %>
           <%= link_to 'Переназначить', edit_user_path(@user) %>
       <% elsif user_signed_in? && current_user.followees.include?(@user) %>
@@ -24,9 +24,11 @@
       <% else %>
       <%# можно добавить кнопку для регистрации или что-нибудь ещё  %>
       <% end%>
-      Подписчики: <%= @user.followers.count %>
-      Подписки: <%= link_to @user.followees.count, following_path %>
-      <br>
+      <div class="follow">
+        <span>Подписчики: <%= @user.followers.count %></span>
+        <span>Подписки: <%= link_to @user.followees.count, following_path %></span>
+      </div>
+
 
       <p>ID <%= @user.id %></p>
       <p>Email <%= @user.email %></p>
