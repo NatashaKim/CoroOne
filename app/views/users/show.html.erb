@@ -1,30 +1,40 @@
-<%= image_tag(@user.image.url, alt: 'Image') if @user.image? %>
-<p>Username <%= @user.username %></p>
-<% if user_signed_in? && current_user.admin == true %>
-  <p>Moderator <%= @user.ismoderator %></p>
-<% end %>
-<% if user_signed_in? && current_user.admin == true %>
-  <p>Admin <%= @user.admin %></p>
-<% end %>
-<% if user_signed_in? && @user.id == current_user.id %>
-    <%= link_to 'Edit Profile', edit_user_registration_path %>
-<% elsif user_signed_in? && current_user.admin == true %>
-    <%= link_to 'Переназначить', edit_user_path(@user) %>
-<% elsif user_signed_in? && current_user.followees.include?(@user) %>
-    <h5><%= button_to "Unfollow", unfollow_user_path, method: "POST" %></h5>
-<% elsif user_signed_in? %>
-    <h5><%= button_to "Follow", follow_user_path, method: "POST"  %></h5>
-<% else %>
-<%# можно добавить кнопку для регистрации или что-нибудь ещё  %>
-<% end%>
-Подписчики: <%= @user.followers.count %>
-Подписки: <%= link_to @user.followees.count, following_path %>
-<br>
+<body class="show_user_body">
+  <%= render 'navbar/navbarleft' %>
+  <div class="wrapper_user_show">
+    <div class="account">
+      <%= image_tag(@user.image.url, alt: 'Image') if @user.image? %>
+      <p><%= @user.username %></p>
+      <% if user_signed_in? && @user.admin == true %>
+        <p>Администратор</p>
+      <% end %>
+      <% if user_signed_in? && @user.ismoderator == true %>
+        <p>Модератор</p>
+      <% end %>
+      <% if user_signed_in? && @user.isdeveloper == true %>
+        <p>Разработчик</p>
+      <% end %>
+      <% if user_signed_in? && @user.id == current_user.id %>
+          <%= link_to 'Edit Profile', edit_user_registration_path %>
+      <% elsif user_signed_in? && current_user.admin == true %>
+          <%= link_to 'Переназначить', edit_user_path(@user) %>
+      <% elsif user_signed_in? && current_user.followees.include?(@user) %>
+          <h5><%= button_to "Unfollow", unfollow_user_path, method: "POST" %></h5>
+      <% elsif user_signed_in? %>
+          <h5><%= button_to "Follow", follow_user_path, method: "POST"  %></h5>
+      <% else %>
+      <%# можно добавить кнопку для регистрации или что-нибудь ещё  %>
+      <% end%>
+      Подписчики: <%= @user.followers.count %>
+      Подписки: <%= link_to @user.followees.count, following_path %>
+      <br>
 
-<p>ID <%= @user.id %></p>
-<p>Email <%= @user.email %></p>
+      <p>ID <%= @user.id %></p>
+      <p>Email <%= @user.email %></p>
+    </div>
 
-In favorites <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Post' : 'Posts'%>
-<% @posts.each do |post| %>
-  <br><%= link_to post.title, post %>
-<% end %>
+    In favorites <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Post' : 'Posts'%>
+    <% @posts.each do |post| %>
+      <br><%= link_to post.title, post %>
+    <% end %>
+  </div>
+</body>

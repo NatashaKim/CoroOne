@@ -8,6 +8,9 @@ body.edit_user {
   font-family: "RedRing";
   margin: 0;
   overflow-x: hidden;
+  .top_menu {
+    display: none;
+  }
   .edit_user_wrapper {
     overflow-x: hidden;
     width: 50vw;
@@ -66,6 +69,23 @@ body.edit_user {
         margin-top: 5.7vw;
         position: inherit;
         display: inline-block;
+      }
+    }
+  }
+}
+
+
+body.show_user_body {
+  font-family: "RedRing";
+  height: auto;
+  .wrapper_user_show {
+    width: 50vw;
+    margin: 0 auto;
+    .account {
+      text-align: center;
+      img {
+        width: 12vw;
+        border-radius: 50%;
       }
     }
   }
