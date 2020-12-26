@@ -2054,17 +2054,21 @@ $dark: #04005E;
        section.menu {
         display: block;
         position: fixed;
-        top: 15vw;
+        top: 9vw;
         left: 5vw;
         div.menu_th {
           &:hover {
               p {
                 display: block;
-                font-size: 1.2vw;
-                color: $white;
-                width: 20vw;
-                margin-bottom: 0.7vw;
-                margin-left: 2vw;
+                width: 22vw;
+                a {
+                  font-size: 1.2vw;
+                  color: $white;
+                  width: 22vw;
+                  margin-bottom: 0.7vw;
+                  margin-left: 2vw;
+                  text-decoration: none;
+                }
               }
             }
           h5 {
@@ -2439,7 +2443,9 @@ $dark: #04005E;
                         width: 34.3vw;
                       }
                       p {
-                        @include small_text;
+                        font-size: 1.2vw;
+                        width: 100%;
+                        line-height: 3vw;
                         @include text_underimgm;
                       }
                     }
@@ -2457,7 +2463,9 @@ $dark: #04005E;
                         width: 34.3vw;
                       }
                       p {
-                        @include small_text;
+                        font-size: 1.2vw;
+                        width: 100%;
+                        line-height: 3vw;
                         @include text_underimgm;
                       }
                     }
@@ -2512,6 +2520,7 @@ $dark: #04005E;
               }
             }
             section.colors {
+
               div.colors_colors {
                 @include last_objectm;
                 display: flex;
@@ -2594,8 +2603,9 @@ $dark: #04005E;
                      flex-direction: row;
                      div.colorpair {
                         p {
-                          @include small_text;
+                          font-size: 1.2vw;
                           width: 100%;
+                          line-height: 3vw;
                         }
                         img {
                           width: 9.6vw;
@@ -2800,6 +2810,7 @@ $dark: #04005E;
                       display: flex;
                       flex-direction: column;
                       img {
+                         margin-right: 8vw;
                          width: 28vw;
                          margin-bottom: 5vw;
                       }
@@ -2821,9 +2832,9 @@ $dark: #04005E;
                     div.variant_one1 {
                       margin-bottom: 20vw;
                       display: flex;
-                      flex-direction: row;
+                      flex-direction: column;
                       img {
-                         @include big_image;
+                         width: 28vw;
                          margin-bottom: 5vw;
                       }
                       div.variant_one1_colors {
@@ -2831,12 +2842,12 @@ $dark: #04005E;
                         flex-direction: row;
                         div.color3 {
                           background-color: $gray;
-                          width: 50%;
+                          width: 14vw;
                           height: 6vw;
                         }
                         div.color4 {
                           background-color: $green;
-                          width: 50%;
+                          width: 14vw;
                           height: 6vw;
                         }
                       }
