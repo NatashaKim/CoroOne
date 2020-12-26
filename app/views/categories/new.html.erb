@@ -1,5 +1,11 @@
-<h1>Новая категория</h1>
+<body class="new_post">
+  <%= render 'navbar/navbarleft' %>
+  <div class="new_post_wrapper">
+    <div class="new_post_card">
+    <h1>Новая категория</h1>
 
-<%= render 'form', category: @category %>
-
-<%= link_to 'Назад', admin_context_path(categories: "") %>
+    <%= render 'form', category: @category %>
+    <%= link_to 'Назад', admin_context_path(categories: "") %>
+  </div>
+</div>
+</body>
