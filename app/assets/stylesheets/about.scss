@@ -319,6 +319,9 @@ $dark: #04005E;
            justify-content: space-between;
            z-index: 1;
            position: fixed;
+           &:hover {
+             background-color: #1C1C1E;
+           }
            div.graphiklogo {
              display: block;
              img {
@@ -452,6 +455,7 @@ $dark: #04005E;
                      margin-bottom:  9vw;
                    }
                    p.big_shift {
+                     margin-left: 2vw;
                      font-size: 2vw;
                      line-height: 6vw;
                    }
