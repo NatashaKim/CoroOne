@@ -25,17 +25,17 @@
       <%# можно добавить кнопку для регистрации или что-нибудь ещё  %>
       <% end%>
       <div class="follow">
-        <span>Подписчики: <%= @user.followers.count %></span>
+        <span>Подписчики: <%= link_to @user.followers.count %></span>
         <span>Подписки: <%= link_to @user.followees.count, following_path %></span>
       </div>
 
       <div class="general">
-        <p>ID <%= @user.id %></p>
         <p>Email <%= @user.email %></p>
+        <p>ID <%= @user.id %></p>
       </div>
     </div>
 
-    In favorites <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'Post' : 'Posts'%>
+    <span class="in_favorites">В закладках <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'пост' : 'поста'%></span>
     <% @posts.each do |post| %>
       <br><%= link_to post.title, post %>
     <% end %>
