@@ -294,7 +294,7 @@ $dark: #04005E;
     height: 312.5vw;
     padding: 5vw;
     margin: 0px;
-    .wrapper_about {
+    div.wrapper_about {
       overflow-x: hidden;
        p {
          @include maintext;
@@ -450,6 +450,7 @@ $dark: #04005E;
        div.wrapper {
 
             section.logo {
+              margin-top: 28vw;
               padding-top: 20vw;
                div.logo_concept {
                  div.concept {
