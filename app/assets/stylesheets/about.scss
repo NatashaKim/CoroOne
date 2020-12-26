@@ -294,7 +294,6 @@ $dark: #04005E;
     height: 312.5vw;
     padding: 5vw;
     margin: 0px;
-    div.wrapper_about {
       overflow-x: hidden;
        p {
          @include maintext;
@@ -1173,7 +1172,7 @@ $dark: #04005E;
 
 
    }
-}
+
 }
 
 @media (min-width: 700px) {
