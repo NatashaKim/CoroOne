@@ -294,7 +294,6 @@ $dark: #04005E;
     height: 312.5vw;
     padding: 5vw;
     margin: 0px;
-      overflow-x: hidden;
        p {
          @include maintext;
        }
@@ -1191,13 +1190,16 @@ $dark: #04005E;
     padding: 5vw;
     margin: 0px;
        p {
-         @include maintextk;
+        font-size: 3.1vw;
+        line-height: 6.3vw;
        }
        h1 {
          @include h1k;
+         font-size: 7.5vw;
        }
        h2 {
-         @include h2k;
+         margin-bottom: 6vw;
+         font-size: 5vw;
        }
        p.small_text {
          @include small_textk;
@@ -1312,7 +1314,7 @@ $dark: #04005E;
                    p.big_shift {
                      margin-left: 20vw;
                      font-size: 2vw;
-                     line-height: 4vw;
+                     line-height: 5.5vw;
                    }
                  }
                  div.logo_blocks {
@@ -1326,6 +1328,8 @@ $dark: #04005E;
                       width: 60%;
                       margin-left: 34vw;
                       @include text_underimg;
+                      font-size: 2.8vw;
+                      line-height: 4.6vw;
                     }
                  }
                  div.s {
@@ -1344,6 +1348,8 @@ $dark: #04005E;
                        margin-left: 34vw;
                        @include text_underimg;
                        @include maintext_abovephoto;
+                       font-size: 2.8vw;
+                       line-height: 4.6vw;
                      }
                  }
                }
@@ -1387,6 +1393,8 @@ $dark: #04005E;
                }
                div.examples_of_using {
                   div.img_one_of_twot {
+
+                    margin-top: 6vw;
                     @include img_aftertext;
                     display: flex;
                     flex-direction: row;
@@ -1462,6 +1470,7 @@ $dark: #04005E;
                   display: flex;
                   flex-direction: column;
                   div {
+                    margin-bottom: 5vw;
                     display: flex;
                     flex-direction: column;
                     img {
@@ -1482,6 +1491,7 @@ $dark: #04005E;
                   display: flex;
                   flex-direction: column;
                    div.elements_el_things {
+                      margin-bottom: 6vw;
                      @include img_aftertext;
                      display: flex;
                      flex-direction: column;
@@ -1502,11 +1512,15 @@ $dark: #04005E;
                     @include maintext_afterbigphoto;
                     p.designing_grid_header {
                       @include p_abovephoto;
+                      font-size: 1.8vw;
+                      line-height: 5.6vw;
                     }
                     img {
                       @include big_image;
                     }
                     p:last-child {
+                      font-size: 1.8vw;
+                      line-height: 5.6vw;
                       @include text_underimg;
                     }
                   }
@@ -1560,6 +1574,7 @@ $dark: #04005E;
                     }
                     p {
                       @include text_underimg;
+                      font-size: 1.4vw;
                     }
                   }
                 }
@@ -1621,6 +1636,7 @@ $dark: #04005E;
               div.colors_five {
                 @include last_objectk;
                 @include img_aftertext;
+                margin-top: 10vw;
                 p.colorname {
                   @include text_above;
                 }
@@ -1637,6 +1653,7 @@ $dark: #04005E;
                    @include img_aftertext;
                    display: flex;
                    flex-direction: row;
+                   margin-top: 10vw;
                    div.using_rules_color {
                      display: flex;
                      flex-direction: column;
@@ -2233,7 +2250,9 @@ $dark: #04005E;
                     p {
                       margin-top: 9vw;
                       width: 40%;
-                      margin-left: 0vw;
+                      margin-left: 5vw;
+                      font-size: 1.6vw;
+                      line-height: 2.6vw;
                     }
                  }
                  div.s {
@@ -2255,7 +2274,9 @@ $dark: #04005E;
                      p {
                        margin-top: 11vw;
                        width: 40%;
-                       margin-left: 0vw;
+                       margin-left: 5vw;
+                       font-size: 1.6vw;
+                       line-height: 2.6vw;
                        @include maintext_abovephotom;
                      }
                  }
@@ -2430,12 +2451,16 @@ $dark: #04005E;
                     @include maintext_afterbigphotom;
                     p.designing_grid_header {
                       @include p_abovephoto;
+                      line-height: 3.3vw;
+                      width: 80%;
                     }
                     img {
                       @include big_image;
                     }
                     p:last-child {
                       @include text_underimgm;
+                      width: 80%;
+                      line-height: 3.3vw;
                     }
                   }
                 }
@@ -2787,7 +2812,7 @@ $dark: #04005E;
                     margin-right: 3vw;
                    }
                    img {
-                     width: 434.3vw;
+                     width: 34.3vw;
                    }
                  }
                  div.composition_rules_two {
