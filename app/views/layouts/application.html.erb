@@ -11,12 +11,14 @@
   </head>
 
   <body >
+    <%= react_component 'Tests' %>
 
-  <% if notice %>
-    <p class="notice"><%= notice %></p>
-  <% elsif alert %>
-    <p class="alert"><%= alert %></p>
-  <% end %>
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% elsif alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+    
     <%= yield %>
   </body>
 </html>
