@@ -11,7 +11,7 @@
 
     <div class="main_section">
       <div class="table_hidden">
-          <span>Name</span>
+          <!-- <span>Name</span> -->
           <span>Category</span>
           <span>Title</span>
           <span>Author</span>
@@ -23,12 +23,13 @@
         <div class="one_card">
           <div class="info">
             <div  class="posts_img"><%= link_to(image_tag(post.image.thumb.url, alt: 'Image'), post.image.url, target: '_blank') if post.image? %></div>
-            <!-- <div class="name"><%#= post.name %></div> -->
+            <!-- <div class="name"><#%= post.name %></div>  -->
             <div class="category.name"><span>
               <% if post.category_id? %>
               <%= post.category.name %>
               <% end %></span></div>
             <div class="title"><%= post.title %></div>
+            <div class="author"><%= post.author %></div>
             <div class="content"><%= post.content.html_safe %></div>
           </div>
           <div><%#= post.likes.count %> <%#= (post.likes.count) == 1 ? 'Like' : 'Likes'%></div>
