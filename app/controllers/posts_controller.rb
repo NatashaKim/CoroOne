@@ -64,12 +64,6 @@ class PostsController < ApplicationController
     render 'newpuzzles'
   end
 
-  def newdiscussion
-    @post = Post.new
-    @post.post_type = PostType.find_by_name("discussion")
-    render 'newdiscussion'
-  end
-
   def newportfolio
     @post = Post.new
     @post.post_type = PostType.find_by_name("portfolio")

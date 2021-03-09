@@ -6,8 +6,6 @@
 
     <% if @post.post_type.name == "news" %>
         <%= render 'form', post: @post %>
-      <% elsif @post.post_type.name == "discussion" %>
-            <%= render 'formdiscussion', post: @post %>
       <% elsif @post.post_type.name == "portfolio" %>
             <%= render 'formportfolio', post: @post %>
       <% elsif @post.post_type.name == "reviews" %>

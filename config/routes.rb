@@ -19,7 +19,6 @@ resources :posts do
       get :newnews
       get :newpuzzles
       get :newreviews
-      get :newdiscussion
       get :newportfolio
       get :newevents
     end
