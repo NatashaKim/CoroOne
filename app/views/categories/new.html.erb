@@ -3,7 +3,7 @@
     <div class="new_post_card">
     <h1>Новая категория</h1>
 
-    <%= render 'form', category: @category %>
+    <%= render 'form', category: @category, post_types: @post_types %>
     <%= link_to 'Назад', admin_context_path(categories: "") %>
   </div>
 </div>

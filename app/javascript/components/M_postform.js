@@ -13,7 +13,8 @@ class M_postform extends React.Component {
         author: props.post.author ? props.post.author : '',
         content: props.post.content ? props.post.content : '',
         image: props.post.image ? props.post.image : '',
-        categories: []
+        categories: props.categories ? props.categories : [],
+        post_type_id: props.post.post_type_id ? props.post.post_type_id : '',
 
 }
     ;
@@ -46,21 +47,14 @@ class M_postform extends React.Component {
     }
 
 
-
-
-
-
-
-
-    componentDidMount() {
-      availableCategories()
-          .then(res => {
-              this.setState({
-                  categories: res.Categories.name
-              })
-              console.log("hello", this.state.categories)
-          })
-     }
+    // componentDidMount() {
+    //   availableCategories()
+    //       .then(res => {
+    //           this.setState({
+    //               categories: res
+    //           })
+    //       })
+    //  }
 
     render() {
       return (
@@ -68,10 +62,10 @@ class M_postform extends React.Component {
 
             <A_select
              title={"Category"}
-             name="category[name]"
+             name="post[category_id]"
              value={this.state.category}
              placeholder={"Select"}
-             handleChange={this.handleInput}
+             handleChange={this.handleCategoryChange}
              options={this.state.categories}
           />
 
@@ -107,7 +101,14 @@ class M_postform extends React.Component {
             onChange={this.handleContentChange}
           />
 
-          <input type="submit" value="Create category" />
+          <input
+            type="hidden"
+            name="post[post_type_id]"
+            value={this.state.post_type_id}
+            // onChange={this.handleTitleChange}
+          />
+
+          <input type="submit" value="Create post" />
         </div>
       );
     }

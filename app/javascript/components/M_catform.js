@@ -1,12 +1,16 @@
 import React from "react"
+import axios from 'axios';
 import PropTypes from "prop-types"
+import A_select from "./A_select"
+import {availablePostTypes} from './Api.js';
 class M_catform extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
         name: props.category.name ? props.category.name : '',
         description: props.category.description ? props.category.description : '',
-        post_type_id: props.category.post_type_id ? props.category.post_type_id : ''
+        post_type_id: props.category.post_type_id ? props.category.post_type_id : '',
+        post_types: props.post_types ? props.post_types : []
       };
       this.handleNameChange = this.handleNameChange.bind(this);
       this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
@@ -22,6 +26,15 @@ class M_catform extends React.Component {
     handlePostTypeChange(e) {
       this.setState({ post_type_id: e.target.value });
     }
+
+    // componentDidMount() {
+    //   availablePostTypes()
+    //       .then(res => {
+    //           this.setState({
+    //               post_types: res
+    //           })
+    //       })
+    //  }
 
     render() {
       return (
@@ -49,13 +62,16 @@ class M_catform extends React.Component {
             name="category[display_in_navbar]"
           />
 
-          <label>postType</label>
-          <input
-            type="text"
-            name="category[post_type_id]"
-            value={this.state.post_type_id}
-            onChange={this.handlePostTypeChange}
-          />
+
+
+          <A_select
+           title={"Post type"}
+           name="category[post_type_id]"
+           value={this.state.post_type}
+           placeholder={"Select"}
+           handleChange={this.handlePostTypeChange}
+           options={this.state.post_types}
+        />
 
           <input type="submit" value="Create category" />
         </div>

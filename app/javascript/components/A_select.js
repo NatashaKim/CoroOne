@@ -6,10 +6,10 @@ const A_select = props => {
     <div className="form-group">
       <label for={props.name}> {props.title} </label>
       <select
-        id={props.name}
+        id={props.id}
         name={props.name}
         value={props.value}
-        onChange={props.handleCategoryChange}
+        onChange={props.handleChange}
         className="form-control"
       >
         <option value="" disabled>
@@ -17,8 +17,8 @@ const A_select = props => {
         </option>
         {props.options.map(option => {
           return (
-            <option key={option} value={option} label={option}>
-              {option}
+            <option key={option.id} value={option.id} label={option.name}>
+              {option.name}
             </option>
           );
         })}

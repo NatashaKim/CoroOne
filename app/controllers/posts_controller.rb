@@ -40,21 +40,21 @@ class PostsController < ApplicationController
   def newnews
     @post = Post.new
     @post.post_type = PostType.find_by_name("news")
-    @categories = ["Обновления","О компаниях"]
+    @categories = [{id:"5", name:"Обновления"}, {id:"6", name:"О компаниях"} ]
     render 'newnews'
   end
 
   def newarticles
     @post = Post.new
     @post.post_type = PostType.find_by_name("articles")
-    @categories = ["Факты","Советы","Чит-коды"]
+    @categories = [{id:"7", name:"Факты"}, {id:"8", name:"Советы"}, {id:"9", name:"Чит-коды"} ]
     render 'newarticles'
   end
 
   def newreviews
     @post = Post.new
     @post.post_type = PostType.find_by_name("reviews")
-    @categories = ["Действие","Симулятор","Стратегия","Ролевая игра","Приключения","Головоломка"]
+    @categories = [{id:"10", name:"Действие"}, {id:"11", name:"Симулятор"}, {id:"12", name:"Стратегия"}, {id:"13", name:"Ролевая игра"}, {id:"14", name:"Приключения"}, {id:"15", name:"Головоломка"} ]
     render 'newreviews'
   end
 
@@ -79,7 +79,7 @@ class PostsController < ApplicationController
   def newevents
     @post = Post.new
     @post.post_type = PostType.find_by_name("events")
-    @categories = ["Анонсы","Релизы"]
+    @categories = [{id:"3", name:"Анонсы"}, {id:"4", name:"Релизы"} ]
     render 'newevents'
   end
 
@@ -91,7 +91,6 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params.merge(user_id: current_user.id))
-
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }

@@ -3,7 +3,7 @@
     <div class="new_post_card">
       <h1>Новый пост</h1>
 
-      <%= render 'form', post: @post %>
+      <%= render 'form', post: @post, categories: @categories %>
       <%= link_to 'Назад', admin_context_path(curatorposts: "") %>
     </div>
   </div>

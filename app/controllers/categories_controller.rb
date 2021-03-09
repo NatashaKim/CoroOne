@@ -15,6 +15,8 @@ class CategoriesController < ApplicationController
   # GET /categories/new
   def new
     @category = Category.new
+    @categories = Category.all
+    @post_types = [{id:"1", name:"news"}, {id:"2", name:"discussion"}, {id:"3", name:"portfolio"}, {id:"4", name:"reviews"},  {id:"5", name:"articles"}, {id:"6", name:"puzzles"}, {id:"7", name:"events"} ]
   end
 
   # GET /categories/1/edit
