@@ -58,6 +58,13 @@ class PostsController < ApplicationController
     render 'newreviews'
   end
 
+  def newnecrology
+    @post = Post.new
+    @post.post_type = PostType.find_by_name("necrology")
+    @categories = [{id:"10", name:"Действие"}, {id:"11", name:"Симулятор"}, {id:"12", name:"Стратегия"}, {id:"13", name:"Ролевая игра"}, {id:"14", name:"Приключения"}, {id:"15", name:"Головоломка"} ]
+    render 'newnecrology'
+  end
+
   def newpuzzles
     @post = Post.new
     @post.post_type = PostType.find_by_name("puzzles")

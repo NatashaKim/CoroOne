@@ -21,6 +21,7 @@ resources :posts do
       get :newreviews
       get :newportfolio
       get :newevents
+      get :newnecrology
     end
     resources :answers
     resources :comments

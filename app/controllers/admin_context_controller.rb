@@ -42,6 +42,8 @@ elsif params.has_key?(:posts)
     @whatcontenttoshow="show-portfolio"
   elsif params[:post_type] == "puzzles"
     @whatcontenttoshow="show-puzzles"
+  elsif params[:post_type] == "necrology"
+    @whatcontenttoshow="show-necrology"
   else
     @whatcontenttoshow = "show-posts"
   end

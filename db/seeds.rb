@@ -38,11 +38,11 @@
 # puts "Some magic just create a #{ post.name } with id #{ post.id }!"
 
 
-# post_types=[
-#   {    name: "events"  },
-#
-# ]
-# post_types.each do |pt|
-#   r=PostType.create(pt)
-#   puts "Some magic just create a #{ r.name } with id #{ r.id }!"
-# end
+post_types=[
+  {    name: "necrology"  },
+
+]
+post_types.each do |pt|
+  r=PostType.create(pt)
+  puts "Some magic just create a #{ r.name } with id #{ r.id }!"
+end

@@ -1,0 +1,9 @@
+<body class="new_post">
+  <div class="new_post_wrapper">
+    <div class="new_post_card">
+      <h1>Создание некролога</h1>
+      <%= render 'form', post: @post, categories: @categories %>
+      <%= link_to 'Назад', admin_context_path(curatorposts: "") %>
+    </div>
+  </div>
+</body>

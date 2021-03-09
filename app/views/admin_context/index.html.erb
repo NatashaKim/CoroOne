@@ -89,6 +89,7 @@
 
 
 
+
 <% if @whatcontenttoshow == "show-portfolio" %>
   <div class="wrapper_portfolio">
 
@@ -160,6 +161,57 @@
       </table>
 
     </div>
+<% end %>
+
+
+
+<% if @whatcontenttoshow == "show-necrology" %>
+<div class="wrapper_necrology">
+
+    <div class="create">
+    </div>
+    <h1>Кладбище проектов</h1>
+    <div class="filters">
+      <div class="button_and_list_filters">
+        <span class="drop_down_button">Категории &#9660</span>
+        <ul>
+        <% Category.all.each do |cat| %>
+          <li><%= link_to cat.name, admin_context_path(posts: "", category: cat.name) %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+           <th>Название</th>
+           <th>Пользователь</th>
+           <th>Опубликовано</th>
+           <th>Активность</th>
+           <th></th>
+           <th>Действия</th>
+           <th></th>
+        </tr>
+      </thead>
+      <tbody>
+
+      <% @posts.each do |post| %>
+        <tr>
+          <td><span><%= link_to post.name, post %></span></td>
+          <td class="author"><span><%= post.user.username %></span></td>
+          <td><span><%= post.created_at.mday %>.<%= post.created_at.month %>.<%= post.created_at.year %></span></td>
+          <td><%= image_tag("like_icon.svg", :alt => "like") %><div><%= post.likes.count %></div></td>
+          <td><%= image_tag("comment_icon.svg", :alt => "comment") %><div><%= post.comments.count %></div></td>
+          <td><%= link_to image_tag("edit_icon.svg"), edit_post_path(post) %></td>
+          <td><%= link_to image_tag("delete_icon.svg"), post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+
+
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
 <% end %>
 
 
@@ -330,6 +382,7 @@
     </div>
   </div>
 <% end %>
+
 
 
 
