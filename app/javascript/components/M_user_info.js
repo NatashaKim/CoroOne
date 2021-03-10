@@ -5,6 +5,7 @@ class M_user_info extends React.Component {
   render () {
     return (
       <div className="UserInfo">
+        <A_avatar user={this.props.user} />
         <div className="UserInfo-name">
           {this.props.user.username}
         </div>

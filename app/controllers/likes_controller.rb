@@ -13,6 +13,8 @@ class LikesController < ApplicationController
     end
     redirect_to post_path(@post)
   end
+
+
   def destroy
   if !(already_liked?)
     flash[:notice] = "Cannot unlike"
