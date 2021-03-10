@@ -1,20 +1,9 @@
 <body class="show_body">
-  <%= render 'navbar/navbarleft' %>
+
   <div class="wrapper_show">
     <div class="narrow">
-      <% if @post.category_id? %>
-          <span>
-            <%= @post.category.name %>
-          </span>
-      <% end %>
-      <h1><%= @post.title %></h1>
-      <span class="small"><%= @post.created_at %></span> · <span class="small"><%= @post.author %></span>
-      <%= image_tag(@post.image.url, alt: 'Image') if @post.image? %>
-        <p>
-          <strong></strong>
-          <%= @post.content.html_safe %>
-        </p>
-      </div>
+
+      <%= react_component 'M_postview', { category: @category, post: @post } %>
 
       <div class="activity">
         <div class="count">

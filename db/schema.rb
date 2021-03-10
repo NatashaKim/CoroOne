@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_22_215000) do
+ActiveRecord::Schema.define(version: 2021_03_10_122249) do
 
   create_table "answers", force: :cascade do |t|
     t.text "option"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2020_12_22_215000) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "user_id", null: false
+    t.integer "parent_id"
     t.index ["post_id"], name: "index_comments_on_post_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
@@ -94,9 +95,22 @@ ActiveRecord::Schema.define(version: 2020_12_22_215000) do
     t.integer "user_id", null: false
     t.integer "category_id"
     t.integer "post_type_id"
+    t.integer "project_id"
     t.index ["category_id"], name: "index_posts_on_category_id"
     t.index ["post_type_id"], name: "index_posts_on_post_type_id"
+    t.index ["project_id"], name: "index_posts_on_project_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.date "project_start_date"
+    t.date "project_end_date"
+    t.text "download_project"
+    t.text "donate_project"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "subscribers", force: :cascade do |t|
@@ -132,5 +146,6 @@ ActiveRecord::Schema.define(version: 2020_12_22_215000) do
   add_foreign_key "likes", "users"
   add_foreign_key "posts", "categories"
   add_foreign_key "posts", "post_types"
+  add_foreign_key "posts", "projects"
   add_foreign_key "posts", "users"
 end

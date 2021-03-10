@@ -24,6 +24,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @category = Category.find(@post.category_id)
     if @post.post_type.name == "puzzles"
       render 'showpuzzle'
     else
@@ -135,7 +136,7 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:name, :title, :author, :content, :image, :category_id, :post_type_id)
+      params.require(:post).permit(:name, :title, :author, :content, :image, :category_id, :post_type_id, :project_id)
     end
 
     # layout 'posts'

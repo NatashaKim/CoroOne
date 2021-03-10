@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :projects
   resources :post_types
   resources :follows
   resources :categories
