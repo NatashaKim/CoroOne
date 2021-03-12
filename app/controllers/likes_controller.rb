@@ -9,7 +9,9 @@ class LikesController < ApplicationController
     if already_liked?
       flash[:notice] = "You can't like more than once"
     else
-      @post.likes.create(user_id: current_user.id)
+      @new_like = @post.likes.create(user_id: current_user.id)
+      render json: @new_like
+      return
     end
     redirect_to post_path(@post)
   end
@@ -20,6 +22,8 @@ class LikesController < ApplicationController
     flash[:notice] = "Cannot unlike"
   else
     @like.destroy
+    render json: nil
+    return
   end
   redirect_to post_path(@post)
   end
