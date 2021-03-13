@@ -25,7 +25,7 @@ class M_commentform extends React.Component {
           <label>Content</label>
           <textarea
             type="text"
-            name="comment[content]"
+            name="comment[body]"
             value={this.state.content}
             onChange={this.handleContentChange}
           />

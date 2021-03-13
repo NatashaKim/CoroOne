@@ -25,6 +25,9 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @category = Category.find(@post.category_id)
+    @comment = Comment.new
+    @comment.post_id = @post.id
+    @comment.user = current_user
     if @post.post_type.name == "puzzles"
       render 'showpuzzle'
     else
