@@ -1,0 +1,96 @@
+/*:root{
+  --default: #2763BD;
+  --unactive: #2763BD;
+  --text: #2763BD;
+  --graytext: #9F9F9F;
+  --alternative: #424242;
+  --back: #9F9F9F;
+
+}*/
+
+
+
+.btn{
+  font-family: 'RedRing', sans-serif;
+  font-weight: bold;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: 0.2 ease;
+}
+.btn > img{
+  display: none;
+  padding-right: 5px;
+}
+
+.btn:hover{
+  opacity: 0.7;
+}
+
+
+/* Button styles */
+.btn--default {
+  color: #fff;
+  border: none;
+
+}
+
+.btn--unactive{
+  background-color: var(--unactive);
+  opacity: 0.5;
+  color: #fff;
+  border: none;
+}
+.btn--text{
+  background-color: transparent;
+  color: var(--default);
+  border: none;
+  font-weight: 600;
+}
+.btn--graytext{
+  color: var(--graytext);
+  border: none;
+  font-weight: 600;
+}
+.btn--alternative{
+  color: var(--alternative);
+  border: solid 1px #101010;
+}
+.btn--back{
+  background-color: transparent;
+  color: var(--back);
+  border: none;
+}
+.btn--back > img{
+  display: inline-block;
+}
+
+/* Button sizes */
+
+.btn--small {
+  padding: 8px 26px;
+  font-size: 14px;
+}
+
+.btn--medium {
+  padding: 15px 36px;
+  font-size: 18px;
+}
+
+.btn--large {
+  padding: 20px 40px;
+  font-size: 28px;
+}
+
+/* Button colors */
+
+.btn--blue {
+  background-color: var(--blue-color);
+}
+
+.btn--green {
+  background-color: var(--green-color);
+}
+
+.btn--gray {
+  background-color: var(--gray-color);
+}
