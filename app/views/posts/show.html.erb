@@ -4,41 +4,12 @@
     <div class="narrow">
 
       <%= react_component 'M_postview', { category: @category, post: @post } %>
-
       <div class="activity">
-        <div class="count">
-          <span><%= @post.likes.count %></span>
-          <span><%= @post.favorites.count %></span>
-        </div>
-
-        <p>
-        	<strong></strong>
-        	<%#= @post.user_id %>
-        </p>
-
-        <% pre_like = @post.likes.find { |like| like.user_id == current_user.id} %>
-        <% if user_signed_in? %>
-
-        <div class="like">
-        <% if pre_like %>
-          <%= button_to '', post_like_path(@post, pre_like), method: :delete %>
-        <% else %>
-          <%= button_to '', post_likes_path(@post), method: :post %>
-        <% end %>
-        </div>
-
-          <%= react_component 'A_like_button', { post: @post, likes: @post.likes, current_user_id: current_user.id } %>
-
-          <div class="favorite">
-          <% pre_favorite = @post.favorites.find { |favorite| favorite.user_id == current_user.id} %>
-          <% if pre_favorite %>
-              <%= button_to '', post_favorite_path(@post, pre_favorite), method: :delete %>
-          <% else %>
-              <%= button_to '', post_favorites_path(@post), method: :post %>
-          <% end %>
-          </div>
-        <% end %>
+        <%= react_component 'A_like_button', { post: @post, likes: @post.likes, current_user_id: current_user.id } %>
+        <%= react_component 'A_favorite_button', { post: @post, favorites: @post.favorites, current_user_id: current_user.id } %>
       </div>
+
+  </div>
 
       <div class="comments">
 
