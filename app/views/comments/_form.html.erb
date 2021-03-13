@@ -1,11 +1,3 @@
 <%= form_for([@post, @post.comments.build]) do |f| %>
-	<div class="field">
-			<%= image_tag(current_user.image.small_thumb.url, alt: 'Image') if current_user.image? %>
-	</div>
-	<div class="field">
-		<%= f.text_area :body %>
-	</div>
-		<div class="actions">
-		<%= f.submit "Создать комментарий" %>
-	</div>
+  <%= react_component 'M_commentform', {comment: @comment, user: @comment.user} %>
 <% end %>

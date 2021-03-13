@@ -44,6 +44,9 @@ end
   delete 'users/:id', to: 'users#destroy'
   get 'users/:id/following', :to => "users#following", :as => :following
 
+  resources :projects do
+      resources :developers
+  end
   # delete 'comments/:id', to: 'comments#destroy'
   # root 'posts#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

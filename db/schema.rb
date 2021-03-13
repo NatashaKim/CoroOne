@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_10_122249) do
+ActiveRecord::Schema.define(version: 2021_03_12_195402) do
 
   create_table "answers", force: :cascade do |t|
     t.text "option"
@@ -51,6 +51,15 @@ ActiveRecord::Schema.define(version: 2021_03_10_122249) do
     t.integer "parent_id"
     t.index ["post_id"], name: "index_comments_on_post_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "developers", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["project_id"], name: "index_developers_on_project_id"
+    t.index ["user_id"], name: "index_developers_on_user_id"
   end
 
   create_table "favorites", force: :cascade do |t|
@@ -111,6 +120,7 @@ ActiveRecord::Schema.define(version: 2021_03_10_122249) do
     t.text "donate_project"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "status"
   end
 
   create_table "subscribers", force: :cascade do |t|
@@ -140,6 +150,8 @@ ActiveRecord::Schema.define(version: 2021_03_10_122249) do
   add_foreign_key "categories", "post_types"
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
+  add_foreign_key "developers", "projects"
+  add_foreign_key "developers", "users"
   add_foreign_key "favorites", "posts"
   add_foreign_key "favorites", "users"
   add_foreign_key "likes", "posts"
