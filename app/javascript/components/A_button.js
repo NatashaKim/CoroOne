@@ -25,7 +25,9 @@ const COLORS = [
   'btn--gray',
   'btn--border',
   'btn--white',
-  'btn--minor'
+  'btn--minor',
+  'btn--text',
+  'btn--create'
 ]
 
 const A_button = ({
