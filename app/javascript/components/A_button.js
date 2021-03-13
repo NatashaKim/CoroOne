@@ -3,15 +3,15 @@ import PropTypes from "prop-types"
 import '../../assets/stylesheets/button.scss'
 
 
-const STYLES = [
-  'btn--default',
-  'btn--unactive',
-  'btn--active',
-  'btn--text',
-  'btn--graytext',
-  'btn--alternative',
-  'btn--back',
-]
+//const STYLES = [
+  //'btn--default',
+  //'btn--minor',
+  //'btn--active',
+  //'btn--text',
+  //'btn--graytext',
+  //'btn--alternative',
+  //'btn--back',
+//]
 
 const SIZES = [
   'btn--small',
@@ -24,7 +24,9 @@ const COLORS = [
   'btn--aqua',
   'btn--gray',
   'btn--border',
-  'btn--white']
+  'btn--white',
+  'btn--minor'
+]
 
 const A_button = ({
   children,
@@ -35,8 +37,8 @@ const A_button = ({
   buttonColor
 }) => {
 
-  const checkButtonStyle = STYLES.includes(buttonStyle)
-  ? buttonStyle : STYLES[0]
+  //const checkButtonStyle = STYLES.includes(buttonStyle)
+  //? buttonStyle : STYLES[0]
 
   const checkButtonSize = SIZES.includes(buttonSize)
   ? buttonSize : SIZES[0]
@@ -45,7 +47,7 @@ const A_button = ({
   ? buttonColor : COLORS[0]
 
   return(
-      <button className = {`btn ${checkButtonStyle} ${checkButtonSize} ${checkButtonColor}`} onClick = {onClick} type = {type}>
+      <button className = {`btn ${checkButtonSize} ${checkButtonColor}`} onClick = {onClick} type = {type}>
         {children}
       </button>
 

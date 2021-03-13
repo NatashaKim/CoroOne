@@ -1,0 +1,50 @@
+.heading {
+  font-family: 'RedRing', sans-serif;
+}
+
+/* Heading sizes*/
+.heading--14 {
+font-size: 14px;
+}
+
+.heading--18 {
+font-size: 18px;
+}
+
+.heading--24 {
+font-size: 24px;
+}
+
+.heading--28{
+font-size: 28px;
+}
+
+
+/* Heading colors*/
+.heading--blue {
+  color: var(--blue-color);
+}
+
+.heading--white {
+  color: var(--white-color);
+}
+
+
+/* Heading weight*/
+.heading--bold {
+  font-weight: bold;
+}
+
+.heading--regural {
+  font-weight: normal;
+}
+
+
+/* Heading align*/
+.heading--center {
+  text-align: center;
+}
+
+.heading--left {
+  text-align: left;
+}

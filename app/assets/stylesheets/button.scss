@@ -10,10 +10,9 @@
 
 
 
-.btn{
+.btn {
   font-family: 'RedRing', sans-serif;
   font-weight: bold;
-  border-radius: 24px;
   cursor: pointer;
   transition: 0.2 ease;
 }
@@ -22,75 +21,78 @@
   padding-right: 5px;
 }
 
-.btn:hover{
-  opacity: 0.7;
-}
 
 
-/* Button styles */
-.btn--default {
-  color: #fff;
-  border: none;
 
-}
 
-.btn--unactive{
-  background-color: var(--unactive);
-  opacity: 0.5;
-  color: #fff;
-  border: none;
-}
-.btn--text{
-  background-color: transparent;
-  color: var(--default);
-  border: none;
-  font-weight: 600;
-}
-.btn--graytext{
-  color: var(--graytext);
-  border: none;
-  font-weight: 600;
-}
-.btn--alternative{
-  color: var(--alternative);
-  border: solid 1px #101010;
-}
-.btn--back{
-  background-color: transparent;
-  color: var(--back);
-  border: none;
-}
-.btn--back > img{
-  display: inline-block;
-}
+
 
 /* Button sizes */
 
 .btn--small {
   padding: 8px 26px;
   font-size: 14px;
+  border-radius: 18px;
 }
 
 .btn--medium {
   padding: 15px 36px;
   font-size: 18px;
+  border-radius: 28px;
 }
 
 .btn--large {
   padding: 20px 40px;
   font-size: 28px;
+  border-radius: 40px;
 }
 
 /* Button colors */
 
+.btn--minor {
+  background-color: transparent;
+  color: var(--blue-color);
+  border: 3px solid #04005E;
+}
+
+.btn--minor:hover {
+  background-color: transparent;
+  color: darken(#04005E, 3%);
+  border-color: darken(#04005E, 3%);
+}
+
 .btn--blue {
   background-color: var(--blue-color);
+  color: var(--white-color);
+  border: none;
+}
+
+.btn--blue:hover {
+  background-color: darken(#04005E, 3%);
+  color: darken(#F9F9FF, 1%);
+  border: none;
 }
 
 .btn--green {
   background-color: var(--green-color);
+  color: var(--blue-color);
+  border: none;
+}
+
+.btn--green:hover {
+  background-color: darken(#CCFD38, 3%);
+  color: darken(#04005E, 3%);
+  border: none;
 }
 
 .btn--gray {
   background-color: var(--gray-color);
+  color: var(--white-color);
+  border: none;
+}
+
+.btn--gray:hover {
+  background-color: darken(#9896AE, 3%);
+  color: darken(#F9F9FF, 1%);
+  border: none;
 }
