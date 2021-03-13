@@ -57,6 +57,24 @@ const M_input = ({
             buttonColor = 'btn--gray'>
             {btnName}
           </A_button>
+          <A_button
+            type ='button'
+            buttonSize = 'btn--small'
+            buttonColor = 'btn--text'>
+            {btnName}
+          </A_button>
+          <A_button
+            type ='button'
+            buttonSize = 'btn--medium'
+            buttonColor = 'btn--text'>
+            {btnName}
+          </A_button>
+          <A_button
+            type ='button'
+            buttonSize = 'btn--medium'
+            buttonColor = 'btn--create'>
+            {btnName}
+          </A_button>
       </div>
     )
 }
