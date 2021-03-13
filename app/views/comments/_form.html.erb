@@ -1,3 +1,7 @@
 <%= form_for([@post, @post.comments.build]) do |f| %>
-  <%= react_component 'M_commentform', {comment: @comment, user: @comment.user} %>
+  <%= react_component 'M_commentform', {
+    post_id: @post.id,
+    user: current_user
+
+  } %>
 <% end %>

@@ -6,7 +6,7 @@ class M_commentform extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
-        content: props.comment.content ? props.comment.content : ''
+        content: ''
 }
     ;
       this.handleContentChange = this.handleContentChange.bind(this);
@@ -17,8 +17,19 @@ class M_commentform extends React.Component {
       this.setState({ content: e.target.value });
     }
 
+    componentDidMount(e) {
+        this.setState({
+          token: document.querySelector('meta[name="csrf-token"]').content
+        })
+    }
+
   render () {
     return (
+      <form
+      id={'child-comment-'+this.props.parent_id}
+      action={'/posts/'+this.props.post_id+'/comments' + "?authenticity_token="+encodeURIComponent(this.state.token)}
+      method='post'
+      >
       <div className="CommentForm">
         <A_avatar user={this.props.user} />
         <div className="CommentForm--textarea">
@@ -29,9 +40,22 @@ class M_commentform extends React.Component {
             value={this.state.content}
             onChange={this.handleContentChange}
           />
+
+          <input
+            type="hidden"
+            name="comment[parent_id]"
+            value={this.props.parent_id}
+          />
+          <input
+            type="hidden"
+            name="comment[post_id]"
+            value={this.props.post_id}
+          />
+
         </div>
         <input type="submit" value="Create comment" />
       </div>
+      </form>
     );
   }
 }

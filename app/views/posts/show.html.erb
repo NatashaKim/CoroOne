@@ -14,7 +14,9 @@
       <div class="comments">
 
       <h2>Комментарии</h2>
-      <%= render @post.comments %>
+      <% topComments = @post.comments.select{|c| ! c.parent_id} %>
+      <%= render topComments %>
+
 
       <h2>Добавить комментарий:</h2>
       <% if user_signed_in? %>

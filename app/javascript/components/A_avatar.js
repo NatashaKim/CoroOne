@@ -4,8 +4,10 @@ class A_avatar extends React.Component {
   render () {
     return (
       <img className="Avatar"
-        src={this.props.user.image.small_thumb.url}
-        alt={this.props.user.name}
+        src={
+          this.props.user ? this.props.user.image.small_thumb.url :  ''
+        }
+        alt={ this.props.user ? this.props.user.name: 'Oops!'}
       />
     );
   }
