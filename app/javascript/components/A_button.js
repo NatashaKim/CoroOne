@@ -16,7 +16,9 @@ import '../../assets/stylesheets/button.scss'
 const SIZES = [
   'btn--small',
   'btn--medium',
-  'btn--large']
+  'btn--large',
+  'btn--img'
+]
 
 const COLORS = [
   'btn--green',
@@ -27,12 +29,17 @@ const COLORS = [
   'btn--white',
   'btn--minor',
   'btn--text',
-  'btn--create'
+  'btn--create-smth',
+  'btn--create-project',
+  'btn--add-photo',
+  'btn--play'
 ]
 
 const IMG = [
-  '/assets/bookmark_fill_small.svg',
-  '/assets/bookmark_unfill_small.svg'
+  '/assets/button_plus.svg',
+  '/assets/bookmark_add_photo.svg',
+  '/assets/button_create_project.svg',
+  '/assets/button_play.svg'
 ]
 
 const A_button = ({
@@ -59,7 +66,7 @@ const A_button = ({
 
   return(
       <button className = {`btn ${checkButtonSize} ${checkButtonColor}`} onClick = {onClick} >
-        {children} {textpart} {imgpart}
+        {children} {imgpart} {textpart}
 
       </button>
 

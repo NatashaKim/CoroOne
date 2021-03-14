@@ -3,14 +3,13 @@ import A_button from './A_button.js'
 import A_post_title from './A_post_title.js'
 
 
-const M_input = ({
+
+const M_project_preview = ({
   btnName,
   postTitle
 }) => {
-
     return (
       <div>
-
           <A_post_title
             type = 'span'
             headingWeight = 'heading--bold'
@@ -45,55 +44,40 @@ const M_input = ({
 
             buttonSize = 'btn--medium'
             buttonColor = 'btn--blue'>
-
+            {btnName}
           </A_button>
           <A_button
             type ='button'
             buttonColor = 'btn--minor'
             buttonSize = 'btn--medium'>
-
+            {btnName}
           </A_button>
           <A_button
             type ='button'
             buttonSize = 'btn--small'
             buttonColor = 'btn--gray'>
-
+            {btnName}
           </A_button>
           <A_button
             type ='button'
             buttonSize = 'btn--small'
             buttonColor = 'btn--text'>
-
+            {btnName}
           </A_button>
           <A_button
             type ='button'
             buttonSize = 'btn--medium'
             buttonColor = 'btn--text'>
-
+            {btnName}
           </A_button>
           <A_button
-            imgscr = '/assets/button_plus.svg'
-            buttonColor = 'btn--create-smth'
-            buttonSize = 'btn--img'>
-          </A_button>
-          <A_button
-            imgscr = '/assets/button_add_photo.svg'
-            buttonColor = 'btn--add-photo'
-            buttonSize = 'btn--img'>
-          </A_button>
-          <A_button
-            imgscr = '/assets/button_create_project.svg'
-            type ='Создать проект'
-            buttonColor = 'btn--create-project'
-            buttonSize = 'btn--img'>
-          </A_button>
-          <A_button
-            imgscr = '/assets/button_play.svg'
-            buttonColor = 'btn--play'
-            buttonSize = 'btn--img'>
+            type ='button'
+            buttonSize = 'btn--medium'
+            buttonColor = 'btn--create'>
+            {btnName}
           </A_button>
       </div>
     )
 }
 
-export default M_input
+export default M_project_preview
