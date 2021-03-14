@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
   resources :users
   post 'users/:id/edit', to: "users#update"
+  get 'users/:id/getuser', to: "users#getuser"
   post 'users/:id/delete', to: "users#delite"
   post 'users/:id/follow', to: "users#follow", as: "follow_user"
   post 'users/:id/unfollow', to: "users#unfollow", as: "unfollow_user"

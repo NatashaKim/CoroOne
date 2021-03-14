@@ -14,3 +14,10 @@ export function availablePostTypes() {
       return response.data;
    })
 }
+
+export function getuser(user_id) {
+   return axios.get('/users/' + user_id + '/getuser').then(
+     function (response) {
+      return response.data;
+   })
+}

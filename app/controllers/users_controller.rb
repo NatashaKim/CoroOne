@@ -17,6 +17,15 @@ before_action :set_user, only: [:show, :edit, :update, :destroy]
     end
   end
 
+  def getuser
+    @user = User.find(params[:id])
+    if @user
+      render json: @user
+    else
+        render file: 'public/404', status: 404, formats: [:html]
+    end
+  end
+
   def edit
     render 'users/edit'
   end

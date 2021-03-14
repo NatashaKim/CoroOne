@@ -31,7 +31,8 @@ const A_post_title = ({
   headingWeight,
   headingSize,
   headingColors,
-  headingAlign
+  headingAlign,
+  title
 }) => {
 
   const checkHeadingColors = COLORS.includes(headingColors)
@@ -48,7 +49,7 @@ const A_post_title = ({
 
   return(
       <span className = {`heading ${checkHeadingColors} ${checkHeadingSize} ${checkHeadingWeight} ${checkHeadingAlign}`} type = {type}>
-        {children}
+        {title}
       </span>
 
   )
