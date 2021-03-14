@@ -1,31 +1,13 @@
-/*:root{
-  --default: #2763BD;
-  --unactive: #2763BD;
-  --text: #2763BD;
-  --graytext: #9F9F9F;
-  --alternative: #424242;
-  --back: #9F9F9F;
-
-}*/
-
-
-
 .btn {
   font-family: 'RedRing', sans-serif;
   font-weight: bold;
   cursor: pointer;
   transition: 0.2 ease;
 }
-.btn > img{
-  display: none;
+.btn > img {
+  display: block;
   padding-right: 5px;
 }
-
-
-
-
-
-
 
 /* Button sizes */
 .btn--create {
@@ -113,4 +95,12 @@
   background-color: darken(#9896AE, 3%);
   color: darken(#F9F9FF, 1%);
   border: none;
+}
+
+.btn > img {
+  display: block;
+}
+
+.vff {
+  background-color: red;
 }

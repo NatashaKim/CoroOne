@@ -7,6 +7,7 @@ const M_input = ({
   btnName,
   postTitle
 }) => {
+
     return (
       <div>
           <A_post_title
@@ -70,10 +71,10 @@ const M_input = ({
             {btnName}
           </A_button>
           <A_button
-            type ='button'
+            type ='Error'
+            imgscr = '/assets/bookmark_fill_small.svg'
             buttonSize = 'btn--medium'
             buttonColor = 'btn--create'>
-            {btnName}
           </A_button>
       </div>
     )

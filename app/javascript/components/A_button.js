@@ -30,13 +30,19 @@ const COLORS = [
   'btn--create'
 ]
 
+const IMG = [
+  '/assets/bookmark_fill_small.svg',
+  '/assets/bookmark_unfill_small.svg'
+]
+
 const A_button = ({
   children,
   type,
+  imgscr,
   onClick,
   buttonStyle,
   buttonSize,
-  buttonColor
+  buttonColor,
 }) => {
 
   //const checkButtonStyle = STYLES.includes(buttonStyle)
@@ -48,9 +54,13 @@ const A_button = ({
   const checkButtonColor = COLORS.includes(buttonColor)
   ? buttonColor : COLORS[0]
 
+  let textpart = <div>{type}</div>
+  let imgpart = <img className = "Vff" src = {imgscr}/>
+
   return(
-      <button className = {`btn ${checkButtonSize} ${checkButtonColor}`} onClick = {onClick} type = {type}>
-        {children}
+      <button className = {`btn ${checkButtonSize} ${checkButtonColor}`} onClick = {onClick} >
+        {children} {textpart} {imgpart}
+
       </button>
 
   )
