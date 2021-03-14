@@ -28,6 +28,12 @@
 
 
 /* Button sizes */
+.btn--create {
+  background-image: url('/assets/button_plus.svg');
+  background-repeat: no-repeat;
+  background-color: var(--aqua-color);
+}
+
 
 .btn--small {
   padding: 8px 26px;
@@ -49,11 +55,6 @@
 
 /* Button colors */
 
-.btn--create {
-  background-image: url('./images/button_plus.svg');
-  background-repeat: no-repeat;
-  background-color: var(--aqua-color);
-}
 
 .btn--minor {
   background-color: transparent;

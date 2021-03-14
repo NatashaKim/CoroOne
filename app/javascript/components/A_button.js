@@ -57,12 +57,3 @@ const A_button = ({
 }
 
 export default A_button
-
-//class Button extends React.Component {
-  //render () {
-    //return (
-      //<React.Fragment>
-      //</React.Fragment>
-    //);
-  //}
-//}
