@@ -6,15 +6,16 @@ import '../../assets/stylesheets/colors.scss'
 
 
 const STYLES = [
-  'h3',
+  'h2',
   'h4',
+  'h5',
   'h6',
-  'p4'
+  'p2'
 ]
 
 const COLORS = [
   'navy-blue',
-  'ice-white'
+  'mineral-gray'
 ]
 
 const ALIGN = [
@@ -22,7 +23,7 @@ const ALIGN = [
   'left_align'
 ]
 
-const A_post_title = ({
+const A_const_title = ({
   children,
   type,
   headingStyle,
@@ -48,4 +49,4 @@ const A_post_title = ({
   )
 }
 
-export default A_post_title
+export default A_const_title

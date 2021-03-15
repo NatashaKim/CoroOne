@@ -1,7 +1,37 @@
-.blue {
-  color: var(--blue-color);
+:root {
+  --zelda-green: #CCFD38;
+  --navy-blue: #04005E;
+  --mineral-gray: #9896AE;
+  --cloudy-gray: #EDEEF4;
+  --neon-blue: #75FEFA;
+  --ice-white: #F9F9FF;
+  --cold-black: #27272C;
 }
 
-.white {
-  color: var(--white-color);
+.zelda-green {
+  color: var(--zelda-green);
+}
+
+.navy-blue {
+  color: var(--navy-blue);
+}
+
+.mineral-gray {
+  color: var(--mineral-gray);
+}
+
+.cloudy-gray {
+  color: var(--cloudy-gray);
+}
+
+.neon-blue {
+  color: var(--neon-blue);
+}
+
+.ice-white {
+  color: var(--ice-white);
+}
+
+.cold-black {
+  color: var(--cold-black);
 }

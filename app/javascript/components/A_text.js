@@ -6,15 +6,17 @@ import '../../assets/stylesheets/colors.scss'
 
 
 const STYLES = [
-  'h3',
   'h4',
   'h6',
-  'p4'
+  'p4',
+  'small3'
 ]
 
 const COLORS = [
   'navy-blue',
-  'ice-white'
+  'zelda-green',
+  'ice-white',
+  'cold-black'
 ]
 
 const ALIGN = [
@@ -22,7 +24,7 @@ const ALIGN = [
   'left_align'
 ]
 
-const A_post_title = ({
+const A_text = ({
   children,
   type,
   headingStyle,
@@ -44,8 +46,7 @@ const A_post_title = ({
       <span className = {`heading ${checkHeadingStyle} ${checkHeadingColor} ${checkHeadingAlign}`} type = {type}>
         {title}
       </span>
-
   )
 }
 
-export default A_post_title
+export default A_text
