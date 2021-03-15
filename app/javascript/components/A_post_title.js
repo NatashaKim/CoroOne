@@ -1,54 +1,48 @@
 import React from "react"
 import PropTypes from "prop-types"
-import '../../assets/stylesheets/A_post_title.scss'
+
+import '../../assets/stylesheets/ui-kit.scss'
+import '../../assets/stylesheets/colors.scss'
 
 
-const WEIGHT = [
-  'heading--bold',
-  'heading--regural'
-]
 
-const SIZES = [
-  'heading--14',
-  'heading--18',
-  'heading--24',
-  'heading--28'
+const STYLES = [
+  'h3',
+  'h4',
+  'h6',
+  'p4'
 ]
 
 const COLORS = [
-  'heading--blue',
-  'heading--white'
+  'blue',
+  'white'
 ]
 
 const ALIGN = [
-  'heading--center',
-  'heading--left'
+  'center_align',
+  'left_align'
 ]
 
 const A_post_title = ({
   children,
   type,
-  headingWeight,
-  headingSize,
-  headingColors,
+  headingStyle,
+  headingColor,
   headingAlign,
   title
 }) => {
 
-  const checkHeadingColors = COLORS.includes(headingColors)
-  ? headingColors : COLORS[0]
+  const checkHeadingStyle = STYLES.includes(headingStyle)
+  ? headingStyle : STYLES[0]
 
-  const checkHeadingSize = SIZES.includes(headingSize)
-  ? headingSize : SIZES[0]
-
-  const checkHeadingWeight = WEIGHT.includes(headingWeight)
-  ? headingWeight : WEIGHT[0]
+  const checkHeadingColor = COLORS.includes(headingColor)
+  ? headingColor : COLORS[0]
 
   const checkHeadingAlign = ALIGN.includes(headingAlign)
   ? headingAlign : ALIGN[0]
 
   return(
-      <span className = {`heading ${checkHeadingColors} ${checkHeadingSize} ${checkHeadingWeight} ${checkHeadingAlign}`} type = {type}>
+      <span className = {`heading ${checkHeadingStyle} ${checkHeadingColor} ${checkHeadingAlign}`} type = {type}>
         {title}
       </span>
 
