@@ -5,7 +5,7 @@ class SearchController < ApplicationController
         @posts = []
       else
         term = params[:term]
-        @posts = Post.search term, fields: [:text], highlight:  true
+        @posts = Post.search term, fields: [:content], highlight:  true
       end
     end
   def self.search(query)
