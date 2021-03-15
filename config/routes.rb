@@ -33,11 +33,12 @@ end
   resources :subscribers
   get 'posts/index'
 
-
   get 'promo', to: 'promo#index'
   get 'about', to: 'about#index'
   get 'admin_context', to: 'admin_context#index'
   root 'promo#index'
+
+  get "search", to: "search#search"
 
   get 'users', to: 'users#index'
   get 'users/:id' => 'users#show'
