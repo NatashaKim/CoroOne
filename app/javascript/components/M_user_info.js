@@ -13,7 +13,9 @@ class M_user_info extends React.Component {
     return (
       <div>
       <div className="UserInfo">
-        <A_avatar user = {this.props.user}/>
+        <A_avatar avatarSizes = "small_thumb" user = {this.props.user}/>
+        <A_avatar avatarSizes = "medium_thumb" user = {this.props.user}/>
+        <A_avatar avatarSizes = "large_thumb" user = {this.props.user}/>
         <div className="UserInfo-name">
           {this.props.user.username}
         </div>
