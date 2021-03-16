@@ -6,16 +6,22 @@ import '../../assets/stylesheets/colors.scss'
 
 
 const STYLES = [
+  'h1',
+  'h3',
   'h4',
+  'h5',
   'h6',
+  'p2',
+  'p3',
   'p4',
   'small3'
 ]
 
 const COLORS = [
   'navy-blue',
-  'zelda-green',
   'ice-white',
+  'zelda-green',
+  'mineral-gray',
   'cold-black'
 ]
 
@@ -24,7 +30,7 @@ const ALIGN = [
   'left_align'
 ]
 
-const A_project_title = ({
+const A_title = ({
   children,
   type,
   headingStyle,
@@ -46,7 +52,8 @@ const A_project_title = ({
       <span className = {`heading ${checkHeadingStyle} ${checkHeadingColor} ${checkHeadingAlign}`} type = {type}>
         {title}
       </span>
+
   )
 }
 
-export default A_project_title
+export default A_title

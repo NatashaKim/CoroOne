@@ -1,6 +1,6 @@
 import React from 'react'
 import A_button from './A_button.js'
-import A_post_title from './A_post_title.js'
+import A_title from './A_title.js'
 
 
 
@@ -10,14 +10,14 @@ const M_project_preview = ({
 }) => {
     return (
       <div>
-          <A_post_title
+          <A_title
             type = 'span'
             headingWeight = 'heading--bold'
             headingSize = 'heading--24'
             headingColors = 'heading--white'
             headingAlign = 'heading--center'>
             {postTitle}
-          </A_post_title>
+          </A_title>
           <A_button
             type ='button'
 
