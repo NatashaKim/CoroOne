@@ -6,15 +6,14 @@ import '../../assets/stylesheets/colors.scss'
 
 
 const STYLES = [
-  'h4',
-  'h6',
+  'p1',
+  'p3',
   'p4',
-  'small3'
+  'small6'
 ]
 
 const COLORS = [
-  'navy-blue',
-  'zelda-green',
+  'mineral-gray',
   'ice-white',
   'cold-black'
 ]

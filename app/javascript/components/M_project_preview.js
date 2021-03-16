@@ -10,7 +10,7 @@ const M_project_preview = ({
 }) => {
     return (
       <div>
-      
+
       </div>
     )
 }

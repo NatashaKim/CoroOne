@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import A_post_title from './A_post_title.js'
+import A_title from './A_title.js'
 
 class A_textblock extends React.Component {
   render () {
@@ -9,7 +9,7 @@ class A_textblock extends React.Component {
       <p>
         A_textblock
       </p>
-      <A_post_title title = {this.props.post.title}/>
+      <A_title title = {this.props.post.title}/>
       </div>
     );
   }
