@@ -1,0 +1,16 @@
+.category--mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--mineral-gray);
+  background-color: var(--zelda-green);
+  border-radius: 12px;
+  padding: 11px 4px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: bold;
+  img {
+     display: block;
+     margin-bottom: -16px;
+  }
+}
