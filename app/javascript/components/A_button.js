@@ -58,8 +58,7 @@ const A_button = ({
         {children} {imgpart} {textpart}
 
       </button>
-
-  )
+   )
 }
 
 export default A_button

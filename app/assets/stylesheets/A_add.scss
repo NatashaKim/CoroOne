@@ -1,0 +1,46 @@
+.adv--mobile,
+.adv--desktop {
+  font-family: 'RedRing', sans-serif;
+  cursor: pointer;
+  transition: 0.2 ease;
+  background-color: var(--navy-blue);
+  color: var(--ice-white);
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 16px;
+  border: none;
+}
+
+.advicon {
+  display: block;
+  margin-left: 8px;
+}
+
+.adv--mobile {
+  font-size: 14px;
+  padding: 12px 30px;
+}
+
+.adv--desktop {
+  padding: 12px 158px;
+  font-size: 18px;
+}
+
+.adv {
+
+}
+
+
+.adv--mobile:hover {
+  background-color: darken(#04005E, 6%);
+  color: darken(#F9F9FF, 6%);
+  border: none;
+}
+
+.adv--desktop:hover {
+  background-color: darken(#04005E, 6%);
+  color: darken(#F9F9FF, 6%);
+  border: none;
+}
