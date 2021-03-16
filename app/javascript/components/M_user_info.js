@@ -5,7 +5,11 @@ import A_debug from "./A_debug"
 class M_user_info extends React.Component {
   render () {
     if (!this.props.user) {return "Нет юзера"}
-    if (!this.props.user.image) {return "Нет картинки"}
+
+    if (!this.props.user.image) {
+      return <A_debug aObject = {this.props.user}/>
+    }
+
     return (
       <div>
       <div className="UserInfo">
