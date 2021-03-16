@@ -4,8 +4,7 @@ import A_title from './A_title.js'
 
 
 const M_input = ({
-  btnName,
-  postTitle
+
 }) => {
 
     return (

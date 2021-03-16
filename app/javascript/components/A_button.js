@@ -1,17 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import '../../assets/stylesheets/button.scss'
+import '../../assets/stylesheets/colors.scss'
 
-
-//const STYLES = [
-  //'btn--default',
-  //'btn--minor',
-  //'btn--active',
-  //'btn--text',
-  //'btn--graytext',
-  //'btn--alternative',
-  //'btn--back',
-//]
 
 const SIZES = [
   'btn--small',
@@ -52,8 +43,6 @@ const A_button = ({
   buttonColor,
 }) => {
 
-  //const checkButtonStyle = STYLES.includes(buttonStyle)
-  //? buttonStyle : STYLES[0]
 
   const checkButtonSize = SIZES.includes(buttonSize)
   ? buttonSize : SIZES[0]

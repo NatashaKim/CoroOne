@@ -46,7 +46,7 @@
   border-radius: 36px;
   width: 72px;
   height: 72px;
-  background-color: var(--aqua-color);
+  background-color: var(--neon-blue);
   border: none;
 }
 
@@ -67,11 +67,11 @@
   border-radius: 16px;
   width: 100px;
   height: 115px;
-  background-color: var(--white-color);
+  background-color: var(--ice-white);
   border: none;
   font-size: 12px;
   line-height: 16px;
-  color: var(--gray-color);
+  color: var(--mineral-gray);
   font-weight: bold;
 }
 
@@ -87,7 +87,7 @@
   border-radius: 16px;
   width: 60px;
   height: 60px;
-  background-color: var(--gray-light-color);
+  background-color: var(--cloudy-gray);
   border: none;
 }
 
@@ -109,13 +109,13 @@
 
 .btn--minor {
   background-color: transparent;
-  color: var(--blue-color);
+  color: var(--navy-blue);
   border: 3px solid #04005E;
 }
 
 .btn--text {
   background-color: transparent;
-  color: var(--gray-color);
+  color: var(--mineral-gray);
   border: none;
 }
 
@@ -131,8 +131,8 @@
 }
 
 .btn--blue {
-  background-color: var(--blue-color);
-  color: var(--white-color);
+  background-color: var(--navy-blue);
+  color: var(--ice-white);
   border: none;
 }
 
@@ -143,8 +143,8 @@
 }
 
 .btn--green {
-  background-color: var(--green-color);
-  color: var(--blue-color);
+  background-color: var(--zelda-green);
+  color: var(--navy-blue);
   border: none;
 }
 
@@ -155,8 +155,8 @@
 }
 
 .btn--gray {
-  background-color: var(--gray-color);
-  color: var(--white-color);
+  background-color: var(--mineral-gray);
+  color: var(--ice-white);
   border: none;
 }
 
