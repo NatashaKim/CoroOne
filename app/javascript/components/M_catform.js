@@ -2,6 +2,7 @@ import React from "react"
 import axios from 'axios';
 import PropTypes from "prop-types"
 import A_select from "./A_select"
+import A_input from "./A_input"
 import {availablePostTypes} from './Api.js';
 class M_catform extends React.Component {
   constructor(props) {
@@ -27,24 +28,15 @@ class M_catform extends React.Component {
       this.setState({ post_type_id: e.target.value });
     }
 
-    // componentDidMount() {
-    //   availablePostTypes()
-    //       .then(res => {
-    //           this.setState({
-    //               post_types: res
-    //           })
-    //       })
-    //  }
-
     render() {
       return (
         <div>
           <label>Name</label>
-          <input
+          <A_input
             type="text"
             name="category[name]"
             value={this.state.name}
-            onChange={this.handleNameChange}
+            handleChange={this.handleNameChange.bind(this)}
           />
 
           <label>Description</label>
@@ -54,6 +46,7 @@ class M_catform extends React.Component {
             value={this.state.description}
             onChange={this.handleDescriptionChange}
           />
+
           <label>Display in Navbar?</label>
           <input
             defaultChecked={this.props.category.display_in_navbar ? this.props.category.display_in_navbar : false}
