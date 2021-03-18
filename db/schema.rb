@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_12_195402) do
+ActiveRecord::Schema.define(version: 2021_03_18_200114) do
 
   create_table "answers", force: :cascade do |t|
     t.text "option"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2021_03_12_195402) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "post_type_id"
+    t.string "imagesrc"
     t.index ["post_type_id"], name: "index_categories_on_post_type_id"
   end
 
