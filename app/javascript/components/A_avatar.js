@@ -39,10 +39,10 @@ class A_avatar extends React.Component {
   }
 }
 
-export default A_avatar
+export default A_avatar;
 
 const Sizes = [
   'small_thumb',
   'medium_thumb',
   'large_thumb',
-]
+];

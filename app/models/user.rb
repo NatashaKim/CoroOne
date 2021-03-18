@@ -18,6 +18,7 @@ class User < ApplicationRecord
   mount_uploader :image, AvatarUploader
 
 
+
 #   after_save :toggle_admin
 #
 #   private

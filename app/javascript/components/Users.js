@@ -1,13 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
-import A_avatar from "./A_avatar.js"
+import {A_avatar} from "./A_avatar"
 
 class Users extends React.Component {
   render() {
     return (
       <div>
-        <A_avatar user = {this.props.user}
-          avatarSizes = "small_thumb"/>
         <h1>All Users</h1>
           {this.props.users.map(user => (
             <div key={user.id}>
@@ -25,4 +23,4 @@ class Users extends React.Component {
 Users.propTypes = {
   users: PropTypes.array
 };
-export default Users
+export default Users;
