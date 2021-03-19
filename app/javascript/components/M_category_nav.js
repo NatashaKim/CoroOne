@@ -7,10 +7,14 @@ class M_category_nav extends React.Component {
   render () {
     return (
       <div>
-        
-      </div>
+          {this.props.categories.map(category => (
+            <div key={category.id}>
+            <a href={`/posts?category=${category.name}/`} > {`${category.name}`}</a>
+            </div>
+          ))}
+        </div>
     );
   }
 }
 
-export default A_avatar
+export default M_category_nav

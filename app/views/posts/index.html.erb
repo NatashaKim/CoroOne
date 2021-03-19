@@ -8,6 +8,7 @@
     	<%= link_to cat.name, posts_path(category: cat.name) %> <br>
     <% end %>
     <br>
+    <%= react_component 'M_category_nav', { categories: @categories, category: @category } %>
 
     <div class="main_section">
       <div class="table_hidden">

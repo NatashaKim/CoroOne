@@ -4,18 +4,7 @@
 
     <p id="notice"><%= notice %></p>
     <%= react_component 'M_catview', { category: @category } %>
-    <!-- <p>
-      <#%= @category.name %>
-    </p>
-
-    <p>
-      <#%= @category.description %>
-    </p>
-
-      <#%#= @category.display_in_navbar %>
-    <div class="activity">
       <%= link_to 'Редактировать', edit_category_path(@category) %> |
       <%= link_to 'Назад', admin_context_path(categories: "") %>
-    </div> -->
-  </div>
+    </div>
 </body>
