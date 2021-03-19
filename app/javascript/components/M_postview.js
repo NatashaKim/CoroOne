@@ -5,8 +5,8 @@ class M_postview extends React.Component {
     let categoryTag='';
 
     if (this.props.category) {
-  categoryTag = <p>Category:{this.props.category.name}</p>;
-}
+      categoryTag = <p>Category:{this.props.category.name}</p>;
+    }
     return (
       <div>
         <h1>{this.props.post.title}</h1>

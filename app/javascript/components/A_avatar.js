@@ -2,6 +2,11 @@ import React from "react"
 import PropTypes from "prop-types"
 import '../../assets/stylesheets/A_avatar.scss'
 
+const Sizes = [
+  'small_thumb',
+  'medium_thumb',
+  'large_thumb',
+];
 
 class A_avatar extends React.Component {
   render () {
@@ -40,9 +45,3 @@ class A_avatar extends React.Component {
 }
 
 export default A_avatar;
-
-const Sizes = [
-  'small_thumb',
-  'medium_thumb',
-  'large_thumb',
-];

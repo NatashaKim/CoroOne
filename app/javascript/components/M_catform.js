@@ -6,13 +6,13 @@ import A_input from "./A_input"
 import {availablePostTypes} from './Api.js';
 class M_catform extends React.Component {
   constructor(props) {
-      super(props);
-      this.state = {
-        name: props.category.name ? props.category.name : '',
-        description: props.category.description ? props.category.description : '',
-        post_type_id: props.category.post_type_id ? props.category.post_type_id : '',
-        post_types: props.post_types ? props.post_types : []
-      };
+    super(props);
+    this.state = {
+      name: props.category.name ? props.category.name : '',
+      description: props.category.description ? props.category.description : '',
+      post_type_id: props.category.post_type_id ? props.category.post_type_id : '',
+      post_types: props.post_types ? props.post_types : []
+    };
       this.handleNameChange = this.handleNameChange.bind(this);
       this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
       this.handlePostTypeChange = this.handlePostTypeChange.bind(this);
@@ -33,18 +33,18 @@ class M_catform extends React.Component {
         <div>
           <label>Name</label>
           <A_input
-            type="text"
             name="category[name]"
             value={this.state.name}
             handleChange={this.handleNameChange.bind(this)}
+            inputTypes = "default"
           />
 
           <label>Description</label>
-          <input
-            type="text"
+          <A_input
             name="category[description]"
             value={this.state.description}
-            onChange={this.handleDescriptionChange}
+            handleChange={this.handleDescriptionChange.bind(this)}
+            inputTypes = "default"
           />
 
           <label>Display in Navbar?</label>
