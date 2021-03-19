@@ -3,6 +3,7 @@ import axios from 'axios';
 import PropTypes from "prop-types"
 import A_select from "./A_select"
 import A_input from "./A_input"
+import A_textarea from "./A_textarea"
 import {availablePostTypes} from './Api.js';
 class M_catform extends React.Component {
   constructor(props) {
@@ -39,12 +40,13 @@ class M_catform extends React.Component {
             inputTypes = "default"
           />
 
-          <label>Description</label>
-          <A_input
+          <label>
+          Description
+          </label>
+          <A_textarea
             name="category[description]"
             value={this.state.description}
             handleChange={this.handleDescriptionChange.bind(this)}
-            inputTypes = "default"
           />
 
           <label>Display in Navbar?</label>
