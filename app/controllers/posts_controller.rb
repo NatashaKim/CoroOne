@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @categories = [{id:"3", name:"Анонсы"}, {id:"4", name:"Релизы"}, {id:"5", name:"Обновления"}, {id:"6", name:"О компаниях"}, {id:"7", name:"Факты"}, {id:"8", name:"Советы"}, {id:"9", name:"Чит-коды"}, {id:"10", name:"Действие"}, {id:"11", name:"Симулятор"}, {id:"12", name:"Стратегия"}, {id:"13", name:"Ролевая игра"}, {id:"14", name:"Приключения"}, {id:"15", name:"Головоломка"}]
+    @categories = Category.all
     if params.has_key?(:category)
       @category = Category.find_by_name(params[:category])
       @posts = Post.where(category: @category)

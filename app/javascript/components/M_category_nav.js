@@ -9,7 +9,7 @@ class M_category_nav extends React.Component {
       <div>
           {this.props.categories.map(category => (
             <div key={category.id}>
-            <a href={`/posts?category=${category.name}/`} > {`${category.name}`}</a>
+            <a href={`/posts?category=${category.name}`} > {`${category.name}`}</a>
             </div>
           ))}
         </div>
