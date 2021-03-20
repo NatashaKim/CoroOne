@@ -3,8 +3,18 @@
   <div class="wrapper_posts">
 
     <%= image_tag("news.svg", :alt => "Новости") %>
+<<<<<<< HEAD
 
     <%= react_component 'M_post_types_nav', { post_types: @M_post_types_nav, post_type: @post_type } %>
+=======
+    <h2>All Categories</h2>
+    <% Category.all.each do |cat| %>
+    	<%= link_to cat.name, posts_path(category: cat.name) %> <br>
+    <% end %>
+    <br>
+
+    <%= react_component 'M_post_types_nav', { post_types: @post_types, post_type: @post_type } %>
+>>>>>>> 851fa749e9933042b43dc11d198ac512a2803c2c
 
     <div class="main_section">
       <div class="table_hidden">
