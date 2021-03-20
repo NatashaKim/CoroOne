@@ -1,0 +1,23 @@
+::-webkit-input-placeholder {color: var(--mineral-gray); opacity:1;}
+::-moz-placeholder          {color: var(--mineral-gray); opacity:1;}
+:-moz-placeholder           {color: var(--mineral-gray); opacity:1;}
+:-ms-input-placeholder      {color: var(--mineral-gray); opacity:1;}
+
+:focus::-webkit-input-placeholder {opacity:0;}
+:focus::-moz-placeholder          {opacity:0;}
+:focus:-moz-placeholder           {opacity:0;}
+:focus:-ms-input-placeholder      {opacity:0;}
+
+.textarea {
+ box-sizing: border-box;
+ width: 674px;
+ height: 160px;
+ background-color: var(--light-purple);
+ font-family: "RedRing";
+ color: var(--navy-blue);
+ font-size: 18px;
+ font-weight: normal;
+ border-radius: 32px;
+ border: none;
+ padding: 18px 24px;
+}

@@ -1,5 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
+import '../../assets/stylesheets/A_textarea.scss'
+
 class A_textarea extends React.Component {
   constructor(props) {
       super(props);
@@ -15,9 +17,11 @@ class A_textarea extends React.Component {
     render() {
       return (
         <textarea
+          className = "textarea"
           name={this.props.name}
           value={this.state.value}
           onChange={this.handleChange}
+          placeholder={this.props.placeholder}
         />
       );
     }

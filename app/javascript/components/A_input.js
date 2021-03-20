@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import '../../assets/stylesheets/A_input.scss'
-import IconVisibility from '../../assets/stylesheets/A_input.scss'
+
 
 const Types = [
   'default',
