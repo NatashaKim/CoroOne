@@ -8,19 +8,10 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @categories = Category.all
+    @post_types = PostType.all
     if params.has_key?(:category)
       @category = Category.find_by_name(params[:category])
       @posts = Post.where(category: @category)
-    else
-      @posts = Post.all
-    end
-  end
-
-  def index
-    @post_types = PostType.all
-    if params.has_key?(:post_type)
-      @post_type = PostType.find_by_name(params[:post_type])
-      @posts = Post.where(post_type: @post_type)
     else
       @posts = Post.all
     end
