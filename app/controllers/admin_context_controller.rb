@@ -28,21 +28,21 @@ class AdminContextController < ApplicationController
 
 if params.has_key?(:curatorposts)
   @whatcontenttoshow = "show-posts"
-  @news = PostType.find_by_name("news")
+  @news = PostType.find_by_name("Новости")
   @events = PostType.find_by_name("events")
-  @articles = PostType.find_by_name("articles")
-  @reviews = PostType.find_by_name("reviews")
+  @articles = PostType.find_by_name("Статьи")
+  @reviews = PostType.find_by_name("Обзоры")
   @posts = @posts.where(post_type: [@news, @events, @articles, @reviews])
   @iwanttoshowbuttonattheright=true
 
 
 elsif params.has_key?(:posts)
 
-  if params[:post_type] == "portfolio"
+  if params[:post_type] == "Мастерская"
     @whatcontenttoshow="show-portfolio"
   elsif params[:post_type] == "puzzles"
     @whatcontenttoshow="show-puzzles"
-  elsif params[:post_type] == "necrology"
+  elsif params[:post_type] == "Кладбище проектов"
     @whatcontenttoshow="show-necrology"
   else
     @whatcontenttoshow = "show-posts"

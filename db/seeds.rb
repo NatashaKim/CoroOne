@@ -39,7 +39,7 @@
 
 
 post_types=[
-  {    name: "necrology"  },
+  {    name: "Кладбище проектов"  },
 
 ]
 post_types.each do |pt|

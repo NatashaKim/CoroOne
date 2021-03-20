@@ -4,17 +4,17 @@
      <div class="edit_post_card">
       <h1>Редактирование поста</h1>
 
-    <% if @post.post_type.name == "news" %>
+    <% if @post.post_type.name == "Новости" %>
         <%= render 'form', post: @post %>
-      <% elsif @post.post_type.name == "portfolio" %>
+      <% elsif @post.post_type.name == "Мастерская" %>
             <%= render 'formportfolio', post: @post %>
-      <% elsif @post.post_type.name == "reviews" %>
+      <% elsif @post.post_type.name == "Обзоры" %>
             <%= render 'form', post: @post %>
-      <% elsif @post.post_type.name == "articles" %>
+      <% elsif @post.post_type.name == "Статьи" %>
             <%= render 'form', post: @post %>
       <% elsif @post.post_type.name == "events" %>
             <%= render 'formevents', post: @post %>
-      <% elsif @post.post_type.name == "necrology" %>
+      <% elsif @post.post_type.name == "Кладбище проектов" %>
             <%= render 'formnecrology', post: @post %>
       <% else %>
         <%= render 'form', post: @post %>
