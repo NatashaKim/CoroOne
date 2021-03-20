@@ -16,6 +16,15 @@ class PostsController < ApplicationController
     end
   end
 
+  def index
+    @post_types = PostType.all
+    if params.has_key?(:post_type)
+      @post_type = PostType.find_by_name(params[:post_type])
+      @posts = Post.where(post_type: @post_type)
+    else
+      @posts = Post.all
+    end
+  end
   #def current_user
   #  return unless session[:user_id]
   #  @current_user ||= User.find(session[:user_id])
