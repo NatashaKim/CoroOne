@@ -25,6 +25,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @tag.post_id = Tag.find(@post.tag_id)
     @category = Category.find(@post.category_id)
     @comment = Comment.new
     @comment.post_id = @post.id
