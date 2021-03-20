@@ -1,3 +1,29 @@
 .post_types_nav {
-  
+  box-sizing: border-box;
+  display: flex;
+  width: 96vw;
+  margin: 0 auto;
+  height: 64px;
+  border: none;
+  padding: 16px 0px;
+  justify-content: center;
+  a {
+    font-family: "RedRing";
+    font-size: 18px;
+    color: var(--mineral-gray);
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 90px;
+    &:hover {
+      color: darken(#9896AE, 8%);
+      background-color: none;
+    }
+    &:visited {
+      color: darken(#9896AE, 8%);
+      background-color: none;
+    }
+  }
+  a.category_nav_a:last-child {
+    margin-right: none;
+  }
 }
