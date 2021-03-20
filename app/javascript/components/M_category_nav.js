@@ -6,13 +6,13 @@ import '../../assets/stylesheets/M_category_nav.scss'
 class M_category_nav extends React.Component {
   render () {
     return (
-      <div>
+      <div className = "category_nav">
           {this.props.categories.map(category => (
             <div key={category.id}>
-            <a href={`/posts?category=${category.name}`} > {`${category.name}`}</a>
+              <a className = "category_nav_a" href={`/posts?category=${category.name}`} > {`${category.name}`}</a>
             </div>
           ))}
-        </div>
+      </div>
     );
   }
 }
