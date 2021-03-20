@@ -3,12 +3,7 @@
   <div class="wrapper_posts">
 
     <%= image_tag("news.svg", :alt => "Новости") %>
-    <h2>All Categories</h2>
-    <% Category.all.each do |cat| %>
-    	<%= link_to cat.name, posts_path(category: cat.name) %> <br>
-    <% end %>
-    <br>
-    
+
     <%= react_component 'M_post_types_nav', { post_types: @M_post_types_nav, post_type: @post_type } %>
 
     <div class="main_section">
@@ -45,6 +40,38 @@
 
         <% end %>
       </div>
+
+
+      <table>
+        <thead>
+          <tr>
+            <th class="BigBlue">Name</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Content</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @posts.each do |post| %>
+            <tr>
+              <td><%= post.title %></td>
+              <td><%= post.author %></td>
+              <td><%= render_with_hashtags(post.content) %></td>
+              <td><%= link_to 'Show', post %></td>
+              <td><%= link_to 'Edit', edit_post_path(post) %></td>
+              <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+
+
+
+
+
+
     </div>
 
     <br>
