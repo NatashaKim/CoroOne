@@ -3,10 +3,6 @@
   <div class="wrapper_posts">
 
     <%= image_tag("news.svg", :alt => "Новости") %>
-<<<<<<< HEAD
-
-
-=======
     <h2>All Categories</h2>
     <% Category.all.each do |cat| %>
     	<%= link_to cat.name, posts_path(category: cat.name) %> <br>
@@ -14,6 +10,7 @@
     <br>
 
     <%= react_component 'M_post_types_nav', { post_types: @post_types, post_type: @post_type } %>
+    <%= react_component 'M_category_nav', { categories: @categories } %>
 
 
     <div class="main_section">

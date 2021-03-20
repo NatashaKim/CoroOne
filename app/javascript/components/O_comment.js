@@ -23,7 +23,8 @@ class O_comment extends React.Component {
 
     return (
       <div className="Comment">
-      <M_user_info user={this.state.author} />
+
+        <M_user_info user={this.state.author} />
         <div className="Comment-text">
           {this.props.comment.body}
         </div>
@@ -32,18 +33,19 @@ class O_comment extends React.Component {
           parent_id={this.props.comment.id}
           post_id={this.props.post.id}
         />
-      <div>
-      childComments length = {childComments.length}
-      {childComments.map(c =>
-        <div className = "comment_container">
-        <O_comment
-        comment={c}
-        post={this.props.post}
-        comments={this.props.comments}
-        currentUser={this.props.currentUser}/>
+
+        <div>
+          childComments length = {childComments.length}
+          {childComments.map(c =>
+            <div className = "comment_container">
+            <O_comment
+            comment={c}
+            post={this.props.post}
+            comments={this.props.comments}
+            currentUser={this.props.currentUser}/>
+            </div>
+          ) }
         </div>
-      ) }
-      </div>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import M_category_nav from "./M_category_nav"
 class M_postview extends React.Component {
   render() {
     let categoryTag='';
@@ -13,6 +14,7 @@ class M_postview extends React.Component {
             <p>Category_id:{`${this.props.post.category_id}`}</p>
 
             {categoryTag}
+            <M_category_nav categories = {this.props.categories} post = {this.props.post} category = {this.props.category}/>
             <p>ID: {`${this.props.post.id}`}</p>
             <p>Author: {`${this.props.post.author}`}</p>
             <p>Content: {`${this.props.post.content}`}</p>
