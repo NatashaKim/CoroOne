@@ -40,6 +40,8 @@ end
 
   get "search", to: "search#search"
 
+  get '/posts/hashtag/:name', to: 'posts#hashtags'
+
   get 'users', to: 'users#index'
   get 'users/:id' => 'users#show'
   get 'users/:id/edit' => 'users#edit'
