@@ -12,7 +12,7 @@ class A_hashtag extends React.Component {
       return (
         <div>
         {
-          myArray.map(mytag => (<p>{mytag}</p>))
+          myArray.map(mytag => (<a href = {"/posts/hashtag/" + mytag.replace(/\#/g, '')}>{mytag}</a>))
         }
         </div>
       );
