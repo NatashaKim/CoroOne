@@ -24,7 +24,7 @@ class M_postview extends React.Component {
 
             {categoryTag}
             <A_category post = {this.props.post} category = {this.props.category}/>
-            <A_hashtag post = {this.props.post}/>
+            <A_hashtag post = {this.props.post} tagKinds = "h--hashtag"/>
             <p>ID: {`${this.props.post.id}`}</p>
             <p>Author: {`${this.props.post.author}`}</p>
             <p>Content: {`${this.props.post.content}`}</p>
