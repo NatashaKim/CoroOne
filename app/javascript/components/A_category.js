@@ -6,7 +6,7 @@ import '../../assets/stylesheets/A_category.scss'
 class A_category extends React.Component {
   render () {
     let category = '';
-    if (this.props.post) {
+    if (this.props.category) {
       category = this.props.category.name
     }
     return (

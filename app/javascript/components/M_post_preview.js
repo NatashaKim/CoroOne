@@ -12,7 +12,7 @@ class M_post_preview extends React.Component {
     }
     return (
       <div>
-      <A_category post = {this.props.post} category = {this.props.category}/>
+      <A_category category = {this.props.post.category}/>
       <A_title title = {this.props.post.title} />
       <img
         src = {imgsrc}
