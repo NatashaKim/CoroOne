@@ -3,36 +3,40 @@ import PropTypes from "prop-types"
 import '../../assets/stylesheets/A_post_types.scss'
 
 
-const IMG = [
-  '/assets/title_articles.svg',
-  '/assets/title_necrology.svg',
-  '/assets/button_create_project.svg',
-  '/assets/button_play.svg'
-]
-
-const A_button = ({
-  children,
-  type,
-  imgscr,
-  onClick,
-  buttonStyle,
-  buttonSize,
-  buttonColor,
-}) => {
 
 
-  const checkButtonColor = COLORS.includes(buttonColor)
-  ? buttonColor : COLORS[0]
 
-  let textpart = <div>{type}</div>
-  let imgpart = <img className = "Vff" src = {imgscr}/>
+class A_post_types extends React.Component {
+  render () {
+    let imgsrc = '';
 
-  return(
-      <a = {`btn ${checkButtonSize} ${checkButtonColor}`} onClick = {onClick} >
-        {children} {imgpart} {textpart}
-        <img src={imgsrc}/>
-      </a>
-   )
+    if (this.props.post_type.name = 'article') {
+      imgsrc = '/assets/title_articles.svg';
+    } else if(this.props.post_type.name = 'necrology') {
+      imgsrc = '/assets/title_necrology.svg';
+    } else if (this.props.post_type.name = 'new') {
+       imgsrc = '/assets/title_news.svg';
+    } else if (this.props.post_type.name = 'review'){
+      imgsrc = '/assets/title_reviews.svg';
+    } else  {
+      imgsrc = '/assets/title_portfolio.svg';
+    }
+
+    return (
+
+            <div >
+
+                <img
+                  className = "post_types_img"
+                  src = {imgsrc}
+                />
+            
+            </div>
+    );
+  }
 }
 
-export default A_button
+
+
+
+export default A_post_types

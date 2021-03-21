@@ -1,7 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
+import '../../assets/stylesheets/A_hashtag.scss'
+
+
 
 class A_hashtag extends React.Component {
+
     render() {
       let myRe = new RegExp("#\\w+", "g");
       let myArray = [];
@@ -10,7 +14,7 @@ class A_hashtag extends React.Component {
         myArray.push(tag[0]);
       }
       return (
-        <div>
+        <div  >
         {
           myArray.map(mytag => (<a href = {"/posts/hashtag/" + mytag.replace(/\#/g, '')}>{mytag}</a>))
         }
