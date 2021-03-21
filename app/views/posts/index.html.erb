@@ -9,6 +9,8 @@
     <% end %>
     <br>
 
+
+    <%= react_component 'M_checkbox'%>
     <%= react_component 'M_post_types_nav', { post_types: @post_types, post_type: @post_type } %>
     <%= react_component 'M_categories_nav', { categories: @categories } %>
     <%= react_component 'O_posts_preview', { post_type_id: 1 } %>

@@ -1,0 +1,17 @@
+.container {
+  box-sizing: border-box;
+  width: 500px;
+  background-color: var(--navy-blue);
+  padding: 16px;
+  .row {
+    .col-sm-12 {
+      form {
+        div.checkbox_button {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
