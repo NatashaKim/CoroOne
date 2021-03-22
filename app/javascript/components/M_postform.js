@@ -52,15 +52,6 @@ class M_postform extends React.Component {
     }
 
 
-    // componentDidMount() {
-    //   availableCategories()
-    //       .then(res => {
-    //           this.setState({
-    //               categories: res
-    //           })
-    //       })
-    //  }
-
     render() {
       return (
         <div className = "postform">
