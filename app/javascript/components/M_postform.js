@@ -47,20 +47,11 @@ class M_postform extends React.Component {
     }
 
 
-    // componentDidMount() {
-    //   availableCategories()
-    //       .then(res => {
-    //           this.setState({
-    //               categories: res
-    //           })
-    //       })
-    //  }
-
     render() {
       return (
         <div>
 
-            <A_select
+          <A_select
              title={"Category"}
              name="post[category_id]"
              value={this.state.category}
