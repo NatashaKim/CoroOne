@@ -3,6 +3,7 @@ import axios from 'axios';
 import PropTypes from "prop-types"
 import A_select from "./A_select"
 import A_textarea from "./A_textarea"
+import A_input from "./A_input"
 import A_button from "./A_button"
 import {availableCategories} from './Api.js';
 import '../../assets/stylesheets/M_postform.scss'
@@ -74,8 +75,8 @@ class M_postform extends React.Component {
            />
 
           <label>Название статьи</label>
-          <A_textarea
-            textareaSize = "textarea--small"
+          <A_input
+            inputTypes = "default"
             type="text"
             name="post[name]"
             value={this.state.name}
@@ -83,8 +84,8 @@ class M_postform extends React.Component {
           />
 
           <label>Заголовок</label>
-          <A_textarea
-            textareaSize = "textarea--small"
+          <A_input
+            inputTypes = "default"
             type="text"
             name="post[title]"
             value={this.state.title}
@@ -92,8 +93,8 @@ class M_postform extends React.Component {
           />
 
           <label>Автор</label>
-          <A_textarea
-            textareaSize = "textarea--small"
+          <A_input
+            inputTypes = "default"
             type="text"
             name="post[author]"
             value={this.state.author}
@@ -102,14 +103,14 @@ class M_postform extends React.Component {
 
           <label>Текст статьи</label>
           <A_textarea
-            textareaSize = "textarea--big"
+            textareaSize = "textarea--small"
             type="text"
             name="post[content]"
             value={this.state.content}
             onChange={this.handleContentChange}
           />
 
-          <A_textarea
+          <textarea
             type="hidden"
             name="post[post_type_id]"
             value={this.state.post_type_id}

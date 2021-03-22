@@ -20,7 +20,8 @@ class M_post_preview extends React.Component {
     return (
       <div style={sectionStyle}>
         <A_category category = {this.props.post.category}/>
-        <A_post_title post = {this.props.post}/>
+        <A_post_title
+         post = {this.props.post}/>
       </div>
     );
   }
