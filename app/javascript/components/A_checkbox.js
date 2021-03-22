@@ -25,14 +25,15 @@ class A_checkbox extends React.Component {
     const { isChecked } = this.state;
 
     return (
-      <div className="checkbox">
+      <div className="checkboxes">
         <label>
           <input
-                            type="checkbox"
-                            value={label}
-                            checked={isChecked}
-                            onChange={this.toggleCheckboxChange}
-                        />
+              className = "checkbox"
+              type="checkbox"
+              value={label}
+              checked={isChecked}
+              onChange={this.toggleCheckboxChange}
+          />
 
           {label}
         </label>

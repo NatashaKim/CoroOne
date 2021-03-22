@@ -7,10 +7,41 @@ import A_button from "./A_button.js"
 
 
 const items = [
-  'One',
-  'Two',
-  'Three',
+  'Стратегия',
+  'Шутер',
+  'Спортивная',
+  'Головоломка',
+  'Симулятор',
+  'Приключение',
+  'Ролевая'
 ];
+
+const items2 = [
+  'Персонажи',
+  'Окружение',
+  'Уровни и миры'
+];
+
+const items3 = [
+  'Идея или концепт',
+  'Сюжет',
+  'Игровые механики',
+  'Иллюстрации и скетчи'
+];
+
+const items4 = [
+  'Голоса героев',
+  'Фоновая музыка',
+  'Звуки в интерфейсе'
+];
+
+const items5 = [
+  'Движок',
+  'Игровая физика',
+  '3D-графика',
+  'Интерфейс'
+];
+
 
 class M_checkbox extends React.Component {
   componentWillMount = () => {
@@ -35,10 +66,10 @@ class M_checkbox extends React.Component {
 
   createCheckbox = label => (
     <A_checkbox
-            label={label}
-            handleCheckboxChange={this.toggleCheckbox}
-            key={label}
-        />
+      label={label}
+      handleCheckboxChange={this.toggleCheckbox}
+      key={label}
+    />
   )
 
   createCheckboxes = () => (
@@ -58,7 +89,7 @@ class M_checkbox extends React.Component {
                   <A_button
                     type = "Отменить"
                     buttonSize = "btn--small"
-                    buttonColor = "btn--minor">
+                    buttonColor = "btn--text">
                   </A_button>
 
                   <A_button
