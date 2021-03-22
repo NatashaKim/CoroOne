@@ -1,3 +1,76 @@
-.vertical {
+div.ps--vertical {
+  width: 326px;
+  height: 488px;
+  border-Radius: 32px;
+  div {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    left: 50%;
+    justify-content: center;
+    div {
+      margin-top: 57%;
+    }
+    span {
+      margin-top: 8px;
+      align-items: center;
+      color: var(--ice-white);
+      font-family: "RedRing", sans-serif;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: bold;
+    }
+  }
+}
 
+
+.ps--horisontal_small {
+  width: 501px;
+  height: 296px;
+  border-Radius: 32px;
+  background-color: red;
+  div {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    left: 50%;
+    justify-content: center;
+    div {
+      margin-top: 57%;
+    }
+    span {
+      margin-top: 8px;
+      align-items: center;
+      color: var(--ice-white);
+      font-family: "RedRing", sans-serif;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: bold;
+    }
+  }
+}
+
+div.horisontal_small {
+  width: 501px;
+  height: 296px;
+  border-Radius: 32px;
+  div {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    left: 50%;
+    justify-content: center;
+    div {
+      margin-top: 57%;
+    }
+    span {
+      margin-top: 8px;
+      align-items: center;
+      color: var(--ice-white);
+      font-family: "RedRing", sans-serif;
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: bold;
+    }
+  }
 }
