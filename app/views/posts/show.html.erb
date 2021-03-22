@@ -10,6 +10,7 @@
       <div class="activity">
 
       <%= react_component 'M_postview', { category: @category, categories: @categories, post: @post } %>
+      <%= react_component 'M_post_preview', { category: @category, post: @post } %>
       <div class="activity">
         <%= react_component 'A_like_button', { post: @post, likes: @post.likes, current_user_id: current_user.id } %>
         <%= react_component 'A_favorite_button', { post: @post, favorites: @post.favorites, current_user_id: current_user.id } %>

@@ -11,15 +11,30 @@ class PostsController < ApplicationController
     @post_types = PostType.all
     if params.has_key?(:category)
       @category = Category.find_by_name(params[:category])
-      @posts = Post.where(category: @category)
+      @posts = Post.where(category: @category).includes(:category)
+      render json: { posts: @posts }
+      #render json: @posts, include: [:category]
     else
-      @posts = Post.all
+      @posts = Post.all.includes(:category).map do
+        |post|
+        post.as_json(include: [:category, :image])
+      end
+      #render json: { posts: @posts }
     end
   end
   #def current_user
   #  return unless session[:user_id]
   #  @current_user ||= User.find(session[:user_id])
   #end
+
+
+  def get_posts_by_type
+      @posts = Post.where(post_type_id: params[:post_type_id]).includes(:category).limit(params[:count]).map do
+        |post|
+        post.as_json(include: [:category, :image])
+      end
+      render json: @posts
+  end
 
 
   # GET /posts/1

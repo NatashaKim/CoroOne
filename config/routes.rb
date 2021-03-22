@@ -42,6 +42,8 @@ end
 
   get '/posts/hashtag/:name', to: 'posts#hashtags'
 
+  get '/posts_by_type/:post_type_id/count/:count', to: "posts#get_posts_by_type"
+
   get 'users', to: 'users#index'
   get 'users/:id' => 'users#show'
   get 'users/:id/edit' => 'users#edit'

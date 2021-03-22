@@ -13,7 +13,7 @@
     <%= react_component 'M_checkbox'%>
     <%= react_component 'M_post_types_nav', { post_types: @post_types, post_type: @post_type } %>
     <%= react_component 'M_categories_nav', { categories: @categories } %>
-
+    <%= react_component 'O_posts_preview', { post_type_id: 1 } %>
 
     <div class="main_section">
       <div class="table_hidden">
@@ -23,63 +23,6 @@
           <span>Author</span>
           <span>Content</span>
       </div>
-
-      <div class="posts_cards">
-        <% @posts.each do |post| %>
-        <div class="one_card">
-          <div class="info">
-            <div  class="posts_img"><%= link_to(image_tag(post.image.thumb.url, alt: 'Image'), post.image.url, target: '_blank') if post.image? %></div>
-            <!-- <div class="name"><#%= post.name %></div>  -->
-            <div class="category.name"><span>
-              <% if post.category_id? %>
-              <%= post.category.name %>
-              <% end %></span></div>
-            <div class="title"><%= post.title %></div>
-            <div class="author"><%= post.author %></div>
-            <div class="content"><%= post.content.html_safe %></div>
-          </div>
-          <div><%#= post.likes.count %> <%#= (post.likes.count) == 1 ? 'Like' : 'Likes'%></div>
-          <div><%#= post.comments.count %> <%#= (post.comments.count) == 1 ? 'Comment' : 'Commentes'%></div>
-          <div class="action">
-            <div><%= link_to 'Открыть', post %></div>
-            <div><%= link_to 'Редактировать', edit_post_path(post) %></div>
-            <div><%= link_to 'Удалить', post, method: :delete, data: { confirm: 'Are you sure?' } %></div>
-          </div>
-        </div>
-
-        <% end %>
-      </div>
-
-
-      <table>
-        <thead>
-          <tr>
-            <th class="BigBlue">Name</th>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Content</th>
-            <th colspan="3"></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @posts.each do |post| %>
-            <tr>
-              <td><%= post.title %></td>
-              <td><%= post.author %></td>
-              <td><%= render_with_hashtags(post.content) %></td>
-              <td><%= link_to 'Show', post %></td>
-              <td><%= link_to 'Edit', edit_post_path(post) %></td>
-              <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-
-
-
-
-
 
     </div>
 
