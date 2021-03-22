@@ -2,7 +2,11 @@ import React from "react"
 import axios from 'axios';
 import PropTypes from "prop-types"
 import A_select from "./A_select"
+import A_textarea from "./A_textarea"
+import A_button from "./A_button"
 import {availableCategories} from './Api.js';
+import '../../assets/stylesheets/M_postform.scss'
+
 class M_postform extends React.Component {
   constructor(props) {
       super(props);
@@ -49,55 +53,65 @@ class M_postform extends React.Component {
 
     render() {
       return (
-        <div>
+        <div className = "postform">
 
-          <A_select
-             title={"Category"}
+            <A_select
+             title={"Жанр"}
              name="post[category_id]"
              value={this.state.category}
              placeholder={"Select"}
              handleChange={this.handleCategoryChange}
              options={this.state.categories}
-          />
+           />
 
-          <label>Name</label>
-          <input
+          <label>Название статьи</label>
+          <A_textarea
+            textareaSize = "textarea--small"
             type="text"
             name="post[name]"
             value={this.state.name}
             onChange={this.handleNameChange}
           />
 
-          <label>Title</label>
-          <input
+          <label>Заголовок</label>
+          <A_textarea
+            textareaSize = "textarea--small"
             type="text"
             name="post[title]"
             value={this.state.title}
             onChange={this.handleTitleChange}
           />
 
-          <label>Author</label>
-          <input
+          <label>Автор</label>
+          <A_textarea
+            textareaSize = "textarea--small"
             type="text"
             name="post[author]"
             value={this.state.author}
             onChange={this.handleAuthorChange}
           />
 
-          <label>Content</label>
-          <input
+          <label>Текст статьи</label>
+          <A_textarea
+            textareaSize = "textarea--big"
             type="text"
             name="post[content]"
             value={this.state.content}
             onChange={this.handleContentChange}
           />
 
-          <input
+          <A_textarea
             type="hidden"
             name="post[post_type_id]"
             value={this.state.post_type_id}
             // onChange={this.handleTitleChange}
           />
+
+          <A_button
+            type = "Создать пост"
+            buttonSize = "btn--small"
+            buttonColor = "btn--gray">
+          </A_button>
 
           <input type="submit" value="Create post" />
         </div>

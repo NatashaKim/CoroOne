@@ -4,6 +4,15 @@
   font-weight: normal;
 }
 
+@font-face {
+  font-family: "PTMono";
+  src: url("PTMono-Bold.woff") format("woff");
+  font-weight: bold;
+}
+
+
+
+
 @mixin table_mix {
   table {
     table-layout: fixed;
