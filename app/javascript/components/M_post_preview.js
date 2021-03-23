@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import A_category from "./A_category"
 import A_post_title from "./A_post_title"
+import A_button from "./A_button"
 import '../../assets/stylesheets/M_post_preview.scss'
 
 
@@ -13,6 +14,7 @@ const STYLES = [
   'ps--horizontal_medium',
   'ps--horizontal_big'
 ]
+
 
 class M_post_preview extends React.Component {
 
@@ -40,6 +42,13 @@ class M_post_preview extends React.Component {
             <A_category category = {this.props.post.category}/>
             <A_post_title
              post = {this.props.post}/>
+            <div className = "button_div">
+              <A_button
+                 type = "Читать"
+                 buttonSize = "btn--small"
+                 buttonColor = "btn--green">
+              </A_button>
+            </div>
         </div>
       </div>
     );
