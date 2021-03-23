@@ -72,13 +72,8 @@ class M_navbar extends React.Component {
 
       return (
         <div className="navbar">
-<<<<<<< HEAD
             <a>
                 <A_icon src = {Imgsrc[imgret]} icon_type = {icon_type}/>
-=======
-            <a href={link_to_page}>
-                <A_icon src = {Imgsrc[imgret]} icon_type = {icontype}/>
->>>>>>> 5eafcf2f1094dacca0d97b4c8c85781cbcca6c68
             </a>
         </div>
       );
