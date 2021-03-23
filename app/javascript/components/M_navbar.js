@@ -44,19 +44,21 @@ class M_navbar extends React.Component {
       this.setState(state => ({show: !state.show}))
     }
 
-    if (icon_type = "profile") {
-      getImg =() => this.state.show ? 'profile' : 'profile_fill'
-    } elseif (icon_type = "bookmarks") {
-      getImg = () => this.state.show ? 'bookmarks' : 'bookmarks_fill'
-    } else (icon_type = "notification") {
-      getImg = () => this.state.show ? 'notification' : 'notification_fill'
-    }
-
       render() {
         const imgName = this.getImg()
 
         const checkiconTypes = Types.includes(this.props.iconTypes)
         ? this.props.iconTypes : Types[0]
+
+        let icontype = "";
+
+        if (icontype = "profile") {
+          getImg =() => this.state.show ? 'profile' : 'profile_fill';
+        } elseif (icontype = "bookmarks") {
+          getImg = () => this.state.show ? 'bookmarks' : 'bookmarks_fill';
+        } else (icontype = "notification") {
+          getImg = () => this.state.show ? 'notification' : 'notification_fill'
+        }
 
         let imgret = '';
         if (checkiconTypes == Types[0]) {
@@ -67,10 +69,16 @@ class M_navbar extends React.Component {
 
 
 
+
       return (
         <div className="navbar">
+<<<<<<< HEAD
             <a>
                 <A_icon src = {Imgsrc[imgret]} icon_type = {icon_type}/>
+=======
+            <a href={link_to_page}>
+                <A_icon src = {Imgsrc[imgret]} icon_type = {icontype}/>
+>>>>>>> 5eafcf2f1094dacca0d97b4c8c85781cbcca6c68
             </a>
         </div>
       );
