@@ -13,6 +13,7 @@ const Icon = {
   //Меню, нажатые иконки (выбрана страница)
   'notification_menu_fill': '/assets/icon_notification_menu_fill.svg',
   'bookmarks_menu_fill': '/assets/icon_bookmarks_menu_fill.svg',
+  'profile_menu_fill': '/assets/icon_profile_menu_fill.svg',
 
   //Иконки соц.сетей без круга для "поделиться"
   'insta_big_gray': '/assets/icon_insta.svg',
