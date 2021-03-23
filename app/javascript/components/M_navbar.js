@@ -69,18 +69,13 @@ class M_navbar extends React.Component {
 
       return (
         <div className="navbar">
-            <a href={}>
+            <a>
                 <A_icon src = {Imgsrc[imgret]} icon_type = {icon_type}/>
             </a>
         </div>
       );
     }
-  render () {
-    return (
-
-    )
   }
-}
 
 
 export default M_navbar
