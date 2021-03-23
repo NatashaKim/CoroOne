@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import A_category from "./A_category"
 import A_post_title from "./A_post_title"
+import '../../assets/stylesheets/M_post_preview.scss'
 
 
 const STYLES = [
@@ -34,7 +35,7 @@ class M_post_preview extends React.Component {
     };
 
     return (
-      <div style={sectionStyle} className = {`ps ${checkpostStyle}`}>
+      <div style={sectionStyle} className = {`post_preview ${checkpostStyle}`}>
         <div>
             <A_category category = {this.props.post.category}/>
             <A_post_title

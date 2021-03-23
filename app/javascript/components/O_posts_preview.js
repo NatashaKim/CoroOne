@@ -23,9 +23,9 @@ class O_posts_preview extends React.Component {
       <div>
         <A_post_type post_type_id = {this.props.post_type_id} />
         {this.state.posts.slice(0, size).map(post => (
-          <M_post_preview key = {post.id} post = {post} category = {post.category} post_number = {postNumber = postNumber + 1} />
+          <M_post_preview key = {post.id} post = {post} category = {post.category} post_number = {postNumber = postNumber + 1} postStyle = "ps--horizontal_small" />
         ))}
-        
+
       </div>
     );
   }
