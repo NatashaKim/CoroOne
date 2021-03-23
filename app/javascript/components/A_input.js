@@ -5,7 +5,7 @@ import '../../assets/stylesheets/A_input.scss'
 
 const Types = [
   'default',
-  'password'
+  'password',
 ];
 
 const Imgsrc = {
