@@ -27,13 +27,13 @@ class O_posts_preview extends React.Component {
       <div>
         <A_post_type post_type_id = {this.props.post_type_id} />
         {this.state.posts.slice(0, size1).map(post => (
-          <M_post_preview key = {post.id} post = {post} category = {post.category} post_number = {postNumber = postNumber + 1} postStyle = "ps--screen"  />
+          <M_post_preview key = {post.id} post = {post} category = {post.category} post_number = {postNumber = postNumber + 1} postStyle = 'ps--horizontal_long_puzzle'  />
         ))}
 
         <M_post_preview_combo posts = {this.state.posts.slice(size1, size2)} />
 
         {this.state.posts.slice(size2, size3).map(post => (
-          <M_post_preview key = {post.id} post = {post} category = {post.category} post_number = {postNumber = postNumber + 1} postStyle = "ps--screen"  />
+          <M_post_preview key = {post.id} post = {post} category = {post.category} post_number = {postNumber = postNumber + 1} postStyle = "ps--vertical"  />
         ))}
 
 

@@ -8,6 +8,7 @@ class M_catview extends React.Component {
             <p><strong>ID:</strong> {this.props.category.id}</p>
             <p><strong>Name:</strong> {this.props.category.name}</p>
             <p><strong>Description:</strong> {this.props.category.description}</p>
+            <p><strong>Image Src:</strong> {this.props.category.imagesrc}</p>
             <p><strong>Display in Navbar:</strong> {`${this.props.category.display_in_navbar}`}</p>
             <a href={`/categories/${this.props.category.id}/edit`}>Edit</a><span> | </span>
             <a href={`./`}>Back</a>

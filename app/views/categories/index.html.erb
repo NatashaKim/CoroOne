@@ -2,8 +2,8 @@
 
 <h1>Categories</h1>
 
-<%= react_component 'M_category_nav', { categories: @categories, category: @category } %>
-
+<%= react_component 'M_categories_nav', { categories: @categories } %>
 <br>
+<%= react_component 'M_cat_preview', { categories: @categories } %>
 
 <%= link_to 'New Category', new_category_path %>

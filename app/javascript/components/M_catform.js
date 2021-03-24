@@ -11,11 +11,13 @@ class M_catform extends React.Component {
     this.state = {
       name: props.category.name ? props.category.name : '',
       description: props.category.description ? props.category.description : '',
+      imagesrc: props.category.imagesrc ? props.category.imagesrc : '',
       post_type_id: props.category.post_type_id ? props.category.post_type_id : '',
       post_types: props.post_types ? props.post_types : []
     };
       this.handleNameChange = this.handleNameChange.bind(this);
       this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
+      this.handleImagesrcChange = this.handleImagesrcChange.bind(this);
       this.handlePostTypeChange = this.handlePostTypeChange.bind(this);
 
     }
@@ -27,6 +29,9 @@ class M_catform extends React.Component {
     }
     handlePostTypeChange(e) {
       this.setState({ post_type_id: e.target.value });
+    }
+    handleImagesrcChange(e) {
+      this.setState({ imagesrc: e.target.value });
     }
 
     render() {
@@ -49,6 +54,16 @@ class M_catform extends React.Component {
             handleChange={this.handleDescriptionChange.bind(this)}
           />
 
+          <label>
+          Image Src
+          </label>
+          <A_input
+            name="category[imagesrc]"
+            value={this.state.imagesrc}
+            handleChange={this.handleImagesrcChange.bind(this)}
+            inputTypes = "default"
+          />
+
           <label>Display in Navbar?</label>
           <input
             defaultChecked={this.props.category.display_in_navbar ? this.props.category.display_in_navbar : false}
@@ -56,8 +71,6 @@ class M_catform extends React.Component {
             type="checkbox"
             name="category[display_in_navbar]"
           />
-
-
 
           <A_select
            title={"Post type"}

@@ -44,37 +44,29 @@ class M_navbar extends React.Component {
       this.setState(state => ({show: !state.show}))
     }
 
+
+    getProfile =() => this.state.show ? 'profile' : 'profile_fill';
+    getBookmarks = () => this.state.show ? 'bookmarks' : 'bookmarks_fill';
+    getNotification = () => this.state.show ? 'notification' : 'notification_fill';
+
       render() {
-        const imgName = this.getImg()
 
         const checkiconTypes = Types.includes(this.props.iconTypes)
         ? this.props.iconTypes : Types[0]
 
-        let icontype = "";
-
-        if (icontype = "profile") {
-          getImg =() => this.state.show ? 'profile' : 'profile_fill';
-        } elseif (icontype = "bookmarks") {
-          getImg = () => this.state.show ? 'bookmarks' : 'bookmarks_fill';
-        } else (icontype = "notification") {
-          getImg = () => this.state.show ? 'notification' : 'notification_fill'
-        }
-
         let imgret = '';
         if (checkiconTypes == Types[0]) {
-           imgret =  "";
-        }  else {
-          imgret = this.getImg();
+           imgret = this.getProfile();
+        } else if (checkiconTypes == Types[1]) {
+          imgret = this.getBookmarks();
+        } else {
+          imgret = this.getNotification();
         }
-
-
 
 
       return (
         <div className="navbar">
-            <a>
-                <A_icon src = {Imgsrc[imgret]} icon_type = {icon_type}/>
-            </a>
+          <img src = {Imgsrc[imgret]} onClick={this.toggleImage}/>
         </div>
       );
     }

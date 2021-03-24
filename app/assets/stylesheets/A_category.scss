@@ -1,3 +1,8 @@
+a.Category {
+ display: block;
+ text-decoration: none;
+}
+
 .category--mobile {
   display: flex;
   flex-direction: column;
@@ -13,11 +18,4 @@
      display: block;
      margin-bottom: -16px;
   }
-}
-
-.category {
-  font-family: "PTMono", sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-  color: var(--zelda-green);
 }

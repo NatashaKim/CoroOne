@@ -7,9 +7,6 @@ const KINDS = [
   'h--htag',
 ]
 
-
-
-
 class A_hashtag extends React.Component {
 
     render() {
