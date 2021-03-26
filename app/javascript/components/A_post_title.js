@@ -41,9 +41,9 @@ const A_post_title = ({
   ? headingAlign : ALIGN[0]
 
   return(
-      <span className = {`heading ${checkHeadingStyle} ${checkHeadingColor} ${checkHeadingAlign}`} type = {type}>
+      <a className = {`Heading ${checkHeadingStyle} ${checkHeadingColor} ${checkHeadingAlign}`} type = {type} href={`/posts/${post.id}`}>
         {post.title}
-      </span>
+      </a>
 
   )
 }

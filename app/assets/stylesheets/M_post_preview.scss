@@ -23,7 +23,7 @@
     height: 488px;
     .Preview_wrapper{
       width: 246px;
-      a {
+      .Category {
         margin-bottom: 4px;
       }
       button {
@@ -37,7 +37,7 @@
      height: 296px;
      .Preview_wrapper{
        width: 421px;
-       a {
+       .Category {
          margin-bottom: 4px;
        }
        button {
@@ -51,7 +51,7 @@
      height: 800px;
      .Preview_wrapper{
        width: 394px;
-       a {
+       .Category {
          margin-bottom: 8px;
        }
        button {
@@ -65,7 +65,7 @@
      height: 367px;
      .Preview_wrapper{
        width: 394px;
-       a {
+       .Category {
          margin-bottom: 8px;
        }
        button {
@@ -79,7 +79,7 @@
      height: 326px;
      .Preview_wrapper{
        width: 371px;
-       a {
+       .Category {
          margin-bottom: 4px;
        }
        button {
@@ -93,7 +93,7 @@
      height: 326px;
      .Preview_wrapper{
        width: 341px;
-       a {
+       .Category {
          margin-bottom: 4px;
        }
        button {
@@ -101,129 +101,4 @@
        }
      }
    }
-
-//   &.ps--horizontal_small {
-//    width: 501px;
-//    height: 296px;
-//    div {
-//      margin-top: 20%;
-//    }
-//    span {
-//      width: 501px;
-//      padding-left: 60px;
-//      padding-right: 60px;
-//      margin-top: 8px;
-//      font-size: 18px;
-//      line-height: 24px;
-//    }
-//    div.button_div {
-//      visibility: hidden;
-//    }
-//   }
-//   &.ps--horizontal_big {
-//    width: 851px;
-//    height: 326px;
-//    div {
-//      margin-top: 15%;
-//    }
-//    span {
-//      width: 851px;
-//      padding-left: 240px;
-//      padding-right: 240px;
-//      margin-top: 8px;
-//      font-size: 18px;
-//      line-height: 24px;
-//    }
-//    div.button_div {
-//      visibility: hidden;
-//    }
-//   }
-//   &.ps--horizontal_medium {
-//    width: 501px;
-//    height: 326px;
-//    div {
-//      margin-top: 23%;
-//    }
-//    span {
-//      width: 501px;
-//      padding-left: 100px;
-//      padding-right: 100px;
-//      margin-top: 8px;
-//      font-size: 18px;
-//      line-height: 24px;
-//    }
-//    div.button_div {
-//      visibility: hidden;
-//    }
-//   }
-//   &.ps--screen_narrow {
-//    width: 1026px;
-//    height: 367px;
-//    div {
-//      font-size: 24px;
-//      line-height: 30px;
-//      margin-top: 10%;
-//    }
-//    span {
-//      width: 1026px;
-//      padding-left: 300px;
-//      padding-right: 300px;
-//      margin-top: 8px;
-//      font-size: 24px;
-//      line-height: 32px;
-//    }
-//    div.button_div {
-//      margin-top: 0px;
-//      width: 1026px;
-//      display: flex;
-//      align-items: center;
-//      button {
-//        visibility: visible;
-//        margin-top: 32px;
-//        width: 98px;
-//        div {
-//          margin-top: 0;
-//          font-size: 14px;
-//          line-height: 24px;
-//        }
-//
-//      }
-//    }
-//   }
-//   &.ps--screen {
-//    width: 100vw;
-//    height: 800px;
-//    div {
-//      display: flex;
-//      width: 100vw;
-//      font-size: 24px;
-//      line-height: 30px;
-//      margin-top: 330px;
-//      align-items: center;
-//    }
-//    span {
-//      width: 550px;
-//      text-align: center;
-//      margin-top: 8px;
-//      font-size: 24px;
-//      line-height: 32px;
-//    }
-//    div.button_div {
-//      margin-top: 0px;
-//      display: flex;
-//      align-items: center;
-//      button {
-//        visibility: visible;
-//        margin-top: 32px;
-//        width: 98px;
-//        div {
-//          width: 48px;
-//          margin-top: 0;
-//          font-size: 14px;
-//          line-height: 24px;
-//        }
-//
-//      }
-//    }
-//   }
 }
