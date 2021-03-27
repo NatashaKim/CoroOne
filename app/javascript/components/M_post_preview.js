@@ -60,6 +60,8 @@ class M_post_preview extends React.Component {
       checkpostStyle = 'ps--vertical'
     } else if (this.props.post_type_id == 1  && this.props.post_number == 3) {
       checkpostStyle = 'ps--vertical'
+    } else if (this.props.post_type_id == 5  && this.props.post_number == 1) {
+      checkpostStyle = 'ps--horizontal_long'
     } else {
       checkpostStyle = STYLES.includes(this.props.postStyle)
       ? this.props.postStyle : STYLES[0]

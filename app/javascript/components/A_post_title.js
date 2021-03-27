@@ -28,11 +28,21 @@ const A_post_title = ({
   headingStyle,
   headingColor,
   headingAlign,
-  post
+  post,
+  post_number
 }) => {
 
-  const checkHeadingStyle = STYLES.includes(headingStyle)
+  let checkHeadingStyle = STYLES.includes(headingStyle)
   ? headingStyle : STYLES[0]
+
+  if (post_number) {
+    if (post_number == 1) {
+      checkHeadingStyle = 'h6'
+    } else {
+      checkHeadingStyle = STYLES.includes(headingStyle)
+      ? headingStyle : STYLES[0]
+    }
+  }
 
   const checkHeadingColor = COLORS.includes(headingColor)
   ? headingColor : COLORS[0]

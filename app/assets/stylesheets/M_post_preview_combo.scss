@@ -1,0 +1,23 @@
+.Post_preview_combo {
+  width: 1026px;
+  height: 264px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 24px;
+  .Heading:nth-child(1) {
+    grid-column: 1 / 5;
+  }
+  .Heading:nth-child(2) {
+    grid-column: 7 / 10;
+  }
+  .Heading:nth-child(3) {
+    grid-column: 10 /13;
+  }
+  .Heading:nth-child(4) {
+    grid-column: 7 / 10;
+  }
+  .Heading:nth-child(5) {
+    grid-column: 10 /13;
+  }
+}
