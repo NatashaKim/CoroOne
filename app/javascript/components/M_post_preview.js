@@ -50,8 +50,22 @@ class M_post_preview extends React.Component {
     }
 
     let postStyle = " ";
-    const checkpostStyle = STYLES.includes(this.props.postStyle)
+
+    let checkpostStyle = STYLES.includes(this.props.postStyle)
     ? this.props.postStyle : STYLES[0]
+
+    if (this.props.post_type_id == 1  && this.props.post_number == 1) {
+      checkpostStyle = 'ps--vertical'
+    } else if (this.props.post_type_id == 1  && this.props.post_number == 2) {
+      checkpostStyle = 'ps--vertical'
+    } else if (this.props.post_type_id == 1  && this.props.post_number == 3) {
+      checkpostStyle = 'ps--vertical'
+    } else {
+      checkpostStyle = STYLES.includes(this.props.postStyle)
+      ? this.props.postStyle : STYLES[0]
+    }
+
+
 
     return (
       <div style={sectionStyle} className = {`Post_preview ${checkpostStyle}`}>

@@ -1,4 +1,29 @@
 .Spider {
   clip-path: url(#mask1);
   height: 826px;
+  box-sizing: border-box;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .Preview_wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    justify-content: center;
+    width: 394px;
+    .Post_info {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      .Category {
+        margin-bottom: 8px;
+      }
+    }
+    .btn {
+      margin-top: 32px;
+    }
+  }
 }
