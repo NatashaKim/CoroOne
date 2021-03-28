@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_20_105133) do
+ActiveRecord::Schema.define(version: 2021_03_27_190000) do
 
   create_table "answers", force: :cascade do |t|
     t.text "option"
@@ -106,6 +106,7 @@ ActiveRecord::Schema.define(version: 2021_03_20_105133) do
     t.integer "category_id"
     t.integer "post_type_id"
     t.integer "project_id"
+    t.string "videourl"
     t.index ["category_id"], name: "index_posts_on_category_id"
     t.index ["post_type_id"], name: "index_posts_on_post_type_id"
     t.index ["project_id"], name: "index_posts_on_project_id"
