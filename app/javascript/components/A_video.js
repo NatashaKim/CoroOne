@@ -9,6 +9,8 @@ class A_video extends React.Component {
           <ReactPlayer
             url= {this.props.videourl}
             controls = "true"
+            width = "501px"
+            height = "256px"
           />
         </div>
       );

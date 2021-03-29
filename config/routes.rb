@@ -43,6 +43,7 @@ end
   get '/posts/hashtag/:name', to: 'posts#hashtags'
 
   get '/posts_by_type/:post_type_id/count/:count', to: "posts#get_posts_by_type"
+  # get `/your/api/namespace/endpoint/:withDynamicString/:forParams`, to: "posts#upload_image"
 
   get 'users', to: 'users#index'
   get 'users/:id' => 'users#show'

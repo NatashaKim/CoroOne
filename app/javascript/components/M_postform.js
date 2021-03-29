@@ -1,4 +1,5 @@
 import React from "react"
+
 import axios from 'axios';
 import PropTypes from "prop-types"
 import A_select from "./A_select"
@@ -51,6 +52,28 @@ class M_postform extends React.Component {
       this.setState({ image: e.target.value });
     }
 
+    // readFile(files) {
+    //   if (files && files[0]) {
+    //     let formPayLoad = new FormData();
+    //     formPayLoad.append('uploaded_image', files[0]);
+    //     this.sendImageToController(formPayLoad)
+    //   }
+    // }
+    //
+    // sendImageToController(formPayLoad){
+    //
+    // fetch(`/your/api/namespace/endpoint/${withDynamicString}/${forParams}`, {
+    //   credentials: 'same-origin',
+    //   headers: {},
+    //   method: 'POST',
+    //   body: formPayLoad
+    // })
+    //
+    //   .then(response => response.json())
+    //   .then(imageFromController => {
+    //     this.setState({uploads: this.state.uploads.concat(imageFromController)})
+    //   })
+    // }
 
     render() {
       return (
@@ -100,6 +123,16 @@ class M_postform extends React.Component {
             value={this.state.content}
             onChange={this.handleContentChange}
           />
+
+
+          <label>Картинка</label>
+          <input
+            type="file"
+            name="post[image]"
+            onChange={this.handleImageChange}
+          />
+
+
 
           <A_textarea
             textareaType="textarea--hidden"
