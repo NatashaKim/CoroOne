@@ -18,6 +18,7 @@ class M_postform extends React.Component {
         author: props.post.author ? props.post.author : '',
         content: props.post.content ? props.post.content : '',
         image: props.post.image ? props.post.image : '',
+        videourl: props.post.videourl ? props.post.videourl : '',
         categories: props.categories ? props.categories : [],
         post_type_id: props.post.post_type_id ? props.post.post_type_id : '',
 
@@ -29,6 +30,7 @@ class M_postform extends React.Component {
       this.handleAuthorChange = this.handleAuthorChange.bind(this);
       this.handleContentChange = this.handleContentChange.bind(this);
       this.handleImageChange = this.handleImageChange.bind(this);
+      this.handleVideourlChange = this.handleVideourlChange.bind(this);
 
     }
 
@@ -49,6 +51,9 @@ class M_postform extends React.Component {
     }
     handleImageChange(e) {
       this.setState({ image: e.target.value });
+    }
+    handleVideourlChange(e) {
+      this.setState({ videourl: e.target.value });
     }
 
 
@@ -101,8 +106,17 @@ class M_postform extends React.Component {
             onChange={this.handleContentChange}
           />
 
+          <label>Видео</label>
+          <A_input
+            inputTypes = "default"
+            type="text"
+            name="post[videourl]"
+            value={this.state.videourl}
+            onChange={this.handleVideourlChange}
+          />
+
           <A_textarea
-            textareaType="textarea--hidden"
+            textareaType = "textarea--hidden"
             type="hidden"
             name="post[post_type_id]"
             value={this.state.post_type_id}

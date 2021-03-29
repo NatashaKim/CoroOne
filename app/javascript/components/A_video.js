@@ -1,14 +1,18 @@
 import React from "react"
 import ReactPlayer from "react-player"
 
-function A_video() {
-  return (
-    <div>
-      <ReactPlayer
-        url="https://vimeo.com/164438721"
-      />
-    </div>
-  )
+
+class A_video extends React.Component {
+    render () {
+      return (
+        <div>
+          <ReactPlayer
+            url= {this.props.videourl}
+            controls = "true"
+          />
+        </div>
+      );
+    }
 }
 
 export default A_video

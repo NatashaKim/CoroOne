@@ -2,9 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import '../../assets/stylesheets/A_textarea.scss'
 
-const SIZES = [
+const TYPES = [
   'textarea--small',
   'textarea--big',
+  'textarea--hidden'
 ]
 
 class A_textarea extends React.Component {
@@ -25,13 +26,13 @@ class A_textarea extends React.Component {
 
 
     render() {
-      const textareaSize = " "
+      const textareaType = " "
 
-      const checktextareaSize = SIZES.includes(textareaSize)
-      ? textareaSize : SIZES[0]
+      const checkTextareaType = TYPES.includes(this.props.textareaType)
+      ? this.props.textareaType : TYPES[0]
       return (
         <textarea
-          className = {`textarea ${checktextareaSize}`}
+          className = {`textarea ${checkTextareaType}`}
           name={this.props.name}
           value={this.state.value}
           onChange={this.handleChange}
