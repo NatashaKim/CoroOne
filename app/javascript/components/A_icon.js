@@ -35,6 +35,7 @@ const Icon = {
   'arrow_down': '/assets/icon_arrow_down.svg',
   'arrow_right': '/assets/icon_arrow_right.svg',
   'arrow_left': '/assets/icon_arrow_left.svg',
+  'arrow_big': '/assets/icon_arrow_big.svg',
 
   //Cохраненки в пользовательском посте
   'bookmarks_post_un': '/assets/icon_bookmarks_post_un.svg',

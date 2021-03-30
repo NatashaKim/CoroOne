@@ -17,7 +17,7 @@
 
     <div class="News">
       <%= react_component 'A_post_type', { post_type: @post_types[0] } %>
-      <%= react_component 'O_posts_preview', { post_type_id: 1, post_number: 17, remove_post: spider_post_id} %>
+      <%= react_component 'O_news_preview', { post_type_id: 1, post_number: 17, remove_post: spider_post_id} %>
     </div>
 
     <%= react_component 'M_post_preview', { post: news_banner, category: @posts[2]["category"], postStyle: 'ps--screen' } %>
@@ -25,13 +25,14 @@
     <div class="Articles">
       <%= react_component 'A_post_type', { post_type: @post_types[3] } %>
       <%= react_component 'O_articles_preview', { post_type_id: 5, post_number: 14 } %>
+      <%= react_component 'M_more_info', {moreInfoType: "more news"} %>
     </div>
 
     <%= react_component 'M_post_preview', { post: articles_banner, category: @posts[2]["category"], postStyle: 'ps--screen' } %>
 
     <div class="Reviews">
       <%= react_component 'A_post_type', { post_type: @post_types[2] } %>
-      <%= react_component 'O_reviews_preview', { post_type_id: 4, post_number: 11 } %>
+      <%= react_component 'O_reviews_preview', { post_type_id: 4, post_number: 10 } %>
     </div>
 
     <%= react_component 'M_post_preview', { post: reviews_banner, category: @posts[2]["category"], postStyle: 'ps--screen' } %>

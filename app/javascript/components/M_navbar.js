@@ -21,6 +21,7 @@ class M_navbar extends React.Component {
             iconTypes = "bookmarks"
           />
           <A_navbar_icon
+            current_user = {this.props.current_user}
             iconTypes = "profile"
           />
         </div>

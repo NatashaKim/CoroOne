@@ -56,6 +56,11 @@ class A_navbar_icon extends React.Component {
 
       render() {
 
+        let current_user_id = '';
+        if (this.props.current_user) {
+          current_user_id = this.props.current_user.id
+        }
+
         const checkiconTypes = Types.includes(this.props.iconTypes)
         ? this.props.iconTypes : Types[0]
 
@@ -70,9 +75,16 @@ class A_navbar_icon extends React.Component {
           imgret = this.getSearch();
         }
 
+        let menu_href = "";
+        if (checkiconTypes == Types[0]) {
+           menu_href = `/users/${current_user_id}`;
+        } else {
+          menu_href = "";
+        }
+
 
       return (
-        <a className="Navbar_icon">
+        <a className="Navbar_icon" href={menu_href}>
           <img src = {Imgsrc[imgret]} onClick={this.toggleImage}/>
         </a>
       );
