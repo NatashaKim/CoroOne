@@ -1,9 +1,11 @@
 .News_grid {
+      margin: 0 auto;
   width: 1026px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 488px 296px 264px;
+  grid-template-rows: auto 1fr;
   grid-gap: 24px;
+  margin-bottom: 24px;
   .Post_preview:nth-child(1) {
     grid-column: 1 / 3;
   }

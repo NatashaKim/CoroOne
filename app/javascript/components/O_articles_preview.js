@@ -4,7 +4,7 @@ import M_post_preview from "./M_post_preview"
 import A_post_type from "./A_post_type"
 import {get_posts_by_type} from './Api.js'
 import M_post_preview_combo from "./M_post_preview_combo"
-import '../../assets/stylesheets/O_posts_preview.scss'
+import '../../assets/stylesheets/O_articles_preview.scss'
 
 
 const posts_in_part = 9;

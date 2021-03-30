@@ -59,9 +59,8 @@ render_part(some_posts){
        parts.push(this.render_part(p));
     }
     return (
-      <div>
+      <div className = "News_preview">
         {parts}
-
       </div>
     );
   }

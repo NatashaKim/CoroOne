@@ -4,8 +4,6 @@ import A_category from "./A_category"
 import A_post_title from "./A_post_title"
 import A_button from "./A_button"
 import A_video from "./A_video"
-import '../../assets/stylesheets/M_post_preview.scss'
-
 
 class M_video_preview extends React.Component {
 
