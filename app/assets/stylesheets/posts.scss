@@ -2,22 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-.Spider_section {
-  background-color: var(--zelda-green);
-  border-radius: 64px;
-}
-.News {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--light-gray);
-  width: 1202px;
-  margin: 0 auto;
-  padding: 88px 0;
-  border-radius: 64px;
-  filter: drop-shadow(0 0 20px rgba(4,0,94,0.07));
-  margin-top: 64px;
-  margin-bottom: 64px;
-}
 // @font-face {
 //   font-family: "RedRing";
 //   src: url("RedRing-Regular.woff") format("woff");

@@ -1,0 +1,16 @@
+.Spider_section {
+  background-color: var(--zelda-green);
+  border-radius: 64px;
+}
+.Post_type_section_wrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-gray);
+  width: 1202px;
+  margin: 0 auto;
+  padding: 88px 0;
+  border-radius: 64px;
+  filter: drop-shadow(0 0 20px rgba(4,0,94,0.07));
+  margin-top: 64px;
+  margin-bottom: 64px;
+}

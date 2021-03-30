@@ -8,11 +8,14 @@ class M_regform extends React.Component {
       this.state = {
         email: props.user.email ? props.user.email : '',
         username: props.user.username ? props.user.username : '',
-        password: props.post.author ? props.post.author : '',
+        password: props.user.password ? props.user.password : '',
+        image: props.user.image.url ? props.user.image.url : ''
     };
       this.handleEmailChange = this.handleEmailChange.bind(this);
       this.handleUsernameChange = this.handleUsernameChange.bind(this);
       this.handlePasswordChange = this.handlePasswordChange.bind(this);
+      this.handleImageChange = this.handleImageChange.bind(this);
+
     }
 
     handleEmailChange(e) {
@@ -24,6 +27,9 @@ class M_regform extends React.Component {
     handlePasswordChange(e) {
       this.setState({ password: e.target.value });
     }
+    handleImageChange(e) {
+   this.setState({ image: e.target.value });
+ }
 
     render() {
       return (
@@ -52,6 +58,16 @@ class M_regform extends React.Component {
             value={this.state.password}
             onChange={this.handlePasswordChange}
           />
+
+          <img src={this.props.user.image.small_thumb.url}/>
+          <A_Iinput
+              textChild ={"Изображение"}
+              inputStyle="input--image"
+              type="file"
+              name="user[image]"
+              value={this.state.image.url}
+              onChange={this.handleImageChange}
+            />
 
           <input type="submit" value="Create post" />
         </div>
