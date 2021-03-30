@@ -22,7 +22,7 @@ class M_spider extends React.Component {
     };
 
     return (
-      <div>
+      <div className = {`Spider_and_mask`}>
         <div style = {sectionStyle} className = {`Spider`}>
           <div className = "Preview_wrapper">
             <div className = "Post_info">

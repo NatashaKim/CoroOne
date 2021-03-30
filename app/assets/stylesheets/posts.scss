@@ -1,164 +1,169 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-@font-face {
-  font-family: "RedRing";
-  src: url("RedRing-Regular.woff") format("woff");
-  font-weight: normal;
-}
 
-@font-face {
-  font-family: "RedRing";
-  src: url("RedRing-Medium.woff") format("woff");
-  font-weight: bold;
+.Spider_section {
+  background-color: var(--zelda-green);
+  border-radius: 64px;
 }
-
-@mixin flex_mix {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-@mixin card_mix {
-  .info {
-    display: flex;
-    flex-direction: column;
-    .posts_img {
-      height: 17.3vw;
-      margin-bottom: 0.8vw;
-    }
-    .name {
-      font-size: 1.2vw;
-      color: gray;
-    }
-    .title {
-      margin-top: 0.8vw;
-      font-size: 1.5vw;
-      font-weight: bolder;
-      line-height: 2vw;
-    }
-    .content {
-      font-size: 1.4vw;
-      line-height: 2vw;
-    }
-  }
-  .action {
-    display: flex;
-    flex-direction: row;
-    font-size: 1vw;
-    width: 16vw;
-    margin-top: 1.2vw;
-    justify-content: space-between;
-    div {
-      a {
-        color: gray;
-      }
-      a:hover {
-        background-color: black;
-        border-radius: 2vw;
-        padding: 0.2vw;
-      }
-    }
-  }
-
-}
-
-@mixin post_form {
-  margin-top: 3vw;
-  .form_body {
-    display: flex;
-    flex-direction: column;
-      .field {
-        width: 50vw;
-        margin-bottom: 3vw;
-        label {
-          margin: 1vw auto;
-          font-size: 1.3vw;
-          text-align: left;
-          font-weight: bold;
-        }
-        input {
-          border-style: none;
-          border-radius: 0.3vw;
-          width: 50vw;
-          height: 2.5vw;
-          background-color: #F4F2F2;
-          padding-left: 1vw;
-        }
-      }
-      .carrier-wave-field {
-        margin-bottom: 3vw;
-        height: fit-content;
-        label {
-          margin: 1vw auto;
-          font-size: 1.3vw;
-          text-align: left;
-          font-weight: bold;
-        }
-        img {
-          width: 16vw;
-          margin-top: 5vw;
-        }
-        .how {
-          padding:5px 10px;
-          background:#F4F2F2;
-          border:1px solid #F4F2F2;
-          position:relative;
-          color:#9896AE;
-          border-radius:2px;
-          text-align:center;
-          vertical-align: middle;
-          width: 10vw;
-          height: 2.5vw;
-          line-height: 2.5vw;
-          cursor:pointer;
-          input {
-            text-align: center;
-            width: 13vw;
-            color: #9896AE;
-            font-family: 'RedRing';
-            opacity: 0%;
-            position: absolute;
-            z-index: 1000;
-            cursor: pointer;
-            right: 0;
-            top: 0;
-            height: 100%;
-            font-size: 24px;
-            width: 100%;
-          }
-        }
-      }
-      .field {
-        select {
-          border-style: none;
-          text-align: left;
-          align-items: flex-start;
-          white-space: nowrap;
-          align-self: flex-start;
-          font-family: 'RedRing';
-          background-color: white;
-        }
-      }
-  }
-  .actions {
-    input {
-      border-style: none;
-      display: block;
-      margin-top: 5vw;
-      padding: 0.7vw 1.5vw;
-      width: fit-content;
-      background-color: #9896AE;
-      color: #F5F6FF;
-      font-size: 1vw;
-      border-radius: 2vw;
-      float: right;
-      &:hover {
-         background-color: #04005E;
-      }
-    }
-  }
-}
+// @font-face {
+//   font-family: "RedRing";
+//   src: url("RedRing-Regular.woff") format("woff");
+//   font-weight: normal;
+// }
+//
+// @font-face {
+//   font-family: "RedRing";
+//   src: url("RedRing-Medium.woff") format("woff");
+//   font-weight: bold;
+// }
+//
+// @mixin flex_mix {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+// }
+//
+// @mixin card_mix {
+//   .info {
+//     display: flex;
+//     flex-direction: column;
+//     .posts_img {
+//       height: 17.3vw;
+//       margin-bottom: 0.8vw;
+//     }
+//     .name {
+//       font-size: 1.2vw;
+//       color: gray;
+//     }
+//     .title {
+//       margin-top: 0.8vw;
+//       font-size: 1.5vw;
+//       font-weight: bolder;
+//       line-height: 2vw;
+//     }
+//     .content {
+//       font-size: 1.4vw;
+//       line-height: 2vw;
+//     }
+//   }
+//   .action {
+//     display: flex;
+//     flex-direction: row;
+//     font-size: 1vw;
+//     width: 16vw;
+//     margin-top: 1.2vw;
+//     justify-content: space-between;
+//     div {
+//       a {
+//         color: gray;
+//       }
+//       a:hover {
+//         background-color: black;
+//         border-radius: 2vw;
+//         padding: 0.2vw;
+//       }
+//     }
+//   }
+//
+// }
+//
+// @mixin post_form {
+//   margin-top: 3vw;
+//   .form_body {
+//     display: flex;
+//     flex-direction: column;
+//       .field {
+//         width: 50vw;
+//         margin-bottom: 3vw;
+//         label {
+//           margin: 1vw auto;
+//           font-size: 1.3vw;
+//           text-align: left;
+//           font-weight: bold;
+//         }
+//         input {
+//           border-style: none;
+//           border-radius: 0.3vw;
+//           width: 50vw;
+//           height: 2.5vw;
+//           background-color: #F4F2F2;
+//           padding-left: 1vw;
+//         }
+//       }
+//       .carrier-wave-field {
+//         margin-bottom: 3vw;
+//         height: fit-content;
+//         label {
+//           margin: 1vw auto;
+//           font-size: 1.3vw;
+//           text-align: left;
+//           font-weight: bold;
+//         }
+//         img {
+//           width: 16vw;
+//           margin-top: 5vw;
+//         }
+//         .how {
+//           padding:5px 10px;
+//           background:#F4F2F2;
+//           border:1px solid #F4F2F2;
+//           position:relative;
+//           color:#9896AE;
+//           border-radius:2px;
+//           text-align:center;
+//           vertical-align: middle;
+//           width: 10vw;
+//           height: 2.5vw;
+//           line-height: 2.5vw;
+//           cursor:pointer;
+//           input {
+//             text-align: center;
+//             width: 13vw;
+//             color: #9896AE;
+//             font-family: 'RedRing';
+//             opacity: 0%;
+//             position: absolute;
+//             z-index: 1000;
+//             cursor: pointer;
+//             right: 0;
+//             top: 0;
+//             height: 100%;
+//             font-size: 24px;
+//             width: 100%;
+//           }
+//         }
+//       }
+//       .field {
+//         select {
+//           border-style: none;
+//           text-align: left;
+//           align-items: flex-start;
+//           white-space: nowrap;
+//           align-self: flex-start;
+//           font-family: 'RedRing';
+//           background-color: white;
+//         }
+//       }
+//   }
+//   .actions {
+//     input {
+//       border-style: none;
+//       display: block;
+//       margin-top: 5vw;
+//       padding: 0.7vw 1.5vw;
+//       width: fit-content;
+//       background-color: #9896AE;
+//       color: #F5F6FF;
+//       font-size: 1vw;
+//       border-radius: 2vw;
+//       float: right;
+//       &:hover {
+//          background-color: #04005E;
+//       }
+//     }
+//   }
+// }
 
 // body.posts {
 //   box-sizing: border-box;

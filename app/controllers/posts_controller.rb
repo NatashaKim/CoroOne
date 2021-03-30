@@ -29,6 +29,13 @@ class PostsController < ApplicationController
   #  @current_user ||= User.find(session[:user_id])
   #end
 
+  def post_type_page
+    @post_type = PostType.find_by_name(params[:name])
+    @categories = Category.all
+    @post_types = PostType.all
+    render "posttypepage"
+  end
+
 
   def get_posts_by_type
       @posts = Post.where(post_type_id: params[:post_type_id]).includes(:category).limit(params[:count]).map do

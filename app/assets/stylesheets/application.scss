@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+body {
+   margin: 0;
+   background-color: var(--mineral-gray);
+   box-sizing: border-box;
+   .Wrapper {
+     background-color: var(--light-gray);
+     overflow-x: hidden;
+     border-radius: 64px;
+   }
+ }

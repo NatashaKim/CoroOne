@@ -1,0 +1,14 @@
+.Navbar {
+  background-color: var(--mineral-gray);
+  width: 1440px;
+  height: 60px;
+  padding: 12px 119px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  div {
+    width: 204px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

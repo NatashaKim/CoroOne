@@ -48,6 +48,8 @@ render_part(some_posts){
       for(let i = rest_posts.length-1; i >=0; i--){
         if(this.props.remove_post.includes(rest_posts[i].id)) rest_posts.splice(i,1);
       }
+    } else {
+      rest_posts = rest_posts.slice(0, rest_posts.length - 4);
     }
 
     while(rest_posts.length > 0){

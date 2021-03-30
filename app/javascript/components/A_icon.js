@@ -3,18 +3,6 @@ import '../../assets/stylesheets/A_icon.scss'
 const {PropTypes} = React;
 
 const Icon = {
-  //Меню, ненажатые иконки
-  'notification_menu_un': '/assets/icon_notification.svg',
-  'profile_menu_un': '/assets/icon_profile.svg',
-  'posts_menu_un': '/assets/icon_posts.svg',
-  'search_menu_un': '/assets/icon_search.svg',
-  'bookmarks_menu_un': '/assets/icon_bookmarks_unfilled.svg',
-
-  //Меню, нажатые иконки (выбрана страница)
-  'notification_menu_fill': '/assets/icon_notification_menu_fill.svg',
-  'bookmarks_menu_fill': '/assets/icon_bookmarks_menu_fill.svg',
-  'profile_menu_fill': '/assets/icon_profile_menu_fill.svg',
-
   //Иконки соц.сетей без круга для "поделиться"
   'insta_big_gray': '/assets/icon_insta.svg',
   'twitter_big_gray': '/assets/icon_twitter.svg',

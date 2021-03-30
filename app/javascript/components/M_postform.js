@@ -21,6 +21,7 @@ class M_postform extends React.Component {
         image: props.post.image ? props.post.image : '',
         categories: props.categories ? props.categories : [],
         post_type_id: props.post.post_type_id ? props.post.post_type_id : '',
+        file:null
 
 }
     ;
@@ -30,6 +31,10 @@ class M_postform extends React.Component {
       this.handleAuthorChange = this.handleAuthorChange.bind(this);
       this.handleContentChange = this.handleContentChange.bind(this);
       this.handleImageChange = this.handleImageChange.bind(this);
+
+      this.onFormSubmit = this.onFormSubmit.bind(this)
+      this.onChange = this.onChange.bind(this)
+      this.fileUpload = this.fileUpload.bind(this)
 
     }
 
@@ -50,30 +55,33 @@ class M_postform extends React.Component {
     }
     handleImageChange(e) {
       this.setState({ image: e.target.value });
+      const config = {
+          headers: {
+              'content-type': 'multipart/form-data'
+          }
+      }
     }
 
-    // readFile(files) {
-    //   if (files && files[0]) {
-    //     let formPayLoad = new FormData();
-    //     formPayLoad.append('uploaded_image', files[0]);
-    //     this.sendImageToController(formPayLoad)
-    //   }
-    // }
-    //
-    // sendImageToController(formPayLoad){
-    //
-    // fetch(`/your/api/namespace/endpoint/${withDynamicString}/${forParams}`, {
-    //   credentials: 'same-origin',
-    //   headers: {},
-    //   method: 'POST',
-    //   body: formPayLoad
-    // })
-    //
-    //   .then(response => response.json())
-    //   .then(imageFromController => {
-    //     this.setState({uploads: this.state.uploads.concat(imageFromController)})
-    //   })
-    // }
+    onFormSubmit(e){
+        e.preventDefault() // Stop form submit
+        this.fileUpload(this.state.file).then((response)=>{
+          console.log(response.data);
+        })
+      }
+      onChange(e) {
+        this.setState({file:e.target.files[0]})
+      }
+      fileUpload(file){
+        const url = 'http://example.com/file-upload';
+        const formData = new FormData();
+        formData.append('file',file)
+        const config = {
+            headers: {
+                'content-type': 'multipart/form-data'
+            }
+        }
+        return  post(url, formData,config)
+      }
 
     render() {
       return (
@@ -132,7 +140,9 @@ class M_postform extends React.Component {
             onChange={this.handleImageChange}
           />
 
-
+          <h1>File Upload</h1>
+        <input type="file" onChange={this.onChange} />
+        <button type="submit">Upload</button>
 
           <A_textarea
             textareaType="textarea--hidden"

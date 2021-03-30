@@ -25,13 +25,13 @@ render_part(some_posts){
   let postNumber = 0;
   return (
     <div>
-    <div className = "News_grid">
-      {some_posts.slice(0, top_slice).map(post => (
-        <M_post_preview key = {post.id} post = {post} category = {post.category} post_number = {postNumber = postNumber + 1} postStyle = 'ps--horizontal' post_type_id = {this.props.post_type_id}  />
-      ))}
-    </div>
+      <div className = "News_grid">
+        {some_posts.slice(0, top_slice).map(post => (
+          <M_post_preview key = {post.id} post = {post} category = {post.category} post_number = {postNumber = postNumber + 1} postStyle = 'ps--horizontal' post_type_id = {this.props.post_type_id}  />
+        ))}
+      </div>
 
-    <M_post_preview_combo posts = {some_posts.slice(top_slice, posts_in_part)} />
+      <M_post_preview_combo posts = {some_posts.slice(top_slice, posts_in_part)} />
     </div>
 
       );
