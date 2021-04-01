@@ -1,0 +1,34 @@
+<body class="show_body">
+
+  <div class="wrapper_show">
+    <div class="narrow">
+
+      <%= react_component 'M_userpostview', { post: @post } %>
+      <div class="activity">
+        <%= react_component 'A_like_button', { post: @post, likes: @post.likes, current_user_id: current_user.id } %>
+        <%= react_component 'A_favorite_button', { post: @post, favorites: @post.favorites, current_user_id: current_user.id } %>
+      </div>
+
+  </div>
+
+      <div class="comments">
+
+      <h2>Комментарии</h2>
+      <% topComments = @post.comments.select{|c| ! c.parent_id} %>
+      <%= render topComments %>
+
+
+      <h2>Добавить комментарий:</h2>
+      <% if user_signed_in? %>
+        <%= render "comments/form" %>
+      <% else %>
+        <p>Please <%= link_to 'login', new_user_session_path %> or <%= link_to 'register', new_user_registration_path %> to comment.</p>
+      <% end %>
+
+      <% if user_signed_in? %>
+      <%= link_to 'Редактировать', edit_post_path(@post) %> |
+      <% end %>
+      <%= link_to 'Назад', admin_context_path(curatorposts: "") %>
+      </div>
+  </div>
+</body>

@@ -1,4 +1,5 @@
 import React from "react"
+
 import axios from 'axios';
 import PropTypes from "prop-types"
 import A_select from "./A_select"
@@ -8,7 +9,7 @@ import A_button from "./A_button"
 import {availableCategories} from './Api.js';
 import '../../assets/stylesheets/O_postform.scss'
 
-class O_postform extends React.Component {
+class O_necrologyform extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
@@ -18,7 +19,6 @@ class O_postform extends React.Component {
         author: props.post.author ? props.post.author : '',
         content: props.post.content ? props.post.content : '',
         image: props.post.image ? props.post.image : '',
-        videourl: props.post.videourl ? props.post.videourl : '',
         categories: props.categories ? props.categories : [],
         post_type_id: props.post.post_type_id ? props.post.post_type_id : '',
 
@@ -30,8 +30,13 @@ class O_postform extends React.Component {
       this.handleAuthorChange = this.handleAuthorChange.bind(this);
       this.handleContentChange = this.handleContentChange.bind(this);
       this.handleImageChange = this.handleImageChange.bind(this);
-      this.handleVideourlChange = this.handleVideourlChange.bind(this);
 
+    }
+
+    componentDidMount(e) {
+        this.setState({
+          authenticity_token: document.querySelector('meta[name="csrf-token"]').content
+        })
     }
 
     handleCategoryChange(e) {
@@ -52,14 +57,16 @@ class O_postform extends React.Component {
     handleImageChange(e) {
       this.setState({ image: e.target.value });
     }
-    handleVideourlChange(e) {
-      this.setState({ videourl: e.target.value });
-    }
 
 
     render() {
       return (
         <div className = "postform">
+          <input
+            type="hidden"
+            name="authenticity_token"
+            value={this.state.authenticity_token}
+          />
 
             <A_select
              title={"Жанр"}
@@ -106,17 +113,16 @@ class O_postform extends React.Component {
             onChange={this.handleContentChange}
           />
 
-          <label>Видео</label>
-          <A_input
-            inputTypes = "default"
-            type="text"
-            name="post[videourl]"
-            value={this.state.videourl}
-            onChange={this.handleVideourlChange}
+
+          <label>Картинка</label>
+          <input
+            type="file"
+            name="post[image]"
+            onChange={this.handleImageChange}
           />
 
           <A_textarea
-            textareaType = "textarea--hidden"
+            textareaType="textarea--hidden"
             type="hidden"
             name="post[post_type_id]"
             value={this.state.post_type_id}
@@ -135,4 +141,4 @@ class O_postform extends React.Component {
     }
   }
 
-export default O_postform
+export default O_necrologyform

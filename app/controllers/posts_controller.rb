@@ -11,15 +11,15 @@ class PostsController < ApplicationController
     @post_types = PostType.all
     if params.has_key?(:category)
       @category = Category.find_by_name(params[:category])
-      @posts = Post.where(category: @category).includes(:category).map do
+      @posts = Post.where(category: @category).includes(:category, :likes).map do
         |post|
-        post.as_json(include: [:category, :image])
+        post.as_json(include: [:category, :image, :likes])
       end
       #render json: @posts, include: [:category]
     else
-      @posts = Post.all.includes(:category).map do
+      @posts = Post.all.includes(:category, :likes).map do
         |post|
-        post.as_json(include: [:category, :image])
+        post.as_json(include: [:category, :image, :likes])
       end
       #render json: { posts: @posts }
     end
@@ -50,12 +50,16 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @categories = Category.all
-    @category = Category.find(@post.category_id)
+    if params.has_key?(:category)
+      @category = Category.find(@post.category_id)
+    end
     @comment = Comment.new
     @comment.post_id = @post.id
     @comment.user = current_user
     if @post.post_type.name == "puzzles"
       render 'showpuzzle'
+    elsif @post.post_type.name == "Мастерская"
+     render 'showuserpost'
     else
       render 'show'
     end
@@ -170,7 +174,7 @@ class PostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:name, :title, :author, :content, :image, :category_id, :post_type_id, :project_id, :tag_id, :videourl)
+      params.require(:post).permit(:name, :title, :author, :content, :image, :category_id, :post_type_id, :project_id, :tag_id, :videourl, :likes)
     end
 
     # layout 'posts'

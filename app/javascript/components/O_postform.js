@@ -7,9 +7,9 @@ import A_textarea from "./A_textarea"
 import A_input from "./A_input"
 import A_button from "./A_button"
 import {availableCategories} from './Api.js';
-import '../../assets/stylesheets/M_postform.scss'
+import '../../assets/stylesheets/O_postform.scss'
 
-class M_postform extends React.Component {
+class O_postform extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
@@ -141,4 +141,4 @@ class M_postform extends React.Component {
     }
   }
 
-export default M_postform
+export default O_postform

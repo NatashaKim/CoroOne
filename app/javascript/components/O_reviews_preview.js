@@ -85,7 +85,7 @@ render_post_without_video (post) {
 
 
     return (
-      <div>
+      <div className = "Reviews_grid">
         {parts}
       </div>
     );

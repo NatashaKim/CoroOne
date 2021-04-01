@@ -1,0 +1,32 @@
+.Video_preview {
+  background-color: var(--ice-white);
+  width: fit-content;
+  border-radius: 32px;
+  div {
+    width: fit-content;
+    div {
+      border-radius: 32px;
+      .react-player__play-icon {
+        border-radius: 0px;
+      }
+    }
+  }
+  .Preview_wrapper {
+    width: 501px;
+    height: 104px;
+    .Post_info {
+      position: relative;
+      width: 501px;
+      text-align: center;
+      .Category {
+        margin: 0 auto;
+        position: absolute;
+        top: -270px;
+        width: 501px;
+      }
+      .Heading {
+        width: 421px;
+      }
+    }
+  }
+}
