@@ -1,6 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 import A_avatar from "./A_avatar"
+import A_button from "./A_button"
+import A_input from "./A_input"
+import A_textarea from "./A_textarea"
+import '../../assets/stylesheets/M_commentform.scss'
+
 class M_commentform extends React.Component {
 
   constructor(props) {
@@ -33,27 +38,24 @@ class M_commentform extends React.Component {
       <div className="CommentForm">
         <A_avatar user={this.props.user} />
         <div className="CommentForm--textarea">
-          <label>Content</label>
-          <textarea
+          <A_textarea
             type="text"
             name="comment[body]"
+            placeholder="Напишите комментарий"
             value={this.state.content}
             onChange={this.handleContentChange}
+            textareaType="textarea--small"
           />
 
-          <input
-            type="hidden"
-            name="comment[parent_id]"
-            value={this.props.parent_id}
-          />
-          <input
-            type="hidden"
-            name="comment[post_id]"
-            value={this.props.post_id}
-          />
 
         </div>
-        <input type="submit" value="Create comment" />
+        <A_button
+          value = "Опубликовать комментарий"
+          type = "submit"
+          buttonSize = "btn--small"
+          buttonColor = "btn--blue"
+        />
+
       </div>
       </form>
     );

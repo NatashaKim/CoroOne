@@ -35,7 +35,7 @@ const IMG = [
 
 const A_button = ({
   children,
-  type,
+  value,
   imgscr,
   onClick,
   buttonStyle,
@@ -50,7 +50,7 @@ const A_button = ({
   const checkButtonColor = COLORS.includes(buttonColor)
   ? buttonColor : COLORS[0]
 
-  let textpart = <div>{type}</div>
+  let textpart = <div>{value}</div>
   let imgpart = <img className = "Vff" src = {imgscr}/>
 
   return(

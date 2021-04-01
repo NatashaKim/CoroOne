@@ -1,0 +1,10 @@
+div.CommentForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  div.CommentForm--textarea {
+    textarea {
+      background-color: var(--ice-white);
+    }
+  }
+}
