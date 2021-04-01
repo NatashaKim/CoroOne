@@ -23,19 +23,19 @@ class O_comment extends React.Component {
 
     return (
       <div className="Comment">
-
-        <M_user_info user={this.state.author} />
-        <div className="Comment-text">
-          {this.props.comment.body}
-        </div>
         <M_commentform
           user={this.props.currentUser}
           parent_id={this.props.comment.id}
           post_id={this.props.post.id}
         />
+        <M_user_info user={this.state.author} />
+        <div className="Comment-text">
+          {this.props.comment.body}
+        </div>
+
 
         <div>
-          childComments length = {childComments.length}
+
           {childComments.map(c =>
             <div className = "comment_container">
             <O_comment

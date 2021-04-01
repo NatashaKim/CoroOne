@@ -2,13 +2,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import A_category from "./A_category"
 import A_hashtag from "./A_hashtag"
+import M_user_info from "./M_user_info"
+import '../../assets/stylesheets/M_postview.scss'
+
 class M_postview extends React.Component {
   render() {
     let categoryTag='';
 
-    if (this.props.category) {
-      categoryTag = <p>Category:{this.props.category.name}</p>;
-    }
+
 
     let myRe = new RegExp("#\\w+", "g");
     let myArray = [];
@@ -18,16 +19,17 @@ class M_postview extends React.Component {
     }
 
     return (
-      <div>
+      <div className="m-postview">
         <h1>{this.props.post.title}</h1>
-            <p>Category_id:{`${this.props.post.category_id}`}</p>
+
 
             {categoryTag}
             <A_category post = {this.props.post} category = {this.props.category}/>
             <A_hashtag post = {this.props.post} tagKinds = "h--hashtag"/>
-            <p>ID: {`${this.props.post.id}`}</p>
-            <p>Author: {`${this.props.post.author}`}</p>
-            <p>Content: {`${this.props.post.content}`}</p>
+
+            <p>{`${this.props.post.author}`}</p>
+            <M_user_info user={this.props.post.author} />
+            <p className="content">{`${this.props.post.content}`}</p>
       </div>
     );
   }

@@ -2,6 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import A_avatar from "./A_avatar"
 import A_debug from "./A_debug"
+import '../../assets/stylesheets/M_user_info.scss'
+
 class M_user_info extends React.Component {
   render () {
     if (!this.props.user) {return "Нет юзера"}
