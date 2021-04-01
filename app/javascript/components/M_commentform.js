@@ -50,7 +50,7 @@ class M_commentform extends React.Component {
 
         </div>
         <A_button
-          value = "Опубликовать комментарий"
+          value = "Отправить"
           type = "submit"
           buttonSize = "btn--small"
           buttonColor = "btn--blue"

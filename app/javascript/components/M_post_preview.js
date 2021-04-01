@@ -84,7 +84,7 @@ class M_post_preview extends React.Component {
              headingStyle = {headingStyle}/>
            </div>
             <A_button
-               type = "Читать"
+               value = "Читать"
                buttonSize = "btn--small"
                buttonColor = "btn--green">
             </A_button>
