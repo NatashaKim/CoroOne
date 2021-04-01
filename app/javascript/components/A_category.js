@@ -13,6 +13,7 @@ const STYLES = [
 const TYPES = [
   'default',
   'image',
+  'text_with_image',
 ];
 
 const COLORS = [
@@ -43,6 +44,8 @@ class A_category extends React.Component {
        imgsrc = '';
     } else if (this.props.category.imagesrc == null) {
        imgsrc = '';
+    } else if (checkCategoryTypes == TYPES[1]) {
+       imgsrc = this.props.category.imagesrc, category = '';
     } else {
       imgsrc = this.props.category.imagesrc;
     }

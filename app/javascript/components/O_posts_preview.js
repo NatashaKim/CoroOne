@@ -27,7 +27,7 @@ render_part(some_posts){
     <div>
       <div className = "News_grid">
         {some_posts.slice(0, top_slice).map(post => (
-          <M_post_preview key = {post.id} post = {post} category = {post.category} post_number = {postNumber = postNumber + 1} postStyle = 'ps--horizontal' post_type_id = {this.props.post_type_id}  />
+          <M_post_preview key = {post.id} post = {post} category = {post.category} post_type_id = {this.props.post_type_id}  />
         ))}
       </div>
 

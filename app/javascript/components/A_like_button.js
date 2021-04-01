@@ -12,8 +12,8 @@ class A_like_button extends React.Component {
   constructor(props) {
       super(props);
       this.state={
-        likes_count: this.props.likes.length,
-        pre_like: this.props.likes.find((element, index, array) => {return element.user_id ==this.props.current_user_id}),
+        likes_count: this.props.likes ? this.props.likes.length : 0,
+        pre_like: this.props.likes ? this.props.likes.find((element, index, array) => {return element.user_id ==this.props.current_user_id}) : null
       }
 }
 

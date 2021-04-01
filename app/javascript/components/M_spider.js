@@ -37,7 +37,7 @@ class M_spider extends React.Component {
                headingStyle = 'h4'/>
              </div>
               <A_button
-                 type = "Читать"
+                 value = "Читать"
                  buttonSize = "btn--small"
                  buttonColor = "btn--green">
               </A_button>

@@ -1,17 +1,16 @@
 import React from "react"
 
 import axios from 'axios';
-import DropdownDate from "react-dropdown-date";
+import { YearPicker, MonthPicker, DayPicker } from 'react-dropdown-date';
 import PropTypes from "prop-types"
 import A_select from "./A_select"
 import A_textarea from "./A_textarea"
 import A_input from "./A_input"
 import A_button from "./A_button"
 import {availableCategories} from './Api.js';
-import '../../assets/stylesheets/O_postform.scss'
 
-const formatDate = date => {
-  var d = new Date(date),
+let formatDate = project_start_date => {
+  var d = new Date(project_start_date),
     month = "" + (d.getMonth() + 1),
     year = d.getFullYear();
 
@@ -20,30 +19,25 @@ const formatDate = date => {
   return [year, month].join("-");
 };
 
-class O_necrologyform extends React.Component {
+class O_necrologyform2 extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
         title: props.post.title ? props.post.title : '',
         category_id: props.post.category_id ? props.post.category_id : '',
 
-        project_start_date: props.post.project_start_date ? props.post.project_start_date : '',
-
-        project_end_date: props.post.project_end_date ? props.post.project_end_date : '',
-
-        years: props.years ? props.years : [],
-        months: props.years ? props.years : [],
+        year: null, month: null,
+        project_start_date: null,
+        categories: props.categories ? props.categories : [],
         content: props.post.content ? props.post.content : '',
         image: props.post.image ? props.post.image : '',
-        feedback: props.post.feedback ? props.post.feedback : '',
-        date: null, selectedDate: "2012-11"
+        post_type_id: props.post.post_type_id ? props.post.post_type_id : '',
+        feedback: props.post.feedback ? props.post.feedback : ''
 
 }
     ;
       this.handleTitleChange = this.handleTitleChange.bind(this);
       this.handleCategoryChange = this.handleCategoryChange.bind(this);
-      this.handleStartDateChange = this.handleStartDateChange.bind(this);
-      this.handleEndDateChange = this.handleEndDateChange.bind(this);
       this.handleContentChange = this.handleContentChange.bind(this);
       this.handleImageChange = this.handleImageChange.bind(this);
       this.handleFeedbackChange = this.handleFeedbackChange.bind(this);
@@ -61,12 +55,6 @@ class O_necrologyform extends React.Component {
     handleCategoryChange(e) {
       this.setState({ category_id: e.target.value });
     }
-    handleStartDateChange(e) {
-      this.setState({ project_start_date: e.target.value });
-    }
-    handleEndDateChange(e) {
-      this.setState({ project_start_date: e.target.value });
-    }
     handleContentChange(e) {
       this.setState({ content: e.target.value });
     }
@@ -78,6 +66,7 @@ class O_necrologyform extends React.Component {
     }
 
 
+
     render() {
       return (
         <div className = "postform">
@@ -85,6 +74,12 @@ class O_necrologyform extends React.Component {
             type="hidden"
             name="authenticity_token"
             value={this.state.authenticity_token}
+          />
+
+          <input
+            type="hidden"
+            name="post[project_start_date]"
+            value={this.state.project_start_date}
           />
 
           <label>Название игры</label>
@@ -107,30 +102,38 @@ class O_necrologyform extends React.Component {
            />
 
            <label>Дата рождения проекта</label>
-           <DropdownDate
-             onDateChange={date => {
-               this.setState({ date: date, selectedDate: formatDate(date) });
-             }}
-             defaultValues={
-               {
-                 year: "select year",
-                 month: "select month",
-               }
-             }
-           />
+           <YearPicker
+              defaultValue={'select year'}
+              value={this.state.year}
+              onChange={(year) => {
+                this.setState({ year });
+                this.setState({
+                  project_start_date: new Date(year,this.state.month,1)
+                });
+              }}
+              id={'year'}
+              name={'year'}
+              classes={'classes'}
+              optionClasses={'option classes'}
+            />
 
-          <label>Дата смерти проекта</label>
-          <DropdownDate
-            onDateChange={date => {
-              this.setState({ date: date, selectedDate: formatDate(date) });
-            }}
-            defaultValues={
-              {
-                year: "select year",
-                month: "select month",
-              }
-            }
-          />
+            <MonthPicker
+              defaultValue={'select month'}
+              month={this.state.month}
+              value={this.state.month}  
+              onChange={(month) => {
+                this.setState({ month });
+                this.setState({
+                  project_start_date: new Date(this.state.year,month,1)
+                });
+              }}
+              id={'month'}
+              name={'month'}
+              classes={'classes'}
+              optionClasses={'option classes'}
+            />
+
+
 
           <label>Концепция</label>
           <A_textarea
@@ -177,4 +180,4 @@ class O_necrologyform extends React.Component {
     }
   }
 
-export default O_necrologyform
+export default O_necrologyform2

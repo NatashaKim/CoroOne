@@ -25,10 +25,11 @@ const ALIGN = [
 
 const A_text = ({
   children,
-  type,
+  value,
   headingStyle,
   headingColor,
   headingAlign,
+  type,
   title
 }) => {
 
@@ -43,7 +44,7 @@ const A_text = ({
 
   return(
       <span className = {`heading ${checkHeadingStyle} ${checkHeadingColor} ${checkHeadingAlign}`} type = {type}>
-        {title}
+        {value}
       </span>
   )
 }

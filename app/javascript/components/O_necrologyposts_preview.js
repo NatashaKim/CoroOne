@@ -2,10 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import '../../assets/stylesheets/M_categories_nav.scss'
 import {get_posts_by_type} from './Api.js'
-import M_userpost_preview from "./M_userpost_preview"
+import M_necrologypost_preview from "./M_necrologypost_preview"
 
 
-class O_userpost_preview extends React.Component {
+class O_necrologyposts_preview extends React.Component {
   constructor(props) {
       super(props);
       this.state={
@@ -21,16 +21,13 @@ class O_userpost_preview extends React.Component {
     return (
       <div>
         {rest_posts.map(post => (
-          <M_userpost_preview
+          <M_necrologypost_preview
           key = {post.id}
-          post = {post}
-          likes = {post.likes}
-          current_user_id = {this.props.current_user_id}
-          user = {this.props.user} />
+          post = {post}/>
          ))}
       </div>
     );
   }
 }
 
-export default O_userpost_preview
+export default O_necrologyposts_preview
