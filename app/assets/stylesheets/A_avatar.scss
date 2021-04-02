@@ -1,3 +1,6 @@
 .Avatar {
   border-radius: 50%;
+  &.unvisible {
+    display: none;
+  }
 }

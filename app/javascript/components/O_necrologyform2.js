@@ -27,7 +27,9 @@ class O_necrologyform2 extends React.Component {
         category_id: props.post.category_id ? props.post.category_id : '',
 
         year: null, month: null,
+        year_death: null, month_death: null,
         project_start_date: null,
+        project_end_date: null,
         categories: props.categories ? props.categories : [],
         content: props.post.content ? props.post.content : '',
         image: props.post.image ? props.post.image : '',
@@ -82,6 +84,12 @@ class O_necrologyform2 extends React.Component {
             value={this.state.project_start_date}
           />
 
+          <input
+            type="hidden"
+            name="post[project_end_date]"
+            value={this.state.project_end_date}
+          />
+
           <label>Название игры</label>
           <A_input
             inputTypes = "default"
@@ -108,7 +116,7 @@ class O_necrologyform2 extends React.Component {
               onChange={(year) => {
                 this.setState({ year });
                 this.setState({
-                  project_start_date: new Date(year,this.state.month,1)
+                  project_start_date: new Date(year,this.state.month)
                 });
               }}
               id={'year'}
@@ -120,11 +128,11 @@ class O_necrologyform2 extends React.Component {
             <MonthPicker
               defaultValue={'select month'}
               month={this.state.month}
-              value={this.state.month}  
+              value={this.state.month}
               onChange={(month) => {
                 this.setState({ month });
                 this.setState({
-                  project_start_date: new Date(this.state.year,month,1)
+                  project_start_date: new Date(this.state.year,month)
                 });
               }}
               id={'month'}
@@ -132,6 +140,38 @@ class O_necrologyform2 extends React.Component {
               classes={'classes'}
               optionClasses={'option classes'}
             />
+
+            <label>Дата смерти проекта</label>
+            <YearPicker
+               defaultValue={'select year'}
+               value={this.state.year_death}
+               onChange={(year_death) => {
+                 this.setState({ year_death });
+                 this.setState({
+                   project_end_date: new Date(year_death,this.state.month_death)
+                 });
+               }}
+               id={'year_death'}
+               name={'year_death'}
+               classes={'classes_death'}
+               optionClasses={'option classes death'}
+             />
+
+             <MonthPicker
+               defaultValue={'select month'}
+               month_death={this.state.month_death}
+               value={this.state.month_death}
+               onChange={(month_death) => {
+                 this.setState({ month_death });
+                 this.setState({
+                   project_end_date: new Date(this.state.year_death,month_death)
+                 });
+               }}
+               id={'month_death'}
+               name={'month_death'}
+               classes={'classes_death'}
+               optionClasses={'option classes death'}
+             />
 
 
 

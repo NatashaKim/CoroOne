@@ -4,16 +4,29 @@ import A_category from "./A_category"
 import A_post_title from "./A_post_title"
 import A_button from "./A_button"
 import A_text from "./A_text"
-import '../../assets/stylesheets/M_post_preview.scss'
+import M_user_info from "./M_user_info"
+import A_dates_of_life from "./A_dates_of_life"
+import '../../assets/stylesheets/M_necrologypost_preview.scss'
+import {getuser} from './Api.js';
 
 
 class M_necrologypost_preview extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state={
+        author: null
+      };
+
+      getuser(this.props.post.user_id).then((u)=>{
+        this.setState({author: u})
+      });
+}
 
   render () {
 
     let imgsrc = '';
-    if (!this.props.post.image) {
-      imgsrc = '/assets/avatar_default.svg';
+    if (!this.props.post.image.thumb.url) {
+      imgsrc = '/assets/grave_project_placeholder.svg';
     } else {
       imgsrc = this.props.post.image.thumb.url;
     }
@@ -26,14 +39,16 @@ class M_necrologypost_preview extends React.Component {
             />
             <A_post_title
              post = {this.props.post}
-             headingColor = 'ice-white'
+             headingStyle = 'h6'
+             headingColor = 'navy-blue'
              headingAlign = 'center_align'/>
-          <A_text value = {this.props.post.project_start_date}/>
-          <A_text value = {this.props.post.project_end_date}/>
+           <A_dates_of_life post = {this.props.post}/>
            <A_category
            category = {this.props.post.category}
            categoryTypes = "image"/>
-            <A_text value = "Любимый ребенок пользователя GROOMka"/>
+           <div>Любимый ребенок пользователя
+           <M_user_info user={this.state.author} infoType = 'without_avatar' />
+           </div>
             <A_button
                value = "F"
                buttonSize = "btn--small"
