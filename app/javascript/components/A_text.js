@@ -7,6 +7,7 @@ import '../../assets/stylesheets/colors.scss'
 
 const STYLES = [
   'p1',
+  'p2',
   'p3',
   'p4',
   'small6'
@@ -15,6 +16,7 @@ const STYLES = [
 const COLORS = [
   'mineral-gray',
   'ice-white',
+  'zelda-green',
   'cold-black'
 ]
 

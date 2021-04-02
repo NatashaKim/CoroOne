@@ -4,7 +4,6 @@ import '../../assets/stylesheets/A_textarea.scss'
 
 const TYPES = [
   'textarea--small',
-  'textarea--big',
   'textarea--hidden'
 ]
 

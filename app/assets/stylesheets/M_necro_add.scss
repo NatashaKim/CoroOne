@@ -1,0 +1,17 @@
+.Necro_add {
+  background-color: var(--mineral-gray);
+  border-radius: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1200px;
+  height: 296px;
+  box-sizing: border-box;
+  padding: 56px 80px 56px 100px;
+  margin-top: 24px;
+  margin-bottom: 154px;
+  .Necro_add_text {
+    width: 412px;
+    height: fit-content;
+  }
+}

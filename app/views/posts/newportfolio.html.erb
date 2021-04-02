@@ -1,7 +1,6 @@
 <body class="new_post">
-  <div class="new_userpost_wrapper">
+  <div class="new_post_wrapper">
     <%= react_component 'A_title', { title: "Новый пост", headingStyle: 'h2' } %>
     <%= render 'formportfolio', post: @post, author: current_user %>
-    <%= link_to 'Назад', admin_context_path(posts: "", post_type: "Мастерская") %>
   </div>
 </body>

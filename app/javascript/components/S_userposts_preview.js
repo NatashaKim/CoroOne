@@ -19,7 +19,7 @@ class S_userposts_preview extends React.Component {
     if (!this.state.posts) {return ""}
     let rest_posts = this.state.posts;
     return (
-      <div>
+      <div className = "Userposts_grid" >
         {rest_posts.map(post => (
           <O_userpost_preview
           key = {post.id}
