@@ -42,6 +42,12 @@
 
 }
 
+.btn--micro {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+}
+
 /* Button colors */
 
 .btn--create-smth {
@@ -167,5 +173,11 @@
 .btn--gray:hover {
   background-color: darken(#9896AE, 3%);
   color: darken(#F9F9FF, 1%);
+  border: none;
+}
+
+.btn--necro {
+  background-color: var(--mineral-gray);
+  color: var(--neon-blue);
   border: none;
 }

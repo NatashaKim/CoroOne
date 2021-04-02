@@ -4,7 +4,7 @@ import A_category from "./A_category"
 import A_post_title from "./A_post_title"
 import A_button from "./A_button"
 import A_text from "./A_text"
-import M_user_info from "./M_user_info"
+import A_username from "./A_username"
 import A_dates_of_life from "./A_dates_of_life"
 import '../../assets/stylesheets/M_necrologypost_preview.scss'
 import {getuser} from './Api.js';
@@ -33,10 +33,14 @@ class M_necrologypost_preview extends React.Component {
 
 
     return (
-      <div className = {`Post_preview`}>
+      <div className = {`Necrologypost_preview`}>
+         <div className = "Necro_wrapper">
+
             <img className = "Necro_img"
               src = {imgsrc}
             />
+
+
             <A_post_title
              post = {this.props.post}
              headingStyle = 'h6'
@@ -46,13 +50,22 @@ class M_necrologypost_preview extends React.Component {
            <A_category
            category = {this.props.post.category}
            categoryTypes = "image"/>
-           <div>Любимый ребенок пользователя
-           <M_user_info user={this.state.author} infoType = 'without_avatar' />
+
+
+           <div className = "Necro_user">
+             <span className = "small6 mineral-gray">Любимый ребенок пользователя </span>
+             <A_username user={this.state.author} usernameStyle ='small4' usernameColor='mineral-gray' />
            </div>
+
+           </div>
+
+           <div className = "Necro_F">
+            <span className = "p4 navy-blue" >Отдать честь проекту </span>
             <A_button
                value = "F"
-               buttonSize = "btn--small"
-               buttonColor = "btn--green"/>
+               buttonSize = "btn--micro"
+               buttonColor = "btn--necro"/>
+           </div>
 
       </div>
     );

@@ -11,7 +11,7 @@ class A_dates_of_life extends React.Component {
     let end_month = end_date.getMonth()+1;
     let end_year = end_date.getFullYear();
     return (
-      <div className = "Heading small5 mineral-gray">
+      <div className = "Dates_of_life small5 mineral-gray">
         {start_month}.{start_year} - {end_month}.{end_year}
       </div>
     );

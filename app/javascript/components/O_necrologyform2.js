@@ -94,9 +94,9 @@ class O_necrologyform2 extends React.Component {
           <A_input
             inputTypes = "default"
             type="text"
-            name="post[name]"
-            value={this.state.name}
-            onChange={this.handleNameChange}
+            name="post[title]"
+            value={this.state.title}
+            onChange={this.handleTitleChange}
           />
 
           <label>Жанр игры</label>

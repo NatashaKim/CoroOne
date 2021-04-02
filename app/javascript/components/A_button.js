@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import '../../assets/stylesheets/button.scss'
+import '../../assets/stylesheets/A_button.scss'
 import '../../assets/stylesheets/colors.scss'
 
 
@@ -8,7 +8,8 @@ const SIZES = [
   'btn--small',
   'btn--medium',
   'btn--large',
-  'btn--img'
+  'btn--img',
+  'btn--micro'
 ]
 
 const COLORS = [
@@ -23,7 +24,8 @@ const COLORS = [
   'btn--create-smth',
   'btn--create-project',
   'btn--add-photo',
-  'btn--play'
+  'btn--play',
+  'btn--necro'
 ]
 
 const IMG = [
