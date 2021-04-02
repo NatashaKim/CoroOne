@@ -60,7 +60,7 @@ class M_necrologypost_preview extends React.Component {
            </div>
 
            <div className = "Necro_F">
-            <span className = "p4 navy-blue" >Отдать честь проекту </span>
+            <span className = "p4 navy-blue" >Отдать честь проекту</span>
             <A_button
                value = "F"
                buttonSize = "btn--micro"

@@ -19,7 +19,7 @@ class O_necrologyposts_preview extends React.Component {
     if (!this.state.posts) {return ""}
     let rest_posts = this.state.posts;
     return (
-      <div>
+      <div className = "Necrologies_grid">
         {rest_posts.map(post => (
           <M_necrologypost_preview
           key = {post.id}

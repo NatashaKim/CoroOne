@@ -5,9 +5,10 @@ import A_icon from "./A_icon.js"
 import A_title from "./A_title.js"
 
 const TYPES = [
-  'more news',
-  'more articles',
-  'more reviews'
+  'more_news',
+  'more_articles',
+  'more_reviews',
+  'more_necrologies'
 ];
 
 class M_more_info extends React.Component {
@@ -32,6 +33,10 @@ class M_more_info extends React.Component {
         more_info_href = "/posts/by_type/Обзоры",
         more_info_title = "Все обзоры";
         more_info_style = 'h4';
+      } else if (checkMoreInfoType == TYPES[3]) {
+        more_info_href = "/posts/by_type/Кладбище проектов",
+        more_info_title = "Все проекты";
+        more_info_style = 'h4';
       } else {
         more_info_href = "",
         more_info_title = "",
@@ -39,7 +44,7 @@ class M_more_info extends React.Component {
       }
 
       return (
-        <div className = "More_info">
+        <div className = {`More_info ${checkMoreInfoType}`}>
           <a href = {more_info_href}>
             <A_title
             headingStyle = {more_info_style}

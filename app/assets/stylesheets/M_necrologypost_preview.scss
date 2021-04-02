@@ -37,9 +37,14 @@
     .Necro_user {
       text-align: center;
       span {
-            line-height: 12px;
+        line-height: 12px;
       }
     }
-
+  }
+  .Necro_F {
+    width: 202px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }

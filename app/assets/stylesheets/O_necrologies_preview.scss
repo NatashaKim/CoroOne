@@ -1,0 +1,10 @@
+.Necrologies_grid {
+  margin: 0 auto;
+  width: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  grid-gap: 44px;
+  margin-bottom: 24px;
+
+}
