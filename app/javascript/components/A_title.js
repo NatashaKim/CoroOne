@@ -7,6 +7,7 @@ import '../../assets/stylesheets/colors.scss'
 
 const STYLES = [
   'h1',
+  'h2',
   'h3',
   'h4',
   'h5',

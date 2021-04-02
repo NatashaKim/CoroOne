@@ -1,7 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import A_avatar from "./A_avatar"
-import A_debug from "./A_debug"
 
 const STYLES = [
   'h6',

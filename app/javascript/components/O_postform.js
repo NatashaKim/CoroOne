@@ -88,7 +88,7 @@ class O_postform extends React.Component {
 
           <label>Заголовок</label>
           <A_input
-            inputTypes = "default"
+            inputTypes = "password"
             type="text"
             name="post[title]"
             value={this.state.title}

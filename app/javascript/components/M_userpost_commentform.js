@@ -5,7 +5,7 @@ import A_button from "./A_button"
 import A_input from "./A_input"
 import '../../assets/stylesheets/M_commentform.scss'
 
-class M_commentform extends React.Component {
+class M_userpost_commentform extends React.Component {
 
   constructor(props) {
       super(props);
@@ -34,31 +34,20 @@ class M_commentform extends React.Component {
       action={'/posts/'+this.props.post_id+'/comments' + "?authenticity_token="+encodeURIComponent(this.state.token)}
       method='post'
       >
-      <div className="CommentForm">
-        <A_avatar user={this.props.user} />
-        <div className="CommentForm--textarea">
+        <div className="Userpost_commentform">
+          <A_avatar user={this.props.user} />
           <A_input
             type="text"
-            inputPlace = "registration"
+            inputPlace = "workshop_comment"
             name="comment[body]"
             placeholder="Напишите комментарий"
             value={this.state.content}
             onChange={this.handleContentChange}
           />
-
-
         </div>
-        <A_button
-          value = "Отправить"
-          type = "submit"
-          buttonSize = "btn--small"
-          buttonColor = "btn--blue"
-        />
-
-      </div>
       </form>
     );
   }
 }
 
-export default M_commentform
+export default M_userpost_commentform

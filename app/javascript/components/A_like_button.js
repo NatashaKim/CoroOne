@@ -67,7 +67,7 @@ getImg = () => this.state.pre_like ? imageSrc.fill : imageSrc.unfill
           }
 
         }><img src={this.getImg()}/></button>
-        <span>{this.state.likes_count}</span>
+        <span className='p3 mineral-gray'>{this.state.likes_count}</span>
       </div>
     );
 
