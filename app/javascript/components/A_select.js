@@ -3,8 +3,7 @@ import PropTypes from "prop-types"
 
 const A_select = props => {
   return (
-    <div className="form-group">
-      <label for={props.name}> {props.title} </label>
+
       <select
         id={props.id}
         name={props.name}
@@ -23,7 +22,6 @@ const A_select = props => {
           );
         })}
       </select>
-    </div>
   );
 };
 

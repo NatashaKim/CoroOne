@@ -6,6 +6,7 @@ import PropTypes from "prop-types"
 import A_select from "./A_select"
 import A_textarea from "./A_textarea"
 import A_input from "./A_input"
+import A_label from "./A_label"
 import A_button from "./A_button"
 import {availableCategories} from './Api.js';
 
@@ -25,7 +26,6 @@ class O_necrologyform2 extends React.Component {
       this.state = {
         title: props.post.title ? props.post.title : '',
         category_id: props.post.category_id ? props.post.category_id : '',
-
         year: null, month: null,
         year_death: null, month_death: null,
         project_start_date: null,
@@ -71,7 +71,8 @@ class O_necrologyform2 extends React.Component {
 
     render() {
       return (
-        <div className = "postform">
+        <div className = "Postform">
+        <div className = "Postform_body">
           <input
             type="hidden"
             name="authenticity_token"
@@ -90,8 +91,10 @@ class O_necrologyform2 extends React.Component {
             value={this.state.project_end_date}
           />
 
-          <label>Название игры</label>
+          <A_label
+          label = "Название игры"/>
           <A_input
+            inputPlace = "new_post"
             inputTypes = "default"
             type="text"
             name="post[title]"
@@ -99,9 +102,10 @@ class O_necrologyform2 extends React.Component {
             onChange={this.handleTitleChange}
           />
 
-          <label>Жанр игры</label>
+            <A_label
+            label = "Жанр  игры"/>
             <A_select
-             title={"Жанр  игры"}
+
              name="post[category_id]"
              value={this.state.category}
              placeholder={"Select"}
@@ -109,8 +113,10 @@ class O_necrologyform2 extends React.Component {
              options={this.state.categories}
            />
 
-           <label>Дата рождения проекта</label>
+           <A_label
+           label = "Дата рождения проекта"/>
            <YearPicker
+              className = "Date_style"
               defaultValue={'select year'}
               value={this.state.year}
               onChange={(year) => {
@@ -126,6 +132,7 @@ class O_necrologyform2 extends React.Component {
             />
 
             <MonthPicker
+              className = "Date_style"
               defaultValue={'select month'}
               month={this.state.month}
               value={this.state.month}
@@ -141,8 +148,10 @@ class O_necrologyform2 extends React.Component {
               optionClasses={'option classes'}
             />
 
-            <label>Дата смерти проекта</label>
+            <A_label
+            label = "Дата смерти проекта"/>
             <YearPicker
+               className = "Date_style"
                defaultValue={'select year'}
                value={this.state.year_death}
                onChange={(year_death) => {
@@ -158,6 +167,7 @@ class O_necrologyform2 extends React.Component {
              />
 
              <MonthPicker
+               className = "Date_style"
                defaultValue={'select month'}
                month_death={this.state.month_death}
                value={this.state.month_death}
@@ -175,7 +185,8 @@ class O_necrologyform2 extends React.Component {
 
 
 
-          <label>Концепция</label>
+          <A_label
+          label = "Концепция"/>
           <A_textarea
             textareaType = "textarea--small"
             type="text"
@@ -185,14 +196,18 @@ class O_necrologyform2 extends React.Component {
           />
 
 
-          <label>Обложка проекта</label>
+          <A_label
+          label = "Обложка проекта"/>
           <input
+            className = "File_input"
             type="file"
             name="post[image]"
             onChange={this.handleImageChange}
           />
 
-          <label>Обратная связь (необязательно)</label>
+
+          <A_label
+          label = "Обратная связь (необязательно)"/>
           <A_textarea
             textareaType = "textarea--small"
             type="text"
@@ -207,14 +222,15 @@ class O_necrologyform2 extends React.Component {
             name="post[post_type_id]"
             value={this.state.post_type_id}
           />
+          
+          </div>
 
           <A_button
-            type = "Создать пост"
+            value = "Создать пост"
             buttonSize = "btn--small"
             buttonColor = "btn--gray">
           </A_button>
 
-          <input type="submit" value="Create post" />
         </div>
       );
     }

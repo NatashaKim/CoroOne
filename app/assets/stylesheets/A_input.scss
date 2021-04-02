@@ -50,6 +50,7 @@
    &.new_post {
      border-radius: 24px;
      width: 674px;
+     margin-bottom: 42px;
      input {
        font-size: 18px;
        background-color: var(--light-purple);
@@ -68,4 +69,8 @@
       }
    }
 
+}
+
+.File_input {
+  margin-bottom: 42px;
 }
