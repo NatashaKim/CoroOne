@@ -41,7 +41,7 @@ class A_avatar extends React.Component {
 
 
       <div>
-        <img className = {`Avatar ${checkavatarType}`}
+        <img className = {`Avatar`}
           onClick = {this.props.onClick}
           src = {imgsrc}
           alt = { this.props.user ? this.props.user.name: 'Oops!'}

@@ -8,7 +8,7 @@
       <%= react_component 'M_postview', { category: @category, categories: @categories, post: @post } %>
 
 
-  
+
     <%= react_component 'A_favorite_button', { post: @post, favorites: @post.favorites, current_user_id: current_user.id } %>
 
       </div>
@@ -34,5 +34,5 @@
       <% end %>
       <%= link_to 'Назад', admin_context_path(curatorposts: "") %>
       </div>
-  </div>
+
 </body>

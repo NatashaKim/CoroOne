@@ -11,15 +11,15 @@ class PostsController < ApplicationController
     @post_types = PostType.all
     if params.has_key?(:category)
       @category = Category.find_by_name(params[:category])
-      @posts = Post.where(category: @category).includes(:category, :likes).map do
+      @posts = Post.where(category: @category).includes(:category, :likes, :favorites).map do
         |post|
-        post.as_json(include: [:category, :image, :likes])
+        post.as_json(include: [:category, :image, :likes, :favorites])
       end
       #render json: @posts, include: [:category]
     else
-      @posts = Post.all.includes(:category, :likes).map do
+      @posts = Post.all.includes(:category, :likes, :favorites).map do
         |post|
-        post.as_json(include: [:category, :image, :likes])
+        post.as_json(include: [:category, :image, :likes, :favorites])
       end
       #render json: { posts: @posts }
     end

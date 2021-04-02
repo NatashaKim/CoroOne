@@ -1,12 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import A_avatar from "./A_avatar"
+import A_username from "./A_username"
 import A_debug from "./A_debug"
 import '../../assets/stylesheets/M_user_info.scss'
 
 const TYPES = [
-  'with_avatar',
-  'without_avatar'
+  'for_post',
+  'for_project',
+  'for_avatar',
 ]
 
 class M_user_info extends React.Component {
@@ -20,20 +22,23 @@ class M_user_info extends React.Component {
     let checkInfoType = TYPES.includes(this.props.infoType)
     ? this.props.infoType : TYPES[0]
 
-    let avatarType = ''
+    let time = ''
+    let usernameStyle = ''
+    let usernameColor = ''
 
-    if (checkInfoType == TYPES[1]) {
-      avatarType = 'unvisible'
-    } else {
-      avatarType = 'visible'
+    if (checkInfoType == TYPES[0]) {
+      time = '5 часов назад',
+      usernameStyle = 'h6',
+      usernameColor = 'cold-black'
     }
 
     return (
       <div>
-      <div className="UserInfo">
-        <A_avatar avatarSizes = "small_thumb" user = {this.props.user} avatarType = {avatarType}/>
-        <div className="UserInfo-name">
-          {this.props.user.username}
+      <div className={`UserInfo ${checkInfoType}`}>
+        <A_avatar avatarSizes = "small_thumb" user = {this.props.user}/>
+        <div className="UserInfo_text">
+          <A_username usernameStyle = {usernameStyle} usernameColor = {usernameColor} user = {this.props.user}/>
+          <span className="UserInfo_time p4 mineral-gray" >{time}</span>
         </div>
       </div>
       </div>

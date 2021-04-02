@@ -12,8 +12,8 @@ class A_favorite_button extends React.Component {
   constructor(props) {
       super(props);
       this.state={
-        favorites_count: this.props.favorites.length,
-        pre_favorite: this.props.favorites.find((element, index, array) => {return element.user_id ==this.props.current_user_id}),
+        favorites_count: this.props.favorites ? this.props.favorites.length : 0,
+        pre_favorite: this.props.favorites ? this.props.favorites.find((element, index, array) => {return element.user_id ==this.props.current_user_id}) : null,
       }
 }
 

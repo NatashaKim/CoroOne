@@ -26,26 +26,26 @@ const ALIGN = [
 const A_text = ({
   children,
   value,
-  headingStyle,
-  headingColor,
-  headingAlign,
+  textStyle,
+  textColor,
+  textAlign,
   type,
   title
 }) => {
 
-  const checkHeadingStyle = STYLES.includes(headingStyle)
-  ? headingStyle : STYLES[0]
+  const checkTextStyle = STYLES.includes(textStyle)
+  ? textStyle : STYLES[0]
 
-  const checkHeadingColor = COLORS.includes(headingColor)
-  ? headingColor : COLORS[0]
+  const checkTextColor = COLORS.includes(textColor)
+  ? textColor : COLORS[0]
 
-  const checkHeadingAlign = ALIGN.includes(headingAlign)
-  ? headingAlign : ALIGN[0]
+  const checkTextAlign = ALIGN.includes(textAlign)
+  ? textAlign : ALIGN[0]
 
   return(
-      <span className = {`heading ${checkHeadingStyle} ${checkHeadingColor} ${checkHeadingAlign}`} type = {type}>
+      <p className = {`Text ${checkTextStyle} ${checkTextColor} ${checkTextAlign}`} type = {type}>
         {value}
-      </span>
+      </p>
   )
 }
 

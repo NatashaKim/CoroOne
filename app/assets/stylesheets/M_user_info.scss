@@ -1,0 +1,16 @@
+.UserInfo {
+  display: flex;
+  .UserInfo_text {
+    display: flex;
+    flex-direction: column;
+  }
+  &.for_post {
+    padding-bottom: 20px;
+    .UserInfo_text {
+      margin-left: 12px;
+      .UserInfo_time {
+        line-height: 20px;
+      }
+    }
+  }
+}
