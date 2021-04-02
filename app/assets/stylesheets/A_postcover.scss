@@ -1,0 +1,9 @@
+.Postcover_container {
+  width: 1440px;
+  height: 502px;
+  display: flex;
+  .Postcover {
+    object-fit: cover;
+    width: 100%;
+  }
+}

@@ -21,7 +21,7 @@ class M_postview extends React.Component {
 
     return (
       <div className="m-postview">
-      <A_postcover post = {this.props.post}/>
+           <A_postcover post = {this.props.post}/>
         <h1>{this.props.post.title}</h1>
 
 

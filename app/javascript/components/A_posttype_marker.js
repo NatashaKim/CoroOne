@@ -9,7 +9,7 @@ class A_posttype_marker extends React.Component {
   render () {
     return (
       <div className = "Posttype_marker">
-        <img className = "Marker" src = '/assets/posttype_marker.svg'>
+        <img className = "Marker" src = '/assets/posttype_marker.svg'/>
         <a href={`/posts/by_type/${this.props.post_type.name}`} >
           {this.props.post_type.name}
         </a>
@@ -18,4 +18,4 @@ class A_posttype_marker extends React.Component {
   }
 }
 
-export default A_category
+export default A_posttype_marker

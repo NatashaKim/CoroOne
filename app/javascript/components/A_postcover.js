@@ -13,7 +13,7 @@ class A_postcover extends React.Component {
     }
 
     return(
-      <div>
+      <div className = "Postcover_container">
         <img className = {`Postcover`}
           src = {imgsrc}
         />
