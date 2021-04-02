@@ -60,6 +60,8 @@ class PostsController < ApplicationController
       render 'showpuzzle'
     elsif @post.post_type.name == "Мастерская"
      render 'showuserpost'
+    elsif @post.post_type.name == "Кладбище проектов"
+     render 'shownecrology'
     else
       render 'show'
     end
