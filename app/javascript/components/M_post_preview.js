@@ -4,6 +4,7 @@ import A_category from "./A_category"
 import A_post_title from "./A_post_title"
 import A_button from "./A_button"
 import '../../assets/stylesheets/M_post_preview.scss'
+import '../../assets/stylesheets/colors.scss'
 
 
 const STYLES = [

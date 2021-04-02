@@ -17,6 +17,12 @@
       align-items: center;
       display: flex;
       flex-direction: column;
+      a:first-child {
+        color: var(--zelda-green);
+      }
+      a:last-child {
+        color: var(--ice-white);
+      }
     }
   }
 
