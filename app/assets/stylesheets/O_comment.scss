@@ -1,3 +1,32 @@
 .comment_container {
   padding-left: 100px;
 }
+.comments {
+  padding-left: 120px;
+  .heading {
+    margin-bottom: 48px;
+    margin-top: 80px;
+    display: block;
+  }
+  .Comment {
+    display: flex;
+    flex-direction: column;
+    width: 675px;
+    margin-bottom: 32px;
+    .UserInfo {
+      &for_post {
+        padding-bottom: 12px;
+      }
+    }
+    button {
+      width: fit-content;
+      border: none;
+      align-self: flex-end;
+    }
+  }
+  .CommentForm {
+    width: 675px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

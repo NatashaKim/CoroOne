@@ -5,7 +5,7 @@
 
       <div class="comments">
 
-      <%= react_component 'A_title', { headingStyle: "h3", headingColor: "mineral-gray", title: "Комментарии" } %>
+      <%= react_component 'A_title', { headingStyle: "h3", headingColor: "mineral-gray", title: "Комментарии", headingAlign: "left_align"} %>
 
       <% topComments = @post.comments.select{|c| ! c.parent_id} %>
       <%= render topComments %>
