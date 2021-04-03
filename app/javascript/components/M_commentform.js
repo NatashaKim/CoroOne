@@ -39,12 +39,23 @@ class M_commentform extends React.Component {
         <div className="CommentForm--textarea">
           <A_input
             type="text"
-            inputPlace = "registration"
+            inputPlace = "pub_comment"
             name="comment[body]"
             placeholder="Напишите комментарий"
             value={this.state.content}
             onChange={this.handleContentChange}
           />
+
+          <input
+             type="hidden"
+             name="comment[parent_id]"
+             value={this.props.parent_id}
+           />
+           <input
+             type="hidden"
+             name="comment[post_id]"
+             value={this.props.post_id}
+           />
 
 
         </div>
