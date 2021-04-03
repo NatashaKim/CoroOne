@@ -23,5 +23,11 @@ body {
      background-color: var(--light-gray);
      overflow-x: hidden;
      border-radius: 64px;
+     a {
+       text-decoration: none;
+     }
+     div {
+       box-sizing: border-box;
+     }
    }
  }

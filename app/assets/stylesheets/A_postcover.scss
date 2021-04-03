@@ -1,9 +1,20 @@
 .Postcover_container {
-  width: 1440px;
-  height: 502px;
   display: flex;
   .Postcover {
     object-fit: cover;
     width: 100%;
+  }
+  &.publication {
+    width: 1440px;
+    height: 502px;
+  }
+  &.necrology {
+    width: 152px;
+    height: 152px;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    .Postcover {
+      border-radius: 50%;
+    }
   }
 }

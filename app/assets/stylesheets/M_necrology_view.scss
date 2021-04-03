@@ -1,0 +1,36 @@
+.Necrology_view {
+  .Necrology_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-right: 208px;
+    .Necro_user_inside {
+      background-image: url('/assets/necro_user_back.svg');
+      width: 484px;
+      box-sizing: border-box;
+      height: 220px;
+      padding: 80px 120px 0 80px;
+      background-repeat: no-repeat;
+      display: inline-block;
+    }
+  }
+
+  .Necro_main_info {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: -120px;
+    width: fit-content;
+    align-items: center;
+    margin-bottom: 48px;
+    .Dates_of_life {
+      font-family: "PT Mono";
+      font-size: 14px;
+      margin-top: 8px;
+    }
+  }
+  p {
+    width: 676px;
+    margin: 0 auto;
+  }
+}

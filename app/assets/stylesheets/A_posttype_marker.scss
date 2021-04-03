@@ -1,0 +1,14 @@
+.Posttype_marker {
+  width: 118px;
+  display: inline-block;
+  background-color: var(--zelda-green);
+  padding: 16px 12px;
+  box-sizing: border-box;
+  text-align: center;
+  border-radius: 0 0 16px 16px;
+  a {
+    color: var(--mineral-gray);
+    margin-bottom: 16px;
+    display: block;
+  }
+}

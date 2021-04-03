@@ -1,34 +1,22 @@
 <body class="show_body">
 
-  <div class="wrapper_show">
-    <div class="narrow">
+      <%= react_component 'M_necrology_view', { category: @category, categories: @categories, post: @post, post_type: @post.post_type, category: @post.category } %>
 
-      <%= react_component 'M_userpostview', { post: @post } %>
-      <div class="activity">
-        <%= react_component 'A_like_button', { post: @post, likes: @post.likes, current_user_id: current_user.id } %>
-        <%= react_component 'A_favorite_button', { post: @post, favorites: @post.favorites, current_user_id: current_user.id } %>
-      </div>
-
-  </div>
 
       <div class="comments">
 
       <h2>Комментарии</h2>
-      <% topComments = @post.comments.select{|c| ! c.parent_id} %>
-      <%= render topComments %>
+      <%= react_component 'A_title', { headingStyle: "h3", headingColor: "mineral-gray", title: "Комментарии" } %>
 
-
-      <h2>Добавить комментарий:</h2>
       <% if user_signed_in? %>
         <%= render "comments/form" %>
       <% else %>
         <p>Please <%= link_to 'login', new_user_session_path %> or <%= link_to 'register', new_user_registration_path %> to comment.</p>
       <% end %>
+      
+      <% topComments = @post.comments.select{|c| ! c.parent_id} %>
+      <%= render topComments %>
 
-      <% if user_signed_in? %>
-      <%= link_to 'Редактировать', edit_post_path(@post) %> |
-      <% end %>
-      <%= link_to 'Назад', admin_context_path(curatorposts: "") %>
       </div>
-  </div>
+
 </body>

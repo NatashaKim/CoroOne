@@ -1,0 +1,36 @@
+.Necro_feedback {
+  background-color: var(--zelda-green);
+  display: flex;
+  width: 674px;
+  margin: 0 auto;
+  height: 133px;
+  padding: 36px 87px 36px 36px;
+  border-radius: 32px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 44px;
+  .Offer {
+    width: 273px;
+    p.Necro_small_text {
+      margin-top: 8px;
+      width: 273px;
+      font-family: "PT Mono";
+      font-size: 11px;
+      line-height: 14px;
+      color: var(--mineral-gray);
+    }
+  }
+  .Contact {
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p.Necro_small_text {
+      width: 163px;
+      font-family: "PT Mono";
+      font-size: 11px;
+      line-height: 14px;
+      color: var(--mineral-gray);
+    }
+  }
+}
