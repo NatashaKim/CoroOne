@@ -25,6 +25,10 @@ body {
      border-radius: 64px;
      a {
        text-decoration: none;
+       &:hover {
+         background-color: transparent;
+
+       }
      }
      div {
        box-sizing: border-box;

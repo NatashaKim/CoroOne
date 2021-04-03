@@ -22,7 +22,7 @@ class M_postview extends React.Component {
     return (
       <div className="m-postview">
            <A_postcover post = {this.props.post}/>
-        <h1>{this.props.post.title}</h1>
+
 
 
             <A_hashtag post = {this.props.post} tagKinds = "h--hashtag"/>
