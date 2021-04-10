@@ -44,22 +44,25 @@ render_post_without_video (post) {
     let post_with_video = [];
     let post_without_video = [];
 
+    let rest_posts = this.state.posts;
 
-    for (var i = 0; i < this.state.posts.length; i++) {
-      let a = this.state.posts[i];
+    if (this.props.remove_post) {
+
+      for(let i = rest_posts.length-1; i >=0; i--){
+        if(this.props.remove_post.includes(rest_posts[i].id)) rest_posts.splice(i,1);
+      }
+    } else {
+      rest_posts = rest_posts.slice(0, rest_posts.length - 4);
+    }
+
+
+
+    for (var i = 0; i < rest_posts.length; i++) {
+      let a = rest_posts[i];
       if (a.videourl) {post_with_video.push(a);
       } else {
         post_without_video.push(a);
       }
-    }
-
-
-    if (this.props.remove_post) {
-      for(let i = post_without_video.length-1; i >=0; i--){
-        if(this.props.remove_post.includes(post_without_video[i].id)) post_without_video.splice(i,1);
-      }
-    } else {
-      post_without_video = post_without_video.slice(0, post_without_video.length - 4);
     }
 
 

@@ -16,6 +16,11 @@
         <p>Please <%= link_to 'login', new_user_session_path %> or <%= link_to 'register', new_user_registration_path %> to comment.</p>
       <% end %>
 
+      <% if user_signed_in? %>
+      <%= link_to 'Редактировать', edit_post_path(@post) %> |
+      <% end %>
+      <%= link_to 'Назад', admin_context_path(curatorposts: "") %>
+
       </div>
 
 </body>

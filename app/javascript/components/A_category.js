@@ -42,7 +42,7 @@ class A_category extends React.Component {
     let imgsrc = '';
     if (checkCategoryTypes == TYPES[0]) {
        imgsrc = '';
-    } else if (this.props.category.imagesrc == null) {
+    } else if (this.props.category == null) {
        imgsrc = '';
     } else if (checkCategoryTypes == TYPES[1]) {
        imgsrc = this.props.category.imagesrc, category = '';

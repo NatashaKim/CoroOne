@@ -1,3 +1,4 @@
-<%= form_with(model: post, local: true) do |form| %>
+<form enctype="multipart/form-data" action="/posts" accept-charset="UTF-8" method="post">
   <%= react_component 'M_formreviews', { post: @post, categories: @categories } %>
-<% end %>
+
+</form>

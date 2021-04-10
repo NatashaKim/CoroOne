@@ -34,6 +34,12 @@ class O_postform extends React.Component {
 
     }
 
+    componentDidMount(e) {
+        this.setState({
+          authenticity_token: document.querySelector('meta[name="csrf-token"]').content
+        })
+    }
+
     handleCategoryChange(e) {
       this.setState({ category_id: e.target.value });
     }
@@ -60,6 +66,12 @@ class O_postform extends React.Component {
     render() {
       return (
         <div className = "postform">
+
+            <input
+              type="hidden"
+              name="authenticity_token"
+              value={this.state.authenticity_token}
+            />
 
             <A_select
              title={"Жанр"}
@@ -113,6 +125,13 @@ class O_postform extends React.Component {
             name="post[videourl]"
             value={this.state.videourl}
             onChange={this.handleVideourlChange}
+          />
+
+          <label>Картинка</label>
+          <input
+            type="file"
+            name="post[image]"
+            onChange={this.handleImageChange}
           />
 
           <A_textarea
