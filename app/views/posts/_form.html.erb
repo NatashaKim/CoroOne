@@ -1,4 +1,9 @@
-<form enctype="multipart/form-data" action="/posts" accept-charset="UTF-8" method="post">
+<% @action = "/posts/"%>
+  <%if @post.id > 0%>
+    <% @action = @action + @post.id.to_s %>
+  <% end %>
+
+<form enctype="multipart/form-data" action=<%= @action %> accept-charset="UTF-8" method="post">
   <%= react_component 'O_postform', { post: @post, categories: @categories } %>
 
 </form>

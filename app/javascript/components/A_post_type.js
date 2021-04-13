@@ -19,13 +19,13 @@ class A_post_type extends React.Component {
     if (checkPostTypeStyle == STYLES[0]) {
       if (this.props.post_type.id == 1) {
         imgsrc = '/assets/title_news.svg';
-      } else if(this.props.post_type.id == 3) {
-        imgsrc = '/assets/title_portfolio.svg';
-      } else if (this.props.post_type.id == 4) {
-         imgsrc = '/assets/title_reviews.svg';
-      } else if (this.props.post_type.id == 5){
+      } else if (this.props.post_type.id == 2){
         imgsrc = '/assets/title_articles.svg';
-      } else if (this.props.post_type.id == 8){
+      } else if (this.props.post_type.id == 3) {
+         imgsrc = '/assets/title_reviews.svg';
+      } else if(this.props.post_type.id == 4) {
+        imgsrc = '/assets/title_portfolio.svg';
+      } else if (this.props.post_type.id == 5){
         imgsrc = '/assets/title_necrology.svg';
       } else  {
         imgsrc = '';

@@ -7,6 +7,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    # Image.all.each { |i| i.image.recreate_versions! }
+    Post.all.each {|x|x.image.recreate_versions!}
     @categories = Category.all
     @post_types = PostType.all
     if params.has_key?(:category)
@@ -76,21 +78,21 @@ class PostsController < ApplicationController
   def newnews
     @post = Post.new
     @post.post_type = PostType.find_by_name("Новости")
-    @categories = [{id:"5", name:"Обновления"}, {id:"6", name:"О компаниях"} ]
+    @categories = [{id:"1", name:"Анонсы"}, {id:"2", name:"Релизы"}, {id:"3", name:"Обновления"}, {id:"4", name:"О компаниях"} ]
     render 'newnews'
   end
 
   def newarticles
     @post = Post.new
     @post.post_type = PostType.find_by_name("Статьи")
-    @categories = [{id:"7", name:"Факты"}, {id:"8", name:"Советы"}, {id:"9", name:"Чит-коды"} ]
+    @categories = [{id:"5", name:"Факты"}, {id:"6", name:"Советы"}, {id:"7", name:"Чит-коды"} ]
     render 'newarticles'
   end
 
   def newreviews
     @post = Post.new
     @post.post_type = PostType.find_by_name("Обзоры")
-    @categories = [{id:"10", name:"Действие"}, {id:"11", name:"Симулятор"}, {id:"12", name:"Стратегия"}, {id:"13", name:"Ролевая игра"}, {id:"14", name:"Приключения"}, {id:"15", name:"Головоломка"} ]
+    @categories = [{id:"8", name:"Экшен"}, {id:"9", name:"Адвенчура"}, {id:"10", name:"Казуальная"}, {id:"11", name:"Многопользовательская"}, {id:"12", name:"Приключения"}, {id:"12", name:"Гонки"}, {id:"13", name:"РПГ"}, {id:"14", name:"Симулятор"}, {id:"15", name:"Спортивная"}, {id:"16", name:"Стратегия"}, {id:"17", name:"Хоррор"}, {id:"18", name:"Бесплатная"}, {id:"19", name:"Визуальная новелла"}, {id:"20", name:"Настольные"} ]
     render 'newreviews'
   end
 
@@ -101,23 +103,10 @@ class PostsController < ApplicationController
     render 'newnecrology'
   end
 
-  def newpuzzles
-    @post = Post.new
-    @post.post_type = PostType.find_by_name("puzzles")
-    render 'newpuzzles'
-  end
-
   def newportfolio
     @post = Post.new
     @post.post_type = PostType.find_by_name("Мастерская")
     render 'newportfolio'
-  end
-
-  def newevents
-    @post = Post.new
-    @post.post_type = PostType.find_by_name("events")
-    @categories = [{id:"3", name:"Анонсы"}, {id:"4", name:"Релизы"} ]
-    render 'newevents'
   end
 
   def hashtags
@@ -127,6 +116,13 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    if @post.post_type.name == "Новости"
+      @categories = [{id:"1", name:"Анонсы"}, {id:"2", name:"Релизы"}, {id:"3", name:"Обновления"}, {id:"4", name:"О компаниях"} ]
+    elsif @post.post_type.name == "Статьи"
+      @categories = [{id:"5", name:"Факты"}, {id:"6", name:"Советы"}, {id:"7", name:"Чит-коды"} ]
+    else
+      @categories = [{id:"8", name:"Экшен"}, {id:"9", name:"Адвенчура"}, {id:"10", name:"Казуальная"}, {id:"11", name:"Многопользовательская"}, {id:"12", name:"Приключения"}, {id:"12", name:"Гонки"}, {id:"13", name:"РПГ"}, {id:"14", name:"Симулятор"}, {id:"15", name:"Спортивная"}, {id:"16", name:"Стратегия"}, {id:"17", name:"Хоррор"}, {id:"18", name:"Бесплатная"}, {id:"19", name:"Визуальная новелла"}, {id:"20", name:"Настольные"} ]
+    end
   end
 
   # POST /posts
@@ -155,6 +151,13 @@ class PostsController < ApplicationController
         format.html { render :edit }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
+    end
+    if @post.post_type.name == "Новости"
+      @categories = [{id:"1", name:"Анонсы"}, {id:"2", name:"Релизы"}, {id:"3", name:"Обновления"}, {id:"4", name:"О компаниях"} ]
+    elsif @post.post_type.name == "Статьи"
+      @categories = [{id:"5", name:"Факты"}, {id:"6", name:"Советы"}, {id:"7", name:"Чит-коды"} ]
+    else
+      @categories = [{id:"8", name:"Экшен"}, {id:"9", name:"Адвенчура"}, {id:"10", name:"Казуальная"}, {id:"11", name:"Многопользовательская"}, {id:"12", name:"Приключения"}, {id:"12", name:"Гонки"}, {id:"13", name:"РПГ"}, {id:"14", name:"Симулятор"}, {id:"15", name:"Спортивная"}, {id:"16", name:"Стратегия"}, {id:"17", name:"Хоррор"}, {id:"18", name:"Бесплатная"}, {id:"19", name:"Визуальная новелла"}, {id:"20", name:"Настольные"} ]
     end
   end
 

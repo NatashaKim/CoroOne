@@ -6,14 +6,12 @@
 
     <% if @post.post_type.name == "Новости" %>
         <%= render 'form', post: @post %>
-      <% elsif @post.post_type.name == "Мастерская" %>
-            <%= render 'formportfolio', post: @post %>
-      <% elsif @post.post_type.name == "Обзоры" %>
-            <%= render 'form', post: @post %>
       <% elsif @post.post_type.name == "Статьи" %>
             <%= render 'form', post: @post %>
-      <% elsif @post.post_type.name == "events" %>
-            <%= render 'formevents', post: @post %>
+      <% elsif @post.post_type.name == "Обзоры" %>
+            <%= render 'formreviews', post: @post %>
+      <% elsif @post.post_type.name == "Мастерская" %>
+            <%= render 'formportfolio', post: @post %>
       <% elsif @post.post_type.name == "Кладбище проектов" %>
             <%= render 'formnecrology', post: @post %>
       <% else %>

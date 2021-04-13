@@ -14,7 +14,6 @@ class O_postform extends React.Component {
       super(props);
       this.state = {
         category_id: props.post.category_id ? props.post.category_id : '',
-        name: props.post.name ? props.post.name : '',
         title: props.post.title ? props.post.title : '',
         author: props.post.author ? props.post.author : '',
         content: props.post.content ? props.post.content : '',
@@ -25,7 +24,6 @@ class O_postform extends React.Component {
 }
     ;
       this.handleCategoryChange = this.handleCategoryChange.bind(this);
-      this.handleNameChange = this.handleNameChange.bind(this);
       this.handleTitleChange = this.handleTitleChange.bind(this);
       this.handleAuthorChange = this.handleAuthorChange.bind(this);
       this.handleContentChange = this.handleContentChange.bind(this);
@@ -41,9 +39,6 @@ class O_postform extends React.Component {
 
     handleCategoryChange(e) {
       this.setState({ category_id: e.target.value });
-    }
-    handleNameChange(e) {
-      this.setState({ name: e.target.value });
     }
     handleTitleChange(e) {
       this.setState({ title: e.target.value });
@@ -76,15 +71,6 @@ class O_postform extends React.Component {
              handleChange={this.handleCategoryChange}
              options={this.state.categories}
            />
-
-          <label>Название статьи</label>
-          <A_input
-            inputTypes = "default"
-            type="text"
-            name="post[name]"
-            value={this.state.name}
-            onChange={this.handleNameChange}
-          />
 
           <label>Заголовок</label>
           <A_input

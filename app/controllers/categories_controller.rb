@@ -16,11 +16,12 @@ class CategoriesController < ApplicationController
   def new
     @category = Category.new
     @categories = Category.all
-    @post_types = [{id:"1", name:"Новости"}, {id:"3", name:"Мастерская"}, {id:"4", name:"Обзоры"},  {id:"5", name:"Статьи"}, {id:"6", name:"puzzles"}, {id:"7", name:"events"}, {id:"8", name:"Кладбище проектов"} ]
+    @post_types = [{id:"1", name:"Новости"}, {id:"2", name:"Статьи"}, {id:"3", name:"Обзоры"}, {id:"4", name:"Мастерская"}, {id:"5", name:"Кладбище проектов"} ]
   end
 
   # GET /categories/1/edit
   def edit
+    @post_types = [{id:"1", name:"Новости"}, {id:"2", name:"Статьи"}, {id:"3", name:"Обзоры"}, {id:"4", name:"Мастерская"}, {id:"5", name:"Кладбище проектов"} ]
   end
 
   # POST /categories
