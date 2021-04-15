@@ -1,6 +1,8 @@
 <% @action = "/posts/"%>
-  <%if @post.id > 0%>
-    <% @action = @action + @post.id.to_s %>
+  <%if @post.id%>
+    <%if @post.id > 0%>
+      <% @action = @action + @post.id.to_s %>
+    <% end %>
   <% end %>
 
 <form enctype="multipart/form-data" action=<%= @action %> accept-charset="UTF-8" method="post">
