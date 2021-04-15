@@ -17,10 +17,11 @@
       align-items: center;
       display: flex;
       flex-direction: column;
-      a:first-child {
+      .Category {
+        margin-bottom: 8px;
         color: var(--zelda-green);
       }
-      a:last-child {
+      .Heading {
         color: var(--ice-white);
       }
     }

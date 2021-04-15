@@ -26,6 +26,10 @@
         flex-direction: column;
         .Category {
           margin-bottom: 8px;
+          color: var(--zelda-green);
+        }
+        .Heading {
+          color: var(--ice-white);
         }
       }
       .btn {
