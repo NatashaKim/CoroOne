@@ -8,7 +8,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     # Image.all.each { |i| i.image.recreate_versions! }
-    Post.all.each {|x|x.image.recreate_versions!}
+    # Post.all.each {|x|x.image.recreate_versions!}
     @categories = Category.all
     @post_types = PostType.all
     if params.has_key?(:category)

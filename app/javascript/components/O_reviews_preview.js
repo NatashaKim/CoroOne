@@ -15,7 +15,7 @@ class O_reviews_preview extends React.Component {
       this.state={
         posts: null
       }
-      get_posts_by_type(4, this.props.post_number).then((u)=>{
+      get_posts_by_type(this.props.post_type_id, this.props.post_number).then((u)=>{
         this.setState({posts: u})
       })
 }

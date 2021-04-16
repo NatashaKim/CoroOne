@@ -112,7 +112,6 @@ class O_postform extends React.Component {
             type="hidden"
             name="post[post_type_id]"
             value={this.state.post_type_id}
-            // onChange={this.handleTitleChange}
           />
 
           <A_button
