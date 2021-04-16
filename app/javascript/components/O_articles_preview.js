@@ -16,7 +16,7 @@ class O_posts_preview extends React.Component {
       this.state={
         posts: null
       }
-      get_posts_by_type(5, this.props.post_number).then((u)=>{
+      get_posts_by_type(this.props.post_type_id, this.props.post_number).then((u)=>{
         this.setState({posts: u})
       })
 }
@@ -28,7 +28,7 @@ render_part(some_posts){
     <div>
       <div className = "Articles_grid">
         {some_posts.slice(0, top_slice).map(post => (
-          <M_post_preview key = {post.id} post = {post} category = {post.category} post_number = {postNumber = postNumber + 1} postStyle = 'ps--vertical' post_type_id = '5' />
+          <M_post_preview key = {post.id} post = {post} category = {post.category} post_number = {postNumber = postNumber + 1} postStyle = 'ps--vertical' post_type_id = '2' />
         ))}
       </div>
       <M_post_preview_combo posts = {some_posts.slice(top_slice, posts_in_part)} />
