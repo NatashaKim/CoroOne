@@ -1,3 +1,9 @@
+<% @action = "/posts/"%>
+  <%if @post.id%>
+    <%if @post.id > 0%>
+      <% @action = @action + @post.id.to_s %>
+    <% end %>
+  <% end %>
 <form enctype="multipart/form-data" action="/posts" accept-charset="UTF-8" method="post">
   <%= react_component 'O_reviewsform', { post: @post, categories: @categories } %>
 

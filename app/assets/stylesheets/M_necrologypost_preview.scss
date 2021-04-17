@@ -25,6 +25,11 @@
     }
     .Heading {
       margin-bottom: 8px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     .Dates_of_life {
       margin-bottom: 8px;

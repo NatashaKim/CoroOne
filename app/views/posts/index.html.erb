@@ -25,7 +25,7 @@
 
     <div class="Post_type_section_wrapper">
       <%= react_component 'A_post_type', { post_type: @post_types[1] } %>
-      <%= react_component 'O_articles_preview', { post_type_id: 2, post_number: 14 } %>
+      <%= react_component 'O_articles_preview', { post_type_id: 2, post_number: 14, remove_post: spider_post_id } %>
       <%= react_component 'M_more_info', {moreInfoType: "more_articles"} %>
     </div>
 
@@ -33,23 +33,23 @@
 
     <div class="Post_type_section_wrapper">
       <%= react_component 'A_post_type', { post_type: @post_types[2] } %>
-      <%= react_component 'O_reviews_preview', { post_type_id: 3, post_number: 10 } %>
+      <%= react_component 'O_reviews_preview', { post_type_id: 3, post_number: 10, remove_post: spider_post_id } %>
       <%= react_component 'M_more_info', {moreInfoType: "more_reviews"} %>
     </div>
 
     <%= react_component 'M_post_preview', { post: reviews_banner, category: @posts[2]["category"], postStyle: 'ps--screen' } %>
 
     <div class="Post_type_section_wrapper Without_shadow">
-      <%= react_component 'A_post_type', { post_type: @post_types[3] } %>
+      <%= react_component 'A_post_type', { post_type: @post_types[4] } %>
       <%= react_component 'M_necro_add' %>
-      <%= react_component 'O_necrologyposts_preview', { post_type_id: 4, post_number: 8 } %>
+      <%= react_component 'O_necrologyposts_preview', { post_type_id: 5, post_number: 8 } %>
       <%= react_component 'M_more_info', {moreInfoType: "more_necrologies"} %>
     </div>
 
     <div class="Workshop_wrapper">
-    <%= react_component 'A_post_type', { post_type: @post_types[4] } %>
+    <%= react_component 'A_post_type', { post_type: @post_types[3] } %>
     <%= react_component 'O_newprojects_placeholder' %>
-    <%= react_component 'S_userposts_preview', { post_type_id: 5, post_number: 13, current_user_id: current_user.id, user: current_user} %>
+    <%= react_component 'S_userposts_preview', { post_type_id: 4, post_number: 13, current_user_id: current_user.id, user: current_user} %>
     </div>
     <br>
 

@@ -10,6 +10,7 @@
     width: 612px;
     height: 612px;
     display: flex;
+    overflow: hidden;
     .Userpost_img_cover {
       object-fit: cover;
       border-radius: 4px;

@@ -25,10 +25,10 @@ class M_necrologypost_preview extends React.Component {
   render () {
 
     let imgsrc = '';
-    if (!this.props.post.image.thumb.url) {
+    if (!this.props.post.image.small_thumb.url) {
       imgsrc = '/assets/grave_project_placeholder.svg';
     } else {
-      imgsrc = this.props.post.image.thumb.url;
+      imgsrc = this.props.post.image.small_thumb.url;
     }
 
 
