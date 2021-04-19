@@ -2,10 +2,12 @@ import React from "react"
 
 import axios from 'axios';
 import PropTypes from "prop-types"
-import A_select from "./A_select"
 import A_textarea from "./A_textarea"
-import A_input from "./A_input"
 import A_button from "./A_button"
+import M_input_with_label from "./M_input_with_label"
+import M_image_input_with_label from "./M_image_input_with_label"
+import M_textarea_with_label from "./M_textarea_with_label"
+import M_select_with_label from "./M_select_with_label"
 import {availableCategories} from './Api.js';
 import '../../assets/stylesheets/O_postform.scss'
 
@@ -56,71 +58,68 @@ class O_postform extends React.Component {
 
     render() {
       return (
-        <div className = "postform">
-          <input
-            type="hidden"
-            name="authenticity_token"
-            value={this.state.authenticity_token}
-          />
+        <div className = "Postform">
+          <div className = "Postform_body">
+            <input
+              type="hidden"
+              name="authenticity_token"
+              value={this.state.authenticity_token}
+            />
 
-            <A_select
-             title={"Жанр"}
-             name="post[category_id]"
-             value={this.state.category}
-             placeholder={"Select"}
-             handleChange={this.handleCategoryChange}
-             options={this.state.categories}
-           />
+             <M_select_with_label
+              label = "Категория"
+              name="post[category_id]"
+              value={this.state.category}
+              placeholder={"Выберите категорию"}
+              handleChange={this.handleCategoryChange}
+              options={this.state.categories}
+            />
 
-          <label>Заголовок</label>
-          <A_input
-            inputTypes = "password"
-            type="text"
-            name="post[title]"
-            value={this.state.title}
-            onChange={this.handleTitleChange}
-          />
+            <M_input_with_label
+              label = "Заголовок"
+              inputPlace = "new_post"
+              name="post[title]"
+              value={this.state.title}
+              onChange={this.handleTitleChange}
+            />
 
-          <label>Автор</label>
-          <A_input
-            inputTypes = "default"
-            type="text"
-            name="post[author]"
-            value={this.state.author}
-            onChange={this.handleAuthorChange}
-          />
+            <M_input_with_label
+              label = "Автор"
+              inputPlace = "new_post"
+              name="post[author]"
+              value={this.state.author}
+              onChange={this.handleAuthorChange}
+            />
 
-          <label>Текст статьи</label>
-          <A_textarea
-            textareaType = "textarea--small"
-            type="text"
-            name="post[content]"
-            value={this.state.content}
-            onChange={this.handleContentChange}
-          />
+            <M_textarea_with_label
+              label = "Текст публикации"
+              name="post[content]"
+              value={this.state.content}
+              onChange={this.handleContentChange}
+            />
 
+            <M_image_input_with_label
+              label = "Обложка"
+              name="post[image]"
+              onChange={this.handleImageChange}
+              limitation = "Не менее 1440px Х 800px"
+            />
 
-          <label>Картинка</label>
-          <input
-            type="file"
-            name="post[image]"
-            onChange={this.handleImageChange}
-          />
+            <A_textarea
+              textareaType="textarea--hidden"
+              type="hidden"
+              name="post[post_type_id]"
+              value={this.state.post_type_id}
+            />
 
-          <A_textarea
-            textareaType="textarea--hidden"
-            type="hidden"
-            name="post[post_type_id]"
-            value={this.state.post_type_id}
-          />
+          </div>
 
           <A_button
-            type = "Создать пост"
+            value = "Опубликовать пост"
             buttonSize = "btn--small"
             buttonColor = "btn--gray">
           </A_button>
 
-          <input type="submit" value="Create post" />
         </div>
       );
     }

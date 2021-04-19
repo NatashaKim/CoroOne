@@ -1,9 +1,11 @@
 import React from "react"
 import axios from 'axios';
 import PropTypes from "prop-types"
-import A_select from "./A_select"
 import A_textarea from "./A_textarea"
-import A_input from "./A_input"
+import M_input_with_label from "./M_input_with_label"
+import M_image_input_with_label from "./M_image_input_with_label"
+import M_textarea_with_label from "./M_textarea_with_label"
+import M_select_with_label from "./M_select_with_label"
 import A_button from "./A_button"
 import {availableCategories} from './Api.js';
 import '../../assets/stylesheets/O_postform.scss'
@@ -60,81 +62,77 @@ class O_reviewsform extends React.Component {
 
     render() {
       return (
-        <div className = "postform">
+        <div className = "Postform">
+          <div className = "Postform_body">
 
-            <input
-              type="hidden"
-              name="authenticity_token"
-              value={this.state.authenticity_token}
+              <input
+                type="hidden"
+                name="authenticity_token"
+                value={this.state.authenticity_token}
+              />
+
+             <M_select_with_label
+              label = "Категория"
+              name="post[category_id]"
+              value={this.state.category}
+              placeholder={"Выберите категорию"}
+              handleChange={this.handleCategoryChange}
+              options={this.state.categories}
             />
 
-            <A_select
-             title={"Жанр"}
-             name="post[category_id]"
-             value={this.state.category}
-             placeholder={"Select"}
-             handleChange={this.handleCategoryChange}
-             options={this.state.categories}
-           />
+            <M_input_with_label
+              label = "Заголовок"
+              inputPlace = "new_post"
+              name="post[title]"
+              value={this.state.title}
+              onChange={this.handleTitleChange}
+            />
 
-          <label>Заголовок</label>
-          <A_input
-            inputTypes = "default"
-            type="text"
-            name="post[title]"
-            value={this.state.title}
-            onChange={this.handleTitleChange}
-          />
+            <M_input_with_label
+              label = "Автор"
+              inputPlace = "new_post"
+              name="post[author]"
+              value={this.state.author}
+              onChange={this.handleAuthorChange}
+            />
 
-          <label>Автор</label>
-          <A_input
-            inputTypes = "default"
-            type="text"
-            name="post[author]"
-            value={this.state.author}
-            onChange={this.handleAuthorChange}
-          />
+            <M_textarea_with_label
+              label = "Текст публикации"
+              name="post[content]"
+              value={this.state.content}
+              onChange={this.handleContentChange}
+            />
 
-          <label>Текст статьи</label>
-          <A_textarea
-            textareaType = "textarea--small"
-            type="text"
-            name="post[content]"
-            value={this.state.content}
-            onChange={this.handleContentChange}
-          />
+            <M_input_with_label
+              label = "Видео"
+              inputPlace = "new_post"
+              name="post[videourl]"
+              value={this.state.videourl}
+              onChange={this.handleVideourlChange}
+            />
 
-          <label>Видео</label>
-          <A_input
-            inputTypes = "default"
-            type="text"
-            name="post[videourl]"
-            value={this.state.videourl}
-            onChange={this.handleVideourlChange}
-          />
+            <M_image_input_with_label
+              label = "Обложка"
+              name="post[image]"
+              onChange={this.handleImageChange}
+              limitation = "Не менее 1440px Х 800px"
+            />
 
-          <label>Картинка</label>
-          <input
-            type="file"
-            name="post[image]"
-            onChange={this.handleImageChange}
-          />
+            <A_textarea
+              textareaType = "textarea--hidden"
+              type="hidden"
+              name="post[post_type_id]"
+              value={this.state.post_type_id}
+            />
 
-          <A_textarea
-            textareaType = "textarea--hidden"
-            type="hidden"
-            name="post[post_type_id]"
-            value={this.state.post_type_id}
-            // onChange={this.handleTitleChange}
-          />
+          </div>
 
           <A_button
-            type = "Создать пост"
+            value = "Опубликовать пост"
             buttonSize = "btn--small"
             buttonColor = "btn--gray">
           </A_button>
 
-          <input type="submit" value="Create post" />
         </div>
       );
     }

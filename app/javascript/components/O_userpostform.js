@@ -2,10 +2,9 @@ import React from "react"
 
 import axios from 'axios';
 import PropTypes from "prop-types"
-import A_select from "./A_select"
 import A_textarea from "./A_textarea"
-import A_label from "./A_label"
-import A_input from "./A_input"
+import M_image_input_with_label from "./M_image_input_with_label"
+import M_textarea_with_label from "./M_textarea_with_label"
 import A_button from "./A_button"
 import {availableCategories} from './Api.js';
 import '../../assets/stylesheets/O_postform.scss'
@@ -46,30 +45,25 @@ class O_postform extends React.Component {
     render() {
       return (
         <div className = "Postform">
-        <div className = "Postform_body">
+          <div className = "Postform_body">
             <input
               type="hidden"
               name="authenticity_token"
               value={this.state.authenticity_token}
             />
 
-            <A_label
-            label = "Что новенького?)"/>
-            <A_textarea
-              textareaType = "textarea--small"
-              type="text"
+            <M_textarea_with_label
+              label = "Что нового?)"
               name="post[content]"
               value={this.state.content}
               onChange={this.handleContentChange}
             />
 
-
-            <A_label
-            label = "Добавить фотографию"/>
-            <input
-              type="file"
+            <M_image_input_with_label
+              label = "Добавить фотографию"
               name="post[image]"
               onChange={this.handleImageChange}
+              limitation = "Не менее 1200px Х 400px"
             />
 
             <A_textarea
@@ -77,7 +71,6 @@ class O_postform extends React.Component {
               type="hidden"
               name="post[post_type_id]"
               value={this.state.post_type_id}
-              // onChange={this.handleTitleChange}
             />
           </div>
 

@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_29_163620) do
+ActiveRecord::Schema.define(version: 2021_04_17_163404) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "answers", force: :cascade do |t|
     t.text "option"
@@ -79,6 +82,24 @@ ActiveRecord::Schema.define(version: 2021_03_29_163620) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "genre_to_smths", force: :cascade do |t|
+    t.bigint "genre_id", null: false
+    t.bigint "post_id"
+    t.bigint "project_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["genre_id"], name: "index_genre_to_smths_on_genre_id"
+    t.index ["post_id"], name: "index_genre_to_smths_on_post_id"
+    t.index ["project_id"], name: "index_genre_to_smths_on_project_id"
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string "name"
+    t.string "image_src"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "likes", force: :cascade do |t|
     t.integer "post_id", null: false
     t.integer "user_id", null: false
@@ -110,6 +131,8 @@ ActiveRecord::Schema.define(version: 2021_03_29_163620) do
     t.date "project_start_date"
     t.date "project_end_date"
     t.text "feedback"
+    t.string "game_name"
+    t.date "release_date"
     t.index ["category_id"], name: "index_posts_on_category_id"
     t.index ["post_type_id"], name: "index_posts_on_post_type_id"
     t.index ["project_id"], name: "index_posts_on_project_id"
@@ -177,6 +200,9 @@ ActiveRecord::Schema.define(version: 2021_03_29_163620) do
   add_foreign_key "developers", "users"
   add_foreign_key "favorites", "posts"
   add_foreign_key "favorites", "users"
+  add_foreign_key "genre_to_smths", "genres"
+  add_foreign_key "genre_to_smths", "posts"
+  add_foreign_key "genre_to_smths", "projects"
   add_foreign_key "likes", "posts"
   add_foreign_key "likes", "users"
   add_foreign_key "posts", "categories"

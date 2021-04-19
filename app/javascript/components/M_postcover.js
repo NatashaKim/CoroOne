@@ -4,7 +4,6 @@ import '../../assets/stylesheets/M_postcover.scss'
 
 class M_postcover extends React.Component {
   render() {
-    }
 
     return (
       <div className="m-postcover">

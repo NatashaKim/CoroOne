@@ -1,19 +1,37 @@
-  select {
-  box-sizing: border-box;
-  font-family: "RedRing", sans-serif;
-  font-size: 16px;
-  height: 32px;
-  font-weight: normal;
+.Styled-select{
+  height: 40px;
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  border: 2px double red;
+  display: inline-block;
+  position: relative;
   color: var(--mineral-gray);
   border-radius: 32px;
   border: none;
-  padding: 0px 4px 0px 12px;
-  background-color: var(--light-purple);
+  padding: 8px 12px 8px 20px;
   margin: 0 28px 42px 0;
-  option {
+  background: url(icon_arrow_down.svg) no-repeat bottom 8px right 8px var(--light-purple);
+  width: 160px;
+  cursor: pointer;
+  select {
     font-family: "RedRing", sans-serif;
     font-size: 16px;
+    line-height: 24px;
     font-weight: normal;
+    background: transparent;
+    -webkit-appearance: none;
+    border: none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
     color: var(--navy-blue);
+    width: 140px;
+    cursor: pointer;
+    option {
+      font-family: "RedRing", sans-serif;
+      font-size: 16px;
+      font-weight: normal;
+      color: var(--navy-blue);
+    }
   }
 }

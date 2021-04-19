@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 
 const A_select = props => {
   return (
-
+    <div className = "Styled-select">
       <select
         id={props.id}
         name={props.name}
@@ -22,6 +22,7 @@ const A_select = props => {
           );
         })}
       </select>
+    </div>
   );
 };
 

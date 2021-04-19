@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :post_types
   resources :follows
   resources :categories
+  resources :genres
   # resources :categories
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users, :controllers => { registrations: 'registrations' }
