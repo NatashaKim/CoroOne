@@ -12,17 +12,17 @@ const Types = [
 
 
 const Imgsrc = {
-  'profile': '/assets/icon_profile.svg',
-  'profile_fill': '/assets/icon_profile_menu_fill.svg',
+  'profile': '/assets/icon_profile_unfill.svg',
+  'profile_fill': '/assets/icon_profile_fill.svg',
 
-  'bookmarks': '/assets/icon_bookmarks_unfilled.svg',
-  'bookmarks_fill': '/assets/icon_bookmarks_menu_fill.svg',
+  'bookmarks': '/assets/icon_bookmarks_unfill.svg',
+  'bookmarks_fill': '/assets/icon_bookmarks_fill.svg',
 
-  'notification': '/assets/icon_notification.svg',
-  'notification_fill': '/assets/icon_notification_menu_fill.svg',
+  'notification': '/assets/icon_notifications_unfill.svg',
+  'notification_fill': '/assets/icon_notification_fill.svg',
 
-  'search': '/assets/icon_search.svg',
-  'search_fill': '/assets/icon_search_menu_fill.svg'
+  'search': '/assets/icon_search_unfill.svg',
+  'search_fill': '/assets/icon_search_fill.svg'
 }
 
 

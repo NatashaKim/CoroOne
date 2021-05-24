@@ -2,8 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const imageSrc ={
-  fill: '/assets/like_icon_fill.svg',
-  unfill: '/assets/like_icon_unfill.svg'
+  fill: '/assets/icon_like_fill.svg',
+  unfill: '/assets/icon_like_unfill.svg'
 }
 
 class A_like_button extends React.Component {

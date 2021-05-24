@@ -38,12 +38,12 @@ const Icon = {
   'arrow_big': '/assets/icon_arrow_big.svg',
 
   //Cохраненки в пользовательском посте
-  'bookmarks_post_un': '/assets/icon_bookmarks_post_un.svg',
-  'bookmarks_post_fill': '/assets/icon_bookmarks_post_fill.svg',
+  // 'bookmarks_post_un': '/assets/icon_bookmarks_post_un.svg',
+  // 'bookmarks_post_fill': '/assets/icon_bookmarks_post_fill.svg',
 
   //Cохраненки внутри статьи
-  'bookmarks_inpost_un': '/assets/icon_bookmarks_inpost_un.svg',
-  'bookmarks_inpost_fill': '/assets/icon_bookmarks_inpost_fill.svg',
+  // 'bookmarks_inpost_un': '/assets/icon_bookmarks_inpost_un.svg',
+  // 'bookmarks_inpost_fill': '/assets/icon_bookmarks_inpost_fill.svg',
 };
 
 const A_icon = props => (

@@ -14,18 +14,18 @@ class O_reviewsform extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
-        category_id: props.post.category_id ? props.post.category_id : '',
+        genre_id: props.post.genre_id ? props.post.genre_id : '',
         title: props.post.title ? props.post.title : '',
         author: props.post.author ? props.post.author : '',
         content: props.post.content ? props.post.content : '',
         image: props.post.image ? props.post.image : '',
         videourl: props.post.videourl ? props.post.videourl : '',
-        categories: props.categories ? props.categories : [],
+        genres: props.genres ? props.genres : [],
         post_type_id: props.post.post_type_id ? props.post.post_type_id : '',
 
 }
     ;
-      this.handleCategoryChange = this.handleCategoryChange.bind(this);
+      this.handleGenreChange = this.handleGenreChange.bind(this);
       this.handleTitleChange = this.handleTitleChange.bind(this);
       this.handleAuthorChange = this.handleAuthorChange.bind(this);
       this.handleContentChange = this.handleContentChange.bind(this);
@@ -41,7 +41,7 @@ class O_reviewsform extends React.Component {
     }
 
     handleCategoryChange(e) {
-      this.setState({ category_id: e.target.value });
+      this.setState({ genre_id: e.target.value });
     }
     handleTitleChange(e) {
       this.setState({ title: e.target.value });
@@ -73,11 +73,11 @@ class O_reviewsform extends React.Component {
 
              <M_select_with_label
               label = "Категория"
-              name="post[category_id]"
-              value={this.state.category}
+              name="post[genre_id]"
+              value={this.state.genre}
               placeholder={"Выберите категорию"}
-              handleChange={this.handleCategoryChange}
-              options={this.state.categories}
+              handleChange={this.handleGenreChange}
+              options={this.state.genres}
             />
 
             <M_input_with_label
