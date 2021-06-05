@@ -234,7 +234,7 @@ end
 
     # Only allow a list of trusted parameters through.
     def post_params
-      params.require(:post).permit(:name, :title, :author, :content, :image, :category_id, :post_type_id, :project_id, :tag_id, :videourl, :likes, :project_start_date, :project_end_date, :feedback, :game_name, :release_date, :genre_id, :genres)
+      params.require(:post).permit(:name, :title, :author, :content, :image, :category_id, :post_type_id, :project_id, :tag_id, :videourl, :likes, :project_start_date, :project_end_date, :feedback, :game_name, :release_date, :genre_id, :genres, :lid)
     end
 
     # layout 'posts'

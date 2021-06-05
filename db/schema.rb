@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_17_163404) do
+ActiveRecord::Schema.define(version: 2021_06_05_210224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -133,6 +133,7 @@ ActiveRecord::Schema.define(version: 2021_04_17_163404) do
     t.text "feedback"
     t.string "game_name"
     t.date "release_date"
+    t.text "lid"
     t.index ["category_id"], name: "index_posts_on_category_id"
     t.index ["post_type_id"], name: "index_posts_on_post_type_id"
     t.index ["project_id"], name: "index_posts_on_project_id"

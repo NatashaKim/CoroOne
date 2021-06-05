@@ -1,9 +1,9 @@
-<#% set_meta_tags title: @post.name, description: @post.category.name%>
+
 <body class="show_body">
 
   <div class="wrapper_show">
     <div class="narrow">
-      <%= react_component 'M_postview', { category: @category, categories: @categories, post: @post, post_genres: @post_genres } %>
+      <%= react_component 'M_postview', { category: @category, categories: @categories, post: @post, post_genres: @post_genres, post_type: @post.post_type } %>
 
 
 

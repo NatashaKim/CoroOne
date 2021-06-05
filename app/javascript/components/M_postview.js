@@ -4,6 +4,7 @@ import A_category from "./A_category"
 import A_hashtag from "./A_hashtag"
 import M_user_info from "./M_user_info"
 import A_postcover from "./A_postcover"
+import A_posttype_marker from "./A_posttype_marker"
 import '../../assets/stylesheets/M_postview.scss'
 
 class M_postview extends React.Component {
@@ -21,15 +22,14 @@ class M_postview extends React.Component {
 
     return (
       <div className="m-postview">
-           <A_postcover post = {this.props.post}/>
-
-
-
-            <A_hashtag post = {this.props.post} tagKinds = "h--hashtag"/>
-
-            <p>{`${this.props.post.author}`}</p>
-            <M_user_info user={this.props.post.author} />
-            <p className="content">{`${this.props.post.content}`}</p>
+        <A_postcover post = {this.props.post}/>
+        <A_posttype_marker post_type = {this.props.post_type} />
+        <div className="Post_body">
+          <A_hashtag post = {this.props.post} tagKinds = "h--hashtag"/>
+          <p>{`${this.props.post.author}`}</p>
+          <M_user_info user={this.props.post.author} />
+          <p className="content">{`${this.props.post.content}`}</p>
+        </div>
       </div>
     );
   }

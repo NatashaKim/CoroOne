@@ -5,8 +5,10 @@
     width: 100%;
   }
   &.publication {
-    width: 1440px;
+    width: 100vw;
     height: 502px;
+    .Posttype_marker {
+    }
   }
   &.necrology {
     width: 152px;
