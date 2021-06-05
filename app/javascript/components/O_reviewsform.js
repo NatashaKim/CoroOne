@@ -14,6 +14,14 @@ import '../../assets/stylesheets/O_postform.scss'
 class O_reviewsform extends React.Component {
   constructor(props) {
       super(props);
+
+let post_genres=[];
+
+props.genres.map(genre => {
+ post_genres["g_"+genre.id]=props.post_genres.findIndex((element, index, array) => {return element.genre_id == genre.id}) >=0;
+});
+
+
       this.state = {
         genre_id: props.post.genre_id ? props.post.genre_id : '',
         title: props.post.title ? props.post.title : '',
@@ -23,7 +31,7 @@ class O_reviewsform extends React.Component {
         videourl: props.post.videourl ? props.post.videourl : '',
         genres: props.genres ? props.genres : [],
         post_type_id: props.post.post_type_id ? props.post.post_type_id : '',
-
+        post_genres: post_genres,
 }
     ;
       this.handleGenreChange = this.handleGenreChange.bind(this);
@@ -57,7 +65,10 @@ class O_reviewsform extends React.Component {
       this.setState({ videourl: e.target.value });
     }
 
-    handleGenreChange(e) { return true;
+    handleGenreChange(e) {
+      let post_genres = this.state.post_genres;
+      post_genres[e.target.id] = !post_genres[e.target.id];
+      this.setState({post_genres: post_genres});
     }
 
 
@@ -75,21 +86,15 @@ class O_reviewsform extends React.Component {
 
             <div>
             {this.state.genres.map(genre => {
-
+let id = "g_"+genre.id;
 let checked = {};
 
-if(this.props.post_genres.findIndex(
-    (element, index, array) => {
-      return element.genre_id == genre.id
-    }
-  ) >=0
-)
-checked= {checked:"on"};
+if(this.state.post_genres[id]) checked= {checked:"on"};
 
 
               return (
               <div>
-               <input  type="checkbox" id={ "g_"+genre.id } name ={ "genres[g_"+genre.id+"]" } {...checked}  onclick="return true;"/>
+               <input  type="checkbox" id={ id } name ={ "genres[g_"+genre.id+"]" } {...checked}  onChange={this.handleGenreChange}/>
               <label for={ "g_"+genre.id }>{genre.name}</label>
               </div>
            )
