@@ -56,8 +56,9 @@
    }
 
    &.ps--screen {
-     width: 1440px;
+     width: 100vw;
      height: 800px;
+     margin: 0 auto;
      .Preview_wrapper{
        width: 394px;
        .Category {

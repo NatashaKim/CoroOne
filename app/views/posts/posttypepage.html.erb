@@ -20,10 +20,7 @@
 <% end %>
 
 <% if @post_type[:id] == 3%>
-  <%= react_component 'M_genres_nav', { genres: @genres, post_type_id: @post_type[:id] } %>
-  <div class="News">
-    <%= react_component 'O_reviews_preview', { post_type_id: @post_type[:id], post_number: 17} %>
-  </div>
+  <%= react_component 'T_reviews_preview', { genres: @genres, post_type_id: @post_type[:id], post_number: 17 } %>
 <% end %>
 
 <% if @post_type[:id] == 5%>

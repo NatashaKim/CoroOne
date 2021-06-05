@@ -60,6 +60,14 @@ class PostsController < ApplicationController
       render json: @posts
   end
 
+  def get_posts_by_type_and_genre
+      @posts = Post.where(post_type_id: params[:post_type_id]).includes(:category, :genres).map do
+        |post|
+        post.as_json(include: [:category, :genres, :image])
+      end
+      render json: @posts
+  end
+
 
   # GET /posts/1
   # GET /posts/1.json
@@ -68,6 +76,7 @@ class PostsController < ApplicationController
     if params.has_key?(:category)
       @category = Category.find(@post.category_id)
     end
+    @post_genres=GenreToSmth.select("genre_id").where(post_id:@post.id)
     @comment = Comment.new
     @comment.post_id = @post.id
     @comment.user = current_user
@@ -130,12 +139,15 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    @post_genres=GenreToSmth.select("genre_id").where(post_id:@post.id)
     if @post.post_type.name == "Новости"
       @categories = [{id:"1", name:"Анонсы"}, {id:"2", name:"Релизы"}, {id:"3", name:"Обновления"}, {id:"4", name:"О компаниях"} ]
     elsif @post.post_type.name == "Статьи"
       @categories = [{id:"5", name:"Факты"}, {id:"6", name:"Советы"}, {id:"7", name:"Чит-коды"} ]
     else
       @categories = [{id:"8", name:"Экшен"}, {id:"9", name:"Адвенчура"}, {id:"10", name:"Казуальная"}, {id:"11", name:"Многопользовательская"}, {id:"12", name:"Приключения"}, {id:"12", name:"Гонки"}, {id:"13", name:"РПГ"}, {id:"14", name:"Симулятор"}, {id:"15", name:"Спортивная"}, {id:"16", name:"Стратегия"}, {id:"17", name:"Хоррор"}, {id:"18", name:"Бесплатная"}, {id:"19", name:"Визуальная новелла"}, {id:"20", name:"Настольная"} ]
+      @genres = [{id:"1", name:"Экшен"}, {id:"2", name:"Адвенчура"}, {id:"3", name:"Казуальная"}, {id:"4", name:"Многопользовательская"}, {id:"5", name:"Гонки"}, {id:"6", name:"РПГ"}, {id:"7", name:"Симулятор"}, {id:"8", name:"Спортивная"}, {id:"9", name:"Стратегия"}, {id:"10", name:"Хоррор"}, {id:"11", name:"Бесплатная"}, {id:"12", name:"Визуальная новелла"}, {id:"13", name:"Настольная"} ]
+      render 'newreviews'
     end
   end
 
@@ -145,6 +157,21 @@ class PostsController < ApplicationController
     @post = Post.new(post_params.merge(user_id: current_user.id))
     respond_to do |format|
       if @post.save
+
+# 1. Взять все жанры
+# 2. Сделать по жанрам цикл
+# 3. Внутри цикла для каждого id жанра проверять параметр genres[g_id]
+@genres = Genre.all
+
+# logger.debug params[:genres].to_s
+@genres.each do |genre|
+  # logger.debug '"g_'+genre.id.to_s+'"=>"on"'
+  # if params[:genres].to_s.includes?'"g_'+genre.id.to_s+'"=>"on"'
+  if params[:genres].to_s.includes?'"g_'+genre.id.to_s+'"=>"on"'
+    GenreToSmth.new({genre_id: genre.id, post_id:@post.id, project_id:1}).save
+  end
+end
+
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }
       else
@@ -159,6 +186,16 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
+        @genres = Genre.all
+        GenreToSmth.delete_all(:post_id => @post.id)
+
+        @genres.each do |genre|
+          # logger.debug '"g_'+genre.id.to_s+'"=>"on"'
+          if params[:genres].to_s.include? '"g_'+genre.id.to_s+'"=>"on"'
+            GenreToSmth.new({genre_id: genre.id, post_id:@post.id, project_id:1}).save
+          end
+        end
+
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
         format.json { render :show, status: :ok, location: @post }
       else

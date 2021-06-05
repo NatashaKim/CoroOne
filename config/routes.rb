@@ -46,6 +46,9 @@ end
 
   get '/posts_by_type/:post_type_id/count/:count', to: "posts#get_posts_by_type"
 
+  get '/posts_by_type_and_genre/:post_type_id/genre/:genre', to: "posts#get_posts_by_type_and_genre"
+
+
   get '/posts_by_category/:post_type_id/category/:category_id', to: "posts#get_posts_by_category"
 
   get '/posts/by_type/:name', to:"posts#post_type_page"

@@ -9,7 +9,7 @@ class A_checkbox extends React.Component {
   }
 
   toggleCheckboxChange = () => {
-    const { handleCheckboxChange, label } = this.props;
+    const { handleCheckboxChange, label} = this.props;
 
     this.setState(({ isChecked }) => (
       {
@@ -31,6 +31,7 @@ class A_checkbox extends React.Component {
               className = "checkbox"
               type="checkbox"
               value={label}
+              name = {this.props.name}
               checked={isChecked}
               onChange={this.toggleCheckboxChange}
           />

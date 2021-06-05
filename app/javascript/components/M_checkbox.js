@@ -73,7 +73,7 @@ class M_checkbox extends React.Component {
   )
 
   createCheckboxes = () => (
-    items.map(this.createCheckbox)
+    this.props.items.map(this.createCheckbox)
   )
 
   render() {

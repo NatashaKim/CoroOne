@@ -7,6 +7,7 @@ import M_image_input_with_label from "./M_image_input_with_label"
 import M_textarea_with_label from "./M_textarea_with_label"
 import M_select_with_label from "./M_select_with_label"
 import A_button from "./A_button"
+import M_checkbox from "./M_checkbox"
 import {availableCategories} from './Api.js';
 import '../../assets/stylesheets/O_postform.scss'
 
@@ -40,9 +41,6 @@ class O_reviewsform extends React.Component {
         })
     }
 
-    handleCategoryChange(e) {
-      this.setState({ genre_id: e.target.value });
-    }
     handleTitleChange(e) {
       this.setState({ title: e.target.value });
     }
@@ -59,8 +57,12 @@ class O_reviewsform extends React.Component {
       this.setState({ videourl: e.target.value });
     }
 
+    handleGenreChange(e) { return true;
+    }
+
 
     render() {
+
       return (
         <div className = "Postform">
           <div className = "Postform_body">
@@ -71,14 +73,29 @@ class O_reviewsform extends React.Component {
                 value={this.state.authenticity_token}
               />
 
-             <M_select_with_label
-              label = "Категория"
-              name="post[genre_id]"
-              value={this.state.genre}
-              placeholder={"Выберите категорию"}
-              handleChange={this.handleGenreChange}
-              options={this.state.genres}
-            />
+            <div>
+            {this.state.genres.map(genre => {
+
+let checked = {};
+
+if(this.props.post_genres.findIndex(
+    (element, index, array) => {
+      return element.genre_id == genre.id
+    }
+  ) >=0
+)
+checked= {checked:"on"};
+
+
+              return (
+              <div>
+               <input  type="checkbox" id={ "g_"+genre.id } name ={ "genres[g_"+genre.id+"]" } {...checked}  onclick="return true;"/>
+              <label for={ "g_"+genre.id }>{genre.name}</label>
+              </div>
+           )
+         }
+         )}
+           </div>
 
             <M_input_with_label
               label = "Заголовок"

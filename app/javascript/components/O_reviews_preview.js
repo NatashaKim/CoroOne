@@ -13,11 +13,23 @@ class O_reviews_preview extends React.Component {
   constructor(props) {
       super(props);
       this.state={
-        posts: null
+        posts: null//,
+        //genre : props.genre
       }
+
+      if(props.genre){
+        get_posts_by_type_and_genre(this.props.post_type_id, props.genre).then((u)=>{
+          this.setState({posts: u})
+        })
+
+      }
+      else{
+
+
       get_posts_by_type(this.props.post_type_id, this.props.post_number).then((u)=>{
         this.setState({posts: u})
       })
+    }
 }
 
 
