@@ -1,8 +1,8 @@
-<body class="edit_post">
+<body class="new_post">
 
-   <div class="edit_post_wrapper">
-     <div class="edit_post_card">
-      <h1>Редактирование поста</h1>
+   <div class="new_post_wrapper">
+     <div class="new_post_card">
+       <%= react_component 'A_title', { title: "Редактирование поста", headingStyle: 'h2' } %>
 
     <% if @post.post_type.name == "Новости" %>
         <%= render 'form', post: @post %>
@@ -21,7 +21,6 @@
               <%= render "answers/form" %>
         <% end %>
     <% end %>
-
 
 
       <%= link_to 'Открыть', @post %> |

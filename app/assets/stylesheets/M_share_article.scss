@@ -1,0 +1,24 @@
+.Share_article {
+  display: flex;
+  background-color: var(--zelda-green);
+  width: 676px;
+  height: 150px;
+  padding: 24px 24px 24px 32px;
+  border-radius: 32px;
+  flex-direction: column;
+  justify-content: space-between;
+  .Share_ways {
+    display: flex;
+    justify-content: space-between;
+    .Share_social {
+      display: flex;
+      justify-content: space-between;
+      width: 196px;
+    }
+    .Favorite_button {
+      img {
+        width: 40px;
+      }
+    }
+  }
+}

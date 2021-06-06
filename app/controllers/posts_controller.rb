@@ -53,9 +53,9 @@ class PostsController < ApplicationController
 
 
   def get_posts_by_type
-      @posts = Post.where(post_type_id: params[:post_type_id]).includes(:category, :genres).limit(params[:count]).map do
+      @posts = Post.where(post_type_id: params[:post_type_id]).includes(:category, :genres, :likes).limit(params[:count]).map do
         |post|
-        post.as_json(include: [:category, :genres, :image])
+        post.as_json(include: [:category, :genres, :image, :likes])
       end
       render json: @posts
   end

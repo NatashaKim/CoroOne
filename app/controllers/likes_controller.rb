@@ -8,8 +8,11 @@ class LikesController < ApplicationController
   def create
     if already_liked?
       flash[:notice] = "You can't like more than once"
+      logger.debug "11"
     else
+      logger.debug "13"
       @new_like = @post.likes.create(user_id: current_user.id)
+      @new_like.save
       render json: @new_like
       return
     end

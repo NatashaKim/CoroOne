@@ -17,6 +17,7 @@ class O_postform extends React.Component {
       this.state = {
         category_id: props.post.category_id ? props.post.category_id : '',
         title: props.post.title ? props.post.title : '',
+        lid: props.post.lid ? props.post.lid : '',
         author: props.post.author ? props.post.author : '',
         content: props.post.content ? props.post.content : '',
         image: props.post.image ? props.post.image : '',
@@ -27,6 +28,7 @@ class O_postform extends React.Component {
     ;
       this.handleCategoryChange = this.handleCategoryChange.bind(this);
       this.handleTitleChange = this.handleTitleChange.bind(this);
+      this.handleLidChange = this.handleLidChange.bind(this);
       this.handleAuthorChange = this.handleAuthorChange.bind(this);
       this.handleContentChange = this.handleContentChange.bind(this);
       this.handleImageChange = this.handleImageChange.bind(this);
@@ -44,6 +46,9 @@ class O_postform extends React.Component {
     }
     handleTitleChange(e) {
       this.setState({ title: e.target.value });
+    }
+    handleLidChange(e) {
+      this.setState({ lid: e.target.value });
     }
     handleAuthorChange(e) {
       this.setState({ author: e.target.value });
@@ -89,6 +94,13 @@ class O_postform extends React.Component {
               name="post[author]"
               value={this.state.author}
               onChange={this.handleAuthorChange}
+            />
+
+            <M_textarea_with_label
+              label = "Лид"
+              name="post[lid]"
+              value={this.state.lid}
+              onChange={this.handleLidChange}
             />
 
             <M_textarea_with_label
