@@ -9,11 +9,21 @@ class M_article_body extends React.Component {
   render() {
     return (
       <div className="Article_body">
-        <A_text value={this.props.post.content} />
+        <A_text
+          value={this.props.post.content.replace(/#.*$/, "")}
+          textStyle='p3'
+          textColor='cold-black'
+          textAlign='left_align'
+        />
         <div className="Article_body_image">
           <A_postcover post = {this.props.post} />
         </div>
-        <A_text value={this.props.post.content} />
+        <A_text
+          value={this.props.post.content.replace(/#.*$/, "")}
+          textStyle='p3'
+          textColor='cold-black'
+          textAlign='left_align'
+        />
       </div>
     );
   }

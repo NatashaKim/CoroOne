@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import A_category from "./A_category"
-import A_hashtag from "./A_hashtag"
+import A_user_hashtag from "./A_user_hashtag"
 import M_user_info from "./M_user_info"
 import A_postcover from "./A_postcover"
 import A_post_title from "./A_post_title"
@@ -56,7 +56,7 @@ class M_necrology_view extends React.Component {
         </div>
 
         <A_text value = {this.props.post.content} textStyle = "p3" textColor = "cold-black" textAlign = "left_align"/>
-        <A_hashtag post = {this.props.post} tagKinds = "h--hashtag"/>
+        <A_user_hashtag post = {this.props.post} tagKinds = "h--hashtag"/>
 
         <M_necro_feedback post = {this.props.post} user={this.state.author}/>
       </div>

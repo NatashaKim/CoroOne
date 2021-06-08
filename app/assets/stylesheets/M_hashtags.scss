@@ -1,0 +1,17 @@
+.Hashtags_gray {
+  display: flex;
+  width: 100vw;
+  background-color: var(--mineral-gray);
+  border-radius: 74px;
+  margin: 117px auto;
+  .Hashtags_gray_body {
+    width: 959px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 56px auto;
+    align-items: center;
+    .Hashtag_img {
+      margin: 0px 12px;
+    }
+  }
+}

@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import M_share_article from "./M_share_article"
 import M_article_body from "./M_article_body"
 import M_article_header from "./M_article_header"
+import M_hashtags from "./M_hashtags"
 import {getuser} from './Api.js';
 import '../../assets/stylesheets/M_postview.scss'
 

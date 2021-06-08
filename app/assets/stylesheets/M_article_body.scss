@@ -1,3 +1,10 @@
 .Article_body {
   width: 673px;
+  margin-bottom: 74px;
+  .Article_body_image {
+    .Postcover_container {
+      width: inherit;
+      margin: 48px 0;
+    }
+  }
 }

@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import A_category from "./A_category"
-import A_hashtag from "./A_hashtag"
+import A_user_hashtag from "./A_user_hashtag"
 class M_userpostview extends React.Component {
   render() {
 
@@ -14,7 +14,7 @@ class M_userpostview extends React.Component {
 
     return (
       <div>
-            <A_hashtag post = {this.props.post} tagKinds = "h--hashtag"/>
+            <A_user_hashtag post = {this.props.post} tagKinds = "h--hashtag"/>
             <p>ID: {`${this.props.post.id}`}</p>
             <p>Autdhor: {`${this.props.post.author.username}`}</p>
             <p>Content: {`${this.props.post.content}`}</p>

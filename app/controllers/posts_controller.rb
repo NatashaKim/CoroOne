@@ -187,7 +187,7 @@ end
     respond_to do |format|
       if @post.update(post_params)
         @genres = Genre.all
-        GenreToSmth.delete_all(:post_id => @post.id)
+        GenreToSmth.where(post_id: @post.id).destroy_all
 
         @genres.each do |genre|
           # logger.debug '"g_'+genre.id.to_s+'"=>"on"'
