@@ -80,7 +80,7 @@ before_action :set_user, only: [:show, :edit, :update, :destroy]
     end
   # Only allow a list of trusted parameters through.
   def user_params
-    params.require(:user).permit(:username, :email, :image, :admin, :ismoderator, :isdeveloper, :password)
+    params.require(:user).permit(:username, :email, :image, :admin, :ismoderator, :isdeveloper, :password, :account_cover)
   end
 
 end

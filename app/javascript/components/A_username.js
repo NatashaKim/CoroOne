@@ -8,7 +8,8 @@ const STYLES = [
 
 const COLORS = [
   'mineral-gray',
-  'cold-black'
+  'cold-black',
+  'navy-blue'
 ]
 
 class A_username extends React.Component {

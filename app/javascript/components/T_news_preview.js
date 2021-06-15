@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import '../../assets/stylesheets/M_categories_nav.scss'
 import M_genres_nav from "./M_genres_nav"
 import O_news_preview from "./O_news_preview"
-
+import O_puzzle_preview from "./O_puzzle_preview"
 
 class T_news_preview extends React.Component {
   constructor(props) {
@@ -43,13 +43,19 @@ if(this.state.notification)this.state.notification(a);
   render () {
     let genres = this.props.genres;
     return (
-      <div className = "Reviews_page">
-        <M_genres_nav
-        genres = {this.props.genres}
-        post_type_id = {this.props.post_type_id}
-        reviews_preview = {this}
-        />
-        <div class="News">
+      <div className = "News_page">
+        <div class="Post_type_header">
+          <M_genres_nav
+          genres = {this.props.genres}
+          post_type_id = {this.props.post_type_id}
+          reviews_preview = {this}
+          />
+          <O_puzzle_preview
+          post_type_id = {this.props.post_type_id}
+          post_number = "4"
+          />
+        </div>
+        <div class="Post_type_section_wrapper">
           <O_news_preview
           post_type_id = {this.props.post_type_id}
           post_number = {this.props.post_number}
@@ -62,4 +68,4 @@ if(this.state.notification)this.state.notification(a);
   }
 }
 
-export default T_reviews_preview
+export default T_news_preview

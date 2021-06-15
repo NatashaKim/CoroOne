@@ -1,7 +1,20 @@
 <body class="show_user_body">
-  <%= render 'navbar/navbarleft' %>
   <div class="wrapper_user_show">
     <div class="account">
+
+      <% @belonging = "another's"%>
+      <%if @user.id == current_user.id %>
+        <% @belonging = "your" %>
+      <% end %>
+
+      <% @user_role = "gamer"%>
+      <%if @user.isdeveloper == true %>
+        <% @user_role = "developer" %>
+      <% end %>
+      <%= react_component 'M_account', { belonging: @belonging, developer: @developer, user: @user } %>
+
+
+
       <%= image_tag(@user.image.url, alt: 'Image') if @user.image? %>
       <p><%= @user.username %></p>
       <% if user_signed_in? && @user.admin == true %>

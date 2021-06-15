@@ -1,22 +1,11 @@
     <%= react_component 'M_post_types_nav', { post_types: @post_types } %>
 
 <% if @post_type[:id] == 1%>
-  <div class="News">
-    <div class="Post_type_header">
-      <%= react_component 'M_categories_nav', { categories: @categories, post_type_id: @post_type[:id] } %>
-      <%= react_component 'O_puzzle_preview', { post_type_id: @post_type[:id], post_number: 4} %>
-    </div>
-    <div class="Post_type_section_wrapper">
-      <%= react_component 'O_news_preview', { post_type_id: @post_type[:id], post_number: 110} %>
-    </div>
-  </div>
+<%= react_component 'T_news_preview', { genres: @genres, post_type_id: @post_type[:id], post_number: 110 } %>
 <% end %>
 
 <% if @post_type[:id] == 2%>
-  <%= react_component 'M_categories_nav', { categories: @categories, post_type_id: @post_type[:id] } %>
-  <div class="News">
-    <%= react_component 'O_posts_preview', { post_type_id: @post_type[:id], post_number: 17} %>
-  </div>
+  <%= react_component 'T_news_preview', { genres: @genres, post_type_id: @post_type[:id], post_number: 17 } %>
 <% end %>
 
 <% if @post_type[:id] == 3%>

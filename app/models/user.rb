@@ -16,6 +16,7 @@ class User < ApplicationRecord
   has_many :followers, through: :following_users
 
   mount_uploader :image, AvatarUploader
+  mount_uploader :account_cover, AccountCoverUploader
 
 
 

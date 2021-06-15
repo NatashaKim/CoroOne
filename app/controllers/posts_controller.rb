@@ -47,11 +47,9 @@ class PostsController < ApplicationController
     @post_type = PostType.find_by_name(params[:name])
     @categories = Category.all
     @post_types = PostType.all
-    if @post_type = PostType.find_by_name("Обзоры")
+
       @genres = Genre.where(post_type_id:@post_type.id)
-    elsif
-    @genres = Genre.all
-  end
+
     render "posttypepage"
   end
 
