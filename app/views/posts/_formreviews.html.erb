@@ -5,7 +5,7 @@
     <% end %>
   <% end %>
 
-<form enctype="multipart/form-data" action="/posts" accept-charset="UTF-8" method="post">
+<form enctype="multipart/form-data" action=<%= @action %> accept-charset="UTF-8" method="post">
   <%= react_component 'O_reviewsform', { post: @post, genres: @genres, post_genres: @post_genres } %>
 
 </form>

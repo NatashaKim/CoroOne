@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import M_post_preview from "./M_post_preview"
 import A_post_type from "./A_post_type"
 import {get_posts_by_type} from './Api.js'
+import {get_posts_by_type_and_genre} from './Api.js'
 import M_video_preview from "./M_video_preview"
 
 
@@ -17,6 +18,10 @@ class O_reviews_preview extends React.Component {
         //genre : props.genre
       }
 
+if (props.owner) {
+props.owner.setState({notification: (g) =>this.update_genre(g)});
+}
+
       if(props.genre){
         get_posts_by_type_and_genre(this.props.post_type_id, props.genre).then((u)=>{
           this.setState({posts: u})
@@ -30,6 +35,12 @@ class O_reviews_preview extends React.Component {
         this.setState({posts: u})
       })
     }
+}
+
+update_genre(genres) {
+  get_posts_by_type_and_genre(this.props.post_type_id, genres).then((u)=>{
+    this.setState({posts: u})
+  })
 }
 
 

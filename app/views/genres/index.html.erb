@@ -7,6 +7,7 @@
      <tr>
        <th>Name</th>
        <th>Image</th>
+       <th>PostType</th>
        <th colspan="2"></th>
      </tr>
    </thead>
@@ -16,6 +17,7 @@
        <tr>
          <td><%= genre.name %></td>
          <td><%= genre.image_src %></td>
+         <td><%= genre.post_type_id %></td>
          <td><%= link_to 'Show', genre %></td>
          <td><%= link_to 'Edit', edit_genre_path(genre) %></td>
          <td><%= link_to 'Destroy', genre, method: :delete, data: { confirm: 'Are you sure?' } %></td>

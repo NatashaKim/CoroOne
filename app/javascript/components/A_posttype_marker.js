@@ -7,6 +7,7 @@ import '../../assets/stylesheets/colors.scss'
 
 class A_posttype_marker extends React.Component {
   render () {
+    if(this.props.post_type)
     return (
       <div className = "Posttype_marker">
         <a className = "small3 mineral-gray" href={`/posts/by_type/${this.props.post_type.name}`} >
@@ -15,6 +16,7 @@ class A_posttype_marker extends React.Component {
         <img className = "Marker" src = '/assets/posttype_marker.svg'/>
       </div>
     );
+    return null;
   }
 }
 

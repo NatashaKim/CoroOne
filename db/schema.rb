@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_05_210224) do
+ActiveRecord::Schema.define(version: 2021_06_14_192420) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -98,6 +98,8 @@ ActiveRecord::Schema.define(version: 2021_06_05_210224) do
     t.string "image_src"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "post_type_id"
+    t.index ["post_type_id"], name: "index_genres_on_post_type_id"
   end
 
   create_table "likes", force: :cascade do |t|
@@ -204,6 +206,7 @@ ActiveRecord::Schema.define(version: 2021_06_05_210224) do
   add_foreign_key "genre_to_smths", "genres"
   add_foreign_key "genre_to_smths", "posts"
   add_foreign_key "genre_to_smths", "projects"
+  add_foreign_key "genres", "post_types"
   add_foreign_key "likes", "posts"
   add_foreign_key "likes", "users"
   add_foreign_key "posts", "categories"

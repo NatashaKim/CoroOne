@@ -53,7 +53,11 @@
     <div class="Workshop_wrapper">
     <%= react_component 'A_post_type', { post_type: @post_types[3] } %>
     <%= react_component 'O_newprojects_placeholder' %>
-    <%= react_component 'S_userposts_preview', { post_type_id: 4, post_number: 13, current_user_id: current_user.id, user: current_user} %>
+    <% current_user_id = -1 %>
+    <%if current_user%>
+      <%current_user_id= current_user.id%>
+    <% end %>
+    <%= react_component 'S_userposts_preview', { post_type_id: 4, post_number: 13, current_user_id: current_user_id, user: current_user} %>
     </div>
     <br>
 

@@ -1,0 +1,19 @@
+.Article_page {
+  position: relative;
+  .Article_image_header {
+    height: 291px;
+    position: relative;
+    .Article_marker_holder{
+      position: absolute;
+      width: 1095px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: flex-end;
+      left: 50%;
+      transform: translate(-50%);
+      .Posttype_marker {
+        right: 0;
+      }
+    }
+  }
+}

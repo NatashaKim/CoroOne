@@ -1,6 +1,6 @@
 .Puzzle_grid {
   margin: 0 auto;
-  width: 1026px;
+  width: 1375px;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 326px 326px;
@@ -17,11 +17,13 @@
     grid-row: 1 / 3;
     height: auto;
     width: auto;
+    border-radius: 163px 163px 32px 32px;
   }
   .Post_preview:nth-child(3) {
     grid-column: 1 / 2;
     height: auto;
     width: auto;
+    border-radius: 163px;
   }
   .Post_preview:nth-child(4) {
     grid-column: 2 / 3;

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   post 'users/:id/edit', to: "users#update"
   post 'posts/:id', to: "posts#update"
   get 'users/:id/getuser', to: "users#getuser"
+  get 'post_types/:id/getpost_type', to: "post_types#getpost_type"
   post 'users/:id/delete', to: "users#delite"
   post 'users/:id/follow', to: "users#follow", as: "follow_user"
   post 'users/:id/unfollow', to: "users#unfollow", as: "unfollow_user"

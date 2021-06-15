@@ -22,6 +22,13 @@ export function getuser(user_id) {
    })
 }
 
+export function getpost_type(post_type_id) {
+   return axios.get('/post_types/' + post_type_id + '/getpost_type').then(
+     function (response) {
+      return response.data;
+   })
+}
+
 export function get_posts_by_type(post_type_id, count) {
    return axios.get('/posts_by_type/' + post_type_id + '/count/' + count).then(
      function (response) {

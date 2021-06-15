@@ -51,7 +51,10 @@ class A_genre extends React.Component {
     let imgpart = <img className = "Genre_img" src = {imgsrc}/>
 
     return (
-      <div className = {`Genre ${checkGenreStyles} ${checkGenreColors}`} onClick = {() => this.props.genre_nav.selectGenre(this.props.genre)} > {imgpart} {textpart}</div>
+      <div className = {`Genre ${checkGenreStyles} ${checkGenreColors}`}
+      onClick = {
+        () => this.props.genre_nav.selectGenre(this.props.genre)
+      } > {imgpart} {textpart}</div>
     );
   }
 }

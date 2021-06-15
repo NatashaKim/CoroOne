@@ -2,16 +2,15 @@ import React from "react"
 import PropTypes from "prop-types"
 import '../../assets/stylesheets/M_categories_nav.scss'
 import M_genres_nav from "./M_genres_nav"
-import O_reviews_preview from "./O_reviews_preview"
+import O_news_preview from "./O_news_preview"
 
 
-class T_reviews_preview extends React.Component {
+class T_news_preview extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
         selected_genres: []
       };
-
     }
 
     selectGenre(genre) {
@@ -51,7 +50,7 @@ if(this.state.notification)this.state.notification(a);
         reviews_preview = {this}
         />
         <div class="News">
-          <O_reviews_preview
+          <O_news_preview
           post_type_id = {this.props.post_type_id}
           post_number = {this.props.post_number}
           genres = {this.state.selected_genres}

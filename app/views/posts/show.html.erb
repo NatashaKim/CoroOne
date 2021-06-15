@@ -3,9 +3,18 @@
 
   <div class="wrapper_show">
     <div class="narrow">
-      <%# <%= react_component 'M_postview', { category: @category, categories: @categories, post: @post, post_genres: @post_genres, post_type: @post.post_type } %> %>
 
-      <%= react_component 'T_article', { post: @post, current_user_id: current_user.id } %>
+      <%= react_component 'T_article', {
+        post: @post,
+        current_user_id: current_user.id,
+        comment: @comment,
+        author: @comment.user,
+        post: @post,
+        comments: @post.comments,
+        currentUser: current_user,
+        post_id: @post.id,
+        user: current_user
+      } %>
 
       </div>
 

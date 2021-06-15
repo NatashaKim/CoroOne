@@ -1,4 +1,29 @@
 .Article {
   margin: 0 auto;
   width: fit-content;
+  position: relative;
+  .Social_icons_holder {
+    height: 64px;
+    margin-top: -64px;
+    width: 1311px;
+    display: flex;
+    .Shape {
+      width: 320px;
+      height: 64px;
+      background-image: url(social_icons_holder.svg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .Social_icons {
+        width: 196px;
+        height: 40px;
+        justify-content: space-between;
+        display: flex;
+      }
+    }
+  }
+  .Article_content {
+    margin: 0 auto;
+    width: fit-content;
+  }
 }

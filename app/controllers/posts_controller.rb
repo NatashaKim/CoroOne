@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   # http_basic_authenticate_with :name => "admin", :password => "superstrongpassword", :except => [:index, :show]
 
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index, :show, :get_posts_by_type, :post_type_page, :get_posts_by_type_and_genre]
 
   # GET /posts
   # GET /posts.json
@@ -47,7 +47,11 @@ class PostsController < ApplicationController
     @post_type = PostType.find_by_name(params[:name])
     @categories = Category.all
     @post_types = PostType.all
+    if @post_type = PostType.find_by_name("Обзоры")
+      @genres = Genre.where(post_type_id:@post_type.id)
+    elsif
     @genres = Genre.all
+  end
     render "posttypepage"
   end
 
@@ -61,7 +65,11 @@ class PostsController < ApplicationController
   end
 
   def get_posts_by_type_and_genre
-      @posts = Post.where(post_type_id: params[:post_type_id]).includes(:category, :genres).map do
+    @post_id=GenreToSmth.where(genre_id: params[:genre].split(',')).select("post_id")
+      @posts = Post
+      .where(post_type_id: params[:post_type_id])
+      .where(id: @post_id)
+      .includes(:category, :genres).map do
         |post|
         post.as_json(include: [:category, :genres, :image])
       end
@@ -167,7 +175,7 @@ class PostsController < ApplicationController
 @genres.each do |genre|
   # logger.debug '"g_'+genre.id.to_s+'"=>"on"'
   # if params[:genres].to_s.includes?'"g_'+genre.id.to_s+'"=>"on"'
-  if params[:genres].to_s.includes?'"g_'+genre.id.to_s+'"=>"on"'
+  if params[:genres].to_s.include?'"g_'+genre.id.to_s+'"=>"on"'
     GenreToSmth.new({genre_id: genre.id, post_id:@post.id, project_id:1}).save
   end
 end

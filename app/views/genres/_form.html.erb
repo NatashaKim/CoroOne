@@ -21,6 +21,11 @@
      <%= form.text_area :image_src %>
    </div>
 
+   <div class="field">
+     <%= form.label :post_type_id %>
+     <%= form.select :post_type_id, PostType.pluck(:name, :id) %>
+   </div>
+
    <div class="actions">
      <%= form.submit %>
    </div>

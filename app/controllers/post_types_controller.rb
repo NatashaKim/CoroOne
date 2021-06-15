@@ -12,6 +12,15 @@ class PostTypesController < ApplicationController
   def show
   end
 
+  def getpost_type
+    @post_type = PostType.find(params[:id])
+    if @post_type
+      render json: @post_type
+    else
+        render file: 'public/404', status: 404, formats: [:html]
+    end
+  end
+
   # GET /post_types/new
   def new
     @post_type = PostType.new
