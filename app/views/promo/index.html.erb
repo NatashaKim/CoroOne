@@ -2,7 +2,7 @@
 
 <body class="promo">
 
-<div class="wrapper">
+<div class="land">
   <section class="begining">
     <div class="begin">
       <div class="begin_img">
@@ -131,42 +131,12 @@
          </div>
       </div>
     </div>
-    <div class="green_img">
-      <%= image_tag("green_img.png", :alt => "Песочница идей") %>
+    <div class="image_green">
+
     </div>
 
   </section>
 
-
-
-  <section class="fichi_for_mobile">
-    <div class="first_fich">
-      <div class="first_fich_img">
-        <%= image_tag("firstfich.svg", :alt => "Логотип") %>
-      </div>
-      <div class="first_fich_text">
-        <p>Участвуйте в&nbsp;рейтинге инди-проектов. CoroOne формирует еженедельный список самых активных разработчиков, чтобы помочь вам найти спонсоров.</p>
-      </div>
-    </div>
-
-    <div class="second_fich">
-      <div class="second_fich_img">
-        <%= image_tag("secondfich.svg", :alt => "Логотип") %>
-      </div>
-      <div class="second_fich_text">
-        <p>Геймификация и&nbsp;ачивки прямо в&nbsp;интерфейсе. Отгадывай загадки, узнавай интересные факты из&nbsp;мира видео-игр, получай баллы.</p>
-      </div>
-    </div>
-
-    <div class="third_fich">
-      <div class="third_fich_img">
-        <%= image_tag("thirdfich.svg", :alt => "Логотип") %>
-      </div>
-      <div class="third_fich_text">
-        <p>Участвуйте в&nbsp;рейтинге инди-проектов. CoroOne формирует еженедельный список самых активных разработчиков, чтобы помочь вам найти спонсоров.</p>
-      </div>
-    </div>
-  </section>
 
   <section class="sell">
 
@@ -190,8 +160,6 @@
 
 </body>
 <%= render 'footer/footerinner' %>
-
-<%= link_to "Пользователи", users_path %>
 
 <% if user_signed_in? %>
 <%= link_to "Админка", admin_context_path(curatorposts: "") %> |

@@ -86,7 +86,7 @@ h6 {
     z-index: 1;
     margin: 0px;
     background-color: $green;
-    div.wrapper {
+    div.land {
       width: 100vw;
       background-color: $green;
       section.begining {
@@ -331,6 +331,8 @@ h6 {
           }
           div.diary_text_2 {
             width: 28rem;
+            margin-top: 70vw;
+            margin-left: 33vw;
             h4 {
               color: $gray;
               font-size: 1.4rem;
@@ -347,6 +349,8 @@ h6 {
           }
           div.diary_text_3 {
             width: 28rem;
+            margin-top: 46vw;
+            margin-left: 60vw;
             h4 {
               color: $gray;
               font-size: 1.4rem;
@@ -365,7 +369,7 @@ h6 {
       }
 
       section.sand {
-        margin-top: -4rem;
+        margin-top: -12rem;
         div.sand_img {
           img:first-child {
             width: 104vw;
@@ -409,11 +413,11 @@ h6 {
           margin-top: -56rem;
           background-color: $gray;
           width: 100vw;
-          padding-bottom: 16rem;
+          padding-bottom: 10rem;
           padding-left: 14vw;
           div.sand_facts_first {
-            align-items: center;
-            margin: 0 auto;
+            align-items: flex-start;
+            margin: 0 auto 2rem auto;
             display: flex;
             flex-direction: row;
             div.sand_facts_first_f {
@@ -426,7 +430,7 @@ h6 {
                 font-size: 4.5rem;
                 font-weight: normal;
                 margin-bottom: 0.5rem;
-                margin-top: 4rem;
+                margin-top: 3rem;
               }
               p {
                 color: $green;
@@ -442,199 +446,17 @@ h6 {
               }
             }
           }
-          div.green_img {
-            margin-top: 6rem;
-            img {
-              width: 100vw;
-              display: block;
-            }
-          }
-
         }
-      }
-
-
-      section.category {
-        div.circle {
-          background-color: $mainColor;
-          width: 15vw;
-          height: 15vw;
-          border-radius: 8vw;
-          margin-top: -10vw;
-          margin-left: 5vw;
-        }
-        >img {
-          width: 110vw;
-          margin-left: -5vw;
-        }
-        div.category_13 {
-          margin-top: -4vw;
-          width: 102vw;
-          background-color: $mainColor;
-          display: flex;
-          flex-direction: row;
-
-          div.category_13_text {
-            margin-left: 5vw;
-            margin-top: 41vw;
-            h4 {
-              display: block;
-              font-weight: normal;
-              color: $blue;
-              font-size: 3vw;
-              width: 26vw;
-              margin-bottom: 3vw;
-            }
-            p {
-              color: $blue;
-              font-size: 1.4vw;
-              line-height: 2.7vw;
-              font-weight: normal;
-              width: 26vw;
-            }
-          }
-          div.category_13_img {
-             margin-bottom: 8vw;
-             margin-left: -10vw;
-             margin-right: 12vw;
-             margin-top: 10vw;
-             display: flex;
-             flex-direction: column;
-             img:first-child {
-               width: 76vw;
-               margin-bottom: 5vw;
-             }
-             img:last-child {
-               width: 80%;
-               margin-left: auto;
-               margin-right: 0;
-             }
-          }
-        }
-        div.category_kinds {
-          margin-top: -1vw;
-          width: 102vw;
-          background-color: $mainColor;
-          padding: 5vw 5vw 7vw;
-          display: flex;
-          flex-direction: row;
-          div.first_part {
-            margin-bottom: 3vw;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            div.kind_of_category {
-              margin-right: 1.8vw;
-              height: 4vw;
-              padding: 0 2.2vw;
-              background-color: $blue;
-              border-radius: 10vw;
-              p {
-                line-height: 4vw;
-                margin: 0;
-                color: $mainColor;
-                font-size: 1.2vw;
-              }
-            }
-            div.kind_of_category:hover {
-              background-color: #75FEFA;
-              p {
-                color: #03003D;
-              }
-            }
-          }
-          div.second_part {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            margin-left: -3vw;
-            div.kind_of_category {
-              margin-right: 1.8vw;
-              height: 4vw;
-              padding: 0 2.2vw;
-              background-color: $blue;
-              border-radius: 10vw;
-              p {
-                line-height: 4vw;
-                margin: 0;
-                color: $mainColor;
-                font-size: 1.2vw;
-              }
-            }
-            div.kind_of_category:hover {
-              background-color: #75FEFA;
-              p {
-                color: #03003D;
-              }
-            }
-          }
-        }
-      }
-
-      section.fichi_for_desctop {
-        display: block;
-        padding: 5vw 5vw;
-        width: 91vw;
-        background-color: $mainColor;
-        div.fichi_for_desctop_img {
-          margin-left: -20vw;
-          width: 93vw;
-          height: 175vw;
-          display: block;
-          background-image: url(fichi_desctop.png);
-          background-size: 122%;
+        div.image_green {
+          width: 100vw;
+          height: 65rem;
+          margin-top: 6rem;
+          background-image: url(green_img.png);
           background-repeat: no-repeat;
-          div.fichi_for_desctop_li {
-            width: 90vw;
-            margin-left: 20vw;
-            display: flex;
-            flex-direction: column;
-            div.fichi_for_desctop_li_text:first-child {
-              display: flex;
-              flex-direction: row;
-              justify-content: flex-end;
-              margin-top: 11vw;
-              margin-bottom: 40vw;
-              p {
-                color: $blue;
-                font-size: 1.4vw;
-                line-height: 2.7vw;
-                font-weight: normal;
-                width: 30vw;
-              }
-            }
-            div.fichi_for_desctop_li_text:last-child {
-              display: flex;
-              flex-direction: row;
-              justify-content: flex-end;
-              p {
-                color: $blue;
-                font-size: 1.4vw;
-                line-height: 2.7vw;
-                font-weight: normal;
-                width: 30vw;
-              }
-            }
-            div.fichi_for_desctop_li_text_s {
-              display: flex;
-              flex-direction: row;
-              justify-content: flex-start;
-              margin-bottom: 24vw;
-              p {
-                color: $blue;
-                font-size: 1.4vw;
-                line-height: 2.7vw;
-                font-weight: normal;
-                width: 30vw;
-              }
-            }
-          }
+          background-size: 100vw auto;
         }
       }
 
-      section.fichi_for_mobile {
-        display: none;
-      }
 
       section.sell {
         margin-top: -30vw;
