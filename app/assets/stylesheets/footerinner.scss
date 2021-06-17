@@ -1,12 +1,15 @@
 @media (max-width: 1920px) {
   footer  {
-    margin: 5vw;
+    width: 93vw;
+    background-color: #CCFD38;
+    padding: 4rem 4rem 6rem 4rem;
     div.footer_menu {
       margin-bottom: 4vw;
       margin-top: 3vw;
       display: flex;
       flex-direction: row;
       a {
+        font-family: "RedRing";
         font-size: 1.4vw;
         color: #9896AE;
         text-decoration: none;
@@ -24,6 +27,7 @@
         width: 30vw;
         margin-bottom: 12vw;
         p {
+          font-family: "PTMono";
           font-size: 1.4vw;
           line-height: 2vw;
           margin-bottom: 2vw;
@@ -32,6 +36,7 @@
       div.footer_sites {
         width: 32vw;
         p {
+          font-family: "PTMono";
           font-size: 1.4vw;
           line-height: 2vw;
           margin-bottom: 3vw;
