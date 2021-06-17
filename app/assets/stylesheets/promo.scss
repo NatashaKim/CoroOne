@@ -44,867 +44,96 @@
   margin-bottom: 16vw;
 }
 
+
+
 $mainColor: #04005E;
 $blue: #75FEFA;
 $gray: #9896AE;
-$green: #C1F52F;
+$green: #CCFD38;
 
-
-
-
-
-
-
-@media (min-width: 320px) {
-  body.promo {
-    color: $mainColor;
-    //background-image: url(iphoneland.png);
-    box-sizing: border-box;
-    font-family: "RedRing", sans-serif;
-    opacity: 1;
-    background-size: 100vw;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 1;
-    margin: 0px;
-    background-color: #C1F52F;
-    div.wrapper {
-      width: 100vw;
-      section.begining {
-        div.begin {
-          width: 100%;
-          img:first-child {
-            top: -66vw;
-            width: 98vw;
-          }
-          img {
-            position: absolute;
-            top: -70vw;
-            z-index: -1;
-            width: 100%;
-          }
-          div.begin_text {
-            padding: 4vw;
-            margin: 94vw auto 0 auto;
-            @include lastest_object;
-            width: 76%;
-            h1 {
-              font-size: 9vw;
-              line-height: 11vw;
-              font-weight: normal;
-              @include textcenter;
-            }
-            p {
-              font-size: 4.2vw;
-              line-height: 5.5vw;
-              text-align: center;
-              margin: 6vw auto 10vw auto;
-            }
-            button {
-               font-size: 6vw;
-               font-family: "RedRing";
-               text-decoration: none;
-               padding: 3vw 15.7vw;
-               background-color: #04005E;
-               color: #75FEFA;
-               outline: none;
-               border-radius: 10vw;
-               border: 0px;
-               border-color: none;
-               display: block;
-               @include textcenter;
-            }
-            button:hover {
-              background-color: #03003D;
-              color: #75FEFA;
-            }
-          }
-        }
-        div.about {
-          @include last_object;
-          padding: 5vw;
-          p {
-            width: 100%;
-            font-size: 4.2vw;
-            line-height: 7.5vw;
-            color: $mainColor;
-          }
-        }
-        div.advantages {
-          display: flex;
-          flex-direction: column;
-          div.advantage {
-             margin: 0 auto;
-             margin-bottom: 22vw;
-             img {
-               width: 28%;
-               @include imgcenter;
-             }
-             h3 {
-               font-size: 5vw;
-               @include textcenter;
-               margin-top: 7vw;
-             }
-             p {
-               width:73%;
-               font-size: 4.3vw;
-               line-height: 6.2vw;
-               @include textcenter;
-               margin-top: 3vw;
-             }
-          }
-          div.advantage:last-child {
-            @include lastest_object;
-          }
-        }
-      }
-
-      section.defenition {
-        margin: 5vw;
-        h2 {
-          font-size: 6vw;
-          font-weight: normal;
-        }
-        div.defenition_block {
-          display: flex;
-          flex-direction: row;
-          div.defenition_text {
-            div.defenition_text_th {
-               h4 {
-                 font-size: 5vw;
-                 margin-bottom: 3vw;
-                 font-weight: bold;
-               }
-               p {
-                 font-size: 3.6vw;
-                 line-height: 5.5vw;
-                 width: 58vw;
-                 margin-bottom: 68vw;
-               }
-            }
-          }
-          div.defenition_text_th:first-child {
-            margin-top: 44vw;
-          }
-          div.defenition_text_last {
-             h4 {
-               font-size: 5vw;
-               margin-bottom: 3vw;
-               font-weight: bold;
-             }
-             p {
-               font-size: 3.6vw;
-               line-height: 5.5vw;
-               width: 60vw;
-               margin-bottom: 20vw;
-             }
-           }
-          }
-          img:first-child {
-            margin-left: -33vw;
-            width: 139vw;
-            position: absolute;
-          }
-          div.big_format {
-            img {
-               display: none
-            }
-
-          }
-        }
-      }
-
-      section.category {
-        div.circle {
-          display: none;
-        }
-        >img {
-          width: 112vw;
-          margin-left: -5vw;
-        }
-        div.category_13 {
-          margin-top: -4vw;
-          width: 104vw;
-          background-color: $mainColor;
-          display: flex;
-          flex-direction: column-reverse;
-          div.category_13_text {
-            margin-left: 5vw;
-            margin-right: 7vw;
-            h4 {
-              display: none;
-              color: $blue;
-              font-size: 6vw;
-            }
-            p {
-              color: $blue;
-              font-size: 4.2vw;
-              line-height: 6vw;
-              font-weight: normal;
-              width: 80%;
-              margin-right: 0;
-              margin-left: auto;
-            }
-          }
-          div.category_13_img {
-             margin-bottom: 8vw;
-             margin-left: 5vw;
-             margin-right: 7vw;
-             margin-top: 10vw;
-             display: flex;
-             flex-direction: column;
-             img:first-child {
-               width: 100%;
-               margin-bottom: 5vw;
-             }
-             img:last-child {
-               width: 80%;
-               margin-left: auto;
-               margin-right: 0;
-             }
-          }
-        }
-        div.category_kinds {
-          margin-top: -1vw;
-          width: 102vw;
-          background-color: $mainColor;
-          padding: 5vw 5vw 7vw;
-          display: flex;
-          flex-direction: column;
-          div.first_part {
-            margin-bottom: 3vw;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            div.kind_of_category {
-              margin-right: 1.2vw;
-              padding: 2vw 4vw;
-              background-color: $blue;
-              border-radius: 10vw;
-              p {
-                margin: 0;
-                color: $mainColor;
-                font-size: 2.6vw;
-                line-height: 4.5vw;
-              }
-            }
-            div.kind_of_category:hover {
-              background-color: #75FEFA;
-              p {
-                color: #03003D;
-              }
-            }
-          }
-          div.second_part {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            div.kind_of_category {
-              margin-right: 1.2vw;
-              padding: 2vw 4vw;
-              background-color: $blue;
-              border-radius: 10vw;
-              p {
-                margin: 0;
-                color: $mainColor;
-                font-size: 2.6vw;
-                line-height: 4.5vw;
-              }
-            }
-            div.kind_of_category:hover {
-              background-color: #75FEFA;
-              p {
-                color: #03003D;
-              }
-            }
-          }
-        }
-      }
-
-      section.fichi_for_desctop {
-        display: none;
-      }
-
-      section.fichi_for_mobile {
-        display: block;
-        margin-top: -1vw;
-        width: 102vw;
-        background-color: $mainColor;
-        padding: 12vw 5vw 7vw;
-        div.first_fich {
-          div.first_fich_img {
-            img {
-              width: 115vw;
-              margin-left: 14vw;
-            }
-          }
-          div.first_fich_text {
-            p {
-              color: $blue;
-              font-size: 3.6vw;
-              line-height: 6.2vw;
-              width: 80%;
-              margin-top: -36vw;
-            }
-          }
-        }
-        div.second_fich {
-          margin-top: 28vw;
-          div.second_fich_img {
-            img {
-              width: 75vw;
-            }
-          }
-          div.second_fich_text {
-            p {
-              color: $blue;
-              font-size: 3.6vw;
-              line-height: 6.2vw;
-              width: 80%;
-              margin-top: 0vw;
-            }
-          }
-        }
-        div.third_fich {
-          margin-bottom: 50vw;
-          div.third_fich_img {
-            img {
-              width: 105vw;
-              margin-left: -7vw;
-            }
-          }
-          div.third_fich_text {
-            p {
-              color: $blue;
-              font-size: 3.6vw;
-              line-height: 6.2vw;
-              width: 80%;
-              margin-top: -6vw;
-            }
-          }
-        }
-      }
-
-      section.sell {
-        margin-top: -30vw;
-       div.sellback {
-         img {
-           width: 140%;
-         }
-       }
-       div.sellback_info {
-         margin-top: -5vw;
-         width: 104%;
-         background-color: $gray;
-         display: flex;
-         flex-direction: column-reverse;
-         div.sellback_text {
-           width: 90vw;
-           margin: 12vw 5vw 7vw;
-           h3 {
-             width: 80vw;
-             color: $green;
-             font-size: 5vw;
-             line-height: 7vw;
-             font-weight: normal;
-           }
-           p {
-             font-weight: normal;
-             color: $green;
-             font-size: 3.4vw;
-             line-height: 5.5vw;
-             margin-bottom: 17vw;
-           }
-           button.sell_button {
-             font-size: 6vw;
-             font-family: "RedRing";
-             text-decoration: none;
-             padding: 3vw 15.7vw;
-             background-color: $green;
-             color: $mainColor;
-             outline: none;
-             border-radius: 10vw;
-             border: 0px;
-             border-color: none;
-             display: block;
-             @include textcenter;
-             margin-bottom: 25vw;
-           }
-           button.sell_button:hover {
-             background-color: #AFE125;
-             color: #03003D;
-           }
-         }
-       }
-       div.sellback_text_img {
-          margin: 10vw 5vw 0 5vw;
-          img {
-            width: 100%;
-          }
-       }
-      }
-
-
-  }
+@mixin main_text {
+    font-family: "RedRing";
+    font-size: 1.4rem;
+    font-weight: normal;
 }
-@media (min-width: 768px) {
-  body.promo {
-    color: $mainColor;
-    //background-image: url(iphoneland.png);
-    box-sizing: border-box;
-    font-family: "RedRing", sans-serif;
-    opacity: 1;
-    background-size: 100vw;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 1;
-    margin: 0px;
-    background-color: #C1F52F;
-    div.wrapper {
-      width: 100vw;
-      section.begining {
-        div.begin {
-          width: 100%;
-          img:first-child {
-            top: -66vw;
-            width: 98vw;
-          }
-          img {
-            position: absolute;
-            top: -70vw;
-            z-index: -1;
-            width: 100%;
-          }
-          div.begin_text {
-            padding: 4vw;
-            margin: 78vw auto 0 auto;
-            margin-bottom: 25vw;
-            width: 76%;
-            h1 {
-              color: $mainColor;
-              font-size: 9vw;
-              line-height: 11vw;
-              font-weight: normal;
-              @include textcenter;
-              margin-bottom: 3vw;
-            }
-            p {
-              color: $mainColor;
-              width: 63vw;
-              font-size: 4.2vw;
-              line-height: 5.5vw;
-              text-align: center;
-              margin: 6vw 0 10vw 0;
-              @include textcenter;
-              margin-bottom: 7vw
-            }
-            button {
-               font-size: 6vw;
-               font-family: "RedRing";
-               text-decoration: none;
-               padding: 3vw 15.7vw;
-               background-color: #04005E;
-               color: #75FEFA;
-               outline: none;
-               border-radius: 10vw;
-               border: 0px;
-               border-color: none;
-               display: block;
-               @include textcenter;
-            }
-            button:hover {
-              background-color: #03003D;
-              color: #75FEFA;
-            }
-          }
-        }
-        div.about {
-          @include last_object;
-          padding: 5vw;
-          p {
-            width: 100%;
-            font-size: 4.2vw;
-            line-height: 7.5vw;
-            color: $mainColor;
-          }
-        }
-        div.advantages {
-          display: flex;
-          flex-direction: column;
-          div.advantage {
-             margin: 0 auto;
-             margin-bottom: 22vw;
-             img {
-               width: 28%;
-               @include imgcenter;
-             }
-             h3 {
-               font-size: 5vw;
-               @include textcenter;
-               margin-top: 7vw;
-             }
-             p {
-               width:73%;
-               font-size: 4.3vw;
-               line-height: 6.2vw;
-               @include textcenter;
-               margin-top: 3vw;
-             }
-          }
-          div.advantage:last-child {
-            @include lastest_object;
-          }
-        }
-      }
-
-      section.defenition {
-        margin: 5vw;
-        h2 {
-          font-size: 6vw;
-          font-weight: normal;
-        }
-        div.defenition_block {
-          display: flex;
-          flex-direction: row;
-          div.defenition_text {
-            div.defenition_text_th {
-              width: 40vw;
-               h4 {
-                 font-size: 3.8vw;
-                 margin-bottom: 3vw;
-                 font-weight: bold;
-               }
-               p {
-                 font-size: 2.6vw;
-                 line-height: 4.5vw;
-                 width: 48vw;
-                 margin-bottom: 80vw;
-               }
-            }
-          }
-          div.defenition_text_th:first-child {
-            margin-top: 56vw;
-          }
-          div.defenition_text_last {
-             h4 {
-               font-size: 3.8vw;
-               margin-bottom: 3vw;
-               font-weight: bold;
-             }
-             p {
-               font-size: 2.6vw;
-               line-height: 4.5vw;
-               width: 60vw;
-               margin-bottom: 20vw;
-             }
-           }
-          }
-          div.small_format {
-            img {
-              display: block;
-              width: 144vw;
-              margin-left: -38vw;
-            }
-          }
-          div.big_format {
-            img {
-               display: none;
-            }
-
-          }
-        }
-      }
-
-      section.category {
-        div.circle {
-          display: none;
-        }
-        >img {
-          width: 113vw;
-          margin-left: -5vw;
-        }
-        div.category_13 {
-          margin-top: -4vw;
-          width: 104vw;
-          background-color: $mainColor;
-          display: flex;
-          flex-direction: column-reverse;
-          div.category_13_text {
-            margin-left: 5vw;
-            margin-right: 7vw;
-            margin-top: 0vw;
-            h4 {
-              display: none;
-              color: $blue;
-              font-size: 6vw;
-            }
-            p {
-              color: $blue;
-              font-size: 4.2vw;
-              line-height: 6vw;
-              font-weight: normal;
-              width: 80%;
-              margin-right: 0;
-              margin-left: auto;
-            }
-          }
-          div.category_13_img {
-             margin-bottom: 8vw;
-             margin-left: 5vw;
-             margin-right: 7vw;
-             margin-top: 10vw;
-             display: flex;
-             flex-direction: column;
-             img:first-child {
-               width: 100%;
-               margin-bottom: 5vw;
-             }
-             img:last-child {
-               width: 80%;
-               margin-left: auto;
-               margin-right: 0;
-             }
-          }
-        }
-        div.category_kinds {
-          margin-top: -1vw;
-          width: 104vw;
-          background-color: $mainColor;
-          padding: 5vw 5vw 7vw;
-          display: flex;
-          flex-direction: column;
-          div.first_part {
-            margin-bottom: 3vw;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            div.kind_of_category {
-              margin-right: 1.2vw;
-              padding: 2vw 4vw;
-              background-color: $blue;
-              border-radius: 10vw;
-              p {
-                margin: 0;
-                color: $mainColor;
-                font-size: 2.6vw;
-                line-height: 4vw;
-              }
-            }
-            div.kind_of_category:hover {
-              background-color: #75FEFA;
-              p {
-                color: #03003D;
-              }
-            }
-          }
-          div.second_part {
-            margin-left: 0vw;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            div.kind_of_category {
-              margin-right: 1.2vw;
-              padding: 2vw 4vw;
-              background-color: $blue;
-              border-radius: 10vw;
-              p {
-                margin: 0;
-                color: $mainColor;
-                font-size: 2.6vw;
-                line-height: 4vw;
-              }
-            }
-            div.kind_of_category:hover {
-              background-color: #75FEFA;
-              p {
-                color: #03003D;
-              }
-            }
-          }
-        }
-      }
-
-      section.fichi_for_desctop {
-        display: none;
-      }
-
-      section.fichi_for_mobile {
-        display: block;
-        margin-top: -1vw;
-        width: 102vw;
-        background-color: $mainColor;
-        padding: 12vw 5vw 7vw;
-        div.first_fich {
-          div.first_fich_img {
-            img {
-              width: 115vw;
-              margin-left: 14vw;
-            }
-          }
-          div.first_fich_text {
-            p {
-              color: $blue;
-              font-size: 3.6vw;
-              line-height: 6.2vw;
-              width: 80%;
-              margin-top: -36vw;
-            }
-          }
-        }
-        div.second_fich {
-          margin-top: 28vw;
-          div.second_fich_img {
-            img {
-              width: 75vw;
-            }
-          }
-          div.second_fich_text {
-            p {
-              color: $blue;
-              font-size: 3.6vw;
-              line-height: 6.2vw;
-              width: 80%;
-              margin-top: 0vw;
-            }
-          }
-        }
-        div.third_fich {
-          margin-bottom: 50vw;
-          div.third_fich_img {
-            img {
-              width: 105vw;
-              margin-left: -7vw;
-            }
-          }
-          div.third_fich_text {
-            p {
-              color: $blue;
-              font-size: 3.6vw;
-              line-height: 6.2vw;
-              width: 80%;
-              margin-top: -6vw;
-            }
-          }
-        }
-      }
-
-      section.sell {
-        margin-top: -30vw;
-       div.sellback {
-         img {
-           width: 140%;
-         }
-       }
-       div.sellback_info {
-         margin-top: -5vw;
-         width: 104vw;
-         background-color: $gray;
-         display: flex;
-         flex-direction: column-reverse;
-         div.sellback_text {
-           width: 90vw;
-           margin: 12vw 5vw 7vw;
-           h3 {
-             color: $green;
-             font-size: 5vw;
-             line-height: 7vw;
-             font-weight: normal;
-           }
-           p {
-             font-weight: normal;
-             color: $green;
-             font-size: 3.4vw;
-             line-height: 5.5vw;
-             margin-bottom: 17vw;
-           }
-           button.sell_button {
-             font-size: 6vw;
-             font-family: "RedRing";
-             text-decoration: none;
-             padding: 3vw 15.7vw;
-             background-color: $green;
-             color: $mainColor;
-             outline: none;
-             border-radius: 10vw;
-             border: 0px;
-             border-color: none;
-             display: block;
-             @include textcenter;
-             margin-bottom: 25vw;
-           }
-           button.sell_button:hover {
-             background-color: #AFE125;
-             color: #03003D;
-           }
-         }
-       }
-       div.sellback_text_img {
-          margin: 10vw 5vw 0 5vw;
-          img {
-            width: 100%;
-          }
-       }
-      }
-
-
-  }
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "RedRing";
 }
+
+
+
+
+
+
+
 @media (min-width: 1024px) {
+  font-size: 10px;
   body.promo {
-    color: $mainColor;
+    color: $gray;
     //background-image: url(desctop.png);
     box-sizing: border-box;
-    font-family: "RedRing", sans-serif;
+    font-family: "RedRing","PTMono", sans-serif;
     opacity: 1;
     background-size: 100vw;
     background-repeat: no-repeat;
     position: relative;
     z-index: 1;
     margin: 0px;
-    background-color: #C1F52F;
+    background-color: $green;
     div.wrapper {
       width: 100vw;
+      background-color: $green;
       section.begining {
+        background-color: $green;
         div.begin {
           width: 100%;
-          img:first-child {
-            top: -14vw;
+          div.begin_img {
+            padding-top: 3rem;
             width: 98vw;
+            margin: 0 auto;
+            background-color: $green;
+            img:first-child {
+              width: 98vw;
+              display: block;
+            }
+
           }
-          img {
-            position: absolute;
-            top: -19vw;
-            z-index: -1;
-            width: 100%;
-          }
+
           div.begin_text {
-            padding: 7vw;
-            margin: 26vw auto 0 auto;
+            z-index: 2;
+            padding: 5rem;
+            margin: -34rem auto 0 auto;
             margin-bottom: 18vw;
             width: 76%;
             h1 {
+              font-family: "RedRing";
               color: $green;
-              font-size: 4.3vw;
-              font-weight: normal;
+              font-size: 3rem;
+              font-weight: bold;
               @include textcenter;
             }
             p {
               display: block;
               color: $green;
-              font-size: 1.2vw;
-              width: 27vw;
-              line-height: 2vw;
+              width: 30rem;
+              line-height: 2rem;
               text-align: center;
-              margin-top: 6vw;
-              margin-bottom: 10vw;
-              @include textcenter;
+              margin: 3rem auto;
+              margin-bottom: 4rem;
+              @include main_text;
             }
             button {
-               font-size: 1.4vw;
+               font-size: 1.4rem;
                font-family: "RedRing";
                text-decoration: none;
                padding: 1vw 3.7vw;
-               background-color: #04005E;
+               background-color: $mainColor;
                color: #75FEFA;
                outline: none;
                border-radius: 10vw;
@@ -921,106 +150,309 @@ $green: #C1F52F;
 
           }
         }
-        div.about {
-          margin-bottom: 17vw;
-          padding: 5vw;
-          p {
-            width: 66%;
-            font-size: 2.2vw;
-            line-height: 3.8vw;
-            color: $mainColor;
-            @include textcenter;
-          }
-        }
-        div.advantages {
-          width: 76vw;
-          padding: 0 12vw;
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          div.advantage {
 
-             img {
-               width: 16vw;
-               @include imgcenter;
-             }
-             h3 {
-               font-size: 2vw;
-               @include textcenter;
-               margin-top: 7vw;
-             }
-             p {
-               width: 16vw;
-               font-size: 1.2vw;
-               line-height: 1.8vw;
-               margin-top: 1vw;
-             }
-          }
-          div.advantage:last-child {
-            @include last_1920;
-          }
-        }
+
       }
 
       section.defenition {
         width: 90vw;
         margin: 5vw;
-        h2 {
-          font-size: 6vw;
-          font-weight: normal;
+        div.defenition_text {
+          h2 {
+            color: $gray;
+            font-size: 2rem;
+            font-weight: normal;
+            margin-bottom: 3rem;
+          }
+          img {
+            width: 90vw;
+          }
         }
-        div.defenition_block {
+
+      }
+
+      section.fichi {
+        margin-top: 8rem;
+        background-color: #EDF2FF;
+        div.fichi_anime {
+          background-color: $blue;
+          padding: 0.8rem 0.8rem;
+          width:180vw;
+          p {
+            font-family: 'PTMono';
+            font-size: 1.2rem;
+            color: $gray;
+            line-height: 1rem;
+            margin: 0rem
+          }
+        }
+        div.fichi_first {
           display: flex;
           flex-direction: row;
-          div.defenition_text {
-            div.defenition_text_th {
-               h4 {
-                 font-size: 2vw;
-                 margin-bottom: 1vw;
-                 font-weight: bold;
-               }
-               p {
-                 font-size: 1.2vw;
-                 line-height: 1.8vw;
-                 width: 24vw;
-                 margin-bottom: 20vw;
-               }
+          margin-top: 0rem;
+          div.fichi_first_text {
+             width: 60rem;
+             height: 60rem;
+             padding: 8rem 4rem;
+             background-image: url(form_gray.svg);
+             background-repeat: no-repeat;
+             h3 {
+               font-size: 1.8rem;
+               color: $green;
+               font-family: "RedRing";
+               font-weight: bold;
+               margin-bottom: 2rem;
+             }
+             p {
+               font-size: 1rem;
+               font-weight: lighter;
+               color: $green;
+               width: 25rem;
+               line-height: 1.6rem;
+             }
+          }
+          div.fichi_first_img {
+            img {
+                  margin: 17rem 3rem;
             }
           }
-          div.defenition_text_th:first-child {
-            margin-top: 17vw;
+        }
+        div.fichi_second {
+          display: flex;
+          flex-direction: row;
+          margin-top: -10rem;
+          width: 100vw;
+          justify-content: space-between;
+          padding-left: 6rem;
+          div.fichi_second_img {
+            margin-right: 9rem;
           }
-          div.defenition_text_last {
-            h4 {
-              font-size: 2vw;
-              margin-bottom: 1vw;
+          div.fichi_second_text {
+            width: 35rem;
+            height: 60rem;
+            padding: 14rem 6rem;
+            background-image: url(form_green.svg);
+            background-repeat: no-repeat;
+            h3 {
+              font-size: 1.8rem;
+              color: $gray;
+              font-family: "RedRing";
               font-weight: bold;
+              margin-bottom: 2rem;
             }
             p {
-              font-size: 1.2vw;
-              line-height: 1.8vw;
-              width: 24vw;
-              margin-bottom: 20vw;
-            }
-           }
-          }
-          div.small_format {
-            img {
-               display: none;
+              font-size: 1rem;
+              font-weight: lighter;
+              color: $gray;
+              width: 25rem;
+              line-height: 1.6rem;
             }
           }
-          div.big_format {
-            img {
-              display: block;
-              margin-left: -8vw;
-              width: 76vw;
-              position: absolute;
+        }
+        div.fichi_third {
+          margin-right: -12rem;
+          display: flex;
+          flex-direction: row;
+          margin-top: -40rem;
+          width: 100vw;
+          div.fichi_third_text {
+            width: 35rem;
+            height: 79rem;
+            padding: 58rem 6rem;
+            background-image: url(form_gray2.svg);
+            background-repeat: no-repeat;
+            h3 {
+              font-size: 1.8rem;
+              color: $green;
+              font-family: "RedRing";
+              font-weight: bold;
+              margin-bottom: 2rem;
             }
+            p {
+              font-size: 1rem;
+              font-weight: lighter;
+              color: $green;
+              width: 25rem;
+              line-height: 1.6rem;
+            }
+          }
+          div.fichi_third_img {
+            padding-top: 10rem;
+            img {
+              width: 70vw;
+              margin-left: -14rem;
+            }
+          }
+        }
+        div.fichi_anime2 {
+          margin-top: -37.6rem;
+          background-color: $blue;
+          padding: 0.8rem 0.8rem;
+          width:180vw;
+          p {
+            font-family: 'PTMono';
+            font-size: 1.2rem;
+            color: $gray;
+            line-height: 1rem;
+            margin: 0rem
+          }
+        }
+      }
 
+      section.diary {
+        margin-top: 12rem;
+        img {
+          display: block;
+          width: 90vw;
+          margin: 0 auto 12rem auto;
+        }
+        div.diary_text {
+          width: 90vw;
+          margin: 0 auto;
+          height: 154rem;
+          background-image: url(big_img.png);
+          background-repeat: no-repeat;
+          background-size: 90vw;
+          div.diary_text_1 {
+            width: 28rem;
+            h4 {
+              color: $gray;
+              font-size: 1.4rem;
+              font-weight: bold;
+              margin-bottom: 1rem;
+            }
+            p {
+              font-family: "RedRing";
+              color: $gray;
+              font-size: 1.125rem;
+              font-weight: normal;
+              line-height: 1.5rem;
+            }
+          }
+          div.diary_text_2 {
+            width: 28rem;
+            h4 {
+              color: $gray;
+              font-size: 1.4rem;
+              font-weight: bold;
+              margin-bottom: 1rem;
+            }
+            p {
+              font-family: "RedRing";
+              color: $gray;
+              font-size: 1.125rem;
+              font-weight: normal;
+              line-height: 1.5rem;
+            }
+          }
+          div.diary_text_3 {
+            width: 28rem;
+            h4 {
+              color: $gray;
+              font-size: 1.4rem;
+              font-weight: bold;
+              margin-bottom: 1rem;
+            }
+            p {
+              font-family: "RedRing";
+              color: $gray;
+              font-size: 1.125rem;
+              font-weight: normal;
+              line-height: 1.5rem;
+            }
+          }
+        }
+      }
+
+      section.sand {
+        margin-top: -4rem;
+        div.sand_img {
+          img:first-child {
+            width: 104vw;
+          }
+          div.sand_img2 {
+            margin-top: -1rem;
+            background-color: $gray;
+            padding-bottom: 6rem;
+            img:last-child {
+              display: block;
+              width: 90vw;
+              margin: 0 auto;
+            }
+          }
+        }
+        div.sand_text {
+          background-color: $gray;
+          width: 100vw;
+          height:100rem;
+          img {
+            width: 100vw;
+            margin: 0 auto;
+          }
+          div {
+            margin-top: -10rem;
+            padding-right: 5vw;
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            p {
+              width: 21rem;
+              color: $mainColor;
+              font-size: 1.125rem;
+              line-height: 1.5rem;
+              font-family: "RedRing";
+            }
+          }
+        }
+        div.sand_facts {
+          margin-top: -56rem;
+          background-color: $gray;
+          width: 100vw;
+          padding-bottom: 16rem;
+          padding-left: 14vw;
+          div.sand_facts_first {
+            align-items: center;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            div.sand_facts_first_f {
+              width: 16rem;
+              margin-right: 0rem;
+              display: flex;
+              flex-direction: column;
+              h5 {
+                color: $green;
+                font-size: 4.5rem;
+                font-weight: normal;
+                margin-bottom: 0.5rem;
+                margin-top: 4rem;
+              }
+              p {
+                color: $green;
+                font-size: 1.4375rem;
+              }
+            }
+            div.sand_facts_first_t {
+              p {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+                width: 33.5rem;
+                color: $green;
+              }
+            }
+          }
+          div.green_img {
+            margin-top: 6rem;
+            img {
+              width: 100vw;
+              display: block;
+            }
           }
 
         }
       }
+
 
       section.category {
         div.circle {
@@ -1214,28 +646,29 @@ $green: #C1F52F;
        div.sellback_info {
          margin-top: -10vw;
          width: 102%;
-         background-color: $gray;
+         background-color: $green;
          display: flex;
          flex-direction: column;
          div.sellback_text {
            margin: 12vw 5vw 7vw;
            width: 35vw;
            h3 {
-             color: $green;
+             color: $gray;
              font-size: 3vw;
              line-height: 4vw;
              font-weight: normal;
            }
            p {
              font-weight: normal;
-             color: $green;
+             color: $gray;
+             font-family: "RedRing";
              font-size: 1.4vw;
              line-height: 2.7vw;
              margin-bottom: 5vw;
            }
            button.sell_button {
-             background-color: $mainColor;
-             color: $blue;
+             background-color: $gray;
+             color: $green;
              margin-bottom: 25vw;
              font-size: 1.4vw;
              font-family: "RedRing";
@@ -1262,6 +695,6 @@ $green: #C1F52F;
        }
       }
 
-
+   }
   }
 }
