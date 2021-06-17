@@ -1,5 +1,4 @@
 <body class="show_user_body">
-    <div class="account">
       <% @action = ""%>
       <% if user_signed_in? && @user.id == current_user.id %>
           <% @action = 'Редактировать'%>
@@ -13,8 +12,5 @@
           <% @action = 'Войти'%>
       <% end%>
 
-      <%= react_component 'A_account_cover', { user: @user } %>
-
-      <%= react_component 'M_account', { belonging: @belonging, action: @action, user: @user, current_user_id: current_user.id } %>
-    </div>
+      <%= react_component 'T_account', { user: @user, action: @action, current_user_id: current_user.id, post_type_id: 4,} %>
 </body>

@@ -1,0 +1,15 @@
+.Account_page {
+  .Account_posts_container {
+    width: 100vw;
+    border-radius: 32px;
+    background-color: var(--light-gray);
+    z-index: 1;
+    position: relative;
+    margin-top: -32px;
+    .Account_posts {
+      width: 1440px;
+      padding: 49px 211px 0 558px;
+      margin: 0 auto;
+    }
+  }
+}

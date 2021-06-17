@@ -49,6 +49,7 @@ end
 
   get '/posts_by_type_and_genre/:post_type_id/genre/:genre', to: "posts#get_posts_by_type_and_genre"
 
+  get '/posts_by_type_and_user/:post_type_id/user/:user_id', to: "posts#get_posts_by_type_and_user"
 
   get '/posts_by_category/:post_type_id/category/:category_id', to: "posts#get_posts_by_category"
 

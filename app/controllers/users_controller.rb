@@ -8,7 +8,6 @@ before_action :set_user, only: [:show, :edit, :update, :destroy]
   def show
     @user = User.find(params[:id])
     if @user
-      @posts = @user.favorited_posts
       render actions: :show
       @favorites = @user.favorites.all
     else

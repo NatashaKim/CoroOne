@@ -43,6 +43,13 @@ export function get_posts_by_type_and_genre(post_type_id, genre) {
    })
 }
 
+export function get_posts_by_type_and_user(post_type_id, user_id) {
+   return axios.get('/posts_by_type_and_user/' + post_type_id + '/user/' + user_id).then(
+     function (response) {
+      return response.data;
+   })
+}
+
 export function get_posts_by_category(post_type_id, category_id) {
    return axios.get('/posts_by_type/' + post_type_id + '/category/' + category_id).then(
      function (response) {
