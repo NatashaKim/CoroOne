@@ -80,6 +80,7 @@ class A_input extends React.Component {
             className="tg"
             type={typeret}
             name={this.props.name}
+            autocomplete={this.props.autocomplete}
             value={this.state.value}
             onChange={this.handleChange}
             placeholder={this.props.placeholder}

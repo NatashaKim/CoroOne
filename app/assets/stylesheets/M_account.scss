@@ -1,0 +1,52 @@
+.Account_container {
+  height: fit-content;
+  width: 358px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: -60px;
+  left: 0;
+  .Account_holder {
+    width: min-content;
+  }
+  .Account {
+    height: fit-content;
+    width: 358px;
+    background-color: var(--ice-white);
+    border-radius: 0px 186px 186px 0px;
+    padding: 99px 24px 149px 32px;
+    text-align: center;
+    .Avatar {
+      margin-bottom: 10px;
+    }
+    .Account_info {
+      .Username {
+        display: block;
+      }
+      .heading {
+        display: block;
+      }
+      a {
+        .btn {
+          margin: 21px 0 14px 0;
+        }
+      }
+      .Place_holder {
+        .Prize {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .Text {
+        font-size: 14px;
+        line-height: 18px;
+        margin: 2px 0 28px 0;
+      }
+      .Social_icons {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

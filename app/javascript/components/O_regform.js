@@ -18,6 +18,7 @@ class O_regform extends React.Component {
         password: props.user.password ? props.user.password : '',
         password_confirmation: props.user.password_confirmation ? props.user.password_confirmation : '',
         current_password: props.user.current_password ? props.user.current_password : '',
+        account_cover: props.user.account_cover.url ? props.user.account_cover.url : '',
 
     };
       this.handleEmailChange = this.handleEmailChange.bind(this);
@@ -27,7 +28,7 @@ class O_regform extends React.Component {
       this.handlePasswordChange = this.handlePasswordChange.bind(this);
       this.handleCurrentPasswordChange = this.handleCurrentPasswordChange.bind(this);
       this.handlePasswordConfirmationChange = this.handlePasswordConfirmationChange.bind(this);
-
+      this.handleAccountCoverChange = this.handleAccountCoverChange.bind(this);
     }
 
     componentDidMount(e) {
@@ -55,6 +56,9 @@ class O_regform extends React.Component {
     this.setState({ current_password: e.target.value });
     }
     handlePasswordConfirmationChange(e) {
+    this.setState({ password_confirmation: e.target.value });
+    }
+    handleAccountCoverChange(e) {
     this.setState({ password_confirmation: e.target.value });
     }
 
@@ -100,9 +104,18 @@ class O_regform extends React.Component {
             limitation = "Не менее 1440px Х 800px"
           />
 
+          <M_image_input_with_label
+            label = "Обложка"
+            name="user[account_cover]"
+            onChange={this.handleAccountCoverChange}
+            limitation = "Не менее 1440px Х 800px"
+          />
+
           <M_input_with_label
             label = "password"
             inputPlace = "new_post"
+            autocomplete = "new-password"
+            inputTypes = 'password'
             name="user[password]"
             value={this.state.password}
             onChange={this.handlePasswordChange}
@@ -111,6 +124,8 @@ class O_regform extends React.Component {
           <M_input_with_label
             label = "password_confirmation"
             inputPlace = "new_post"
+            autocomplete = "new-password"
+            inputTypes = 'password'
             name="user[password_confirmation]"
             value={this.state.password_confirmation}
             onChange={this.handlePasswordConfirmationChange}
@@ -119,11 +134,12 @@ class O_regform extends React.Component {
           <M_input_with_label
             label = "current_password"
             inputPlace = "new_post"
+            autocomplete = "current-password"
+            inputTypes = 'password'
             name="user[current_password]"
             value={this.state.current_password}
             onChange={this.handleCurrentPasswordChange}
           />
-
 
 
           </div>

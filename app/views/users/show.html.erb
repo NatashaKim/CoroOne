@@ -1,56 +1,20 @@
 <body class="show_user_body">
-  <div class="wrapper_user_show">
     <div class="account">
-
-      <% @belonging = "another's"%>
-      <%if @user.id == current_user.id %>
-        <% @belonging = "your" %>
-      <% end %>
-
-      <% @user_role = "gamer"%>
-      <%if @user.isdeveloper == true %>
-        <% @user_role = "developer" %>
-      <% end %>
-      <%= react_component 'M_account', { belonging: @belonging, developer: @developer, user: @user } %>
-
-
-
-      <%= image_tag(@user.image.url, alt: 'Image') if @user.image? %>
-      <p><%= @user.username %></p>
-      <% if user_signed_in? && @user.admin == true %>
-        <span>Администратор</span>
-      <% end %>
-      <% if user_signed_in? && @user.ismoderator == true %>
-        <span>Модератор</span>
-      <% end %>
-      <% if user_signed_in? && @user.isdeveloper == true %>
-        <span>Разработчик</span>
-      <% end %>
+      <% @action = ""%>
       <% if user_signed_in? && @user.id == current_user.id %>
-          <%= link_to 'Редактировать профиль', edit_user_registration_path %>
+          <% @action = 'Редактировать'%>
       <% elsif user_signed_in? && current_user.admin == true %>
-          <%= link_to 'Переназначить', edit_user_path(@user) %>
+          <% @action = 'Переназначить'%>
       <% elsif user_signed_in? && current_user.followees.include?(@user) %>
-          <h5><%= button_to "Unfollow", unfollow_user_path, method: "POST" %></h5>
+          <% @action = 'Отписаться'%>
       <% elsif user_signed_in? %>
-          <h5><%= button_to "Follow", follow_user_path, method: "POST"  %></h5>
+          <%= @action = 'Подписаться'%>
       <% else %>
-      <%# можно добавить кнопку для регистрации или что-нибудь ещё  %>
+          <% @action = 'Войти'%>
       <% end%>
-      <div class="follow">
-        <span>Подписчики: <%= link_to @user.followers.count %></span>
-        <span>Подписки: <%= link_to @user.followees.count, following_path %></span>
-      </div>
 
-      <div class="general">
-        <p>Email <%= @user.email %></p>
-        <p>ID <%= @user.id %></p>
-      </div>
+      <%= react_component 'A_account_cover', { user: @user } %>
+
+      <%= react_component 'M_account', { belonging: @belonging, action: @action, user: @user, current_user_id: current_user.id } %>
     </div>
-
-    <span class="in_favorites">В закладках <%= @user.favorites.count %> <%= (@user.favorites.count) == 1 ? 'пост' : 'поста'%></span>
-    <% @posts.each do |post| %>
-      <br><%= link_to post.title, post %>
-    <% end %>
-  </div>
 </body>

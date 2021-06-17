@@ -1,0 +1,17 @@
+.Followers_followees {
+  margin-top: 4px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  .Followers_button {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    margin-right: 16px;
+  }
+  .Followees_button {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+  }
+}

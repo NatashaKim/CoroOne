@@ -1,0 +1,8 @@
+.Account_cover_container {
+  height: 164px;
+  display: flex;
+  .Account_cover {
+    object-fit: cover;
+    width: 100%;
+  }
+}

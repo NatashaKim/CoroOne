@@ -32,8 +32,9 @@ class M_input_with_label extends React.Component {
         <A_label
           label = {this.props.label}/>
        <A_input
-          inputTypes = "default"
+          inputTypes = {this.props.inputTypes}
           inputPlace = {this.props.inputPlace}
+          autocomplete = {this.props.autocomplete}
           name={this.props.name}
           value={this.state.value}
           onChange={this.handleChange}/>
