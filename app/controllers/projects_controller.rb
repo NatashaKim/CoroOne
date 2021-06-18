@@ -69,6 +69,6 @@ class ProjectsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def project_params
-      params.require(:project).permit(:name, :description, :project_start_date, :project_end_date, :download_project, :donate_project)
+      params.require(:project).permit(:name, :description, :project_start_date, :project_end_date, :download_project, :donate_project, :idea_or_concept, :plot_and_characters, :game_mechanics, :hero_voices, :background_music, :effects, :engine, :game_ai, :three_d_and_animation, :characters, :levels_and_worlds, :objects, :project_cover)
     end
 end

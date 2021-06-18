@@ -175,19 +175,19 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
 
-# 1. Взять все жанры
-# 2. Сделать по жанрам цикл
-# 3. Внутри цикла для каждого id жанра проверять параметр genres[g_id]
-@genres = Genre.all
+    # 1. Взять все жанры
+    # 2. Сделать по жанрам цикл
+    # 3. Внутри цикла для каждого id жанра проверять параметр genres[g_id]
+    @genres = Genre.all
 
-# logger.debug params[:genres].to_s
-@genres.each do |genre|
-  # logger.debug '"g_'+genre.id.to_s+'"=>"on"'
-  # if params[:genres].to_s.includes?'"g_'+genre.id.to_s+'"=>"on"'
-  if params[:genres].to_s.include?'"g_'+genre.id.to_s+'"=>"on"'
-    GenreToSmth.new({genre_id: genre.id, post_id:@post.id, project_id:1}).save
-  end
-end
+    # logger.debug params[:genres].to_s
+    @genres.each do |genre|
+      # logger.debug '"g_'+genre.id.to_s+'"=>"on"'
+      # if params[:genres].to_s.includes?'"g_'+genre.id.to_s+'"=>"on"'
+      if params[:genres].to_s.include?'"g_'+genre.id.to_s+'"=>"on"'
+        GenreToSmth.new({genre_id: genre.id, post_id:@post.id, project_id:1}).save
+      end
+    end
 
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
         format.json { render :show, status: :created, location: @post }

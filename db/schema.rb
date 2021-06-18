@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_15_164815) do
+ActiveRecord::Schema.define(version: 2021_06_17_203406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -159,6 +159,19 @@ ActiveRecord::Schema.define(version: 2021_06_15_164815) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "status"
+    t.boolean "idea_or_concept", default: false
+    t.boolean "plot_and_characters", default: false
+    t.boolean "game_mechanics", default: false
+    t.boolean "hero_voices", default: false
+    t.boolean "background_music", default: false
+    t.boolean "effects", default: false
+    t.boolean "engine", default: false
+    t.boolean "game_ai", default: false
+    t.boolean "three_d_and_animation", default: false
+    t.boolean "characters", default: false
+    t.boolean "levels_and_worlds", default: false
+    t.boolean "objects", default: false
+    t.string "project_cover"
   end
 
   create_table "subscribers", force: :cascade do |t|
