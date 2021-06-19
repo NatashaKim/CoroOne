@@ -17,9 +17,12 @@ class O_reviewsform extends React.Component {
 
 let post_genres=[];
 
-props.genres.map(genre => {
- post_genres["g_"+genre.id]=props.post_genres.findIndex((element, index, array) => {return element.genre_id == genre.id}) >=0;
-});
+if (props.post_genres) {
+  props.genres.map(genre => {
+   post_genres["g_"+genre.id]=props.post_genres.findIndex((element, index, array) => {return element.genre_id == genre.id}) >=0;
+  });
+}
+
 
 
       this.state = {
@@ -86,10 +89,10 @@ props.genres.map(genre => {
 
             <div>
             {this.state.genres.map(genre => {
-let id = "g_"+genre.id;
-let checked = {};
+            let id = "g_"+genre.id;
+            let checked = {};
 
-if(this.state.post_genres[id]) checked= {checked:"on"};
+            if(this.state.post_genres[id]) checked= {checked:"on"};
 
 
               return (

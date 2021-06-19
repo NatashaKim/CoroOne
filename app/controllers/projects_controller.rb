@@ -15,10 +15,12 @@ class ProjectsController < ApplicationController
   # GET /projects/new
   def new
     @project = Project.new
+    @genres = Genre.all
   end
 
   # GET /projects/1/edit
   def edit
+    @project_genres=GenreToSmth.select("genre_id").where(project_id:@project.id)
   end
 
   # POST /projects
@@ -28,6 +30,15 @@ class ProjectsController < ApplicationController
 
     respond_to do |format|
       if @project.save
+
+        @genres = Genre.all
+
+        @genres.each do |genre|
+          if params[:genres].to_s.include?'"g_'+genre.id.to_s+'"=>"on"'
+            GenreToSmth.new({genre_id: genre.id, project_id:@project.id}).save
+          end
+        end
+
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
         format.json { render :show, status: :created, location: @project }
       else
@@ -41,7 +52,17 @@ class ProjectsController < ApplicationController
   # PATCH/PUT /projects/1.json
   def update
     respond_to do |format|
+
       if @project.update(project_params)
+        @genres = Genre.all
+        GenreToSmth.where(project_id: @project.id).destroy_all
+
+        @genres.each do |genre|
+          if params[:genres].to_s.include? '"g_'+genre.id.to_s+'"=>"on"'
+            GenreToSmth.new({genre_id: genre.id, project_id:@project.id}).save
+          end
+        end
+
         format.html { redirect_to @project, notice: 'Project was successfully updated.' }
         format.json { render :show, status: :ok, location: @project }
       else
@@ -69,6 +90,6 @@ class ProjectsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def project_params
-      params.require(:project).permit(:name, :description, :project_start_date, :project_end_date, :download_project, :donate_project, :idea_or_concept, :plot_and_characters, :game_mechanics, :hero_voices, :background_music, :effects, :engine, :game_ai, :three_d_and_animation, :characters, :levels_and_worlds, :objects, :project_cover)
+      params.require(:project).permit(:name, :description, :project_start_date, :project_end_date, :download_project, :donate_project, :idea_or_concept, :plot_and_characters, :game_mechanics, :hero_voices, :background_music, :effects, :engine, :game_ai, :three_d_and_animation, :characters, :levels_and_worlds, :objects, :project_cover, :genre_id)
     end
 end

@@ -1,8 +1,6 @@
 .Puzzle_grid {
   margin: 0 auto;
-  width: 1375px;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 326px 326px;
   grid-gap: 24px;
   margin-bottom: 24px;
@@ -29,5 +27,13 @@
     grid-column: 2 / 3;
     height: auto;
     width: auto;
+  }
+  &.get_posts_by_type {
+    width: 1375px;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+  &.article {
+    width: 1201px;
+    grid-template-columns: 1fr 1.5fr 1fr;
   }
 }

@@ -26,6 +26,7 @@ class Post < ApplicationRecord
     belongs_to :user
 		belongs_to :category, optional: true
 		belongs_to :post_type
+		belongs_to :project, optional: true
 
 		mount_uploader :image, ImageUploader
 

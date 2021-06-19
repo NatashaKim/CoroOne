@@ -4,25 +4,23 @@ import '../../assets/stylesheets/A_checkbox.scss'
 
 
 class A_checkbox extends React.Component {
-  state = {
-    isChecked: false,
-  }
+  constructor(props) {
+      super(props);
+      this.state = {
+        checked: props.checked
+      };
+      this.toggleCheckbox = this.toggleCheckbox.bind(this);
+    }
 
-  toggleCheckboxChange = () => {
-    const { handleCheckboxChange, label} = this.props;
+    toggleCheckbox = () => {
+      this.setState(state => ({checked: !state.checked}))
+    }
 
-    this.setState(({ isChecked }) => (
-      {
-        isChecked: !isChecked,
-      }
-    ));
-
-    handleCheckboxChange(label);
-  }
 
   render() {
-    const { label } = this.props;
-    const { isChecked } = this.state;
+    let checked = {};
+
+    if(this.state.ckecked) checked= {checked:"on"};
 
     return (
       <div className="checkboxes">
@@ -30,22 +28,17 @@ class A_checkbox extends React.Component {
           <input
               className = "checkbox"
               type="checkbox"
-              value={label}
               name = {this.props.name}
-              checked={isChecked}
-              onChange={this.toggleCheckboxChange}
+              checked={this.state.checked}
+              {...checked}
+              onChange={this.toggleCheckbox}
           />
-
-          {label}
+          {this.props.label}
         </label>
       </div>
     );
   }
 }
 
- A_checkbox.propTypes = {
-  label: PropTypes.string.isRequired,
-  handleCheckboxChange: PropTypes.func.isRequired,
-};
 
 export default  A_checkbox;

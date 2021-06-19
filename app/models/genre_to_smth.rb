@@ -1,5 +1,5 @@
 class GenreToSmth < ApplicationRecord
   belongs_to :genre
-  belongs_to :post
-  belongs_to :project
+  belongs_to :post, optional: true
+  belongs_to :project, optional: true
 end

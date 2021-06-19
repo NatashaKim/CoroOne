@@ -19,7 +19,7 @@ class ProjectCoverUploader < CarrierWave::Uploader::Base
   end
 
   version :large_thumb, from_version: :thumb do
-      process resize_to_fill: 384, 192]
+      process resize_to_fill: [384, 192]
   end
 
   version :medium_thumb, from_version: :thumb do

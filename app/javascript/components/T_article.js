@@ -44,6 +44,7 @@ class T_article extends React.Component {
         <O_puzzle_preview
           post_type_id = {this.props.post.post_type_id}
           post_number = "4"
+          puzzlePlace = "article"
         />
         <O_comment
           comment = {this.props.comment}
