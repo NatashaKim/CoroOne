@@ -5,6 +5,7 @@ import A_title from "./A_title"
 import A_text from "./A_text"
 import M_user_info from "./M_user_info"
 import A_genre from "./A_genre"
+import {getuser} from './Api.js';
 import '../../assets/stylesheets/M_post_preview.scss'
 import '../../assets/stylesheets/colors.scss'
 
@@ -17,6 +18,16 @@ const PLACES = [
 
 
 class M_project_preview extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state={
+        author: null,
+      };
+
+      getuser(this.props.project.user_id).then((u)=>{
+        this.setState({author: u})
+      });
+  }
 
   render () {
 
@@ -61,10 +72,6 @@ class M_project_preview extends React.Component {
       headingColor = 'navy-blue';
     }
 
-
-    let active_genres = this.props.genres.filter(c => c.project_id ==this.props.project.id);
-
-
     return (
       <div style={sectionStyle} className = {`Project_preview ${checkProjectPlace}`}>
         <div className = "Preview_wrapper">
@@ -73,7 +80,7 @@ class M_project_preview extends React.Component {
           src = {imgsrc}
         />
 
-          <M_user_info user={this.props.user}/>
+          <M_user_info user={this.state.author}/>
           <A_title
            title = {this.props.project.name}
            headingColor = {headingColor}

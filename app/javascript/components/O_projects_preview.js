@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import '../../assets/stylesheets/M_categories_nav.scss'
 import {get_projects_by_user} from './Api.js'
+import {get_newest_projects} from './Api.js'
 
 import M_project_preview from "./M_project_preview"
 
@@ -33,7 +34,7 @@ class O_projects_preview extends React.Component {
           genres = {this.props.genres}
           key = {project.id}
           project = {project}
-          projectPlace = 'account'
+          projectPlace = {this.props.projectPlace}
           user = {this.props.user} />
          ))}
       </div>
