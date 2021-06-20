@@ -13,4 +13,16 @@
       }
     }
   }
+  &.for_project {
+    img {
+      margin-right: 12px;
+    }
+    .UserInfo_text {
+      justify-content: center;
+      .Username {
+        justify-content: center;
+        color: var(--ice-white);
+      }
+    }
+  }
 }

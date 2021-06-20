@@ -1,13 +1,25 @@
 .Project_preview {
   &.account {
-    .UserInfo {
+    .For_new {
       display: none;
     }
     .Text {
       display: none;
     }
-    .Genres {
-      display: none;
+  }
+  &.new {
+    .For_new {
+      .Genres {
+        display: flex;
+        .Genre {
+          width: 34px;
+          height: 34px;
+          margin-left: 4px;
+          img {
+            width: 34px;
+          }
+        }
+      }
     }
   }
 }

@@ -80,7 +80,23 @@ class M_project_preview extends React.Component {
           src = {imgsrc}
         />
 
-          <M_user_info user={this.state.author}/>
+
+          <div className = "For_new">
+            <M_user_info
+            user={this.state.author}
+            infoType = 'for_project'
+            />
+
+            <div className = "Genres">
+             {this.props.project.genres.map(genre => (
+                 <A_genre
+                 genreType = 'image'
+                 genre = {genre}
+                 />
+              ))}
+             </div>
+           </div>
+
           <A_title
            title = {this.props.project.name}
            headingColor = {headingColor}
@@ -93,15 +109,6 @@ class M_project_preview extends React.Component {
            textStyle = 'small6'
            value = {this.props.project.description}
          />
-
-         <div className = "Genres">
-          {this.props.project.genres.map(genre => (
-              <A_genre
-              genreType = 'image'
-              genre = {genre}
-              />
-           ))}
-          </div>
 
         </div>
       </div>
