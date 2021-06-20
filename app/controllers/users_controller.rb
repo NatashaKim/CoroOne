@@ -6,6 +6,7 @@ before_action :set_user, only: [:show, :edit, :update, :destroy]
   end
 
   def show
+    @genres = Genre.all
     @user = User.find(params[:id])
     if @user
       render actions: :show

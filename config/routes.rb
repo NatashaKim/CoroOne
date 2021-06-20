@@ -51,6 +51,10 @@ end
 
   get '/posts_by_type_and_user/:post_type_id/user/:user_id', to: "posts#get_posts_by_type_and_user"
 
+  get '/projects_by_user/:user_id', to: "projects#get_projects_by_user"
+
+  get '/newest_projects', to: "projects#get_newest_projects"
+
   get '/posts_by_category/:post_type_id/category/:category_id', to: "posts#get_posts_by_category"
 
   get '/posts/by_type/:name', to:"posts#post_type_page"

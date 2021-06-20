@@ -50,6 +50,20 @@ export function get_posts_by_type_and_user(post_type_id, user_id) {
    })
 }
 
+export function get_projects_by_user(user_id) {
+   return axios.get('/projects_by_user/' + user_id).then(
+     function (response) {
+      return response.data;
+   })
+}
+
+export function get_newest_projects() {
+   return axios.get('/newest_projects').then(
+     function (response) {
+      return response.data;
+   })
+}
+
 export function get_posts_by_category(post_type_id, category_id) {
    return axios.get('/posts_by_type/' + post_type_id + '/category/' + category_id).then(
      function (response) {

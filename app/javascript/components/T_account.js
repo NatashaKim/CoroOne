@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import A_account_cover from "./A_account_cover"
 import M_account from "./M_account"
 import S_userposts_preview from "./S_userposts_preview"
+import O_projects_preview from "./O_projects_preview"
 
 class T_account extends React.Component {
   render () {
@@ -15,6 +16,10 @@ class T_account extends React.Component {
           current_user_id = {this.props.current_user_id}
         />
         <div class="Account_posts_container">
+          <O_projects_preview
+            user = {this.props.user}
+            genres = {this.props.genres}
+          />
           <div class="Account_posts">
             <S_userposts_preview
               post_type_id = {this.props.post_type_id}

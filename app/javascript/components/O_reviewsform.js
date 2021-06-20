@@ -8,23 +8,13 @@ import M_textarea_with_label from "./M_textarea_with_label"
 import M_select_with_label from "./M_select_with_label"
 import A_button from "./A_button"
 import M_checkbox from "./M_checkbox"
+import M_multiselect_genres from "./M_multiselect_genres"
 import {availableCategories} from './Api.js';
 import '../../assets/stylesheets/O_postform.scss'
 
 class O_reviewsform extends React.Component {
   constructor(props) {
       super(props);
-
-let post_genres=[];
-
-if (props.post_genres) {
-  props.genres.map(genre => {
-   post_genres["g_"+genre.id]=props.post_genres.findIndex((element, index, array) => {return element.genre_id == genre.id}) >=0;
-  });
-}
-
-
-
       this.state = {
         genre_id: props.post.genre_id ? props.post.genre_id : '',
         title: props.post.title ? props.post.title : '',
@@ -32,18 +22,14 @@ if (props.post_genres) {
         content: props.post.content ? props.post.content : '',
         image: props.post.image ? props.post.image : '',
         videourl: props.post.videourl ? props.post.videourl : '',
-        genres: props.genres ? props.genres : [],
-        post_type_id: props.post.post_type_id ? props.post.post_type_id : '',
-        post_genres: post_genres,
+        post_type_id: props.post.post_type_id ? props.post.post_type_id : ''
 }
     ;
-      this.handleGenreChange = this.handleGenreChange.bind(this);
       this.handleTitleChange = this.handleTitleChange.bind(this);
       this.handleAuthorChange = this.handleAuthorChange.bind(this);
       this.handleContentChange = this.handleContentChange.bind(this);
       this.handleImageChange = this.handleImageChange.bind(this);
       this.handleVideourlChange = this.handleVideourlChange.bind(this);
-
     }
 
     componentDidMount(e) {
@@ -68,42 +54,22 @@ if (props.post_genres) {
       this.setState({ videourl: e.target.value });
     }
 
-    handleGenreChange(e) {
-      let post_genres = this.state.post_genres;
-      post_genres[e.target.id] = !post_genres[e.target.id];
-      this.setState({post_genres: post_genres});
-    }
-
-
     render() {
 
       return (
         <div className = "Postform">
           <div className = "Postform_body">
 
-              <input
-                type="hidden"
-                name="authenticity_token"
-                value={this.state.authenticity_token}
-              />
+            <input
+              type="hidden"
+              name="authenticity_token"
+              value={this.state.authenticity_token}
+            />
 
-            <div>
-            {this.state.genres.map(genre => {
-            let id = "g_"+genre.id;
-            let checked = {};
-
-            if(this.state.post_genres[id]) checked= {checked:"on"};
-
-
-              return (
-              <div>
-               <input  type="checkbox" id={ id } name ={ "genres[g_"+genre.id+"]" } {...checked}  onChange={this.handleGenreChange}/>
-              <label for={ "g_"+genre.id }>{genre.name}</label>
-              </div>
-           )
-         }
-         )}
-           </div>
+            <M_multiselect_genres
+              genres = {this.props.genres}
+              active_genres = {this.props.active_genres}
+            />
 
             <M_input_with_label
               label = "Заголовок"

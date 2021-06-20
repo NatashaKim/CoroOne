@@ -1,1 +1,13 @@
-
+.Project_preview {
+  &.account {
+    .UserInfo {
+      display: none;
+    }
+    .Text {
+      display: none;
+    }
+    .Genres {
+      display: none;
+    }
+  }
+}

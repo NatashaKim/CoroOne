@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_17_203406) do
+ActiveRecord::Schema.define(version: 2021_06_19_172234) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -172,6 +172,8 @@ ActiveRecord::Schema.define(version: 2021_06_17_203406) do
     t.boolean "levels_and_worlds", default: false
     t.boolean "objects", default: false
     t.string "project_cover"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
   create_table "subscribers", force: :cascade do |t|
@@ -230,4 +232,5 @@ ActiveRecord::Schema.define(version: 2021_06_17_203406) do
   add_foreign_key "posts", "users"
   add_foreign_key "posts_tags", "posts"
   add_foreign_key "posts_tags", "tags"
+  add_foreign_key "projects", "users"
 end

@@ -5,7 +5,29 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.all
+    @projects = Project.all.includes(:user, :genres, :posts).map do
+      |project|
+      project.as_json(include: [:user, :genres, :posts])
+    end
   end
+
+
+  def get_projects_by_user
+      @projects = Project.where(user_id: params[:user_id]).includes(:posts, :genres).map do
+        |project|
+        project.as_json(include: [:posts, :genres])
+      end
+      render json: @projects
+  end
+
+  def get_newest_projects
+    @projects = Project.includes(:posts, :genres).order("created_at DESC").limit(3).map do
+      |project|
+      project.as_json(include: [:posts, :genres])
+    end
+    render json: @projects
+  end
+
 
   # GET /projects/1
   # GET /projects/1.json
@@ -90,6 +112,6 @@ class ProjectsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def project_params
-      params.require(:project).permit(:name, :description, :project_start_date, :project_end_date, :download_project, :donate_project, :idea_or_concept, :plot_and_characters, :game_mechanics, :hero_voices, :background_music, :effects, :engine, :game_ai, :three_d_and_animation, :characters, :levels_and_worlds, :objects, :project_cover, :genre_id)
+      params.require(:project).permit(:name, :description, :project_start_date, :project_end_date, :download_project, :donate_project, :idea_or_concept, :plot_and_characters, :game_mechanics, :hero_voices, :background_music, :effects, :engine, :game_ai, :three_d_and_animation, :characters, :levels_and_worlds, :objects, :project_cover, :genre_id, :user_id)
     end
 end

@@ -6,6 +6,6 @@
   <% end %>
 
 <form enctype="multipart/form-data" action=<%= @action %> accept-charset="UTF-8" method="post">
-  <%= react_component 'O_projectform', { project: @project, genres: @genres, project_genres: @project_genres } %>
+  <%= react_component 'O_projectform', { project: @project, project_genres: @project_genres, active_genres: @project_genres } %>
 
 </form>

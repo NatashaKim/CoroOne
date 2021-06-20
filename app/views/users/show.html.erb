@@ -12,5 +12,5 @@
           <% @action = 'Войти'%>
       <% end%>
 
-      <%= react_component 'T_account', { user: @user, action: @action, current_user_id: current_user.id, post_type_id: 4,} %>
+      <%= react_component 'T_account', { user: @user, action: @action, current_user_id: current_user.id, post_type_id: 4, genres: @genres} %>
 </body>
