@@ -1,4 +1,5 @@
-    <%= react_component 'M_post_types_nav', { post_types: @post_types } %>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<%= react_component 'M_post_types_nav', { post_types: @post_types } %>
 
 <% if @post_type[:id] == 1%>
 <%= react_component 'T_news_preview', { genres: @genres, post_type_id: @post_type[:id], post_number: 110 } %>
