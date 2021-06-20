@@ -1,6 +1,5 @@
 import React from "react"
 import A_postcover from "./A_postcover"
-import '../../assets/stylesheets/M_postcover.scss'
 
 class M_postcover extends React.Component {
   render() {
