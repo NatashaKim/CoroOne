@@ -9,6 +9,10 @@
   }
   &.new {
     .For_new {
+      display: flex;
+      align-items: center;
+      width: 332px;
+      justify-content: space-between;
       .Genres {
         display: flex;
         .Genre {
