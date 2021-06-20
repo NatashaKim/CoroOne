@@ -10,7 +10,7 @@ class M_navbar extends React.Component {
         <a>
           <img src = '/assets/icon_logo.svg'/>
         </a>
-        <div>
+        <div className="Navbar_menu">
           <A_navbar_icon
             iconTypes = "search"
           />
