@@ -17,11 +17,11 @@ class PostsController < ApplicationController
       |post|
       post.as_json(include: [:category, :genres, :image, :likes, :favorites])
     end
+
+
+    @posts = Post.where(nil)
     filtering_params(params).each do |key, value|
-      @posts = @posts.public_send("filter_by_#{key}", value).includes(:category, :likes, :favorites).map do
-        |post|
-        post.as_json(include: [:category, :genres, :image, :likes, :favorites])
-      end if value.present?
+      @posts = @posts.public_send("filter_by_#{key}", value) if value.present?
     end
     # if params.has_key?(:category)
     #   @category = Category.find_by_name(params[:category])
@@ -246,7 +246,7 @@ class PostsController < ApplicationController
     end
 
     def filtering_params(params)
-      params.slice(:user, :category)
+      params.slice(:starts_with)
     end
 
     # Only allow a list of trusted parameters through.
