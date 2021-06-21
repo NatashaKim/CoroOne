@@ -38,7 +38,7 @@ class M_project_preview extends React.Component {
 
     let imgsrc = '';
     if (!this.props.project.project_cover.small_thumb.url) {
-      imgsrc = '/assets/cover_default.svg';
+      imgsrc = '/assets/project_cover_preview_default.svg';
     } else if (this.props.projectPlace == 'new') {
       imgsrc = this.props.project.project_cover.large_thumb.url;
     } else if (this.props.projectPlace == 'top') {
@@ -65,18 +65,17 @@ class M_project_preview extends React.Component {
 
     let headingColor = '';
     if (this.props.projectPlace == 'new') {
-      headingColor = 'ice-white';
+      headingColor = 'zelda-green';
     } else if (this.props.projectPlace == 'top') {
-      headingStyle = 'zelda-green';
+      headingStyle = 'ice-white';
     } else {
       headingColor = 'navy-blue';
     }
 
     return (
       <div style={sectionStyle} className = {`Project_preview ${checkProjectPlace}`}>
-        <div className = "Preview_wrapper">
 
-        <img className = "small_cover"
+        <img className = "Small_cover"
           src = {imgsrc}
         />
 
@@ -107,10 +106,10 @@ class M_project_preview extends React.Component {
          <A_text
            textColor = 'ice-white'
            textStyle = 'small6'
+           textAlign = 'left_align'
            value = {this.props.project.description}
          />
 
-        </div>
       </div>
     );
   }

@@ -43,6 +43,8 @@ end
 
   get "search", to: "search#search"
 
+  get "searchpage" => "search#searchpage", as: "searchpage"
+
   get '/posts/hashtag/:name', to: 'posts#hashtags'
 
   get '/posts_by_type/:post_type_id/count/:count', to: "posts#get_posts_by_type"

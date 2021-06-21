@@ -1,5 +1,11 @@
 .Project_preview {
   &.account {
+    display: flex;
+    flex-direction: column;
+    margin-right: 14px;
+    img {
+      border-radius: 12px;
+    }
     .For_new {
       display: none;
     }
@@ -8,11 +14,19 @@
     }
   }
   &.new {
+    width: 384px;
+    height: 192px;
+    padding: 27px 28px 0 22px;
+    border-radius: 32px;
+    .Small_cover {
+      display: none;
+    }
     .For_new {
       display: flex;
       align-items: center;
       width: 332px;
       justify-content: space-between;
+      margin-bottom: 12px;
       .Genres {
         display: flex;
         .Genre {
@@ -21,9 +35,16 @@
           margin-left: 4px;
           img {
             width: 34px;
+            filter: brightness(0) invert(1);
           }
         }
       }
+    }
+    .heading {
+
+    }
+    .Text {
+      margin: 0;
     }
   }
 }

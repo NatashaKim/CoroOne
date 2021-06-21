@@ -19,6 +19,7 @@ class T_account extends React.Component {
           <O_projects_preview
             user = {this.props.user}
             genres = {this.props.genres}
+            projectsPlace = 'account'
             projectPlace = 'account'
           />
           <div class="Account_posts">
