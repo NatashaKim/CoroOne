@@ -16,6 +16,11 @@
   <% spider_post_id.push(articles_banner["id"])%>
   <% spider_post_id.push(reviews_banner["id"])%>
 
+  <% current_user_id = -1 %>
+  <%if current_user%>
+    <%current_user_id= current_user.id%>
+  <% end %>
+
   <%= react_component 'M_spider', { post: spider_post } %>
 </div>
 
@@ -52,12 +57,8 @@
 
     <div class="Workshop_wrapper">
     <%= react_component 'A_post_type', { post_type: @post_types[3] } %>
-    <%= react_component 'O_projects_preview', { current_user_id: current_user.id, genres: @genre, projectPlace: 'new' } %>
+    <%= react_component 'O_projects_preview', { current_user_id: current_user_id, genres: @genre, projectPlace: 'new' } %>
 
-    <% current_user_id = -1 %>
-    <%if current_user%>
-      <%current_user_id= current_user.id%>
-    <% end %>
     <%= react_component 'S_userposts_preview', { post_type_id: 4, post_number: 13, current_user_id: current_user_id, user: current_user} %>
     </div>
     <br>

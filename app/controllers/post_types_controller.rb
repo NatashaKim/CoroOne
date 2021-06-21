@@ -1,5 +1,5 @@
 class PostTypesController < ApplicationController
-  before_action :set_post_type, only: [:show, :edit, :update, :destroy]
+  #before_action :set_post_type, only: [:show, :edit, :update, :destroy]
 
   # GET /post_types
   # GET /post_types.json

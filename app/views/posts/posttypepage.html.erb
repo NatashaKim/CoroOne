@@ -1,12 +1,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <%= react_component 'M_post_types_nav', { post_types: @post_types } %>
 
+<% current_user_id = -1 %>
+<%if current_user%>
+  <%current_user_id= current_user.id%>
+<% end %>
+
 <% if @post_type[:id] == 1%>
 <%= react_component 'T_news_preview', { genres: @genres, post_type_id: @post_type[:id], post_number: 110 } %>
 <% end %>
 
 <% if @post_type[:id] == 2%>
-  <%= react_component 'T_news_preview', { genres: @genres, post_type_id: @post_type[:id], post_number: 17 } %>
+  <%= react_component 'T_articles_preview', { genres: @genres, post_type_id: @post_type[:id], post_number: 17 } %>
 <% end %>
 
 <% if @post_type[:id] == 3%>
@@ -14,16 +19,18 @@
 <% end %>
 
 <% if @post_type[:id] == 5%>
-  <%= react_component 'M_categories_nav', { categories: @categories, post_type_id: @post_type[:id] } %>
-  <div class="News">
-    <%= react_component 'O_posts_preview', { post_type_id: @post_type[:id], post_number: 17} %>
+  <div class="Post_type_section_wrapper Without_shadow">
+    <%= react_component 'M_necro_add' %>
+    <%= react_component 'O_necrologyposts_preview', { post_type_id: 5, post_number: 8 } %>
+    <%= react_component 'M_more_info', {moreInfoType: "more_necrologies"} %>
   </div>
 <% end %>
 
 <% if @post_type[:id] == 4%>
-  <%= react_component 'M_categories_nav', { categories: @categories, post_type_id: @post_type[:id] } %>
-  <div class="News">
-    <%= react_component 'O_posts_preview', { post_type_id: @post_type[:id], post_number: 17} %>
+  <div class="Workshop_wrapper">
+  <%= react_component 'O_projects_preview', { current_user_id: current_user_id, genres: @genre, projectPlace: 'new' } %>
+
+  <%= react_component 'S_userposts_preview', { post_type_id: 4, post_number: 13, current_user_id: current_user_id, user: current_user} %>
   </div>
 <% end %>
 
