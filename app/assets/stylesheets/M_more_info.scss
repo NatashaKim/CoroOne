@@ -1,17 +1,42 @@
-.More_info {
-  width: 1026px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: flex-end;
-  a {
-    text-decoration: none;
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .More_info {
+    width: 1026px;
+    margin: 0 auto;
     display: flex;
-    float: right;
-    span {
-      margin-right: 8px;
+    justify-content: flex-end;
+    a {
+      text-decoration: none;
+      display: flex;
+      float: right;
+      span {
+        margin-right: 8px;
+      }
+    }
+    &.more_necrologies {
+      width: 1200px;
     }
   }
-  &.more_necrologies {
-    width: 1200px;
+}
+
+
+@media (max-width: 375px) {
+  .More_info {
+    width: 375px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    a {
+      text-decoration: none;
+      display: flex;
+      float: right;
+      span {
+        margin-right: 8px;
+        font-size: 14px;
+      }
+    }
+    &.more_necrologies {
+      width: 375px;
+    }
   }
 }

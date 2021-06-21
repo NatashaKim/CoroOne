@@ -1,19 +1,44 @@
-.Reviews_grid {
-  margin: 0 auto;
-  width: 1026px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: repeat(auto-fit, 360px, 367px);
-  grid-gap: 24px;
-  margin-bottom: 24px;
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .Reviews_grid {
+    margin: 0 auto;
+    width: 1026px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(auto-fit, 360px, 367px);
+    grid-gap: 24px;
+    margin-bottom: 24px;
 
-  div:nth-of-type(3n+1) {
-    grid-column: 1 / 4;
+    div:nth-of-type(3n+1) {
+      grid-column: 1 / 4;
+    }
+    div:nth-of-type(3n-1) {
+      grid-column: 4 / 7;
+    }
+    div:nth-of-type(3n) {
+      grid-column: 1 / 7;
+    }
   }
-  div:nth-of-type(3n-1) {
-    grid-column: 4 / 7;
-  }
-  div:nth-of-type(3n) {
-    grid-column: 1 / 7;
+}
+
+@media (max-width: 375px) {
+  .Reviews_grid {
+    margin: 0 auto;
+    width: 1162px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, 360px, 367px);
+    grid-gap: 12px;
+    margin-bottom: 12px;
+    margin-left: 20px;
+
+    div:nth-of-type(3n+1) {
+      grid-column: 1 / 4;
+    }
+    div:nth-of-type(3n-1) {
+      grid-column: 4 / 7;
+    }
+    div:nth-of-type(3n) {
+      grid-column: 1 / 7;
+    }
   }
 }

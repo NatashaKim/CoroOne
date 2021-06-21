@@ -31,6 +31,9 @@
 
 @media (max-width: 375px) {
   .post_types_nav {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
     box-sizing: border-box;
     display: flex;
     width: 666px;

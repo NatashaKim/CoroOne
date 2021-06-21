@@ -1,5 +1,36 @@
-.Post_types_img_wrapper {
-  margin: 0 auto;
-  width: fit-content;
-  padding-bottom: 48px;
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .Post_types_img_wrapper {
+    margin: 0 auto;
+    width: fit-content;
+    padding-bottom: 48px;
+    a {
+      img {
+
+      }
+      span {
+
+      }
+    }
+  }
+}
+
+
+@media (max-width: 375px) {
+  .Post_types_img_wrapper {
+    width: 375px;
+    margin: 0 auto;
+    width: fit-content;
+    padding-bottom: 24px;
+    a {
+      img {
+        height: 26px;
+      }
+      img#5 {
+        height: 52px;
+      }
+      span {
+        font-size: 16px;
+      }
+    }
+  }
 }
