@@ -1,3 +1,63 @@
 .Projects_preview {
   display: flex;
+  flex-direction: column;
+  &.account {
+    width: 1440px;
+    padding: 49px 211px 0 558px;
+    margin: 0 auto;
+    .More_new_projects {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      .More_info {
+        width: fit-content;
+        margin: 0;
+      }
+    }
+    .Projects_preview_wrapper {
+      display: flex;
+      width: 676px;
+      overflow-x: hidden;
+      .btn {
+        margin: 0 14px 0 0;
+      }
+    }
+  }
+  &.new {
+    padding: 40px 120px 56px 120px;
+    justify-content: space-between;
+    align-items: center;
+    height: 344px;
+    width: 100vw;
+    border-radius: 64px;
+    background-color: var(--zelda-green);
+    .More_new_projects {
+      display: flex;
+      width: 1200px;
+      height: 32px;
+      justify-content: space-between;
+      .heading {
+        display: block;
+        text-align: left;
+        width: 500px;
+      }
+      .More_info {
+        a {
+          align-items: center;
+          span {
+            text-align: right;
+            width: 140px;
+          }
+        }
+      }
+    }
+    .Projects_preview_wrapper {
+      width: 1200px;
+      display: flex;
+      justify-content: space-between;
+      .btn {
+        display: none;
+      }
+    }
+  }
 }

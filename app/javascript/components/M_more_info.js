@@ -8,7 +8,8 @@ const TYPES = [
   'more_news',
   'more_articles',
   'more_reviews',
-  'more_necrologies'
+  'more_necrologies',
+  'more_new_projects'
 ];
 
 class M_more_info extends React.Component {
@@ -20,23 +21,33 @@ class M_more_info extends React.Component {
       let more_info_title = '';
       let more_info_style = '';
       let more_info_color = 'mineral-gray';
+      let more_info_icon = '';
 
       if (checkMoreInfoType == TYPES[0]) {
          more_info_href = "/posts/by_type/Новости",
          more_info_title = "Все новости",
          more_info_style = 'h4';
+         more_info_icon = "arrow_big";
       } else if (checkMoreInfoType == TYPES[1]) {
         more_info_href = "/posts/by_type/Статьи",
         more_info_title = "Все статьи";
         more_info_style = 'h4';
+        more_info_icon = "arrow_big";
       } else if (checkMoreInfoType == TYPES[2]) {
         more_info_href = "/posts/by_type/Обзоры",
         more_info_title = "Все обзоры";
         more_info_style = 'h4';
+        more_info_icon = "arrow_big";
       } else if (checkMoreInfoType == TYPES[3]) {
         more_info_href = "/posts/by_type/Кладбище проектов",
         more_info_title = "Все проекты";
         more_info_style = 'h4';
+        more_info_icon = "arrow_big";
+      } else if (checkMoreInfoType == TYPES[4]) {
+        more_info_href = "",
+        more_info_title = "Все проекты";
+        more_info_style = 'p2';
+        more_info_icon = 'arrow_right';
       } else {
         more_info_href = "",
         more_info_title = "",
@@ -51,7 +62,7 @@ class M_more_info extends React.Component {
             title = {more_info_title}
             headingColor = {more_info_color} />
             <A_icon
-              Icon = "arrow_big"
+              Icon = {more_info_icon}
             />
           </a>
         </div>
