@@ -1,22 +1,53 @@
-.Postcover_container {
-  display: flex;
-  .Postcover {
-    object-fit: cover;
-    width: 100%;
-  }
-  &.publication {
-    width: 100vw;
-    height: 291px;
-    .Posttype_marker {
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .Postcover_container {
+    display: flex;
+    .Postcover {
+      object-fit: cover;
+      width: 100%;
+    }
+    &.publication {
+      width: 100vw;
+      height: 291px;
+      .Posttype_marker {
+      }
+    }
+    &.necrology {
+      width: 152px;
+      height: 152px;
+      border-radius: 50%;
+      margin-bottom: 16px;
+      .Postcover {
+        border-radius: 50%;
+      }
     }
   }
-  &.necrology {
-    width: 152px;
-    height: 152px;
-    border-radius: 50%;
-    margin-bottom: 16px;
+}
+
+
+@media (max-width: 375px) {
+  .Postcover_container {
+    display: flex;
     .Postcover {
+      object-fit: cover;
+      width: 100%;
+    }
+    &.publication {
+      width: 100vw;
+      height: 291px;
+      img {
+        border-radius: 0px;
+      }
+      .Posttype_marker {
+      }
+    }
+    &.necrology {
+      width: 152px;
+      height: 152px;
       border-radius: 50%;
+      margin-bottom: 16px;
+      .Postcover {
+        border-radius: 50%;
+      }
     }
   }
 }

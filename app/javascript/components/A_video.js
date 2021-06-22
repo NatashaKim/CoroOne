@@ -1,5 +1,6 @@
 import React from "react"
 import ReactPlayer from "react-player"
+import '../../assets/stylesheets/A_video.scss'
 
 
 class A_video extends React.Component {

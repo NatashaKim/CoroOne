@@ -1,5 +1,15 @@
-.Userpost_commentform {
-  padding-top: 20px;
-  display: flex;
-  justify-content: space-between;
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .Userpost_commentform {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 375px) {
+  .Userpost_commentform {
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+  }
 }

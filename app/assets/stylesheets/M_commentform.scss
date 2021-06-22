@@ -1,9 +1,40 @@
-div.CommentForm {
-  display: flex;
-  flex-direction: row;
-  div.CommentForm--textarea {
-    textarea {
-      background-color: var(--ice-white);
+@media (min-width: 1440px) and (max-width: 1920px) {
+  div.CommentForm {
+    display: flex;
+    flex-direction: row;
+    div.CommentForm--textarea {
+      textarea {
+        background-color: var(--ice-white);
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  div.CommentForm {
+    margin-top: 40px;
+    margin-left: 20px;
+    width: 335px;
+    display: flex;
+    flex-direction: row;
+    div {
+      img {
+        margin-right: 12px;
+      }
+    }
+    button {
+      display: none;
+    }
+    div {
+      .commnet_container {
+        padding-left: 100px;
+        margin-bottom: 40px;
+      }
+    }
+    div.CommentForm--textarea {
+      textarea {
+        background-color: var(--ice-white);
+      }
     }
   }
 }

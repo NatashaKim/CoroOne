@@ -1,17 +1,53 @@
-.Necro_add {
-  background-color: var(--mineral-gray);
-  border-radius: 32px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 1200px;
-  height: 296px;
-  box-sizing: border-box;
-  padding: 56px 80px 56px 100px;
-  margin-top: 24px;
-  margin-bottom: 154px;
-  .Necro_add_text {
-    width: 412px;
-    height: fit-content;
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .Necro_add {
+    background-color: var(--mineral-gray);
+    border-radius: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    height: 296px;
+    box-sizing: border-box;
+    padding: 56px 80px 56px 100px;
+    margin-top: 24px;
+    margin-bottom: 154px;
+    .Necro_add_text {
+      width: 412px;
+      height: fit-content;
+    }
+  }
+}
+
+
+@media (max-width: 375px) {
+  .Necro_add {
+    background-color: var(--mineral-gray);
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 335px;
+    height: 272px;
+    box-sizing: border-box;
+    padding: 22px 20px 32px 20px;
+    margin-top: 24px;
+    margin-bottom: 60px;
+    margin-left: 20px;
+    img {
+      width: 225px;
+      margin-left: -58px;
+    }
+    .Necro_add_text {
+      width: 283px;
+      height: fit-content;
+      p {
+         margin-bottom: 8px;
+         font-weight: normal;
+      }
+      span {
+
+      }
+    }
   }
 }

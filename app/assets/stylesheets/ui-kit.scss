@@ -23,127 +23,259 @@
 }
 
 /* h */
-.h1 {
-  font-family: 'RedRing', sans-serif;
-  font-size: 36px;
-  line-height: 42px;
-  font-weight: bold;
-}
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .h1 {
+    font-family: 'RedRing', sans-serif;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: bold;
+  }
 
-.h2 {
+  .h2 {
+    font-family: 'RedRing', sans-serif;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: normal;
+  }
+
+  .h3 {
+    font-family: 'RedRing', sans-serif;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: bold;
+  }
+
+  .h4 {
+    font-family: "RedRing";
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+  }
+
+  .h5 {
+    font-family: 'RedRing', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+
+  .h6 {
+    font-family: 'RedRing', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+
+  /* p */
+
+  .p1 {
   font-family: 'RedRing', sans-serif;
-  font-size: 36px;
-  line-height: 36px;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  }
+
+  .p2 {
+  font-family: 'RedRing', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
   font-weight: normal;
-}
+  }
 
-.h3 {
-  font-family: 'RedRing', sans-serif;
-  font-size: 28px;
-  line-height: 36px;
-  font-weight: bold;
-}
-
-.h4 {
-  font-family: "RedRing";
-  font-size: 24px;
-  line-height: 32px;
-  font-weight: bold;
-}
-
-.h5 {
-  font-family: 'RedRing', sans-serif;
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: bold;
-}
-
-.h6 {
-  font-family: 'RedRing', sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: bold;
-}
-
-/* p */
-
-.p1 {
-font-family: 'RedRing', sans-serif;
-font-size: 18px;
-line-height: 24px;
-font-weight: bold;
-}
-
-.p2 {
-font-family: 'RedRing', sans-serif;
-font-size: 18px;
-line-height: 24px;
-font-weight: normal;
-}
-
-.p3 {
-font-family: 'RedRing', sans-serif;
-font-size: 16px;
-line-height: 24px;
-font-weight: normal;
-}
-
-.p4 {
-font-family: 'RedRing', sans-serif;
-font-size: 14px;
-line-height: 28px;
-font-weight: normal;
-}
-
-/* small */
-
-.small1 {
-  font-family: "PTMono";
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: bold;
-}
-
-.small2 {
-  font-family: "PTMono";
-  font-size: 18px;
-  line-height: 30px;
-  font-weight: bold;
-}
-
-.small3 {
+  .p3 {
   font-family: 'RedRing', sans-serif;
   font-size: 16px;
-  line-height: 18px;
-  font-weight: bold;
-}
+  line-height: 24px;
+  font-weight: normal;
+  }
 
-.small4 {
+  .p4 {
   font-family: 'RedRing', sans-serif;
   font-size: 14px;
+  line-height: 28px;
+  font-weight: normal;
+  }
+
+  /* small */
+
+  .small1 {
+    font-family: "PTMono";
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+
+  .small2 {
+    font-family: "PTMono";
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+
+  .small3 {
+    font-family: 'RedRing', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+  }
+
+  .small4 {
+    font-family: 'RedRing', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+
+  .small5 {
+    font-family: "PTMono";
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: normal;
+  }
+
+  .small6 {
+    font-family: 'RedRing', sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: normal;
+  }
+
+  /* Heading align*/
+  .center_align {
+    text-align: center;
+  }
+
+  .left_align {
+    text-align: left;
+  }
+
+}
+
+
+@media (max-width: 375px) {
+  .h1 {
+    font-family: 'RedRing', sans-serif;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: bold;
+  }
+
+  .h2 {
+    font-family: 'RedRing', sans-serif;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: normal;
+  }
+
+  .h3 {
+    font-family: 'RedRing', sans-serif;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+  }
+
+  .h4 {
+    font-family: "RedRing";
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+  }
+
+  .h5 {
+    font-family: 'RedRing', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+
+  .h6 {
+    font-family: 'RedRing', sans-serif;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: bold;
+  }
+
+  /* p */
+
+  .p1 {
+  font-family: 'RedRing', sans-serif;
+  font-size: 18px;
   line-height: 24px;
   font-weight: bold;
-}
+  }
 
-.small5 {
-  font-family: "PTMono";
-  font-size: 12px;
-  line-height: 14px;
+  .p2 {
+  font-family: 'RedRing', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
   font-weight: normal;
-}
+  }
 
-.small6 {
+  .p3 {
   font-family: 'RedRing', sans-serif;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 20px;
   font-weight: normal;
-}
+  }
 
-/* Heading align*/
-.center_align {
-  text-align: center;
-}
+  .p4 {
+  font-family: 'RedRing', sans-serif;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: normal;
+  }
 
-.left_align {
-  text-align: left;
+  /* small */
+
+  .small1 {
+    font-family: "PTMono";
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+
+  .small2 {
+    font-family: "PTMono";
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+
+  .small3 {
+    font-family: 'RedRing', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: bold;
+  }
+
+  .small4 {
+    font-family: 'RedRing', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+
+  .small5 {
+    font-family: "PTMono";
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: normal;
+  }
+
+  .small6 {
+    font-family: 'RedRing', sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: normal;
+  }
+
+  /* Heading align*/
+  .center_align {
+    text-align: center;
+  }
+
+  .left_align {
+    text-align: left;
+  }
+
 }

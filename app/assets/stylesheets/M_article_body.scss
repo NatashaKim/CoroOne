@@ -1,10 +1,26 @@
-.Article_body {
-  width: 673px;
-  margin-bottom: 74px;
-  .Article_body_image {
-    .Postcover_container {
-      width: inherit;
-      margin: 48px 0;
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .Article_body {
+    width: 673px;
+    margin-bottom: 74px;
+    .Article_body_image {
+      .Postcover_container {
+        width: inherit;
+        margin: 48px 0;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 375px) {
+  .Article_body {
+    width: 335px;
+    margin-bottom: 74px;
+    .Article_body_image {
+      .Postcover_container {
+        width: inherit;
+        margin: 48px 0;
+      }
     }
   }
 }

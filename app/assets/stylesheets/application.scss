@@ -15,23 +15,50 @@
  */
 
 @import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
-body {
-   margin: 0;
-   background-color: var(--mineral-gray);
-   box-sizing: border-box;
-   .Wrapper {
-     background-color: var(--light-gray);
-     overflow-x: hidden;
-     border-radius: 64px;
-     a {
-       text-decoration: none;
-       &:hover {
-         background-color: transparent;
 
-       }
-     }
-     div {
-       box-sizing: border-box;
-     }
-   }
+
+ @media (min-width: 1440px) and (max-width: 1920px) {
+   body {
+      margin: 0;
+      background-color: var(--mineral-gray);
+      box-sizing: border-box;
+      .Wrapper {
+        background-color: var(--light-gray);
+        overflow-x: hidden;
+        border-radius: 64px;
+        a {
+          text-decoration: none;
+          &:hover {
+            background-color: transparent;
+
+          }
+        }
+        div {
+          box-sizing: border-box;
+        }
+      }
+    }
+ }
+
+ @media (max-width: 375px) {
+   body {
+      margin: 0;
+      background-color: var(--mineral-gray);
+      box-sizing: border-box;
+      .Wrapper {
+        background-color: var(--light-gray);
+        overflow-x: hidden;
+        border-radius: 0px;
+        a {
+          text-decoration: none;
+          &:hover {
+            background-color: transparent;
+
+          }
+        }
+        div {
+          box-sizing: border-box;
+        }
+      }
+    }
  }
