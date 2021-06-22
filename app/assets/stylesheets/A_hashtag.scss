@@ -1,22 +1,46 @@
-.Article_hashtag {
-  height: 48px;
-  padding: 8px 24px;
-  border: 3px solid var(--zelda-green);
-  width: fit-content;
-  border-radius: 28px;
-  display: flex;
-  align-items: center;
-  margin: 16px 12px;
-  .Hash {
-    color: var(--neon-blue);
-    font-size: 24px;
-    font-weight: bold;
-    font-family: 'RedRing';
+.Hashtag {
+  &.article {
+    height: 48px;
+    padding: 8px 24px;
+    border: 3px solid var(--zelda-green);
+    width: fit-content;
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    margin: 16px 12px;
+    .Hash {
+      color: var(--neon-blue);
+      font-size: 24px;
+      font-weight: bold;
+      font-family: 'RedRing';
+    }
+    .Tag {
+      color: var(--zelda-green);
+      font-size: 24px;
+      font-weight: bold;
+      font-family: 'RedRing';
+    }
   }
-  .Tag {
-    color: var(--zelda-green);
-    font-size: 24px;
-    font-weight: bold;
-    font-family: 'RedRing';
+  &.popular {
+    height: 40px;
+    padding: 4px 16px;
+    border: 2px solid var(--zelda-green);
+    width: fit-content;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    margin: 12px 8px;
+    .Hash {
+      color: var(--neon-blue);
+      font-size: 16px;
+      font-weight: bold;
+      font-family: 'RedRing';
+    }
+    .Tag {
+      color: var(--zelda-green);
+      font-size: 16px;
+      font-weight: bold;
+      font-family: 'RedRing';
+    }
   }
 }

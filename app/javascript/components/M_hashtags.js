@@ -67,7 +67,7 @@ render_part(some_hashtags){
        parts.push(this.render_part(p));
     }
     return (
-      <div className = "News_preview">
+      <div className = "Hashtags">
         {parts}
       </div>
     );
