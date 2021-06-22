@@ -68,6 +68,7 @@ end
   get 'users', to: 'users#index'
   get 'users/:id' => 'users#show'
   get 'users/:id/edit' => 'users#edit'
+  get 'users/:id/favorites', to: 'users#favorites'
   post 'posts/:id' => 'posts#edit'
   delete 'users/:id', to: 'users#destroy'
   get 'users/:id/following', :to => "users#following", :as => :following

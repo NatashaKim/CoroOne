@@ -5,6 +5,7 @@
 
       <%= render 'form', post: @post, categories: @categories %>
       <%= link_to 'Назад', admin_context_path(curatorposts: "") %>
+      <span><%= @errors %></span>
     </div>
   </div>
 </body>

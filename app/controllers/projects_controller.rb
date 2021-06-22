@@ -48,10 +48,14 @@ class ProjectsController < ApplicationController
   # POST /projects
   # POST /projects.json
   def create
-    @project = Project.new(project_params)
+
+    @project = Project.new(project_params.merge(user_id: current_user.id))
 
     respond_to do |format|
+      logger.info(@project.errors);
+
       if @project.save
+        logger.info(@project.errors);
 
         @genres = Genre.all
 
@@ -64,6 +68,8 @@ class ProjectsController < ApplicationController
         format.html { redirect_to @project, notice: 'Project was successfully created.' }
         format.json { render :show, status: :created, location: @project }
       else
+        logger.info(@project.errors.to_json);
+        @errors = @project.errors
         format.html { render :new }
         format.json { render json: @project.errors, status: :unprocessable_entity }
       end

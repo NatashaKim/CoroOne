@@ -1,0 +1,6 @@
+<% current_user_id = -1 %>
+<%if current_user%>
+  <%current_user_id= current_user.id%>
+<% end %>
+
+<%= react_component 'O_posts_preview', { posts: @posts, current_user_id: current_user_id} %>
