@@ -103,7 +103,7 @@ class O_necrologyform extends React.Component {
           />
 
             <A_label
-            label = "Жанр  игры"/>
+            label = "Жанр игры"/>
             <A_select
 
              name="post[category_id]"
@@ -222,7 +222,7 @@ class O_necrologyform extends React.Component {
             name="post[post_type_id]"
             value={this.state.post_type_id}
           />
-          
+
           </div>
 
           <A_button

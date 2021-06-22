@@ -8,7 +8,7 @@ class Post < ApplicationRecord
 		#include Elasticsearch::Model::Callbacks
 
 
-    searchkick
+    #searchkick
 
 
 

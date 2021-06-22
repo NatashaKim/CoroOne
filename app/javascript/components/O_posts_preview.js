@@ -12,9 +12,9 @@ class O_posts_preview extends React.Component {
       <div>
         {this.props.posts.map(post => (
           <M_post_preview_default
-            key = {post.id} 
+            key = {post.id}
             post = {post}
-            favorites = {this.props.favorites}
+            favorites = {post.favorites}
             current_user_id = {this.props.current_user_id}
           />
         ))}

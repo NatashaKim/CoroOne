@@ -43,4 +43,25 @@
       font-family: 'RedRing';
     }
   }
+  &.search_results {
+    width: fit-content;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    color: var(--navy-blue);
+    margin-right: 10px;
+    a {
+      .Hash {
+        color: var(--navy-blue);
+        font-size: 16px;
+        font-weight: bold;
+        font-family: 'RedRing';
+      }
+      .Tag {
+        color: var(--navy-blue);
+        font-size: 16px;
+        font-family: 'RedRing';
+      }
+    }
+  }
 }

@@ -1,0 +1,9 @@
+.Hashtags_search {
+  &.search_results {
+    width: 390px;
+    height: 48px;
+    overflow-y: hidden;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

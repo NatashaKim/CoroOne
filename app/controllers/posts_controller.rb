@@ -118,6 +118,7 @@ class PostsController < ApplicationController
     @post = Post.new
     @post.post_type = PostType.find_by_name("Новости")
     @categories = [{id:"1", name:"Анонсы"}, {id:"2", name:"Релизы"}, {id:"3", name:"Обновления"}, {id:"4", name:"О компаниях"} ]
+    @genres = [{id:"14", name:"Анонс"}, {id:"15", name:"Релиз"}, {id:"16", name:"Обновление"}, {id:"17", name:"О компаниях"} ]
     render 'newnews'
   end
 
@@ -125,6 +126,7 @@ class PostsController < ApplicationController
     @post = Post.new
     @post.post_type = PostType.find_by_name("Статьи")
     @categories = [{id:"5", name:"Факты"}, {id:"6", name:"Советы"}, {id:"7", name:"Чит-коды"} ]
+    @genres = [{id:"18", name:"Факт"}, {id:"19", name:"Совет"}, {id:"20", name:"Чит-код"}]
     render 'newarticles'
   end
 
@@ -159,8 +161,11 @@ class PostsController < ApplicationController
     @post_genres=GenreToSmth.select("genre_id").where(post_id:@post.id)
     if @post.post_type.name == "Новости"
       @categories = [{id:"1", name:"Анонсы"}, {id:"2", name:"Релизы"}, {id:"3", name:"Обновления"}, {id:"4", name:"О компаниях"} ]
+      @genres = [{id:"14", name:"Анонс"}, {id:"15", name:"Релиз"}, {id:"16", name:"Обновление"}, {id:"17", name:"О компаниях"} ]
+      render 'newreviews'
     elsif @post.post_type.name == "Статьи"
       @categories = [{id:"5", name:"Факты"}, {id:"6", name:"Советы"}, {id:"7", name:"Чит-коды"} ]
+      @genres = [{id:"18", name:"Факт"}, {id:"19", name:"Совет"}, {id:"20", name:"Чит-код"}]
     else
       @categories = [{id:"8", name:"Экшен"}, {id:"9", name:"Адвенчура"}, {id:"10", name:"Казуальная"}, {id:"11", name:"Многопользовательская"}, {id:"12", name:"Приключения"}, {id:"12", name:"Гонки"}, {id:"13", name:"РПГ"}, {id:"14", name:"Симулятор"}, {id:"15", name:"Спортивная"}, {id:"16", name:"Стратегия"}, {id:"17", name:"Хоррор"}, {id:"18", name:"Бесплатная"}, {id:"19", name:"Визуальная новелла"}, {id:"20", name:"Настольная"} ]
       @genres = [{id:"1", name:"Экшен"}, {id:"2", name:"Адвенчура"}, {id:"3", name:"Казуальная"}, {id:"4", name:"Многопользовательская"}, {id:"5", name:"Гонки"}, {id:"6", name:"РПГ"}, {id:"7", name:"Симулятор"}, {id:"8", name:"Спортивная"}, {id:"9", name:"Стратегия"}, {id:"10", name:"Хоррор"}, {id:"11", name:"Бесплатная"}, {id:"12", name:"Визуальная новелла"}, {id:"13", name:"Настольная"} ]

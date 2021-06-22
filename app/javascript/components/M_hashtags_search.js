@@ -20,8 +20,8 @@ class M_hashtags_search extends React.Component {
 
     if (!myArray) {return ""}
 
-    const checkHashtagsPlace = PLACES.includes(this.props.hashtagPlace)
-    ? this.props.hashtagPlace : PLACES[0]
+    const checkHashtagsPlace = PLACES.includes(this.props.hashtagsPlace)
+    ? this.props.hashtagsPlace : PLACES[0]
 
     return (
       <div className = {`Hashtags_search ${checkHashtagsPlace}`}>

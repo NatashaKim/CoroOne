@@ -19,55 +19,36 @@ class M_post_preview_default extends React.Component {
       imgsrc = this.props.post.image.thumb.url;
     }
 
+    var sectionStyle = {
+      backgroundImage: `linear-gradient( rgba(4, 0, 94, 0.4), rgba(4, 0, 94, 0.4) ), url(${imgsrc})`
+    };
 
-    let headingStyle = '';
-    if (this.props.postStyle == 'ps--screen') {
-      headingStyle = 'h4';
-    } else if (this.props.postStyle == 'ps--horizontal_long') {
-      headingStyle = 'h4';
-    } else {
-      headingStyle = 'h6';
-    }
-
-    let categoryStyle = '';
-    if (this.props.postStyle == 'ps--screen') {
-      categoryStyle = 'small1';
-    } else if (this.props.postStyle == 'ps--horizontal_long') {
-          categoryStyle = 'small1';
-    } else {
-      categoryStyle = 'small2';
-    }
-
-    let postStyle = " ";
-
-    let checkpostStyle = STYLES.includes(this.props.postStyle)
-    ? this.props.postStyle : STYLES[0]
 
     return (
-      <div style={sectionStyle} className = {`Post_preview ${checkpostStyle}`}>
-        <div className = "Preview_wrapper">
-            <A_post_title
-             post = {this.props.post}
-             headingColor = 'cold-black'
-             headingAlign = 'left_align'
-             headingStyle = 'h6'/>
-            <M_hashtags_search
-               post = {this.props.post}
-               hashtagPlace = 'search_results'
-            />
-            <A_favorite_button
-               post = {this.props.post}
-               favorites = {this.props.favorites}
-               current_user_id = {this.props.current_user_id}
-            />
-
-            <div className = {`Postcover_container ${checkCoverPlace}`}>
-              <img className = {`Postcover`}
-                src = {imgsrc}
+      <div className = 'Post_preview_default'>
+        <div className = "Preview_default_wrapper">
+          <A_post_title
+           post = {this.props.post}
+           headingColor = 'cold-black'
+           headingAlign = 'left_align'
+           headingStyle = 'h6'/>
+           <div className = 'Hashtags_favorite'>
+              <M_hashtags_search
+                 post = {this.props.post}
+                 hashtagPlace = 'search_results'
+                 hashtagsPlace = 'search_results'
+              />
+              <A_favorite_button
+                 post = {this.props.post}
+                 favorites = {this.props.favorites}
+                 current_user_id = {this.props.current_user_id}
               />
             </div>
+          </div>
 
-        </div>
+          <div style={sectionStyle} className = 'Postcover_container'>
+
+          </div>
       </div>
     );
   }

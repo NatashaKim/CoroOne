@@ -1,10 +1,18 @@
 <div class="search-page">
   <%= render 'search/form' %>
 
+  <% current_user_id = -1 %>
+  <%if current_user%>
+    <%current_user_id= current_user.id%>
+  <% end %>
+
   <div class="search-hashtags">
     <#%= react_component 'M_hashtag_search', { tag: @tag} %>
   </div>
   <h1 class="gh">Posts</h1>
+
+
+  <%= react_component 'O_posts_preview', { posts: @posts, current_user_id: current_user_id} %>
 
  <table>
    <thead>
