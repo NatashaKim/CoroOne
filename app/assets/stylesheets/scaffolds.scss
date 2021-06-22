@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'RedRing', sans-serif;
+  src: url('/assets/RedRing-Regular.woff') format('woff');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'RedRing', sans-serif;
+  src: url('/assets/RedRing-Medium.woff') format('woff');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "PTMono";
+  src: url("/assets/PTMono-Medium.woff") format("woff");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "PTMono";
+  src: url("/assets/PTMono-Regular.woff") format("woff");
+  font-weight: normal;
+}
+
 body {
   background-color: #fff;
   color: #333;

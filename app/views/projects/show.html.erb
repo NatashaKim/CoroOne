@@ -1,34 +1,15 @@
-<p id="notice"><%= notice %></p>
+<% current_user_id = -1 %>
+<%if current_user%>
+  <%current_user_id= current_user.id%>
+<% end %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @project.name %>
-</p>
+<#%= react_component 'M_project_preview', {
+  project: @project,
+  current_user_id: current_user_id,
+  genres: @genres
+} %>
 
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
 
-<p>
-  <strong>Project start date:</strong>
-  <%= @project.project_start_date %>
-</p>
-
-<p>
-  <strong>Project end date:</strong>
-  <%= @project.project_end_date %>
-</p>
-
-<p>
-  <strong>Download project:</strong>
-  <%= @project.download_project %>
-</p>
-
-<p>
-  <strong>Donate project:</strong>
-  <%= @project.donate_project %>
-</p>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
