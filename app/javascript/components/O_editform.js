@@ -7,7 +7,7 @@ import M_input_with_label from "./M_input_with_label"
 import M_image_input_with_label from "./M_image_input_with_label"
 import M_textarea_with_label from "./M_textarea_with_label"
 
-class O_regform extends React.Component {
+class O_editform extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
@@ -155,4 +155,4 @@ class O_regform extends React.Component {
     }
   }
 
-export default O_regform
+export default O_editform

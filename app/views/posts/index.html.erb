@@ -11,17 +11,30 @@
   <% articles_banner = @posts[2] %>
   <% reviews_banner = @posts[3] %>
   <% spider_post_id = [] %>
-  <% spider_post_id.push(spider_post["id"])%>
-  <% spider_post_id.push(news_banner["id"])%>
-  <% spider_post_id.push(articles_banner["id"])%>
-  <% spider_post_id.push(reviews_banner["id"])%>
+  <% if spider_post %>
+    <% spider_post_id.push(spider_post["id"])%>
+  <% end %>
+
+  <% if news_banner %>
+    <% spider_post_id.push(news_banner["id"])%>
+  <% end %>
+
+  <% if articles_banner %>
+    <% spider_post_id.push(articles_banner["id"])%>
+  <% end %>
+
+  <% if reviews_banner %>
+    <% spider_post_id.push(reviews_banner["id"])%>
+  <% end %>
 
   <% current_user_id = -1 %>
   <%if current_user%>
     <%current_user_id= current_user.id%>
   <% end %>
 
-  <%= react_component 'M_spider', { post: spider_post } %>
+  <% if spider_post %>
+    <%= react_component 'M_spider', { post: spider_post } %>
+  <% end %>
 </div>
 
     <div class="Post_type_section_wrapper">
@@ -30,7 +43,9 @@
       <%= react_component 'M_more_info', {moreInfoType: "more_news"} %>
     </div>
 
-    <%= react_component 'M_post_preview', { post: news_banner, category: @posts[2]["category"], postStyle: 'ps--screen' } %>
+    <% if news_banner %>
+      <%= react_component 'M_post_preview', { post: news_banner, category: @posts[2]["category"], postStyle: 'ps--screen' } %>
+    <% end %>
 
     <div class="Post_type_section_wrapper">
       <%= react_component 'A_post_type', { post_type: @post_types[1] } %>
@@ -38,7 +53,9 @@
       <%= react_component 'M_more_info', {moreInfoType: "more_articles"} %>
     </div>
 
-    <%= react_component 'M_post_preview', { post: articles_banner, category: @posts[2]["category"], postStyle: 'ps--screen' } %>
+    <% if articles_banner %>
+      <%= react_component 'M_post_preview', { post: articles_banner, category: @posts[2]["category"], postStyle: 'ps--screen' } %>
+    <% end %>
 
     <div class="Post_type_section_wrapper">
       <%= react_component 'A_post_type', { post_type: @post_types[2] } %>
@@ -46,7 +63,9 @@
       <%= react_component 'M_more_info', {moreInfoType: "more_reviews"} %>
     </div>
 
-    <%= react_component 'M_post_preview', { post: reviews_banner, category: @posts[2]["category"], postStyle: 'ps--screen' } %>
+    <% if reviews_banner %>
+      <%= react_component 'M_post_preview', { post: reviews_banner, category: @posts[2]["category"], postStyle: 'ps--screen' } %>
+    <% end %>
 
     <div class="Post_type_section_wrapper Without_shadow">
       <%= react_component 'A_post_type', { post_type: @post_types[4] } %>

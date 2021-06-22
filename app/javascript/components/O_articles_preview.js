@@ -10,7 +10,7 @@ import '../../assets/stylesheets/O_articles_preview.scss'
 const posts_in_part = 9;
 const top_slice = 4;
 
-class O_posts_preview extends React.Component {
+class O_articles_preview extends React.Component {
   constructor(props) {
       super(props);
       this.state={
@@ -65,4 +65,4 @@ render_part(some_posts){
   }
 }
 
-export default O_posts_preview
+export default O_articles_preview

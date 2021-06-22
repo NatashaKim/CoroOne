@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :questions
   resources :projects
   resources :post_types
   resources :follows
@@ -43,7 +44,7 @@ end
 
   get "search", to: "search#search"
 
-  get "searchpage" => "search#searchpage", as: "searchpage"
+  get "searchpage" => "search#index", as: "search_index"
 
   get '/posts/hashtag/:name', to: 'posts#hashtags'
 
