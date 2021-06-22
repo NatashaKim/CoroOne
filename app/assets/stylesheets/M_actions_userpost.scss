@@ -1,4 +1,15 @@
-.Actions_userpost {
-  padding-top: 24px;
-  display: flex;
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .Actions_userpost {
+    padding-top: 24px;
+    display: flex;
+  }
+}
+
+
+@media (max-width: 375px) {
+  .Actions_userpost {
+    padding-top: 12px;
+    display: flex;
+    margin-left: -8px;
+  }
 }

@@ -1,19 +1,58 @@
-.Userpost_preview {
-  width: 671px;
-  background-color: var(--ice-white);
-  margin-bottom: 24px;
-  box-sizing: border-box;
-  border-radius: 32px;
-  padding: 30px;
-  .Userpost_img {
-    border-radius: 4px;
-    width: 612px;
-    height: 612px;
-    display: flex;
-    overflow: hidden;
-    .Userpost_img_cover {
-      object-fit: cover;
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .Userpost_preview {
+    width: 671px;
+    background-color: var(--ice-white);
+    margin-bottom: 24px;
+    box-sizing: border-box;
+    border-radius: 32px;
+    padding: 30px;
+    .Userpost_img {
       border-radius: 4px;
+      width: 612px;
+      height: 612px;
+      display: flex;
+      overflow: hidden;
+      .Userpost_img_cover {
+        object-fit: cover;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .Userpost_preview {
+    width: 375px;
+    background-color: var(--ice-white);
+    margin-bottom: 24px;
+    box-sizing: border-box;
+    border-radius: 32px;
+    padding: 30px 20px;
+    div {
+      p {
+        margin-top: 0px;
+      }
+    }
+    .Userpost_img {
+      border-radius: 4px;
+      width: 375px;
+      height: 375px;
+      display: flex;
+      overflow: hidden;
+      margin-left: -20px;
+      .Userpost_img_cover {
+        object-fit: cover;
+        border-radius: 4px;
+      }
+      .Actions_userpost {
+        padding-top: 10px;
+        margin-left: -8px;
+      }
+      form {
+        div.Userpost_commentform {
+          padding-top: 10px;
+        }
+      }
     }
   }
 }
