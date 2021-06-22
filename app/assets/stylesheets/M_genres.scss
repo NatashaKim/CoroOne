@@ -1,28 +1,62 @@
-.Genres_nav {
-  background-color: #DAFF69;
-  height: 120px;
-  width: 1376px;
-  margin: 0 auto;
-  border-radius: 32px;
-  padding: 16px 0px;
-  .Genres_container {
-    width: 1200px;
-    overflow-x: hidden;
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .Genres_nav {
+    background-color: #DAFF69;
+    height: 120px;
+    width: 1376px;
     margin: 0 auto;
-    .Genres_list {
-      width: fit-content;
-      display: flex;
-      a {
-        text-decoration: none;
-        cursor: pointer;
-        margin-right: 36px;
-        &:hover {
-          color: darken(#9896AE, 8%);
-          background-color: none;
+    border-radius: 32px;
+    padding: 16px 0px;
+    .Genres_container {
+      width: 1200px;
+      overflow-x: hidden;
+      margin: 0 auto;
+      .Genres_list {
+        width: fit-content;
+        display: flex;
+        a {
+          text-decoration: none;
+          cursor: pointer;
+          margin-right: 36px;
+          &:hover {
+            color: darken(#9896AE, 8%);
+            background-color: none;
+          }
+        }
+        a:last-child {
+          margin-right: none;
         }
       }
-      a:last-child {
-        margin-right: none;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .Genres_nav {
+    background-color: #DAFF69;
+    height: 120px;
+    width: 375px;
+    margin: 0 auto;
+    border-radius: 32px;
+    padding: 16px 0px;
+    .Genres_container {
+      width: 1200px;
+      overflow-x: hidden;
+      margin: 0 auto;
+      .Genres_list {
+        width: fit-content;
+        display: flex;
+        a {
+          text-decoration: none;
+          cursor: pointer;
+          margin-right: 36px;
+          &:hover {
+            color: darken(#9896AE, 8%);
+            background-color: none;
+          }
+        }
+        a:last-child {
+          margin-right: none;
+        }
       }
     }
   }
