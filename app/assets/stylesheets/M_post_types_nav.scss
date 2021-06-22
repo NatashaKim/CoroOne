@@ -1,28 +1,30 @@
 @media (min-width: 1440px) and (max-width: 1920px){
-  .post_types_nav {
-    box-sizing: border-box;
-    display: flex;
-    width: 100vw;
-    height: 64px;
-    border: none;
-    padding: 20px 294px;
-    justify-content: space-between;
-    margin-bottom: 64px;
-    a {
-      color: var(--mineral-gray);
-      text-decoration: none;
-      cursor: pointer;
-      &:hover {
-        color: darken(#9896AE, 8%);
-        background-color: none;
+  div {
+    .post_types_nav {
+      box-sizing: border-box;
+      display: flex;
+      width: 100vw;
+      height: 64px;
+      border: none;
+      padding: 20px 294px;
+      justify-content: space-between;
+      margin-bottom: 64px;
+      a {
+        color: var(--mineral-gray);
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+          color: darken(#9896AE, 8%);
+          background-color: none;
+        }
+        &:visited {
+          color: darken(#9896AE, 8%);
+          background-color: none;
+        }
       }
-      &:visited {
-        color: darken(#9896AE, 8%);
-        background-color: none;
+      a.category_nav_a:last-child {
+        margin-right: none;
       }
-    }
-    a.category_nav_a:last-child {
-      margin-right: none;
     }
   }
 }
@@ -30,33 +32,37 @@
 
 
 @media (max-width: 375px) {
-  .post_types_nav {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    box-sizing: border-box;
-    display: flex;
-    width: 666px;
-    height: 64px;
-    border: none;
-    padding: 20px 20px;
-    justify-content: space-between;
-    margin-bottom: 64px;
-    a {
-      color: var(--mineral-gray);
-      text-decoration: none;
-      cursor: pointer;
-      &:hover {
-        color: darken(#9896AE, 8%);
-        background-color: none;
+  div {
+    overflow-x: hidden;
+    .post_types_nav {
+      overflow-x: scroll;
+      overflow-y: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      display: flex;
+      width: 666px;
+      height: 64px;
+      border: none;
+      padding: 20px 20px;
+      justify-content: space-between;
+      margin-bottom: 64px;
+      a {
+        color: var(--mineral-gray);
+        text-decoration: none;
+        cursor: pointer;
+        &:hover {
+          color: darken(#9896AE, 8%);
+          background-color: none;
+        }
+        &:visited {
+          color: darken(#9896AE, 8%);
+          background-color: none;
+        }
       }
-      &:visited {
-        color: darken(#9896AE, 8%);
-        background-color: none;
+      a.category_nav_a:last-child {
+        margin-right: none;
       }
-    }
-    a.category_nav_a:last-child {
-      margin-right: none;
     }
   }
+
 }

@@ -7,12 +7,14 @@ import '../../assets/stylesheets/M_post_types_nav.scss'
 class M_post_types_nav extends React.Component {
   render () {
     return (
-      <div className = "post_types_nav h6">
-        <A_post_type post_type = {this.props.post_types[0]} postTypeStyle = 'menu'/>
-        <A_post_type post_type = {this.props.post_types[1]} postTypeStyle = 'menu'/>
-        <A_post_type post_type = {this.props.post_types[2]} postTypeStyle = 'menu'/>
-        <A_post_type post_type = {this.props.post_types[3]} postTypeStyle = 'menu'/>
-        <A_post_type post_type = {this.props.post_types[4]} postTypeStyle = 'menu'/>
+      <div>
+        <div className = "post_types_nav h6">
+          <A_post_type post_type = {this.props.post_types[0]} postTypeStyle = 'menu'/>
+          <A_post_type post_type = {this.props.post_types[1]} postTypeStyle = 'menu'/>
+          <A_post_type post_type = {this.props.post_types[2]} postTypeStyle = 'menu'/>
+          <A_post_type post_type = {this.props.post_types[3]} postTypeStyle = 'menu'/>
+          <A_post_type post_type = {this.props.post_types[4]} postTypeStyle = 'menu'/>
+        </div>
       </div>
     );
   }
