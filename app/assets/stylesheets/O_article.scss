@@ -1,29 +1,73 @@
-.Article {
-  margin: 0 auto;
-  width: fit-content;
-  position: relative;
-  .Social_icons_holder {
-    height: 64px;
-    margin-top: -64px;
-    width: 1311px;
-    display: flex;
-    .Shape {
-      width: 320px;
-      height: 64px;
-      background-image: url(social_icons_holder.svg);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .Social_icons {
-        width: 196px;
-        height: 40px;
-        justify-content: space-between;
-        display: flex;
-      }
-    }
-  }
-  .Article_content {
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .Article {
     margin: 0 auto;
     width: fit-content;
+    position: relative;
+    .Social_icons_holder {
+      height: 64px;
+      margin-top: -64px;
+      width: 1311px;
+      display: flex;
+      .Shape {
+        width: 320px;
+        height: 64px;
+        background-image: url(social_icons_holder.svg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .Social_icons {
+          width: 196px;
+          height: 40px;
+          justify-content: space-between;
+          display: flex;
+        }
+      }
+    }
+    .Article_content {
+      margin: 0 auto;
+      width: fit-content;
+    }
+  }
+}
+
+
+@media (max-width: 375px) {
+  .Article {
+    margin: 0 auto;
+    width: fit-content;
+    position: relative;
+    .Social_icons_holder {
+      height: 64px;
+      margin-top: -47px;
+      width: 375px;
+      display: flex;
+      .Shape {
+        width: 320px;
+        height: 52px;
+        background-image: url(social_icons_holder.svg);
+        background-size: 260px 48px;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .Social_icons {
+          width: 160px;
+          margin-left: -58px;
+          height: 28px;
+          justify-content: space-between;
+          display: flex;
+          a {
+            img {
+              width: 28px;
+            }
+          }
+        }
+      }
+    }
+    .Article_content {
+      margin: 0 auto;
+      width: 375px;
+      padding: 0 20px 0 20px;
+    }
   }
 }

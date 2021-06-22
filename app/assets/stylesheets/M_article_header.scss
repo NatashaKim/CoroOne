@@ -1,11 +1,29 @@
-.Article_header {
-  width: 673px;
-  margin-top: 52PX;
-  .Heading {
-    color: var(--navy-blue);
-    margin-bottom: 20px;
+
+@media (min-width: 1440px) and (max-width: 1920px) {
+  .Article_header {
+    width: 673px;
+    margin-top: 52PX;
+    .Heading {
+      color: var(--navy-blue);
+      margin-bottom: 20px;
+    }
+    .Text {
+      margin-bottom: 28px;
+    }
   }
-  .Text {
-    margin-bottom: 28px;
+}
+
+
+@media (max-width: 375px) {
+  .Article_header {
+    width: 335px;
+    margin-top: 52PX;
+    .Heading {
+      color: var(--navy-blue);
+      margin-bottom: 20px;
+    }
+    .Text {
+      margin-bottom: 28px;
+    }
   }
 }
