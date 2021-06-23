@@ -28,11 +28,19 @@ class ProjectsController < ApplicationController
     render json: @projects
   end
 
-
   # GET /projects/1
   # GET /projects/1.json
+
   def show
+    @project = Project.find(params[:id]).as_json(include: :genres)
+    respond_to do |format|
+      format.html
+      format.json{
+        render :json => @project.as_json(include: :genres)
+      }
+    end
   end
+
 
   # GET /projects/new
   def new
