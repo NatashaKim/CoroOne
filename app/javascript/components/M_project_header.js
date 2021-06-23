@@ -24,40 +24,8 @@ class M_project_header extends React.Component {
 
   render () {
 
-
-    let imgsrc = '';
-    if (!this.props.project.project_cover.thumb.url) {
-      imgsrc = '/assets/project_cover_default.svg';
-    } else {
-      imgsrc = this.props.project.project_cover.thumb.url;
-    }
-
-    let sectionStyle = {}
-    sectionStyle = {
-      backgroundImage: `linear-gradient( rgba(4, 0, 94, 0.4), rgba(4, 0, 94, 0.4) ), url(${imgsrc})`
-    };
-
-
-    let headingStyle = '';
-    if (this.props.projectPlace == 'new') {
-      headingStyle = 'h6';
-    } else if (this.props.projectPlace == 'top') {
-      headingStyle = 'small3';
-    } else {
-      headingStyle = 'p4';
-    }
-
-    let headingColor = '';
-    if (this.props.projectPlace == 'new') {
-      headingColor = 'zelda-green';
-    } else if (this.props.projectPlace == 'top') {
-      headingStyle = 'ice-white';
-    } else {
-      headingColor = 'navy-blue';
-    }
-
     return (
-      <div style={sectionStyle} className = {`Project_header ${checkProjectPlace}`}>
+      <div style={sectionStyle} className = 'Project_header'>
 
 
             <div className = "Genres">

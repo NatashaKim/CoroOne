@@ -32,7 +32,7 @@ class ProjectsController < ApplicationController
   # GET /projects/1.json
 
   def show
-    @project = Project.find(params[:id])
+    @project = Project.find(params[:id]).as_json(include: :genres)
     respond_to do |format|
       format.html
       format.json{
