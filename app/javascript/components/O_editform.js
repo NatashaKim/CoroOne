@@ -6,6 +6,7 @@ import A_button from "./A_button"
 import M_input_with_label from "./M_input_with_label"
 import M_image_input_with_label from "./M_image_input_with_label"
 import M_textarea_with_label from "./M_textarea_with_label"
+import '../../assets/stylesheets/O_editform.scss'
 
 class O_editform extends React.Component {
   constructor(props) {
@@ -82,7 +83,7 @@ class O_editform extends React.Component {
           />
 
           <M_input_with_label
-            label = "Username"
+            label = "Имя пользователя"
             inputPlace = "new_post"
             name="user[username]"
             value={this.state.username}
@@ -90,7 +91,7 @@ class O_editform extends React.Component {
           />
 
           <M_input_with_label
-            label = "description"
+            label = "Описание"
             inputPlace = "new_post"
             name="user[description]"
             value={this.state.description}
@@ -112,7 +113,17 @@ class O_editform extends React.Component {
           />
 
           <M_input_with_label
-            label = "password"
+            label = "Текущий пароль"
+            inputPlace = "new_post"
+            autocomplete = "current-password"
+            inputTypes = 'password'
+            name="user[current_password]"
+            value={this.state.current_password}
+            onChange={this.handleCurrentPasswordChange}
+          />
+
+          <M_input_with_label
+            label = "Новый пароль (менять по желанию)"
             inputPlace = "new_post"
             autocomplete = "new-password"
             inputTypes = 'password'
@@ -122,23 +133,13 @@ class O_editform extends React.Component {
           />
 
           <M_input_with_label
-            label = "password_confirmation"
+            label = "Подтверждение пароля"
             inputPlace = "new_post"
             autocomplete = "new-password"
             inputTypes = 'password'
             name="user[password_confirmation]"
             value={this.state.password_confirmation}
             onChange={this.handlePasswordConfirmationChange}
-          />
-
-          <M_input_with_label
-            label = "current_password"
-            inputPlace = "new_post"
-            autocomplete = "current-password"
-            inputTypes = 'password'
-            name="user[current_password]"
-            value={this.state.current_password}
-            onChange={this.handleCurrentPasswordChange}
           />
 
 
