@@ -30,8 +30,7 @@ const A_project_title = ({
   headingStyle,
   headingColor,
   headingAlign,
-  post,
-  post_number
+  project
 }) => {
 
   let checkHeadingStyle = STYLES.includes(headingStyle)
@@ -45,7 +44,7 @@ const A_project_title = ({
 
   return(
       <a className = {`Heading ${checkHeadingStyle} ${checkHeadingColor} ${checkHeadingAlign}`} type = {type} href={`/projects/${project.id}`}>
-        {project.title}
+        {project.name}
       </a>
   )
 }

@@ -25,7 +25,7 @@ class M_project_header extends React.Component {
   render () {
 
     return (
-      <div style={sectionStyle} className = 'Project_header'>
+      <div className = 'Project_header'>
 
 
             <div className = "Genres">

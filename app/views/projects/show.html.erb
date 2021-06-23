@@ -3,7 +3,7 @@
   <%current_user_id= current_user.id%>
 <% end %>
 
-<%= react_component 'M_project_preview', {
+<%= react_component 'M_project_header', {
   project: @project,
   current_user_id: current_user_id,
   genres: @genres
