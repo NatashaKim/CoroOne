@@ -12,6 +12,7 @@ import A_button from "./A_button"
 import A_checkbox from "./A_checkbox"
 import M_multiselect_genres from "./M_multiselect_genres"
 import M_multiselect_project_checklist from "./M_multiselect_project_checklist"
+import '../../assets/stylesheets/O_projectform.scss'
 
 
 let formatDate = project_start_date => {
