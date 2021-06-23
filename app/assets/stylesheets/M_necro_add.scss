@@ -28,7 +28,7 @@
     justify-content: space-between;
     align-items: center;
     width: 335px;
-    height: 272px;
+    height: 282px;
     box-sizing: border-box;
     padding: 22px 20px 32px 20px;
     margin-top: 24px;
@@ -39,6 +39,7 @@
       margin-left: -58px;
     }
     .Necro_add_text {
+      overflow-y: hidden;
       width: 283px;
       height: fit-content;
       p {

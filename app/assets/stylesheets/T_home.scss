@@ -16,6 +16,8 @@
     margin-bottom: 64px;
     &.Without_shadow {
       filter:none;
+      background-image: url(necrology.png);
+      background-repeat: no-repeat;
     }
   }
 

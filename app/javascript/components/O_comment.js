@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import M_user_info from "./M_user_info"
+import A_button from "./A_button"
 import M_commentform from "./M_commentform"
 import A_debug from "./A_debug"
 import {getuser} from './Api.js';
@@ -56,12 +57,13 @@ handleAddInput() {
           <div></div>
         }
 
-        <button
-          type="button"
-          onClick={this.handleAddInput}
-        >
-          Ответить
-        </button>
+        <A_button
+           value = "Oтветить"
+           onClick={this.handleAddInput}
+           buttonSize = "btn--small"
+           buttonColor = "btn--text"/>
+
+
 
 
 
