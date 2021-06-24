@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import A_category from "./A_category"
-import A_post_title from "./A_post_title"
+import A_title from "./A_title"
 import A_genre from "./A_genre"
 import '../../assets/stylesheets/M_post_preview.scss'
 import '../../assets/stylesheets/colors.scss'
@@ -36,11 +36,11 @@ class M_release_favorites extends React.Component {
             {this.props.post.release_date}
           </div>
 
-          <A_post_title
-           post = {this.props.post}
+          <A_title
            headingColor = 'zelda-green'
            headingAlign = 'left_align'
            headingStyle = 'h4'
+           title = {this.props.post.game_name}
           />
 
            <div className = "Genres">
