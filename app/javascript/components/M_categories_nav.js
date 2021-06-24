@@ -4,6 +4,7 @@ import '../../assets/stylesheets/M_categories_nav.scss'
 
 
 class M_categories_nav extends React.Component {
+
   render () {
     let categories = this.props.categories.filter(c => c.post_type_id ==this.props.post_type_id);
     return (

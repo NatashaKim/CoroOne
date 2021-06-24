@@ -7,7 +7,7 @@ class M_navbar extends React.Component {
       render() {
       return (
         <div className="Navbar">
-        <a>
+        <a href={'/posts'}>
           <img src = '/assets/icon_logo.svg'/>
         </a>
         <div className="Navbar_menu">

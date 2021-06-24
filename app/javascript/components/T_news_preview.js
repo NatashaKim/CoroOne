@@ -53,6 +53,7 @@ if(this.state.notification)this.state.notification(a);
           <O_puzzle_preview
           post_type_id = {this.props.post_type_id}
           post_number = "4"
+          category={this.props.category}
           />
         </div>
         <div class="Post_type_section_wrapper">
@@ -61,6 +62,7 @@ if(this.state.notification)this.state.notification(a);
           post_number = {this.props.post_number}
           genres = {this.state.selected_genres}
           owner = {this}
+            category={this.props.category}
           />
         </div>
       </div>

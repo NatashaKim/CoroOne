@@ -43,7 +43,7 @@ if(this.state.notification)this.state.notification(a);
   render () {
     let genres = this.props.genres;
     return (
-      <div className = "News_page">
+      <div className = "Articles_page">
         <div class="Post_type_header">
           <M_genres_nav
           genres = {this.props.genres}

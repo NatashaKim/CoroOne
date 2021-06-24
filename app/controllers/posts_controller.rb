@@ -47,6 +47,7 @@ class PostsController < ApplicationController
     @post_type = PostType.find_by_name(params[:name])
     @categories = Category.all
     @post_types = PostType.all
+    @category = params[:category]
 
       @genres = Genre.where(post_type_id:@post_type.id)
 
@@ -55,7 +56,14 @@ class PostsController < ApplicationController
 
 
   def get_posts_by_type
-      @posts = Post.where(post_type_id: params[:post_type_id]).includes(:category, :genres, :likes).limit(params[:count]).map do
+
+      @posts = Post.where(post_type_id: params[:post_type_id])
+      if(params[:category])
+        @category=Category.where(name:params[:category])
+        @posts=@posts.where(category_id: @category[0].id)
+      end
+      @posts=@posts.includes(:category, :genres, :likes).limit(params[:count])
+      @posts=@posts.map do
         |post|
         post.as_json(include: [:category, :genres, :image, :likes])
       end

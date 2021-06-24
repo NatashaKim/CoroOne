@@ -29,7 +29,7 @@ class O_news_preview extends React.Component {
       else{
 
 
-      get_posts_by_type(1, this.props.post_number).then((u)=>{
+      get_posts_by_type(1, this.props.post_number,this.props.category).then((u)=>{
         this.setState({posts: u})
       })
     }

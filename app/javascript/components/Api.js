@@ -29,8 +29,10 @@ export function getpost_type(post_type_id) {
    })
 }
 
-export function get_posts_by_type(post_type_id, count) {
-   return axios.get('/posts_by_type/' + post_type_id + '/count/' + count).then(
+export function get_posts_by_type(post_type_id, count, category) {
+  let url = '/posts_by_type/' + post_type_id + '/count/' + count;
+  if(category) url=url+'?category='+category;
+   return axios.get(url).then(
      function (response) {
       return response.data;
    })

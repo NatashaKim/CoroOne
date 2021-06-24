@@ -6,6 +6,7 @@
     margin: 0 auto;
     border-radius: 32px;
     padding: 16px 0px;
+    margin-bottom: 24px;
     .Genres_container {
       width: 1200px;
       overflow-x: hidden;
@@ -13,6 +14,7 @@
       .Genres_list {
         width: fit-content;
         display: flex;
+        margin: 0 auto;
         a {
           text-decoration: none;
           cursor: pointer;
