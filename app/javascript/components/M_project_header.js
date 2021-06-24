@@ -3,10 +3,13 @@ import PropTypes from "prop-types"
 import A_category from "./A_category"
 import A_project_title from "./A_project_title"
 import A_text from "./A_text"
+import A_button from "./A_button"
 import M_user_info from "./M_user_info"
 import A_genre from "./A_genre"
+import A_followers_followees from "./A_followers_followees"
 import '../../assets/stylesheets/M_post_preview.scss'
 import '../../assets/stylesheets/colors.scss'
+import '../../assets/stylesheets/M_project_header.scss'
 
 
 class M_project_header extends React.Component {
@@ -26,12 +29,29 @@ class M_project_header extends React.Component {
               ))}
              </div>
 
-             <A_project_title
-              project = {this.props.project}
-              headingColor = 'navy-blue'
-              headingStyle = "h1"
-              headingAlign = 'center_align'
-             />
+             <div className = "div_project_title">
+               <A_project_title
+                project = {this.props.project}
+                headingColor = 'navy-blue'
+                headingStyle = "h1"
+                headingAlign = 'center_align'
+               />
+            </div>
+
+
+             
+
+
+
+
+            <div className = "div_project_button">
+            <A_button
+              value = "Редактировать"
+              buttonSize = "btn--small"
+              buttonColor = "btn--gray">
+            </A_button>
+           </div>
+
 
              <A_text
                textColor = 'cold-black'

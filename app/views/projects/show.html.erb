@@ -1,25 +1,44 @@
 <% current_user_id = -1 %>
-<%if current_user%>
-  <%current_user_id= current_user.id%>
-<% end %>
+<div className = "project_wrapper">
+  <%if current_user%>
+    <%current_user_id= current_user.id%>
+  <% end %>
 
-<%= react_component 'A_project_cover', {
-  project: @project
-} %>
 
-<%= react_component 'M_project_header', {
-  project: @project,
-  current_user_id: current_user_id,
-  genres: @genres
-} %>
 
-<%= react_component 'M_project_checklist', {
-  project: @project
-} %>
+  <%= react_component 'A_project_cover', {
+    project: @project
+  } %>
 
-<%= react_component 'M_project_side_info', {
-  project: @project
-} %>
+
+  <div className="M_project_div">
+    <div className="M_project_side_info_div">
+      <%= react_component 'M_project_side_info', {
+        project: @project
+      } %>
+    </div>
+
+    <div className="M_project_side_info_body">
+      <div class="">
+        <%= react_component 'M_project_header', {
+          project: @project,
+          current_user_id: current_user_id,
+          genres: @genres
+        } %>
+      </div>
+
+      <div class="">
+        <%= react_component 'M_project_checklist', {
+          project: @project
+        } %>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</div>
 
 
 

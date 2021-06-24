@@ -1,9 +1,58 @@
-.Checklist_option {
-  &.default {
-    background-color: blue;
-  }
-  &.shozen {
-    background-color: green;
-  }
+.Project_checklist_view {
+   margin-bottom: 120px;
+   margin-top: 40px;
+   width: 638px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   span {
+     margin-bottom: 10px;
+   }
+  .project_cheklist_body {
+    padding: 30px 60px 30px 30px;
+    width: 638px;
+    height: 218px;
+    background-color: #ffffff;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    .project_cheklist_row {
+      margin-bottom: 20px;
+      div {
+        width: 90px;
+        span {
+          font-size: 14px;
+          font-family: "RedRing";
+          font-weight: bold;
+          color: #9896AE;
+        }
+      }
 
+      display: flex;
+      flex-direction: row;
+      .Project_checklist_block {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .Checklist_option {
+          font-size: 14px;
+          font-family: "RedRing";
+          font-weight: normal;
+          color: #9896AE;
+          &.default {
+            opacity: 0.4;
+            width: fit-content;
+          }
+          &.shozen {
+            width: fit-content;
+            padding: 3px 12px 4px 12px;
+            border-radius: 8px;
+            border: 1.5px solid #9896AE;
+          }
+
+        }
+      }
+    }
+  }
 }

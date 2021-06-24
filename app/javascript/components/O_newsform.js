@@ -132,7 +132,7 @@ class O_newsform extends React.Component {
             label = "Дата релиза"/>
             <DayPicker
                className = "Date_style"
-               defaultValue={'select day'}
+               defaultValue={'день'}
                value={this.state.day}
                onChange={(day) => {
                  this.setState({ day });
@@ -148,7 +148,7 @@ class O_newsform extends React.Component {
 
              <MonthPicker
                className = "Date_style"
-               defaultValue={'select month'}
+               defaultValue={'месяц'}
                month={this.state.month}
                value={this.state.month}
                onChange={(month) => {

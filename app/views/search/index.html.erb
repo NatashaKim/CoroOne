@@ -1,42 +1,27 @@
 <div class="search-page">
-  <%= render 'search/form' %>
+  <div class="search">
+    <%= render 'search/form' %>
+  </div>
+
 
   <% current_user_id = -1 %>
   <%if current_user%>
     <%current_user_id= current_user.id%>
   <% end %>
 
-  <div class="search-hashtags">
-    <#%= react_component 'M_hashtag_search', { tag: @tag} %>
+  <h1 class="r">Найденные публикации</h1>
+
+
+  <div class="search-page_preview">
+    <div class="search-page_preview_posts">
+      <%= react_component 'O_posts_preview', { posts: @posts, current_user_id: current_user_id} %>
+    </div>
+    <div class="search-page_preview_tags">
+
+    </div>
   </div>
-  <h1 class="gh">Posts</h1>
 
 
-  <%= react_component 'O_posts_preview', { posts: @posts, current_user_id: current_user_id} %>
 
- <table>
-   <thead>
-     <tr>
-       <th class="BigBlue">Name</th>
-       <th>Title</th>
-       <th>Author</th>
-       <th>Content</th>
-       <th colspan="3"></th>
-     </tr>
-   </thead>
 
-   <tbody>
-     <% @posts.each do |post| %>
-       <tr>
-         <td><%= post.name %></td>
-         <td><%= post.title %></td>
-         <td><%= post.author %></td>
-         <td><%= post.content %></td>
-         <td><%= link_to 'Show', post %></td>
-         <td><%= link_to 'Edit', edit_post_path(post) %></td>
-         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-       </tr>
-     <% end %>
-   </tbody>
- </table>
 </div>

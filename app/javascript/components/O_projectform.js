@@ -120,107 +120,117 @@ class O_projectform extends React.Component {
              value={this.state.description}
              onChange={this.handlDescriptionChange}
            />
+         <div className="Date_wrapper">
+           <div className="Date">
+             <A_label
+             label = "Дата рождения проекта"/>
+             <YearPicker
+                className= "Date_style"
+                defaultValue={'год'}
+                value={this.state.year}
+                onChange={(year) => {
+                  this.setState({ year });
+                  this.setState({
+                    project_start_date: new Date(year,this.state.month)
+                  });
+                }}
+                id={'year'}
+                name={'year'}
+                classes={'classes year'}
+                optionClasses={'option classes'}
+              />
 
-           <A_label
-           label = "Дата рождения проекта"/>
-           <YearPicker
-              className = "Date_style"
-              defaultValue={'select year'}
-              value={this.state.year}
-              onChange={(year) => {
-                this.setState({ year });
-                this.setState({
-                  project_start_date: new Date(year,this.state.month)
-                });
-              }}
-              id={'year'}
-              name={'year'}
-              classes={'classes'}
-              optionClasses={'option classes'}
-            />
+              <MonthPicker
+                className = "Date_style"
+                defaultValue={'месяц'}
+                month={this.state.month}
+                value={this.state.month}
+                onChange={(month) => {
+                  this.setState({ month });
+                  this.setState({
+                    project_start_date: new Date(this.state.year,month)
+                  });
+                }}
+                id={'month'}
+                name={'month'}
+                classes={'classes month'}
+                optionClasses={'option classes'}
+              />
+           </div>
 
-            <MonthPicker
-              className = "Date_style"
-              defaultValue={'select month'}
-              month={this.state.month}
-              value={this.state.month}
-              onChange={(month) => {
-                this.setState({ month });
-                this.setState({
-                  project_start_date: new Date(this.state.year,month)
-                });
-              }}
-              id={'month'}
-              name={'month'}
-              classes={'classes'}
-              optionClasses={'option classes'}
-            />
+           <div className="Date">
 
-            <A_label
-            label = "Дата смерти проекта"/>
-            <YearPicker
-               className = "Date_style"
-               defaultValue={'select year'}
-               value={this.state.year_death}
-               onChange={(year_death) => {
-                 this.setState({ year_death });
-                 this.setState({
-                   project_end_date: new Date(year_death,this.state.month_death)
-                 });
-               }}
-               id={'year_death'}
-               name={'year_death'}
-               classes={'classes_death'}
-               optionClasses={'option classes death'}
-             />
+                 <A_label
+                 label = "Дата релиза проекта"/>
+                 <YearPicker
+                    className = "Date_style"
+                    defaultValue={'год'}
+                    value={this.state.year_death}
+                    onChange={(year_death) => {
+                      this.setState({ year_death });
+                      this.setState({
+                        project_end_date: new Date(year_death,this.state.month_death)
+                      });
+                    }}
+                    id={'year_death'}
+                    name={'year_death'}
+                    classes={'classes_death year'}
+                    optionClasses={'option classes death'}
+                  />
 
-             <MonthPicker
-               className = "Date_style"
-               defaultValue={'select month'}
-               month_death={this.state.month_death}
-               value={this.state.month_death}
-               onChange={(month_death) => {
-                 this.setState({ month_death });
-                 this.setState({
-                   project_end_date: new Date(this.state.year_death,month_death)
-                 });
-               }}
-               id={'month_death'}
-               name={'month_death'}
-               classes={'classes_death'}
-               optionClasses={'option classes death'}
-             />
+                  <MonthPicker
+                    className = "Date_style"
+                    defaultValue={'месяц'}
+                    month_death={this.state.month_death}
+                    value={this.state.month_death}
+                    onChange={(month_death) => {
+                      this.setState({ month_death });
+                      this.setState({
+                        project_end_date: new Date(this.state.year_death,month_death)
+                      });
+                    }}
+                    id={'month_death'}
+                    name={'month_death'}
+                    classes={'classes_death month'}
+                    optionClasses={'option classes death'}
+                  />
 
-            <M_image_input_with_label
-              label = "Обложка"
-              name="project[project_cover]"
-              onChange={this.handleProjectCoverChange}
-              limitation = "Не менее 1440px Х 800px"
-            />
 
-            <M_input_with_label
-              label = "Ссылка для скачивания игры (необязательно)"
-              inputPlace = "new_post"
-              name="project[download_project]"
-              value={this.state.download_project}
-              onChange={this.handleDownloadProjectChange}
-            />
+           </div>
+         </div>
+         <M_image_input_with_label
+           label = "Обложка"
+           name="project[project_cover]"
+           onChange={this.handleProjectCoverChange}
+           limitation = "Не менее 1440px Х 800px"
+         />
 
-            <M_input_with_label
-              label = "Ссылка для донатов (необязательно)"
-              inputPlace = "new_post"
-              name="project[donate_project]"
-              value={this.state.donate_project}
-              onChange={this.handleDonateProjectChange}
-            />
+         <M_input_with_label
+           label = "Ссылка для скачивания игры (необязательно)"
+           inputPlace = "new_post"
+           name="project[download_project]"
+           value={this.state.download_project}
+           onChange={this.handleDownloadProjectChange}
+         />
+
+         <M_input_with_label
+           label = "Ссылка для донатов (необязательно)"
+           inputPlace = "new_post"
+           name="project[donate_project]"
+           value={this.state.donate_project}
+           onChange={this.handleDonateProjectChange}
+         />
+
+         <A_button
+           value = "Опубликовать проект"
+           buttonSize = "btn--small"
+           buttonColor = "btn--gray">
+         </A_button>
+
+
 
           </div>
 
-          <A_button
-            value = "Опубликовать проект"
-            buttonSize = "btn--small"
-            buttonColor = "btn--gray">
-          </A_button>
 
         </div>
       );

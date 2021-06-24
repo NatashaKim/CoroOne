@@ -1,0 +1,16 @@
+div.Projects_form_wrapper {
+  width: 100vw;
+  margin: 0 auto;
+  background-color: #F8FAFF;
+  padding-top: 90px;
+  padding-bottom: 150px;
+  div.Projects_form {
+    h1 {
+      width: 670px;
+      margin: 0 auto;
+      font-size: 36px;
+      font-weight: normal;
+      color: var(--navy-blue);
+    }
+  }
+}
