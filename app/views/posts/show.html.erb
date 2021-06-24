@@ -1,3 +1,7 @@
+<% current_user_id = -1 %>
+<%if current_user%>
+  <%current_user_id= current_user.id%>
+<% end %>
 
 <body class="show_body">
 
@@ -6,7 +10,7 @@
 
       <%= react_component 'T_article', {
         post: @post,
-        current_user_id: current_user.id,
+        current_user_id: current_user_id,
         comment: @comment,
         author: @comment.user,
         post: @post,

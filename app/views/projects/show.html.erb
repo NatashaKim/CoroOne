@@ -3,6 +3,10 @@
   <%current_user_id= current_user.id%>
 <% end %>
 
+<%= react_component 'A_project_cover', {
+  project: @project
+} %>
+
 <%= react_component 'M_project_header', {
   project: @project,
   current_user_id: current_user_id,
@@ -16,6 +20,7 @@
 <%= react_component 'M_project_side_info', {
   project: @project
 } %>
+
 
 
 

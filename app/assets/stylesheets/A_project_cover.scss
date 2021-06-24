@@ -1,0 +1,9 @@
+.Project_cover_container {
+  display: flex;
+  width: 100vw;
+  height: 291px;
+  .Project_cover {
+    object-fit: cover;
+    width: 100%;
+  }
+}

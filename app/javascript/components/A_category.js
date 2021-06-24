@@ -54,7 +54,7 @@ class A_category extends React.Component {
     let imgpart = <img className = "Category_img" src = {imgsrc}/>
 
     return (
-      <a className = {`Category ${checkCategoryStyles} ${checkCategoryColors}`} href={`/posts?category=${category}`} > {imgpart} {textpart}</a>
+      <div className = {`Category ${checkCategoryStyles} ${checkCategoryColors}`} href={`/posts?category=${category}`} > {imgpart} {textpart}</div>
     );
   }
 }

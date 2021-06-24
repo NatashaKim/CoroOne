@@ -15,7 +15,8 @@ const STYLES = [
 const COLORS = [
   'navy-blue',
   'ice-white',
-  'cold-black'
+  'cold-black',
+  'zelda-green'
 ]
 
 const ALIGN = [

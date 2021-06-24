@@ -76,13 +76,13 @@ before_action :set_user, only: [:show, :edit, :update, :destroy]
     @genres = Genre.all
     @user = User.find(params[:id])
      if @user
-       @posts = @user.favorited_posts
+       @posts = @user.favorited_posts.as_json(include: :genres)
        render actions: :show
        @favorites = @user.favorites.all
      else
         render file: 'public/404', status: 404, formats: [:html]
     end
-  
+
   end
 
   private
