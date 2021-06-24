@@ -13,9 +13,9 @@ class PostsController < ApplicationController
     @categories = Category.all
     @genres = Genre.all
     @post_types = PostType.all
-    @posts = Post.all.includes(:category, :genres, :likes, :favorites).map do
+    @posts = Post.all.includes(:category, :genres, :likes, :favorites, :post_type).map do
       |post|
-      post.as_json(include: [:category, :genres, :image, :likes, :favorites])
+      post.as_json(include: [:category, :genres, :image, :likes, :favorites, :post_type])
     end
 
 
@@ -62,10 +62,10 @@ class PostsController < ApplicationController
         @category=Category.where(name:params[:category])
         @posts=@posts.where(category_id: @category[0].id)
       end
-      @posts=@posts.includes(:category, :genres, :likes).limit(params[:count])
+      @posts=@posts.includes(:category, :genres, :likes, :post_type).limit(params[:count])
       @posts=@posts.map do
         |post|
-        post.as_json(include: [:category, :genres, :image, :likes])
+        post.as_json(include: [:category, :genres, :image, :likes, :post_type])
       end
       render json: @posts
   end

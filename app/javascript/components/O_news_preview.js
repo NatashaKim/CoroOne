@@ -16,31 +16,14 @@ class O_news_preview extends React.Component {
         posts: null
       }
 
-      if (props.owner) {
-      props.owner.setState({notification: (g) =>this.update_genre(g)});
-      }
-
-      if(props.genre){
-        get_posts_by_type_and_genre(this.props.post_type_id, props.genre).then((u)=>{
-          this.setState({posts: u})
-        })
-
-      }
-      else{
-
 
       get_posts_by_type(1, this.props.post_number,this.props.category).then((u)=>{
         this.setState({posts: u})
-      })
-    }
+      });
+
 
 }
 
-update_genre(genres) {
-  get_posts_by_type_and_genre(this.props.post_type_id, genres).then((u)=>{
-    this.setState({posts: u})
-  })
-}
 
 
 render_part(some_posts){
@@ -64,7 +47,12 @@ render_part(some_posts){
     if (!this.state.posts) {return ""}
 
     let parts = [];
-    let rest_posts = this.state.posts;
+    let rest_posts = ""
+    if (this.props.posts) {
+      rest_posts = this.props.posts;
+    } else {
+      rest_posts = this.state.posts;
+    }
 
     if (this.props.remove_post) {
 
@@ -80,6 +68,7 @@ render_part(some_posts){
        rest_posts= rest_posts.slice(posts_in_part);
        parts.push(this.render_part(p));
     }
+    
     return (
       <div className = "News_preview">
         {parts}

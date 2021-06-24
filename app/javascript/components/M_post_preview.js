@@ -20,6 +20,7 @@ const STYLES = [
 class M_post_preview extends React.Component {
 
   render () {
+    
 
     let imgsrc = '';
     if (!this.props.post.image) {
@@ -76,6 +77,7 @@ class M_post_preview extends React.Component {
           <div className = "Post_info">
             <A_category
             category = {this.props.post.category}
+            post_type = {this.props.post.post_type}
             categoryStyles = {categoryStyle}
             categoryColors = "zelda-green"/>
             <A_post_title

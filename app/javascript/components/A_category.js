@@ -30,6 +30,11 @@ class A_category extends React.Component {
       category = this.props.category.name
     }
 
+    let post_type = '';
+    if (this.props.post_type) {
+      post_type = this.props.post_type.name
+    }
+
     let checkCategoryStyles = STYLES.includes(this.props.categoryStyles)
     ? this.props.categoryStyles : STYLES[0]
 
@@ -54,7 +59,7 @@ class A_category extends React.Component {
     let imgpart = <img className = "Category_img" src = {imgsrc}/>
 
     return (
-      <a className = {`Category ${checkCategoryStyles} ${checkCategoryColors}`} href={`/posts/by_type/Новости?category=${category}`} > {imgpart} {textpart}</a>
+      <a className = {`Category ${checkCategoryStyles} ${checkCategoryColors}`} href={`/posts/by_type/${post_type}?category=${category}`} > {imgpart} {textpart}</a>
     );
   }
 }
