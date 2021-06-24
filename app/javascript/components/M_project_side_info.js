@@ -7,6 +7,7 @@ import M_social_icons from "./M_social_icons"
 import M_user_info from "./M_user_info"
 import {getuser} from './Api.js';
 
+
 class M_project_side_info extends React.Component {
   constructor(props) {
       super(props);
@@ -29,7 +30,7 @@ class M_project_side_info extends React.Component {
           </div>
         </div>
 
-        <div className="Side_info_section">
+        <div className ="Side_info_section_1">
           <div className="Side_info_block">
             <A_title
               headingStyle = 'p4'
@@ -56,7 +57,9 @@ class M_project_side_info extends React.Component {
               {this.props.project.donate_project}
             </a>
           </div>
+        </div>
 
+        <div className ="Side_info_section_2">
 
           <div className="Side_info_block">
             <A_title

@@ -1,0 +1,35 @@
+div.Project_header {
+  margin-top: 60px;
+  width: 510px;
+  .div_project_title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    a {
+      text-align: center;
+      margin: 0 auto;
+      color: var(--navy-blue);
+    }
+  }
+  .div_project_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    button {
+
+    }
+  }
+  .div_project_followers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  p {
+    line-height: 20px;
+  }
+}

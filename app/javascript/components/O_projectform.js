@@ -161,7 +161,7 @@ class O_projectform extends React.Component {
            <div className="Date">
 
                  <A_label
-                 label = "Дата смерти проекта"/>
+                 label = "Дата релиза проекта"/>
                  <YearPicker
                     className = "Date_style"
                     defaultValue={'год'}

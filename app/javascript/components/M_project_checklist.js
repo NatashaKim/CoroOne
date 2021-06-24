@@ -15,15 +15,17 @@ class M_project_checklist extends React.Component {
           title = "В проекте сделаны:"
         />
 
-        <div>
-          <A_title
+       <div className="project_cheklist_body">
+        <div className="project_cheklist_row">
+          <div><A_title
             headingStyle = 'small3'
             headingColor = 'ice-white'
             headingAlign = 'left_align'
             title = "Диздок"
           />
+          </div>
 
-          <div  className="Project_checklist_block">
+         <div  className="Project_checklist_block">
             <div className={`Checklist_option ${this.props.project.idea_or_concept == true ? 'shozen' : 'default'}`}>
               Идея или концепт
             </div>
@@ -38,73 +40,87 @@ class M_project_checklist extends React.Component {
         </div>
 
 
-        <div>
-          <A_title
-            headingStyle = 'small3'
-            headingColor = 'ice-white'
-            headingAlign = 'left_align'
-            title = "Звук"
-          />
+         <div className="project_cheklist_row">
+           <div><A_title
+             headingStyle = 'small3'
+             headingColor = 'ice-white'
+             headingAlign = 'left_align'
+             title = "Звук"
+           />
+           </div>
 
-          <div  className="Project_checklist_block">
-            <div className={`Checklist_option ${this.props.project.hero_voices == true ? 'shozen' : 'default'}`}>
-              Голоса героев
+
+           <div  className="Project_checklist_block">
+             <div className={`Checklist_option ${this.props.project.hero_voices == true ? 'shozen' : 'default'}`}>
+               Голоса героев
+             </div>
+             <div className={`Checklist_option ${this.props.project.background_music == true ? 'shozen' : 'default'}`}>
+               Фоновая музыка
+             </div>
+             <div className={`Checklist_option ${this.props.project.effects == true ? 'shozen' : 'default'}`}>
+               Эффекты
+             </div>
+           </div>
+
+         </div>
+
+
+
+
+          <div className="project_cheklist_row">
+            <div><A_title
+              headingStyle = 'small3'
+              headingColor = 'ice-white'
+              headingAlign = 'left_align'
+              title = "Код"
+            />
             </div>
-            <div className={`Checklist_option ${this.props.project.background_music == true ? 'shozen' : 'default'}`}>
-              Фоновая музыка
+
+
+            <div  className="Project_checklist_block">
+              <div className={`Checklist_option ${this.props.project.engine == true ? 'shozen' : 'default'}`}>
+                Движок
+              </div>
+              <div className={`Checklist_option ${this.props.project.game_ai == true ? 'shozen' : 'default'}`}>
+                Игровой ИИ
+              </div>
+              <div className={`Checklist_option ${this.props.project.three_d_and_animation == true ? 'shozen' : 'default'}`}>
+                3D и анимация
+              </div>
             </div>
-            <div className={`Checklist_option ${this.props.project.effects == true ? 'shozen' : 'default'}`}>
-              Эффекты
-            </div>
+
           </div>
 
+
+
+
+
+
+           <div className="project_cheklist_row">
+             <div><A_title
+               headingStyle = 'small3'
+               headingColor = 'ice-white'
+               headingAlign = 'left_align'
+               title = "Графика"
+             />
+             </div>
+
+
+             <div  className="Project_checklist_block">
+               <div className={`Checklist_option ${this.props.project.characters == true ? 'shozen' : 'default'}`}>
+                 Персонажи
+               </div>
+               <div className={`Checklist_option ${this.props.project.levels_and_worlds == true ? 'shozen' : 'default'}`}>
+                 Уровни и миры
+               </div>
+               <div className={`Checklist_option ${this.props.project.objects == true ? 'shozen' : 'default'}`}>
+                 Объекты
+               </div>
+             </div>
+           </div>
         </div>
 
 
-        <div>
-          <A_title
-            headingStyle = 'small3'
-            headingColor = 'ice-white'
-            headingAlign = 'left_align'
-            title = "Код"
-          />
-
-          <div  className="Project_checklist_block">
-            <div className={`Checklist_option ${this.props.project.engine == true ? 'shozen' : 'default'}`}>
-              Движок
-            </div>
-            <div className={`Checklist_option ${this.props.project.game_ai == true ? 'shozen' : 'default'}`}>
-              Игровой ИИ
-            </div>
-            <div className={`Checklist_option ${this.props.project.three_d_and_animation == true ? 'shozen' : 'default'}`}>
-              3D и анимация
-            </div>
-          </div>
-
-        </div>
-
-
-        <div>
-          <A_title
-            headingStyle = 'small3'
-            headingColor = 'ice-white'
-            headingAlign = 'left_align'
-            title = "Графика"
-          />
-
-          <div  className="Project_checklist_block">
-            <div className={`Checklist_option ${this.props.project.characters == true ? 'shozen' : 'default'}`}>
-              Персонажи
-            </div>
-            <div className={`Checklist_option ${this.props.project.levels_and_worlds == true ? 'shozen' : 'default'}`}>
-              Уровни и миры
-            </div>
-            <div className={`Checklist_option ${this.props.project.objects == true ? 'shozen' : 'default'}`}>
-              Объекты
-            </div>
-          </div>
-
-        </div>
 
 
       </div>
