@@ -45,10 +45,12 @@ class M_release_favorites extends React.Component {
 
            <div className = "Genres">
             {releaseGenres.map(genre => (
+              <div>
                 <A_genre
                 genreType = 'image'
                 genre = {genre}
                 />
+              </div>
              ))}
             </div>
 
