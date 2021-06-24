@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import A_category from "./A_category"
 import A_post_title from "./A_post_title"
 import A_genre from "./A_genre"
-import '../../assets/stylesheets/M_post_preview.scss'
+import '../../assets/stylesheets/M_release_favorites.scss'
 import '../../assets/stylesheets/colors.scss'
 
 
@@ -26,31 +26,37 @@ class M_release_favorites extends React.Component {
 
 
     return (
-      <div style={sectionStyle} className = 'Post_preview_default'>
-        <div className = "Preview_default_wrapper">
-          <div className = "Date_wrapper">
-            {this.props.post.release_date}
-          </div>
+      <div style={sectionStyle} className = 'Release_preview_default'>
+        <div className = "Release_default_wrapper">
+
 
           <div className = "Date_wrapper">
             {this.props.post.release_date}
           </div>
 
-          <A_post_title
-           post = {this.props.post}
-           headingColor = 'zelda-green'
-           headingAlign = 'left_align'
-           headingStyle = 'h4'
-          />
 
-           <div className = "Genres">
-            {releaseGenres.map(genre => (
-                <A_genre
-                genreType = 'image'
-                genre = {genre}
+          <div className="Release_info">
+              <div className="Release_info_title">
+                <A_post_title
+                 post = {this.props.post}
+                 headingColor = 'zelda-green'
+                 headingAlign = 'left_align'
+                 headingStyle = 'h4'
                 />
-             ))}
-            </div>
+              </div>
+              <div className="Release_info_genres">
+                <div className = "Genres">
+                 {releaseGenres.map(genre => (
+                     <A_genre
+                     genreType = 'image'
+                     genre = {genre}
+                     />
+                  ))}
+                 </div>
+              </div>
+          </div>
+
+
 
         </div>
       </div>
