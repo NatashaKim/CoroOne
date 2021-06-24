@@ -19,6 +19,8 @@ class O_newsform extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
+        category_id: props.post.category_id ? props.post.category_id : '',
+        categories: props.categories ? props.categories : [],
         genre_id: props.post.genre_id ? props.post.genre_id : '',
         title: props.post.title ? props.post.title : '',
         author: props.post.author ? props.post.author : '',
@@ -76,11 +78,6 @@ class O_newsform extends React.Component {
               value={this.state.release_date}
             />
 
-            <M_multiselect_genres
-              genres = {this.props.genres}
-              active_genres = {this.props.active_genres}
-            />
-
             <M_input_with_label
               label = "Заголовок"
               inputPlace = "new_post"
@@ -97,6 +94,22 @@ class O_newsform extends React.Component {
               onChange={this.handleAuthorChange}
             />
 
+            <M_select_with_label
+             label = "Категория"
+             name="post[category_id]"
+             value={this.state.category}
+             placeholder={"Выберите категорию"}
+             handleChange={this.handleCategoryChange}
+             options={this.state.categories}
+           />
+
+           <M_image_input_with_label
+             label = "Обложка"
+             name="post[image]"
+             onChange={this.handleImageChange}
+             limitation = "Не менее 1440px Х 800px"
+           />
+
             <M_textarea_with_label
               label = "Текст публикации"
               name="post[content]"
@@ -110,56 +123,45 @@ class O_newsform extends React.Component {
               value={this.state.game_name}
             />
 
-
-
-             <div className="Date_wrapper">
-               <div className="Date">
-               <A_label
-               label = "Дата релиза"/>
-               <DayPicker
-                  className = "Date_style"
-                  defaultValue={'день'}
-                  value={this.state.day}
-                  onChange={(day) => {
-                    this.setState({ day });
-                    this.setState({
-                      release_date: new Date(day,this.state.month)
-                    });
-                  }}
-                  id={'day'}
-                  name={'day'}
-                  classes={'classes year'}
-                  optionClasses={'option classes'}
-                />
-
-                <MonthPicker
-                  className = "Date_style"
-                  defaultValue={'месяц'}
-                  month={this.state.month}
-                  value={this.state.month}
-                  onChange={(month) => {
-                    this.setState({ month });
-                    this.setState({
-                      release_date: new Date(this.state.day,month)
-                    });
-                  }}
-                  id={'month'}
-                  name={'month'}
-                  classes={'classes month'}
-                  optionClasses={'option classes'}
-                />
-
-
-
-               </div>
-             </div>
-
-            <M_image_input_with_label
-              label = "Обложка"
-              name="post[image]"
-              onChange={this.handleImageChange}
-              limitation = "Не менее 1440px Х 800px"
+            <M_multiselect_genres
+              genres = {this.props.genres}
+              active_genres = {this.props.active_genres}
             />
+
+            <A_label
+            label = "Дата релиза"/>
+            <DayPicker
+               className = "Date_style"
+               defaultValue={'день'}
+               value={this.state.day}
+               onChange={(day) => {
+                 this.setState({ day });
+                 this.setState({
+                   release_date: new Date(day,this.state.month)
+                 });
+               }}
+               id={'day'}
+               name={'day'}
+               classes={'classes'}
+               optionClasses={'option classes'}
+             />
+
+             <MonthPicker
+               className = "Date_style"
+               defaultValue={'месяц'}
+               month={this.state.month}
+               value={this.state.month}
+               onChange={(month) => {
+                 this.setState({ month });
+                 this.setState({
+                   release_date: new Date(this.state.day,month)
+                 });
+               }}
+               id={'month'}
+               name={'month'}
+               classes={'classes'}
+               optionClasses={'option classes'}
+             />
 
             <A_textarea
               textareaType = "textarea--hidden"
