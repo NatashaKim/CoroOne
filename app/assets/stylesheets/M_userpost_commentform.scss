@@ -3,6 +3,14 @@
     padding-top: 20px;
     display: flex;
     justify-content: space-between;
+    div {
+      width: 42px;
+      height: 42px;
+      img.Avatar {
+        width: 42px;
+        height: 42px;
+      }
+    }
   }
 }
 

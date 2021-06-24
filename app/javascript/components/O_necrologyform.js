@@ -8,6 +8,7 @@ import A_textarea from "./A_textarea"
 import A_input from "./A_input"
 import A_label from "./A_label"
 import A_button from "./A_button"
+import M_image_input_with_label from "./M_image_input_with_label"
 import {availableCategories} from './Api.js';
 
 let formatDate = project_start_date => {
@@ -113,75 +114,84 @@ class O_necrologyform extends React.Component {
              options={this.state.categories}
            />
 
-           <A_label
-           label = "Дата рождения проекта"/>
-           <YearPicker
-              className = "Date_style"
-              defaultValue={'select year'}
-              value={this.state.year}
-              onChange={(year) => {
-                this.setState({ year });
-                this.setState({
-                  project_start_date: new Date(year,this.state.month)
-                });
-              }}
-              id={'year'}
-              name={'year'}
-              classes={'classes'}
-              optionClasses={'option classes'}
-            />
+           <div className="Date_wrapper">
+             <div className="Date">
+               <A_label
+               label = "Дата рождения проекта"/>
+               <YearPicker
+                  className= "Date_style"
+                  defaultValue={'год'}
+                  value={this.state.year}
+                  onChange={(year) => {
+                    this.setState({ year });
+                    this.setState({
+                      project_start_date: new Date(year,this.state.month)
+                    });
+                  }}
+                  id={'year'}
+                  name={'year'}
+                  classes={'classes year'}
+                  optionClasses={'option classes'}
+                />
 
-            <MonthPicker
-              className = "Date_style"
-              defaultValue={'select month'}
-              month={this.state.month}
-              value={this.state.month}
-              onChange={(month) => {
-                this.setState({ month });
-                this.setState({
-                  project_start_date: new Date(this.state.year,month)
-                });
-              }}
-              id={'month'}
-              name={'month'}
-              classes={'classes'}
-              optionClasses={'option classes'}
-            />
+                <MonthPicker
+                  className = "Date_style"
+                  defaultValue={'месяц'}
+                  month={this.state.month}
+                  value={this.state.month}
+                  onChange={(month) => {
+                    this.setState({ month });
+                    this.setState({
+                      project_start_date: new Date(this.state.year,month)
+                    });
+                  }}
+                  id={'month'}
+                  name={'month'}
+                  classes={'classes month'}
+                  optionClasses={'option classes'}
+                />
+             </div>
 
-            <A_label
-            label = "Дата смерти проекта"/>
-            <YearPicker
-               className = "Date_style"
-               defaultValue={'select year'}
-               value={this.state.year_death}
-               onChange={(year_death) => {
-                 this.setState({ year_death });
-                 this.setState({
-                   project_end_date: new Date(year_death,this.state.month_death)
-                 });
-               }}
-               id={'year_death'}
-               name={'year_death'}
-               classes={'classes_death'}
-               optionClasses={'option classes death'}
-             />
+             <div className="Date">
 
-             <MonthPicker
-               className = "Date_style"
-               defaultValue={'select month'}
-               month_death={this.state.month_death}
-               value={this.state.month_death}
-               onChange={(month_death) => {
-                 this.setState({ month_death });
-                 this.setState({
-                   project_end_date: new Date(this.state.year_death,month_death)
-                 });
-               }}
-               id={'month_death'}
-               name={'month_death'}
-               classes={'classes_death'}
-               optionClasses={'option classes death'}
-             />
+                   <A_label
+                   label = "Дата смерти проекта"/>
+                   <YearPicker
+                      className = "Date_style"
+                      defaultValue={'год'}
+                      value={this.state.year_death}
+                      onChange={(year_death) => {
+                        this.setState({ year_death });
+                        this.setState({
+                          project_end_date: new Date(year_death,this.state.month_death)
+                        });
+                      }}
+                      id={'year_death'}
+                      name={'year_death'}
+                      classes={'classes_death year'}
+                      optionClasses={'option classes death'}
+                    />
+
+                    <MonthPicker
+                      className = "Date_style"
+                      defaultValue={'месяц'}
+                      month_death={this.state.month_death}
+                      value={this.state.month_death}
+                      onChange={(month_death) => {
+                        this.setState({ month_death });
+                        this.setState({
+                          project_end_date: new Date(this.state.year_death,month_death)
+                        });
+                      }}
+                      id={'month_death'}
+                      name={'month_death'}
+                      classes={'classes_death month'}
+                      optionClasses={'option classes death'}
+                    />
+
+
+             </div>
+           </div>
 
 
 
@@ -196,13 +206,11 @@ class O_necrologyform extends React.Component {
           />
 
 
-          <A_label
-          label = "Обложка проекта"/>
-          <input
-            className = "File_input"
-            type="file"
-            name="post[image]"
-            onChange={this.handleImageChange}
+          <M_image_input_with_label
+            label = "Обложка"
+            name="project[project_cover]"
+            onChange={this.handleProjectCoverChange}
+            limitation = "Не менее 1440px Х 800px"
           />
 
 

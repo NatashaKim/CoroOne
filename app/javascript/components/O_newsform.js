@@ -110,40 +110,49 @@ class O_newsform extends React.Component {
               value={this.state.game_name}
             />
 
-            <A_label
-            label = "Дата релиза"/>
-            <DayPicker
-               className = "Date_style"
-               defaultValue={'select day'}
-               value={this.state.day}
-               onChange={(day) => {
-                 this.setState({ day });
-                 this.setState({
-                   release_date: new Date(day,this.state.month)
-                 });
-               }}
-               id={'day'}
-               name={'day'}
-               classes={'classes'}
-               optionClasses={'option classes'}
-             />
 
-             <MonthPicker
-               className = "Date_style"
-               defaultValue={'select month'}
-               month={this.state.month}
-               value={this.state.month}
-               onChange={(month) => {
-                 this.setState({ month });
-                 this.setState({
-                   release_date: new Date(this.state.day,month)
-                 });
-               }}
-               id={'month'}
-               name={'month'}
-               classes={'classes'}
-               optionClasses={'option classes'}
-             />
+
+             <div className="Date_wrapper">
+               <div className="Date">
+               <A_label
+               label = "Дата релиза"/>
+               <DayPicker
+                  className = "Date_style"
+                  defaultValue={'день'}
+                  value={this.state.day}
+                  onChange={(day) => {
+                    this.setState({ day });
+                    this.setState({
+                      release_date: new Date(day,this.state.month)
+                    });
+                  }}
+                  id={'day'}
+                  name={'day'}
+                  classes={'classes year'}
+                  optionClasses={'option classes'}
+                />
+
+                <MonthPicker
+                  className = "Date_style"
+                  defaultValue={'месяц'}
+                  month={this.state.month}
+                  value={this.state.month}
+                  onChange={(month) => {
+                    this.setState({ month });
+                    this.setState({
+                      release_date: new Date(this.state.day,month)
+                    });
+                  }}
+                  id={'month'}
+                  name={'month'}
+                  classes={'classes month'}
+                  optionClasses={'option classes'}
+                />
+
+
+
+               </div>
+             </div>
 
             <M_image_input_with_label
               label = "Обложка"

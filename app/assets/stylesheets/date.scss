@@ -1,0 +1,37 @@
+
+
+.Date_wrapper {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  div.Date {
+    margin-bottom: -46px;
+    width: 340px;
+    margin-bottom: 24px;
+    margin-top: -20px;
+    select.classes,
+    select.classes_death {
+          overflow: hidden;
+          overflow: -moz-hidden-unscrollable;
+          height: 40px;
+          background-color: #EBEDF7;
+          border-radius: 20px;
+          color: var(--mineral-gray);
+          border: none;
+          padding: 8px 12px 8px 20px;
+          font-size: 16px;
+          font-family: "RedRing";
+          font-weight: normal;
+          margin-right: 20px;
+          background: url(icon_arrow_down.svg) no-repeat bottom 8px right 8px var(--light-purple);
+          appearance: none;
+    }
+
+    select.month {
+          width: 140px;
+    }
+    select.year {
+          width: 95px;
+    }
+  }
+}
