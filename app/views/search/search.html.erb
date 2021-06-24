@@ -1,6 +1,6 @@
 <h2>Результаты по запросу: «<i><%= params[:term] %></i>»</h2>
 
-<% if @posts %>
+<% if @posts.length > 0 %>
 <ul class="search_results">
   <% @posts.each do |post| %>
     <li>

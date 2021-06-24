@@ -9,6 +9,14 @@
   genres: @genres
 } %>
 
+<%= react_component 'M_project_checklist', {
+  project: @project
+} %>
+
+<%= react_component 'M_project_side_info', {
+  project: @project
+} %>
+
 
 
 <%= link_to 'Edit', edit_project_path(@project) %> |

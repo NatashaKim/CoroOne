@@ -30,7 +30,14 @@ class SearchController < ApplicationController
 #   )
 #  end
 
- def index
+def index
+  @posts = Post.where(nil)
+  filtering_params(params).each do |key, value|
+    @posts = @posts.public_send("filter_by_#{key}", value) if value.present?
+  end
+end
+
+ def search
    @posts = Post.where(nil)
    filtering_params(params).each do |key, value|
      @posts = @posts.public_send("filter_by_#{key}", value) if value.present?

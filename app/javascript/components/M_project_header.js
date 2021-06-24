@@ -5,22 +5,11 @@ import A_project_title from "./A_project_title"
 import A_text from "./A_text"
 import M_user_info from "./M_user_info"
 import A_genre from "./A_genre"
-import {getuser} from './Api.js';
 import '../../assets/stylesheets/M_post_preview.scss'
 import '../../assets/stylesheets/colors.scss'
 
 
 class M_project_header extends React.Component {
-  constructor(props) {
-      super(props);
-      this.state={
-        author: null,
-      };
-
-      getuser(this.props.project.user_id).then((u)=>{
-        this.setState({author: u})
-      });
-  }
 
   render () {
 
@@ -55,7 +44,7 @@ class M_project_header extends React.Component {
                textColor = 'navy-blue'
                textStyle = 'p4'
                textAlign = 'center_align'
-               value = "#хочу"
+               value = "#разработка #хештегов #для_проектов #в_процессе"
              />
 
       </div>
