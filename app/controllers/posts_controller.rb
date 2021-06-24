@@ -126,7 +126,7 @@ class PostsController < ApplicationController
     @post = Post.new
     @post.post_type = PostType.find_by_name("Новости")
     @categories = [{id:"1", name:"Анонсы"}, {id:"2", name:"Релизы"}, {id:"3", name:"Обновления"}, {id:"4", name:"О компаниях"} ]
-    @genres = [{id:"1", name:"Экшен"}, {id:"2", name:"Адвенчура"}, {id:"3", name:"Казуальная"}, {id:"4", name:"Многопользовательская"}, {id:"5", name:"Гонки"}, {id:"6", name:"РПГ"}, {id:"7", name:"Симулятор"}, {id:"8", name:"Спортивная"}, {id:"9", name:"Стратегия"}, {id:"10", name:"Хоррор"}, {id:"11", name:"Бесплатная"}, {id:"12", name:"Визуальная новелла"}, {id:"13", name:"Настольная"}, {id:"14", name:"Анонс"}, {id:"15", name:"Релиз"}, {id:"16", name:"Обновление"}, {id:"17", name:"О компаниях"} ]
+    @genres = [{id:"1", name:"Экшен"}, {id:"2", name:"Адвенчура"}, {id:"3", name:"Казуальная"}, {id:"4", name:"Многопользовательская"}, {id:"5", name:"Гонки"}, {id:"6", name:"РПГ"}, {id:"7", name:"Симулятор"}, {id:"8", name:"Спортивная"}, {id:"9", name:"Стратегия"}, {id:"10", name:"Хоррор"}, {id:"11", name:"Бесплатная"}, {id:"12", name:"Визуальная новелла"}, {id:"13", name:"Настольная"}]
     render 'newnews'
   end
 

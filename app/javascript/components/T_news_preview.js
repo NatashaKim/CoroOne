@@ -6,6 +6,8 @@ import O_news_preview from "./O_news_preview"
 import O_puzzle_preview2 from "./O_puzzle_preview2"
 import M_categories_nav from "./M_categories_nav"
 import M_post_preview from "./M_post_preview"
+import M_post_types_nav from "./M_post_types_nav"
+
 import {get_posts_by_type} from './Api.js'
 
 
@@ -46,6 +48,9 @@ class T_news_preview extends React.Component {
     return (
       <div className = "News_page">
         <div class="Post_type_header">
+          <M_post_types_nav
+            post_types = {this.props.post_types}
+          />
           <M_categories_nav
             categories = {this.props.categories}
             post_type_id = "1"

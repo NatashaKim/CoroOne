@@ -1,5 +1,4 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<%= react_component 'M_post_types_nav', { post_types: @post_types } %>
 
 <% current_user_id = -1 %>
 <%if current_user%>
@@ -7,18 +6,21 @@
 <% end %>
 
 <% if @post_type[:id] == 1%>
-<%= react_component 'T_news_preview', { genres: @genres, post_type_id: @post_type[:id], post_number: 110, category: @category, categories: @categories } %>
+<%= react_component 'T_news_preview', { genres: @genres, post_type_id: @post_type[:id], post_number: 110, category: @category, categories: @categories, post_types: @post_types } %>
 <% end %>
 
 <% if @post_type[:id] == 2%>
+  <%= react_component 'M_post_types_nav', { post_types: @post_types } %>
   <%= react_component 'T_articles_preview', { genres: @genres, post_type_id: @post_type[:id], post_number: 17 } %>
 <% end %>
 
 <% if @post_type[:id] == 3%>
+  <%= react_component 'M_post_types_nav', { post_types: @post_types } %>
   <%= react_component 'T_reviews_preview', { genres: @genres, post_type_id: @post_type[:id], post_number: 17 } %>
 <% end %>
 
 <% if @post_type[:id] == 5%>
+  <%= react_component 'M_post_types_nav', { post_types: @post_types } %>
   <div class="Post_type_section_wrapper Without_shadow">
     <%= react_component 'M_necro_add' %>
     <%= react_component 'O_necrologyposts_preview', { post_type_id: 5, post_number: 8 } %>
@@ -27,6 +29,7 @@
 <% end %>
 
 <% if @post_type[:id] == 4%>
+  <%= react_component 'M_post_types_nav', { post_types: @post_types } %>
   <div class="Workshop_wrapper">
   <%= react_component 'O_projects_preview', { current_user_id: current_user_id, genres: @genre, projectPlace: 'new' } %>
 

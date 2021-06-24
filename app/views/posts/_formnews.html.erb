@@ -6,6 +6,6 @@
   <% end %>
 
 <form enctype="multipart/form-data" action=<%= @action %> accept-charset="UTF-8" method="post">
-  <%= react_component 'O_newsform', { post: @post, genres: @genres, active_genres: @post_genres } %>
+  <%= react_component 'O_newsform', { post: @post, genres: @genres, active_genres: @post_genres, categories: @categories } %>
 
 </form>

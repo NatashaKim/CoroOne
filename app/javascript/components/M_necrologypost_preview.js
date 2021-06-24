@@ -43,7 +43,7 @@ class M_necrologypost_preview extends React.Component {
 
             <A_post_title
              post = {this.props.post}
-             headingStyle = 'h5'
+             headingStyle = 'h6'
              headingColor = 'navy-blue'
              headingAlign = 'center_align'/>
            <A_dates_of_life post = {this.props.post}/>
