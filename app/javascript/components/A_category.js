@@ -24,15 +24,33 @@ const COLORS = [
 
 
 class A_category extends React.Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+        bgColor: ""
+      };
+
+
+    }
+
+    boxClick = (e) => {
+      this.setState({
+        bgColor: "red"
+      })
+    }
+
+
   render () {
     let category = '';
     if (this.props.category) {
-      category = this.props.category.name
+      category = this.props.category.name;
     }
 
     let post_type = '';
     if (this.props.post_type) {
       post_type = this.props.post_type.name
+    } else if (this.props.post_type_name) {
+      post_type = this.props.post_type_name
     }
 
     let checkCategoryStyles = STYLES.includes(this.props.categoryStyles)
@@ -50,7 +68,7 @@ class A_category extends React.Component {
     } else if (this.props.category == null) {
        imgsrc = '';
     } else if (checkCategoryTypes == TYPES[1]) {
-       imgsrc = this.props.category.imagesrc, category = '';
+       imgsrc = this.props.category.imagesrc;
     } else {
       imgsrc = this.props.category.imagesrc;
     }
@@ -58,8 +76,9 @@ class A_category extends React.Component {
     let textpart = <span>{category}</span>
     let imgpart = <img className = "Category_img" src = {imgsrc}/>
 
+
     return (
-      <a className = {`Category ${checkCategoryStyles} ${checkCategoryColors}`} href={`/posts/by_type/${post_type}?category=${category}`} > {imgpart} {textpart}</a>
+      <a className = {`Category ${checkCategoryStyles} ${checkCategoryColors}`} href={`/posts/by_type/${post_type}?category=${category}`} style={{backgroundColor: this.state.bgColor}} onClick={this.boxClick}> {imgpart} {textpart}</a>
     );
   }
 }

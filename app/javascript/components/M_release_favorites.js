@@ -24,36 +24,45 @@ class M_release_favorites extends React.Component {
       backgroundImage: `linear-gradient( rgba(4, 0, 94, 0.4), rgba(4, 0, 94, 0.4) ), url(${imgsrc})`
     };
 
+    let date = new Date(this.props.post.release_date);
+    let longMonth = date.toLocaleString('ru', { month: 'long' });
+    let day = date.getUTCDate()
+
 
     return (
       <div style={sectionStyle} className = 'Release_preview_default'>
         <div className = "Release_default_wrapper">
 
 
-          <div className = "Date_wrapper">
-            {this.props.post.release_date}
+          <div className = "Date_container">
+            <div className = "Day">
+              {day}
+            </div>
+            <div className = "Month">
+              {longMonth}
+            </div>
           </div>
 
-          <A_title
-           headingColor = 'zelda-green'
-           headingAlign = 'left_align'
-           headingStyle = 'h4'
-           title = {this.props.post.game_name}
-          />
 
+          <div className="Release_about">
+            <A_title
+             headingColor = 'zelda-green'
+             headingAlign = 'left_align'
+             headingStyle = 'h4'
+             title = {this.props.post.game_name}
+            />
 
-              <div className="Release_info_genres">
-                <div className = "Genres">
-                 {releaseGenres.map(genre => (
-                   <div>
-                     <A_genre
-                     genreType = 'image'
-                     genre = {genre}
-                     />
-                    </div>
-                  ))}
-                 </div>
-              </div>
+            <div className = "Genres">
+             {releaseGenres.map(genre => (
+               <div>
+                 <A_genre
+                 genreType = 'image'
+                 genre = {genre}
+                 />
+                </div>
+              ))}
+             </div>
+          </div>
 
 
 

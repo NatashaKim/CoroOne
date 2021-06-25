@@ -1,3 +1,26 @@
+.Genres_list {
+  a.Category {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    margin-right: 36px;
+    .Category_img {
+      height: 56px;
+    }
+    span {
+      max-width: 120px;
+      font-size: 18px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      font-family: 'RedRing';
+      color: var(--mineral-gray);
+    }
+  }
+}
+
+
 .category_nav {
     box-sizing: border-box;
     display: flex;
