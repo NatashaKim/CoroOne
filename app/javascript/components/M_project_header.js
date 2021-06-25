@@ -29,30 +29,22 @@ class M_project_header extends React.Component {
               ))}
              </div>
 
-             <div className = "div_project_title">
+
                <A_project_title
                 project = {this.props.project}
                 headingColor = 'navy-blue'
                 headingStyle = "h1"
                 headingAlign = 'center_align'
                />
-            </div>
 
 
-             
-
-
-
-
-            <div className = "div_project_button">
             <A_button
               value = "Редактировать"
               buttonSize = "btn--small"
               buttonColor = "btn--gray">
             </A_button>
-           </div>
 
-
+            <div className = "Project_description">
              <A_text
                textColor = 'cold-black'
                textStyle = 'p4'
@@ -66,6 +58,8 @@ class M_project_header extends React.Component {
                textAlign = 'center_align'
                value = "#разработка #хештегов #для_проектов #в_процессе"
              />
+
+             </div>
 
       </div>
     );

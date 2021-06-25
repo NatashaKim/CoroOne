@@ -4,13 +4,11 @@
     <%current_user_id= current_user.id%>
   <% end %>
 
-<%= react_component 'M_navbar', {current_user: current_user}%>
-
-
   <%= react_component 'T_project_show', {
     project: @project,
     current_user_id: current_user_id,
-    genres: @genres
+    genres: @genres,
+    urrent_user: current_user
   } %>
 
 
