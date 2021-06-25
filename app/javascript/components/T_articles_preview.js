@@ -3,64 +3,68 @@ import PropTypes from "prop-types"
 import '../../assets/stylesheets/M_categories_nav.scss'
 import M_genres_nav from "./M_genres_nav"
 import O_articles_preview from "./O_articles_preview"
-import O_puzzle_preview from "./O_puzzle_preview"
+import O_puzzle_preview2 from "./O_puzzle_preview2"
+import M_categories_nav from "./M_categories_nav"
+import M_post_preview from "./M_post_preview"
+import M_post_types_nav from "./M_post_types_nav"
+
+import {get_posts_by_type} from './Api.js'
+
 
 class T_articles_preview extends React.Component {
+
   constructor(props) {
       super(props);
-      this.state = {
-        selected_genres: []
-      };
-    }
-
-    selectGenre(genre) {
-      // Нам передали жанр. Возможно, что он уже был выбран.
-      // Если да - найдем его индекс
-      let genre_index = this.state.selected_genres.findIndex(
-        (element, index, array) => {
-          return element === genre.id
-        }
-      )
-
-      let a = this.state.selected_genres;
-      if (genre_index != -1) {
-        // Жанр уже был выбран. Удаляем его из выбранных
-        a.splice(genre_index,1);
-        this.setState({
-          selected_genres: a
-        });
-      } else {
-        // Жанр не был выбран. Добавляем его выбранные
-        a.push(genre.id)
-        this.setState({
-          selected_genres: a
-        });
+      this.state={
+        posts: null
       }
 
-if(this.state.notification)this.state.notification(a);
-    }
+      get_posts_by_type(2, this.props.post_number,this.props.category).then((u)=>{
+        this.setState({posts: u})
+      });
+}
+
 
   render () {
-    let genres = this.props.genres;
+
+    if (!this.state.posts) {return ""}
+    let all_posts = this.state.posts;
+
+    let puzzle_posts = all_posts.slice(0, 4);
+    let banner = all_posts.slice(4, 5)[0];
+    let rest_posts = all_posts.slice(5,[this.state.posts.length - 1]);
+
+    let banner_html = "";
+    if(banner)banner_html=(<M_post_preview
+      postStyle = 'ps--screen'
+      post = {banner}
+      category = {banner.category}
+    />);
+
     return (
       <div className = "Articles_page">
         <div class="Post_type_header">
-          <M_genres_nav
-          genres = {this.props.genres}
-          post_type_id = {this.props.post_type_id}
-          reviews_preview = {this}
+          <M_post_types_nav
+            post_types = {this.props.post_types}
           />
-          <O_puzzle_preview
-          post_type_id = {this.props.post_type_id}
-          post_number = "4"
+          <M_categories_nav
+            categories = {this.props.categories}
+            post_type_id = "2"
+            post_type_name = "Статьи"
           />
+          <O_puzzle_preview2
+            post_type_id = {this.props.post_type_id}
+            posts = {puzzle_posts}
+          />
+          {banner_html}
+
         </div>
         <div class="Post_type_section_wrapper">
           <O_articles_preview
-          post_type_id = {this.props.post_type_id}
-          post_number = {this.props.post_number}
-          genres = {this.state.selected_genres}
-          owner = {this}
+            post_type_id = {this.props.post_type_id}
+            post_number = {this.props.post_number}
+            category={this.props.category}
+            posts = {rest_posts}
           />
         </div>
       </div>

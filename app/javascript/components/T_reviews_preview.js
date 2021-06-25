@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import '../../assets/stylesheets/M_categories_nav.scss'
 import M_genres_nav from "./M_genres_nav"
+import M_post_types_nav from "./M_post_types_nav"
 import O_reviews_preview from "./O_reviews_preview"
 
 
@@ -45,12 +46,15 @@ if(this.state.notification)this.state.notification(a);
     let genres = this.props.genres;
     return (
       <div className = "Reviews_page">
+        <M_post_types_nav
+          post_types = {this.props.post_types}
+        />
         <M_genres_nav
         genres = {this.props.genres}
         post_type_id = {this.props.post_type_id}
         reviews_preview = {this}
         />
-        <div class="News">
+        <div class="Reviews_wrapper">
           <O_reviews_preview
           post_type_id = {this.props.post_type_id}
           post_number = {this.props.post_number}

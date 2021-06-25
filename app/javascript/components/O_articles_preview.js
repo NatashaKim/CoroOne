@@ -16,9 +16,10 @@ class O_articles_preview extends React.Component {
       this.state={
         posts: null
       }
-      get_posts_by_type(this.props.post_type_id, this.props.post_number).then((u)=>{
+
+      get_posts_by_type(2, this.props.post_number,this.props.category).then((u)=>{
         this.setState({posts: u})
-      })
+      });
 }
 
 
@@ -41,7 +42,13 @@ render_part(some_posts){
     if (!this.state.posts) {return ""}
 
     let parts = [];
-    let rest_posts = this.state.posts;
+    let rest_posts = ""
+    if (this.props.posts) {
+      rest_posts = this.props.posts;
+    } else {
+      rest_posts = this.state.posts;
+    }
+
 
     if (this.props.remove_post) {
 
