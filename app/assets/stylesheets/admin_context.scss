@@ -20,7 +20,7 @@
 
 
 @mixin table_mix {
-  table {
+  table{
     table-layout: fixed;
     width: 100%;
     float: left;
@@ -97,6 +97,14 @@
   }
 
  .button_and_list {
+   ul {
+     li {
+       a {
+         text-decoration: none;
+         color: var(--mineral-gray);
+       }
+     }
+   }
   position: relative;
   &:hover {
     ul {
@@ -119,8 +127,10 @@
       line-height: 2vw;
       a {
         &:hover {
+          text-decoration: none;
+          color: var(--mineral-gray);
           background-color: white;
-          color: #04005E;
+          color: #706D96;
         }
       }
     }
@@ -174,7 +184,7 @@
       a {
         &:hover {
           background-color: white;
-          color: #04005E;
+          color: #706D96;
         }
       }
     }
@@ -203,6 +213,9 @@ body.admin_context {
   overflow-x: hidden;
   display: flex;
   flex-direction: row;
+  background-color: white;
+
+
     .please {
       // overflow-x: hidden;
       width: 74vw;
@@ -224,7 +237,9 @@ body.admin_context {
         }
       }
       h1 {
+        color: var(--navy-blue);
         font-size: 2.3vw;
+        text-decoration: none;
       }
       .filters {
         width: inherit;
@@ -232,9 +247,39 @@ body.admin_context {
         flex-direction: row;
         height: 7vw;
         @include filters_list_mix;
+        .button_and_list_filters {
+          .drop_down_button {
+            color: var(--mineral-gray);
+          }
+          ul {
+            li {
+              a {
+                text-decoration: none;
+                color: var(--mineral-gray);
+              }
+            }
+          }
+        }
+        &:hover {
+          ul {
+            li {
+              a {
+                text-decoration: none;
+                color: #706D96;
+              }
+            }
+          }
+        }
       }
       @include table_mix;
       table {
+        thead {
+          tr {
+            th {
+              color: var(--navy-blue);
+            }
+          }
+        }
         thead th:nth-child(1) {
           width: 15vw;
         }
@@ -263,6 +308,28 @@ body.admin_context {
           width: 3vw;
         }
       }
+      tbody {
+        tr {
+          td {
+            span {
+              a {
+                text-decoration: none;
+                color: var(--navy-blue);
+              }
+            }
+          }
+          td {
+            span {
+              color: var(--mineral-gray);
+            }
+          }
+          td {
+            div {
+              color: var(--mineral-gray);
+            }
+          }
+        }
+      }
     }
     .wrapper_portfolio{
        @include wrapper_all;
@@ -272,6 +339,7 @@ body.admin_context {
         width: inherit;
         }
         h1 {
+          color: var(--navy-blue);
           font-size: 2.3vw;
         }
       .filters {
@@ -280,9 +348,29 @@ body.admin_context {
         flex-direction: row;
         height: 7vw;
         @include filters_list_mix;
+        .button_and_list_filters {
+          .drop_down_button {
+            color: var(--mineral-gray);
+          }
+          ul {
+            li {
+              a {
+                text-decoration: none;
+                color: var(--mineral-gray);
+              }
+            }
+          }
+        }
       }
       @include table_mix;
       table {
+        thead {
+          tr {
+            th {
+              color: var(--navy-blue);
+            }
+          }
+        }
         thead th:nth-child(1) {
           width: 11vw;
         }
@@ -309,6 +397,26 @@ body.admin_context {
         }
         thead th:nth-child(9) {
           width: 3vw;
+        }
+        tbody {
+          tr {
+            td {
+              span {
+                a {
+                  text-decoration: none;
+                  color: var(--navy-blue);
+                }
+              }
+            }
+            td {
+              span {
+                  color: var(--mineral-gray);
+              }
+            }
+            td {
+              color: var(--mineral-gray);
+            }
+          }
         }
       }
     }
@@ -405,4 +513,6 @@ body.admin_context {
       @include table_mix;
     }
   }
+
+
 }

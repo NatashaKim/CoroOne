@@ -15,6 +15,22 @@
         right: 0;
       }
     }
+    .Social_icons_holder_article {
+      margin-bottom: -1px;
+      margin-top: -58px;
+      .Shape {
+        height: 64px;
+        background-image: url(social_icons_article.svg);
+        background-repeat: no-repeat;
+        .Social_icons {
+          .Social_icon {
+            img {
+              display: none;
+            }
+          }
+        }
+      }
+    }
   }
   .Article_puzzle_heading {
     .heading {
