@@ -6,6 +6,7 @@ import M_more_info from "./M_more_info"
 import A_title from "./A_title.js"
 import M_project_preview from "./M_project_preview"
 import A_button from "./A_button"
+import A_link from "./A_link"
 import {get_projects_by_user} from './Api.js'
 import {get_newest_projects} from './Api.js'
 
@@ -49,6 +50,15 @@ class O_projects_preview extends React.Component {
 
     if (!this.state.projects) {return ""}
     let rest_projects = this.state.projects;
+
+    let link_html = ""
+    if (this.props.action == 'Редактировать') {
+      link_html = <A_link
+                    linkColor = 'new-project'
+                    link = '/projects/new'
+                    value = 'Создать проект'
+                  />
+    }
     return (
       <div className = {`Projects_preview ${checkProjectsPlace}`} >
         <div className = 'More_new_projects'>
@@ -63,11 +73,7 @@ class O_projects_preview extends React.Component {
           />
         </div>
         <div className = "Projects_preview_wrapper">
-          <A_button
-            buttonColor = 'btn--create-project'
-            imgscr = '/assets/button_create_project.svg'
-            value = 'Создать проект'
-          />
+          {link_html}
           {rest_projects.map(project => (
             <M_project_preview
             genres = {this.props.genres}

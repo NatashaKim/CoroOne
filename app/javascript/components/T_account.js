@@ -17,6 +17,7 @@ class T_account extends React.Component {
         />
         <div class="Account_posts_container">
           <O_projects_preview
+            action = {this.props.action}
             user = {this.props.user}
             genres = {this.props.genres}
             projectsPlace = 'account'

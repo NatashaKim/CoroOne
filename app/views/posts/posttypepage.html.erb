@@ -23,6 +23,10 @@
     <%= react_component 'M_necro_add' %>
     <%= react_component 'O_necrologyposts_preview', { post_type_id: 5, post_number: 8 } %>
     <%= react_component 'M_more_info', {moreInfoType: "more_necrologies"} %>
+
+    <% if user_signed_in? == true %>
+      <%= react_component 'A_link', { link: "/posts/newnecrology", linkColor: 'link-create'}%>
+    <% end %>
   </div>
 <% end %>
 

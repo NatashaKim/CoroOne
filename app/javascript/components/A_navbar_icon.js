@@ -78,6 +78,8 @@ class A_navbar_icon extends React.Component {
         let menu_href = "";
         if (checkiconTypes == Types[0]) {
            menu_href = `/users/${current_user_id}`;
+        } else if (checkiconTypes == Types[1]) {
+           menu_href = `/users/${current_user_id}/favorites`;
         } else if (checkiconTypes == Types[3]) {
            menu_href = '/searchpage';
         } else {
