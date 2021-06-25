@@ -18,6 +18,9 @@
     flex-direction: column;
     .project_cheklist_row {
       margin-bottom: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
       div {
         width: 90px;
         span {
@@ -31,7 +34,8 @@
       display: flex;
       flex-direction: row;
       .Project_checklist_block {
-        width: 100%;
+        align-items: center;
+        width: fit-content;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -40,6 +44,7 @@
           font-family: "RedRing";
           font-weight: normal;
           color: #9896AE;
+          margin-right: 16px;
           &.default {
             opacity: 0.4;
             width: fit-content;

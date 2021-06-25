@@ -17,14 +17,14 @@ class T_project_show extends React.Component {
       <div className="Project_page">
 
         <div className="Project_image_header">
+          <A_project_cover
+            project = {this.props.project}
+          />
           <div className="Article_marker_holder">
             <div className="Project_marker_placeholder">
               В процессе
             </div>
           </div>
-          <A_project_cover
-            project = {this.props.project}
-          />
         </div>
 
 
@@ -38,22 +38,25 @@ class T_project_show extends React.Component {
           </div>
 
           <div className="M_project_right_section">
-            <div>
-
-              <M_project_header
-                project = {this.props.project}
-                current_user_id = {this.props.current_user_id}
-                genres = {this.props.genres}
-              />
-
+            <div className="M_project_right_section_1">
+                <M_project_header
+                  project = {this.props.project}
+                  current_user_id = {this.props.current_user_id}
+                  genres = {this.props.genres}
+                />
+            </div>
+            <div lassName="M_project_right_section_2">
               <M_project_checklist
                 project = {this.props.project}
               />
+            </div>
+
+
 
             </div>
           </div>
         </div>
-      </div>
+      
     );
   }
 }

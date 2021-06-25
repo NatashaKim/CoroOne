@@ -26,10 +26,12 @@ class M_project_side_info extends React.Component {
 
         <div className="Social_icons_holder">
           <div className="Shape">
-              <M_social_icons/>
+
           </div>
         </div>
 
+
+        <div className="Project_side_background">
         <div className ="Side_info_section_1">
           <div className="Side_info_block">
             <A_title
@@ -102,6 +104,10 @@ class M_project_side_info extends React.Component {
               infoType = 'for_project'
             />
           </div>
+        </div>
+
+
+
 
 
 
