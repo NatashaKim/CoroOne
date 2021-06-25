@@ -156,6 +156,7 @@ class PostsController < ApplicationController
   def newportfolio
     @post = Post.new
     @post.post_type = PostType.find_by_name("Мастерская")
+    @projects = Project.where(user_id: current_user.id)
     render 'newportfolio'
   end
 
