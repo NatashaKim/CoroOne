@@ -1,3 +1,15 @@
-// Place all the styles related to the favorites controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.Favorites {
+  .Favorites_wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 1220px;
+    justify-content: space-between;
+    align-items: flex-start;
+    .Favorites_release {
+      h2 {
+        color: var(--navy-blue);
+      }
+    }
+  }
+}

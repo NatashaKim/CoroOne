@@ -99,7 +99,7 @@ ActiveRecord::Schema.define(version: 2021_06_21_165415) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "post_type_id"
-    t.index ["post_type_id"], name: "index_genres_on_post_type_id"
+    t.index ['"post_type_id"]', name: "index_genres_on_post_type_id"
   end
 
   create_table "likes", force: :cascade do |t|

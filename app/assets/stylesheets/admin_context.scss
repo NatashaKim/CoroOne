@@ -122,7 +122,7 @@
       margin-right: 0.3vw;
       right: 0;
     }
-    li {
+    li  {
       font-size: 1vw;
       line-height: 2vw;
       a {
@@ -222,7 +222,7 @@ body.admin_context {
       height: fit-content;
       display: flex;
       flex-flow: column;
-      margin-left: 19vw;
+      margin-left: -79vw;
       margin-right: 7vw;
     .wrapper_posts{
        @include wrapper_all;
