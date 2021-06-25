@@ -31,7 +31,7 @@ class M_multiselect_project_checklist extends React.Component {
 
         <div className = "wrapper_dropdown">
           <div className="dropdown_name">
-            <p>Что-то</p>
+            <p>Выберите позиции</p>
             <div className ="dropdown_arrow"></div>
           </div>
           <div className = "dropdown">

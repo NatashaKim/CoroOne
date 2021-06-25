@@ -1,0 +1,24 @@
+.T_search_search_wrapper {
+  margin-left: 205px;
+  padding-top: 48px;
+   h2 {
+     margin-top: 55px;
+     color: var(--mineral-gray);
+     font-size: 16px;
+     font-family: "RedRing";
+     font-weight: normal;
+     margin-bottom: 20px;
+   }
+   p {
+    font-size: 36px;
+    font-family: "RedRing";
+    font-weight: bold;
+   }
+   .T_search_search_img {
+     background-repeat: no-repeat;
+     background-image: url(rabbit.svg);
+     width: 800px;
+     height: 800px;
+     margin-left: 300px;
+   }
+}
