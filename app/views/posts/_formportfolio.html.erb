@@ -5,5 +5,5 @@
     <% end %>
   <% end %>
 <form enctype="multipart/form-data" action="/posts" accept-charset="UTF-8" method="post">
-  <%= react_component 'O_userpostform', { post: @post, categories: @categories, author: current_user } %>
+  <%= react_component 'O_userpostform', { post: @post, categories: @categories, author: current_user, projects: @projects } %>
 </form>

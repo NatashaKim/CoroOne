@@ -5,6 +5,7 @@ import M_project_side_info from "./M_project_side_info"
 import A_project_cover from "./A_project_cover"
 import M_project_header from "./M_project_header"
 import M_project_checklist from "./M_project_checklist"
+import O_userpost_preview from "./O_userpost_preview"
 
 
 import {getpost_type} from './Api.js';
@@ -45,10 +46,21 @@ class T_project_show extends React.Component {
                   genres = {this.props.genres}
                 />
             </div>
-            <div lassName="M_project_right_section_2">
+            <div className="M_project_right_section_2">
               <M_project_checklist
                 project = {this.props.project}
               />
+            </div>
+
+            <div class="Account_posts">
+            {this.props.project.posts.map(post => (
+              <O_userpost_preview
+              key = {post.id}
+              post = {post}
+              likes = {post.likes}
+              current_user_id = {this.props.current_user_id}
+              user = {this.props.user} />
+             ))}
             </div>
 
 
@@ -56,7 +68,7 @@ class T_project_show extends React.Component {
             </div>
           </div>
         </div>
-      
+
     );
   }
 }

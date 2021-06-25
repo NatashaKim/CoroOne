@@ -5,6 +5,7 @@ import PropTypes from "prop-types"
 import A_textarea from "./A_textarea"
 import M_image_input_with_label from "./M_image_input_with_label"
 import M_textarea_with_label from "./M_textarea_with_label"
+import M_select_with_label from "./M_select_with_label"
 import A_button from "./A_button"
 import {availableCategories} from './Api.js';
 import '../../assets/stylesheets/O_postform.scss'
@@ -13,6 +14,8 @@ class O_postform extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
+        project_id: props.post.project_id ? props.post.project_id : '',
+        projects: props.projects ? props.projects : [],
         content: props.post.content ? props.post.content : '',
         image: props.post.image ? props.post.image : '',
         post_type_id: props.post.post_type_id ? props.post.post_type_id : '',
@@ -22,6 +25,7 @@ class O_postform extends React.Component {
     ;
       this.handleContentChange = this.handleContentChange.bind(this);
       this.handleImageChange = this.handleImageChange.bind(this);
+      this.handleProjectChange = this.handleProjectChange.bind(this);
 
     }
 
@@ -33,6 +37,9 @@ class O_postform extends React.Component {
 
     handleAuthorChange(e) {
       this.setState({ author: e.target.value });
+    }
+    handleProjectChange(e) {
+      this.setState({ project_id: e.target.value });
     }
     handleContentChange(e) {
       this.setState({ content: e.target.value });
@@ -51,6 +58,15 @@ class O_postform extends React.Component {
               name="authenticity_token"
               value={this.state.authenticity_token}
             />
+
+            <M_select_with_label
+             label = "Проект"
+             name="post[project_id]"
+             value={this.state.project}
+             placeholder={"Выбери проект"}
+             handleChange={this.handleProjectChange}
+             options={this.state.projects}
+           />
 
             <M_textarea_with_label
               label = "Что нового?)"

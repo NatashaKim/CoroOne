@@ -1,9 +1,10 @@
 <% current_user_id = -1 %>
-<div className = "project_wrapper">
+<div className = "Project_wrapper">
   <%if current_user%>
     <%current_user_id= current_user.id%>
   <% end %>
 
+<%= react_component 'M_navbar', {current_user: current_user}%>
 
 
   <%= react_component 'T_project_show', {
