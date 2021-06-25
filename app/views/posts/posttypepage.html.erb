@@ -10,13 +10,11 @@
 <% end %>
 
 <% if @post_type[:id] == 2%>
-  <%= react_component 'M_post_types_nav', { post_types: @post_types } %>
-  <%= react_component 'T_articles_preview', { genres: @genres, post_type_id: @post_type[:id], post_number: 17 } %>
+  <%= react_component 'T_articles_preview', { genres: @genres, post_type_id: @post_type[:id], post_number: 110, category: @category, categories: @categories, post_types: @post_types } %>
 <% end %>
 
 <% if @post_type[:id] == 3%>
-  <%= react_component 'M_post_types_nav', { post_types: @post_types } %>
-  <%= react_component 'T_reviews_preview', { genres: @genres, post_type_id: @post_type[:id], post_number: 17 } %>
+  <%= react_component 'T_reviews_preview', { genres: @genres, post_type_id: @post_type[:id], post_number: 17, post_types: @post_types  } %>
 <% end %>
 
 <% if @post_type[:id] == 5%>

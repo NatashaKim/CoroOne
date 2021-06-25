@@ -27,7 +27,7 @@ class M_video_preview extends React.Component {
             categoryColors = "zelda-green"/>
             <A_post_title
              post = {this.props.post}
-             headingColor = 'ice-white'
+             headingColor = 'navy-blue'
              headingAlign = 'center_align'
              headingStyle = 'h6'/>
            </div>
