@@ -1,11 +1,16 @@
 .wrapper {
   .wrapper_dropdown{
+    &:hover {
+      .dropdown {
+        display: block;
+      }
+    }
    /* Размер и позиционирование */
    .dropdown_name {
      display: flex;
      justify-content: center;
      flex-direction: row;
-     width: 120px;
+     width: fit-content;
      padding-right: 16px;
      padding-left: 16px;
      height: 32px;
@@ -40,11 +45,16 @@
      }
    }
    .dropdown {
+      display: none;
+      margin-top: -10px;
       box-shadow: 0px 0px 16px 3px rgba(218, 218, 222, 1);
       width: 280px;
       padding: 24px 16px 24px 16px;
       background-color: #ffffff;
       border-radius: 16px;
+      &:hover {
+        visibility: visible;
+      }
       div.checkboxes {
         margin-bottom: 8px;
       }

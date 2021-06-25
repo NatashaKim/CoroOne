@@ -1,0 +1,46 @@
+.genres_wrapper {
+  margin-bottom: 42px;
+  &:hover {
+    .genres_dropdown {
+      display: block;
+    }
+  }
+  .genres_name {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: fit-content;
+    padding-right: 16px;
+    padding-left: 16px;
+    height: 32px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 2px solid #04005E;
+    span {
+      width: 48px;
+      margin-right: 12px;
+      margin-top: 2px;
+      display: block;
+      line-height: 24px;
+      font-size: 16px;
+      font-weight: normal;
+      color: #04005E;
+    }
+
+  }
+  .genres_dropdown {
+    display: none;
+    margin-top: 10px;
+    box-shadow: 0px 0px 16px 3px rgba(218, 218, 222, 1);
+    width: 280px;
+    padding: 24px 16px 24px 16px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    div {
+      margin-bottom: 12px;
+      .checkboxes {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
