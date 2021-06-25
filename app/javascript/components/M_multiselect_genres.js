@@ -35,6 +35,7 @@ class M_multiselect_genres extends React.Component {
                 name ={ "genres[g_"+genre.id+"]" }
                 checked = {this.state.active_genres[id]}
               />
+              
            )
          }
        )}

@@ -128,40 +128,47 @@ class O_newsform extends React.Component {
               active_genres = {this.props.active_genres}
             />
 
-            <A_label
-            label = "Дата релиза"/>
-            <DayPicker
-               className = "Date_style"
-               defaultValue={'день'}
-               value={this.state.day}
-               onChange={(day) => {
-                 this.setState({ day });
-                 this.setState({
-                   release_date: new Date(day,this.state.month)
-                 });
-               }}
-               id={'day'}
-               name={'day'}
-               classes={'classes'}
-               optionClasses={'option classes'}
-             />
 
-             <MonthPicker
-               className = "Date_style"
-               defaultValue={'месяц'}
-               month={this.state.month}
-               value={this.state.month}
-               onChange={(month) => {
-                 this.setState({ month });
-                 this.setState({
-                   release_date: new Date(this.state.day,month)
-                 });
-               }}
-               id={'month'}
-               name={'month'}
-               classes={'classes'}
-               optionClasses={'option classes'}
-             />
+             <div className="Date_wrapper">
+               <div className="Date">
+                 <A_label
+                 label = "Дата релиза"/>
+                 <YearPicker
+                    className= "Date_style"
+                    defaultValue={'день'}
+                    value={this.state.day}
+                    onChange={(day) => {
+                      this.setState({ day });
+                      this.setState({
+                        project_start_date: new Date(day,this.state.day)
+                      });
+                    }}
+                    id={'year'}
+                    name={'year'}
+                    classes={'classes year'}
+                    optionClasses={'option classes'}
+                  />
+
+                  <MonthPicker
+                    className = "Date_style"
+                    defaultValue={'месяц'}
+                    month={this.state.month}
+                    value={this.state.month}
+                    onChange={(month) => {
+                      this.setState({ month });
+                      this.setState({
+                        project_start_date: new Date(this.state.year,month)
+                      });
+                    }}
+                    id={'month'}
+                    name={'month'}
+                    classes={'classes month'}
+                    optionClasses={'option classes'}
+                  />
+               </div>
+
+             </div>
+
 
             <A_textarea
               textareaType = "textarea--hidden"

@@ -4,11 +4,22 @@
     width: fit-content;
     border-radius: 32px;
     div {
-      width: fit-content;
+      width: 501px;
+      height: 256px;
       div {
         border-radius: 32px;
-        .react-player__play-icon {
-          border-radius: 0px;
+        div.react-player__preview {
+          width: 501px;
+          height: 256px;
+        }
+        .react-player__shadow {
+          margin-left: 40px;
+          width: 100px;
+          .react-player__play-icon {
+            border-radius: 0px;
+            width: 100px;
+            height: 30px;
+          }
         }
       }
     }
@@ -22,8 +33,9 @@
         padding: 24px 40px ;
         .Category {
           margin: 0 auto;
+          margin-left: -40px;
           position: absolute;
-          top: -270px;
+          top: -220px;
           width: 501px;
         }
         .Heading {
@@ -38,30 +50,39 @@
 
 @media (max-width: 375px) {
   .Video_preview {
-    width: 355px;
+    overflow-y: hidden;
+    width: 335px;
     height: 313px;
     background-color: var(--ice-white);
     width: fit-content;
     border-radius: 32px;
     div {
-      width: fit-content;
+      width: 335px;
+      height: 198px;
       div {
         border-radius: 32px;
         div.react-player__preview {
-          width: 355px;
+          width: 335px;
           height: 198px;
         }
-        .react-player__play-icon {
-          border-radius: 0px;
+        .react-player__shadow {
+           margin-left: 40px;
+          .react-player__play-icon {
+            border-radius: 0px;
+            width: 100px;
+            height: 30px;
+          }
         }
       }
     }
     .Preview_wrapper {
-      width: 355px;
+      overflow-y: hidden;
+      width: 335px;
       height: 120px;
       .Post_info {
+        padding: 20px 40px 20px 40px;
         position: relative;
-        width: 501px;
+        width: 335px;
         text-align: center;
         .Category {
           margin: 0 auto;
@@ -71,6 +92,8 @@
         }
         .Heading {
           width: 421px;
+          font-size: 18px;
+          line-height: 24px;
         }
       }
     }

@@ -6,13 +6,13 @@ import '../../assets/stylesheets/A_video.scss'
 class A_video extends React.Component {
     render () {
       return (
-        <div>
+        <div className="vidosik">
           <ReactPlayer
             url= {this.props.videourl}
             light = {true}
             controls = {true}
-            width = "501px"
-            height = "296px"
+            width = "100%"
+            height = "100%"
           />
         </div>
       );
