@@ -15,6 +15,41 @@
       width: 204px;
       display: flex;
       justify-content: space-between;
+      a {
+        margin-right: 20px;
+      }
+      .Acclist {
+        height: 150px;
+        &:hover {
+          .Account_action {
+            visibility: visible;
+          }
+        }
+         .Account_action {
+           visibility: hidden;
+           margin-top: 10px;
+           margin-left: -94px;
+           display: flex;
+           flex-direction: column;
+           align-items: flex-start;
+           background-color: #ffffff;
+           border-radius: 24px;
+           padding: 24px 24px 32px 10px;
+           .Sign {
+             margin-bottom: 8px;
+             a {
+               font-family: "RedRing";
+               font-size: 16px;
+               color: var(--mineral-gray);
+               font-weight: bold;
+               &:hover {
+                 color: #6F6B96;
+                 background-color: transparent;
+               }
+             }
+           }
+         }
+      }
     }
 
   }

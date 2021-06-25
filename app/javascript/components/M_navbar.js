@@ -20,10 +20,24 @@ class M_navbar extends React.Component {
           <A_navbar_icon
             iconTypes = "bookmarks"
           />
-          <A_navbar_icon
-            current_user = {this.props.current_user}
-            iconTypes = "profile"
-          />
+          <div className="Acclist">
+            <A_navbar_icon
+              current_user = {this.props.current_user}
+              iconTypes = "profile"
+            />
+            <div className="Account_action">
+             <div className="Sign">
+              <a>
+                Войти
+              </a>
+             </div>
+             <div className="Sign">
+              <a>
+                Зарегистрироваться
+              </a>
+             </div>
+            </div>
+          </div>
         </div>
         </div>
       );
