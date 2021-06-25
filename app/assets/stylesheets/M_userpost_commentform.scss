@@ -4,6 +4,7 @@
     display: flex;
     justify-content: space-between;
     div {
+      overflow-y: hidden;
       width: 42px;
       height: 42px;
       img.Avatar {
@@ -19,5 +20,14 @@
     padding-top: 8px;
     display: flex;
     justify-content: space-between;
+    div {
+      overflow-y: hidden;
+      width: 42px;
+      height: 42px;
+      img.Avatar {
+        width: 42px;
+        height: 42px;
+      }
+    }
   }
 }

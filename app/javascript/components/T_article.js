@@ -40,9 +40,14 @@ class T_article extends React.Component {
           post = {this.props.post}
           current_user_id={this.props.current_user_id}
         />
-        <M_hashtags
-          post = {this.props.post}
-        />
+
+        <div className="Social_icons_holder_article">
+          <div className="Shape">
+
+          </div>
+        </div>
+
+
         <div className="Article_puzzle_heading">
           <A_title
             headingColor = 'navy-blue'

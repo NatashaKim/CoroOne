@@ -116,56 +116,60 @@ class O_newsform extends React.Component {
               value={this.state.content}
             />
 
-            <M_input_with_label
-              label = "Название игры"
-              inputPlace = "new_post"
-              name="post[game_name]"
-              value={this.state.game_name}
-            />
+            <div className="form_for_favourites">
+              <M_input_with_label
+                label = "Название игры"
+                inputPlace = "new_post"
+                name="post[game_name]"
+                value={this.state.game_name}
+              />
 
-            <M_multiselect_genres
-              genres = {this.props.genres}
-              active_genres = {this.props.active_genres}
-            />
+              <M_multiselect_genres
+                genres = {this.props.genres}
+                active_genres = {this.props.active_genres}
+              />
 
 
-             <div className="Date_wrapper">
-               <div className="Date">
-                 <A_label
-                 label = "Дата релиза"/>
-                 <YearPicker
-                    className= "Date_style"
-                    defaultValue={'день'}
-                    value={this.state.day}
-                    onChange={(day) => {
-                      this.setState({ day });
-                      this.setState({
-                        project_start_date: new Date(day,this.state.day)
-                      });
-                    }}
-                    id={'year'}
-                    name={'year'}
-                    classes={'classes year'}
-                    optionClasses={'option classes'}
-                  />
+               <div className="Date_wrapper">
+                 <div className="Date">
+                   <A_label
+                   label = "Дата релиза"/>
+                   <YearPicker
+                      className= "Date_style"
+                      defaultValue={'день'}
+                      value={this.state.day}
+                      onChange={(day) => {
+                        this.setState({ day });
+                        this.setState({
+                          project_start_date: new Date(day,this.state.day)
+                        });
+                      }}
+                      id={'year'}
+                      name={'year'}
+                      classes={'classes year'}
+                      optionClasses={'option classes'}
+                    />
 
-                  <MonthPicker
-                    className = "Date_style"
-                    defaultValue={'месяц'}
-                    month={this.state.month}
-                    value={this.state.month}
-                    onChange={(month) => {
-                      this.setState({ month });
-                      this.setState({
-                        project_start_date: new Date(this.state.year,month)
-                      });
-                    }}
-                    id={'month'}
-                    name={'month'}
-                    classes={'classes month'}
-                    optionClasses={'option classes'}
-                  />
-               </div>
+                    <MonthPicker
+                      className = "Date_style"
+                      defaultValue={'месяц'}
+                      month={this.state.month}
+                      value={this.state.month}
+                      onChange={(month) => {
+                        this.setState({ month });
+                        this.setState({
+                          project_start_date: new Date(this.state.year,month)
+                        });
+                      }}
+                      id={'month'}
+                      name={'month'}
+                      classes={'classes month'}
+                      optionClasses={'option classes'}
+                    />
+                 </div>
+              </div>
+
+
 
              </div>
 

@@ -26,6 +26,7 @@ class M_multiselect_genres extends React.Component {
       <div>
         <A_label
         label = "Жанры"/>
+  
         {this.state.genres.map(genre => {
            let id = "g_"+genre.id;
 
@@ -35,7 +36,7 @@ class M_multiselect_genres extends React.Component {
                 name ={ "genres[g_"+genre.id+"]" }
                 checked = {this.state.active_genres[id]}
               />
-              
+
            )
          }
        )}

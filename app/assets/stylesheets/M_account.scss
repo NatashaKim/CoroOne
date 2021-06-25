@@ -45,8 +45,12 @@
         margin: 2px 0 28px 0;
       }
       .Social_icons {
-        display: flex;
-        justify-content: center;
+        display: none;
+        opacity: 0;
+        .social_icon {
+          display: none;
+          opacity: 0;
+        }
       }
     }
   }

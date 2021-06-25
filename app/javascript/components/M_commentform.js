@@ -45,7 +45,7 @@ class M_commentform extends React.Component {
             value={this.state.content}
             onChange={this.handleContentChange}
           />
-
+        
           <input
              type="hidden"
              name="comment[parent_id]"

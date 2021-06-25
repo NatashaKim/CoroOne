@@ -37,8 +37,10 @@
       }
       span {
         line-height: 1.6vw;
-        font-size: 1vw;
+        font-size: 1.4vw;
         width: 10vw;
+        font-weight: bold;
+        color: var(--navy-blue);
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -56,6 +58,12 @@
         border: 0;
         padding: 0;
         display: block;
+        text-decoration: none;
+        color: var(--navy-blue);
+        &:hover {
+          background-color: #ffffff;
+          color: #060341;
+        }
       }
     }
   }
@@ -66,11 +74,17 @@
     padding-bottom: 3vw;
     width: 7vw;
     a {
+      color: var(--mineral-gray);
+      text-decoration: none;
       line-height: 1.6vw;
       font-size: 1vw;
       border: 0;
       padding: 0;
       display: block;
+      &:hover {
+        background-color: #ffffff;
+        color: #706D96;
+      }
     }
   }
 }
