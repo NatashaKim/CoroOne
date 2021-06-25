@@ -17,6 +17,9 @@
       justify-content: space-between;
       a {
         margin-right: 20px;
+        &:hover {
+          background-color: transparent;
+        }
       }
       .Acclist {
         height: 150px;
@@ -26,6 +29,7 @@
           }
         }
          .Account_action {
+           position: absolute;
            visibility: hidden;
            margin-top: 10px;
            margin-left: -94px;
