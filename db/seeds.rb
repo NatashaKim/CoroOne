@@ -171,54 +171,67 @@
      {
        name: "Экшн",
        image_src: "/assets/icon_genre_action.svg",
+       post_type_id: "3",
      },
      {
        name: "Адвенчура",
        image_src: "/assets/icon_genre_adventure.svg",
+       post_type_id: "3",
      },
      {
        name: "Казуальная",
        image_src: "/assets/icon_genre_casual.svg",
+       post_type_id: "3",
      },
      {
        name: "Многопользовательская",
        image_src: "/assets/icon_genre_multiplayer.svg",
+       post_type_id: "3",
      },
      {
        name: "Гонки",
        image_src: "/assets/icon_genre_racing.svg",
+       post_type_id: "3",
      },
      {
        name: "РПГ",
        image_src: "/assets/icon_genre_rpg.svg",
+       post_type_id: "3",
      },
      {
        name: "Симулятор",
        image_src: "/assets/icon_genre_simulator.svg",
+       post_type_id: "3",
      },
      {
        name: "Спортивная",
        image_src: "/assets/icon_genre_sport.svg",
+       post_type_id: "3",
      },
      {
        name: "Стратегия",
        image_src: "/assets/icon_genre_strategy.svg",
+       post_type_id: "3",
      },
      {
        name: "Хоррор",
        image_src: "/assets/icon_genre_horror.svg",
+       post_type_id: "3",
      },
      {
        name: "Бесплатная",
        image_src: "/assets/icon_genre_free.svg",
+       post_type_id: "3",
      },
      {
        name: "Визуальная новелла",
        image_src: "/assets/icon_genre_visual_novel.svg",
+       post_type_id: "3",
      },
      {
        name: "Настольная",
        image_src: "/assets/icon_genre_board.svg",
+       post_type_id: "3",
      },
 
    ]
