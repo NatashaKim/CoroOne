@@ -225,6 +225,7 @@
    #Жанры2
    genres.each do |gen|
      genre=Genre.create(gen)
+     genre.save
      puts "Some magic just craete a #{ genre.name } with id #{ genre.id }!"
    end
 #
