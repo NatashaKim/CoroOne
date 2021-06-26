@@ -14,7 +14,7 @@ class M_project_checklist extends React.Component {
           headingAlign = 'center_align'
           title = "В проекте сделаны:"
         />
-
+       <div className="project_cheklist_wr">
        <div className="project_cheklist_body">
         <div className="project_cheklist_row">
           <div><A_title
@@ -119,6 +119,8 @@ class M_project_checklist extends React.Component {
              </div>
            </div>
         </div>
+
+       </div>
 
 
 
