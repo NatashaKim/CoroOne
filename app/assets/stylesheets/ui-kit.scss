@@ -87,6 +87,7 @@
     font-size: 18px;
     line-height: 30px;
     font-weight: bold;
+    
   }
 
   .small3 {
@@ -94,6 +95,9 @@
     font-size: 16px;
     line-height: 18px;
     font-weight: bold;
+    &:hover {
+      color: #777592;
+    }
   }
 
   .small4 {

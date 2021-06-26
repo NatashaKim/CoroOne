@@ -31,6 +31,9 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         text-overflow: ellipsis;
+        &:hover {
+          color: #131146;
+        }
       }
       .Dates_of_life {
         margin-bottom: 8px;

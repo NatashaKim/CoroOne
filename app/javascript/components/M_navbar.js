@@ -13,7 +13,7 @@ class M_navbar extends React.Component {
           first_link = <a rel="nofollow" data-method="delete" href="/users/sign_out">Выйти</a>, second_link = <a href={`/users/${this.props.current_user_id}`}>Аккаунт</a>;}
       return (
         <div className="Navbar">
-        <a href={'/posts'}>
+        <a className="logos" href={'/posts'}>
           <img src = '/assets/icon_logo.svg'/>
         </a>
         <div className="Navbar_menu">

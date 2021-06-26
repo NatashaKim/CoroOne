@@ -466,10 +466,19 @@ body.admin_context {
         width: inherit;
       }
       h1 {
+        color: var(--navy-blue);
         font-size: 2.3vw;
       }
       @include table_mix;
       table {
+        margin-top: 30px;
+        thead {
+          tr {
+            th {
+              color: var(--navy-blue);
+            }
+          }
+        }
         thead th:nth-child(1) {
           width: 10vw;
         }
@@ -490,6 +499,29 @@ body.admin_context {
         }
         thead th:nth-child(7) {
           width: 7vw;
+        }
+        tbody {
+          tr {
+            td {
+                a {
+                  text-decoration: none;
+                  color: var(--navy-blue);
+                  &:hover {
+                    background-color: transparent;
+                  }
+                }
+
+
+            }
+            td {
+              span {
+                  color: var(--mineral-gray);
+              }
+            }
+            td {
+              color: var(--mineral-gray);
+            }
+          }
         }
         td {
           img {
