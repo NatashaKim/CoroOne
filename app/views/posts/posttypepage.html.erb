@@ -34,7 +34,7 @@
   <%= react_component 'M_post_types_nav', { post_types: @post_types } %>
   <div class="Workshop_wrapper">
   <%= react_component 'O_projects_preview', { current_user_id: current_user_id, genres: @genre, projectPlace: 'new' } %>
-
+  <a class="wishes" href=""><p>Хочу попасть сюда!</p></a>
   <%= react_component 'S_userposts_preview', { post_type_id: 4, post_number: 13, current_user_id: current_user_id, user: current_user} %>
   </div>
 <% end %>
