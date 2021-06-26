@@ -9,8 +9,6 @@
      ismoderator: false,
      isdeveloper: false,
      password: "nata2001",
-     image: File.open(Rails.root.join('public', 'images', 's1.png')),
-     account_cover: File.open(Rails.root.join('public', 'images', 's2.png')),
      description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
    },
    {
@@ -20,8 +18,6 @@
      ismoderator: true,
      isdeveloper: false,
      password: "mitya1993",
-     image: File.open(Rails.root.join('public', 'images', 's2.png')),
-     account_cover: File.open(Rails.root.join('public', 'images', 's4.png')),
      description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
    },
    {
@@ -31,8 +27,6 @@
      ismoderator: false,
      isdeveloper: true,
      password: "nata2001",
-     image: File.open(Rails.root.join('public', 'images', 's5.png')),
-     account_cover: File.open(Rails.root.join('public', 'images', 's6.png')),
      description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
    },
    {
