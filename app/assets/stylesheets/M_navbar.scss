@@ -29,19 +29,22 @@
           }
         }
          .Account_action {
+           z-index: 3;
            position: absolute;
            visibility: hidden;
            margin-top: 10px;
-           margin-left: -94px;
+           margin-left: -48px;
            display: flex;
            flex-direction: column;
            align-items: flex-start;
            background-color: #ffffff;
            border-radius: 24px;
-           padding: 24px 24px 32px 10px;
+           padding: 24px 24px 24px 24px;
+
            .Sign {
              margin-bottom: 8px;
              a {
+               text-decoration: none;
                font-family: "RedRing";
                font-size: 16px;
                color: var(--mineral-gray);
