@@ -5,50 +5,58 @@
    display: flex;
    flex-direction: column;
    align-items: center;
+   &:hover {
+     .project_cheklist_wr {
+       display: block;
+     }
+   }
    span {
      margin-bottom: 10px;
    }
-  .project_cheklist_body {
-    padding: 30px;
-    width: 638px;
-    background-color: var(--ice-white);
-    border-radius: 32px;
-    display: flex;
-    flex-direction: row;
-    .project_cheklist_row {
-      display: flex;
-      flex-direction: column;
-      margin-right: 12px;
-      .heading {
-        margin-bottom: 10px;
-        display: block;
-      }
-      .Project_checklist_block {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 95px;
-        .Checklist_option {
-          font-size: 14px;
-          font-family: "RedRing";
-          font-weight: normal;
-          color: #9896AE;
-          margin-right: 16px;
-          white-space: nowrap;
-          height: 25px;
-          border-radius: 8px;
-          &.default {
-            opacity: 0.4;
-            width: fit-content;
-            padding: 2px 12px 3px 0;
-          }
-          &.shozen {
-            border: 1.5px solid #9896AE;
-            padding: 2px 12px 3px 12px;
-          }
+   .project_cheklist_wr {
+     display: none;
+     .project_cheklist_body {
+       padding: 30px;
+       width: 638px;
+       background-color: var(--ice-white);
+       border-radius: 32px;
+       display: flex;
+       flex-direction: row;
+       .project_cheklist_row {
+         display: flex;
+         flex-direction: column;
+         margin-right: 12px;
+         .heading {
+           margin-bottom: 10px;
+           display: block;
+         }
+         .Project_checklist_block {
+           display: flex;
+           flex-direction: column;
+           justify-content: space-between;
+           height: 95px;
+           .Checklist_option {
+             font-size: 14px;
+             font-family: "RedRing";
+             font-weight: normal;
+             color: #9896AE;
+             margin-right: 16px;
+             white-space: nowrap;
+             height: 25px;
+             border-radius: 8px;
+             &.default {
+               opacity: 0.4;
+               width: fit-content;
+               padding: 2px 12px 3px 0;
+             }
+             &.shozen {
+               border: 1.5px solid #9896AE;
+               padding: 2px 12px 3px 12px;
+             }
 
-        }
-      }
-    }
-  }
+           }
+         }
+       }
+     }
+   }
 }
