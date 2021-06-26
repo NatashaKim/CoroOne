@@ -166,7 +166,7 @@
 #     puts "Some magic just craete a #{ c.name } with id #{ c.id }!"
 #   end
 
-
+#Жанры
   genres = [
      {
        name: "Экшн",
@@ -222,6 +222,7 @@
      },
 
    ]
+   #Жанры2
    genres.each do |gen|
      genre=Genre.create(gen)
      puts "Some magic just craete a #{ genre.name } with id #{ genre.id }!"
