@@ -26,6 +26,7 @@
         background-color: var(--light-gray);
         overflow-x: hidden;
         border-radius: 64px;
+        min-height: 700px;
         a {
           text-decoration: none;
           &:hover {

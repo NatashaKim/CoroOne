@@ -1,17 +1,18 @@
-<body className="Favorites">
-<% current_user_id = -1 %>
-<%if current_user%>
-  <%current_user_id= current_user.id%>
-<% end %>
 
-<div className="Favorites_wrapper">
-   <div className="Favorites_release">
-      <h2>Ближайшие релизы</h2>
-     <%= react_component 'O_release_favorites', { posts: @posts} %></div>
-   <div className="Favorites_posts">
-     <h2>Публикации</h2>
-     <%= react_component 'O_posts_preview', { posts: @posts, current_user_id: current_user_id} %>
+  <% current_user_id = -1 %>
+  <%if current_user%>
+    <%current_user_id= current_user.id%>
+  <% end %>
+<div class = "Favorites_page">
+  <div class = "Favorites_wrapper">
+     <div class = "Favorites_release">
+        <h2>Ближайшие релизы</h2>
+       <%= react_component 'O_release_favorites', { posts: @posts} %>
+     </div>
+     <div class = "Favorites_posts">
+       <h2>Публикации</h2>
+       <%= react_component 'O_posts_preview', { posts: @posts, current_user_id: current_user_id} %>
 
-   </div>
+     </div>
+  </div>
 </div>
-</body>
