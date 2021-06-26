@@ -29,15 +29,6 @@
      password: "nata2001",
      description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
    },
-   {
-     email: "slava@gmail.com",
-     username: "Gamer 3000",
-     admin: false,
-     ismoderator: false,
-     isdeveloper: false,
-     password: "nata2001",
-     description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе, новой и замечательной, да.",
-   },
  ]
 users.each do |us|
    r=User.create(us)
