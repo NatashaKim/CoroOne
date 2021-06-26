@@ -22,29 +22,29 @@
 
       <% if signed_in? %>
         <% if current_user.admin? %>
-          <h3> Администратор
-          <%= f.check_box :admin %></h3>
+          <h3> <%= f.check_box :admin %>Администратор
+          </h3>
         <% end %>
       <% end %>
 
       <% if signed_in? %>
         <% if current_user.admin? %>
-          <h3> Модератор
-          <%= f.check_box :ismoderator %></h3>
+          <h3> <%= f.check_box :ismoderator %>Модератор
+          </h3>
         <% end %>
       <% end %>
 
       <% if signed_in? %>
         <% if current_user.admin? %>
-          <h3> Разработчик
-          <%= f.check_box :isdeveloper %></h3>
+          <h3> <%= f.check_box :isdeveloper %>Разработчик
+          </h3>
         <% end %>
       <% end %>
       <div class="actions">
-        <%= f.submit "Да"%>
+        <%= f.submit "Переназначить пользователя"%>
       </div>
       <% end %>
-      <%= link_to 'Открыть', @user %> |
+      <%= link_to 'Открыть', @user %>
       <%= link_to 'Назад', admin_context_path(users: "") %>
     </div>
   </div>
