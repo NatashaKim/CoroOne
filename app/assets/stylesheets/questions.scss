@@ -1,3 +1,20 @@
-// Place all the styles related to the Questions controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.question_wrapper {
+  margin-top: 160px;
+  margin-left: 350px;
+  h1 {
+    margin-bottom: 42px;
+    color: var(--navy-blue);
+  }
+    .question_form {
+      .question_form_back {
+        margin-top: -52px;
+        a {
+          font-size: 18px;
+          font-family: "RedRing";
+          color: var(--mineral-gray);
+          font-weight: normal;
+        }
+
+      }
+    }
+}

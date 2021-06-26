@@ -1,0 +1,53 @@
+.question {
+  div {
+    h2 {
+
+    }
+    ul {
+
+    }
+  }
+  div.field {
+    label {
+      color: var(--navy-blue);
+      font-size: 18px;
+      font-family: "RedRing";
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+    textarea {
+      width: 674px;
+      height: 180px;
+      border-radius: 24px;
+      border: none;
+      background-color: white;
+      color: var(--navy-blue);
+      font-size: 18px;
+      padding-left: 24px;
+      font-family: "RedRing";
+      font-weight: normal;
+      padding-top: 10px;
+    }
+  }
+  .action_div {
+    width: 694px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    div.actions {
+      margin-top: 60px;
+      input {
+        background-color: var(--mineral-gray);
+        color: #EDF2FF;
+        font-size: 18px;
+        font-family: "RedRing";
+        font-weight: normal;
+        padding: 16px 36px 16px 36px;
+        border-radius: 24px;
+        border: none;
+      }
+    }
+  }
+
+
+}

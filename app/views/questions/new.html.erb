@@ -1,5 +1,14 @@
-<h1>New Question</h1>
+<div class="question_wrapper">
+  <h1>Анкета на переназначение</h1>
+   <div class="question_form">
+     <div class="question_form_form">
+        <%= render 'form', question: @question %>
+     </div>
+     <div class="question_form_back">
+      <%= link_to 'Назад', questions_path %>
+     </div>
 
-<%= render 'form', question: @question %>
 
-<%= link_to 'Back', questions_path %>
+
+   </div>
+</div>
