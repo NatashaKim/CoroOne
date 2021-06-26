@@ -24,6 +24,11 @@
       width: fit-content;
       align-items: center;
       margin-bottom: 48px;
+      a.Heading {
+        &:hover {
+          color: #131146;
+        }
+      }
       .Dates_of_life {
         font-family: "PT Mono";
         font-size: 14px;

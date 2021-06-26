@@ -9,6 +9,11 @@
       width: 100vw;
       height: 291px;
       .Posttype_marker {
+        a.small3 {
+          &:hover {
+            color: #777592;
+          }
+        }
       }
     }
     &.necrology {

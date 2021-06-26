@@ -10,6 +10,11 @@
     justify-content: space-between;
     box-sizing: border-box;
     margin: 0 auto;
+    a.logos {
+      &:hover {
+        background-color: transparent;
+      }
+    }
     div.Navbar_menu {
       display: none;
       width: 204px;
