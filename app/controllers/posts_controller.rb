@@ -150,6 +150,7 @@ class PostsController < ApplicationController
     @post = Post.new
     @post.post_type = PostType.find_by_name("Кладбище проектов")
     @categories = [{id:"8", name:"Экшен"}, {id:"9", name:"Адвенчура"}, {id:"10", name:"Казуальная"}, {id:"11", name:"Многопользовательская"}, {id:"12", name:"Гонки"}, {id:"13", name:"РПГ"}, {id:"14", name:"Симулятор"}, {id:"15", name:"Спортивная"}, {id:"16", name:"Стратегия"}, {id:"17", name:"Хоррор"}, {id:"18", name:"Бесплатная"}, {id:"19", name:"Визуальная новелла"}, {id:"20", name:"Настольная"} ]
+    @genres = [{id:"1", name:"Экшен"}, {id:"2", name:"Адвенчура"}, {id:"3", name:"Казуальная"}, {id:"4", name:"Многопользовательская"}, {id:"5", name:"Гонки"}, {id:"6", name:"РПГ"}, {id:"7", name:"Симулятор"}, {id:"8", name:"Спортивная"}, {id:"9", name:"Стратегия"}, {id:"10", name:"Хоррор"}, {id:"11", name:"Бесплатная"}, {id:"12", name:"Визуальная новелла"}, {id:"13", name:"Настольная"}]
     render 'newnecrology'
   end
 

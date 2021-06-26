@@ -8,6 +8,7 @@ import A_textarea from "./A_textarea"
 import A_input from "./A_input"
 import A_label from "./A_label"
 import A_button from "./A_button"
+import M_multiselect_genres from "./M_multiselect_genres"
 import M_image_input_with_label from "./M_image_input_with_label"
 import {availableCategories} from './Api.js';
 
@@ -25,6 +26,7 @@ class O_necrologyform extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
+        genre_id: props.post.genre_id ? props.post.genre_id : '',
         title: props.post.title ? props.post.title : '',
         category_id: props.post.category_id ? props.post.category_id : '',
         year: null, month: null,
@@ -103,15 +105,9 @@ class O_necrologyform extends React.Component {
             onChange={this.handleTitleChange}
           />
 
-            <A_label
-            label = "Жанр игры"/>
-            <A_select
-
-             name="post[category_id]"
-             value={this.state.category}
-             placeholder={"Select"}
-             handleChange={this.handleCategoryChange}
-             options={this.state.categories}
+           <M_multiselect_genres
+             genres = {this.props.genres}
+             active_genres = {this.props.active_genres}
            />
 
            <div className="Date_wrapper">

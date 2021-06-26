@@ -24,6 +24,17 @@ class T_article extends React.Component {
         });
   }
   render() {
+
+    let comment_section = '';
+    if (this.props.current_user_id == -1) {
+      comment_section = <div>Пожалуйста, <a href="/users/sign_up">зарегистрируйтесь</a> или <a href="/users/sign_in">войдите</a>, чтобы оставить коментарий</div>;
+    } else {
+      comment_section =
+      <M_commentform
+        post_id = {this.props.post_id}
+        user = {this.props.user}
+      />;}
+
     return (
       <div className="Article_page">
         <div className="Article_image_header">
@@ -67,10 +78,7 @@ class T_article extends React.Component {
           comments = {this.props.comments}
           currentUser = {this.props.currentUser}
         />
-        <M_commentform
-          post_id = {this.props.post_id}
-          user = {this.props.user}
-        />
+        {comment_section}
       </div>
     );
   }

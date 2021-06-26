@@ -13,7 +13,7 @@ const TYPES = [
 
 class M_user_info extends React.Component {
   render () {
-    if (!this.props.user) {return "Нет юзера"}
+    if (!this.props.user) {return ""}
 
     if (!this.props.user.image) {
       return <A_debug aObject = {this.props.user}/>
