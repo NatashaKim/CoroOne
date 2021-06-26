@@ -386,7 +386,6 @@
 #     #АНОНСЫ
 #     {
 #       user_id: "1",
-#       account_cover: "a1.png",
 #       category_id: "1",
 #       post_type_id: "1",
 #       title: "Будет ли на стиме Hollow Knight Silksong?",
