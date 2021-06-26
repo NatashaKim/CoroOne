@@ -129,17 +129,22 @@ h6 {
               @include main_text;
             }
             button {
-               font-size: 1.4rem;
+              font-size: 1.4rem;
                font-family: "RedRing";
                text-decoration: none;
                padding: 1vw 3.7vw;
-               background-color: $mainColor;
+               background-color: #04005E;
                color: #75FEFA;
                outline: none;
                border-radius: 10vw;
                border: 0px;
                border-color: none;
-               display: block;
+               /* display: block; */
+               margin: 0 auto;
+               text-align: center;
+               margin-top: 3vw;
+               position: absolute;
+               left: 43%;
                @include textcenter;
                margin-top: 3vw;
                &:hover {

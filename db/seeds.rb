@@ -1,56 +1,56 @@
 # Post.destroy_all
 # puts "Destroyed everything you touch"
 
-#  users = [
-#    {
-#      email: "natasha@gmail.com",
-#      username: "Natashka Gnom",
-#      admin: true,
-#      ismoderator: false,
-#      isdeveloper: false,
-#      password: "nata2001",
-#      image: File.open(Rails.root.join('public', 'images', 's1.png')),
-#      account_cover: File.open(Rails.root.join('public', 'images', 's2.png')),
-#      description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
-#    },
-#    {
-#      email: "mitya@gmail.com",
-#      username: "King_game",
-#      admin: false,
-#      ismoderator: true,
-#      isdeveloper: false,
-#      password: "mitya1993",
-#      image: File.open(Rails.root.join('public', 'images', 's2.png')),
-#      account_cover: File.open(Rails.root.join('public', 'images', 's4.png')),
-#      description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
-#    },
-#    {
-#      email: "slava@gmail.com",
-#      username: "Gamer 3000",
-#      admin: false,
-#      ismoderator: false,
-#      isdeveloper: true,
-#      password: "nata2001",
-#      image: File.open(Rails.root.join('public', 'images', 's5.png')),
-#      account_cover: File.open(Rails.root.join('public', 'images', 's6.png')),
-#      description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
-#    },
-#    {
-#      email: "slava@gmail.com",
-#      username: "Gamer 3000",
-#      admin: false,
-#      ismoderator: false,
-#      isdeveloper: false,
-#      password: "nata2001",
-#      image: File.open(Rails.root.join('public', 'images', 's7.png')),
-#      account_cover: File.open(Rails.root.join('public', 'images', 's8.png')),
-#      description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
-#    },
-#  ]
-# users.each do |us|
-#    r=User.create(us)
-#    puts "Some magic just craete a #{ r.username } with id #{ r.id }!"
-# end
+ users = [
+   {
+     email: "natasha@gmail.com",
+     username: "Natashka Gnom",
+     admin: true,
+     ismoderator: false,
+     isdeveloper: false,
+     password: "nata2001",
+     image: File.open(Rails.root.join('public', 'images', 's1.png')),
+     account_cover: File.open(Rails.root.join('public', 'images', 's2.png')),
+     description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
+   },
+   {
+     email: "mitya@gmail.com",
+     username: "King_game",
+     admin: false,
+     ismoderator: true,
+     isdeveloper: false,
+     password: "mitya1993",
+     image: File.open(Rails.root.join('public', 'images', 's2.png')),
+     account_cover: File.open(Rails.root.join('public', 'images', 's4.png')),
+     description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
+   },
+   {
+     email: "slava@gmail.com",
+     username: "Gamer 3000",
+     admin: false,
+     ismoderator: false,
+     isdeveloper: true,
+     password: "nata2001",
+     image: File.open(Rails.root.join('public', 'images', 's5.png')),
+     account_cover: File.open(Rails.root.join('public', 'images', 's6.png')),
+     description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
+   },
+   {
+     email: "slava@gmail.com",
+     username: "Gamer 3000",
+     admin: false,
+     ismoderator: false,
+     isdeveloper: false,
+     password: "nata2001",
+     image: File.open(Rails.root.join('public', 'images', 's7.png')),
+     account_cover: File.open(Rails.root.join('public', 'images', 's8.png')),
+     description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
+   },
+ ]
+users.each do |us|
+   r=User.create(us)
+   puts "Some magic just craete a #{ r.username } with id #{ r.id }!"
+end
 #
 # post_types = [
 #    {
