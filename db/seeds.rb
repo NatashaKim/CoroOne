@@ -1,61 +1,61 @@
 # Post.destroy_all
 # puts "Destroyed everything you touch"
 
- users = [
-   {
-     email: "natasha@gmail.com",
-     username: "Natashka Gnom",
-     admin: true,
-     ismoderator: false,
-     isdeveloper: false,
-     password: "nata2001",
-     description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
-   },
-   {
-     email: "mitya@gmail.com",
-     username: "King_game",
-     admin: false,
-     ismoderator: true,
-     isdeveloper: false,
-     password: "mitya1993",
-     description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
-   },
-   {
-     email: "slava@gmail.com",
-     username: "Gamer 3000",
-     admin: false,
-     ismoderator: false,
-     isdeveloper: true,
-     password: "nata2001",
-     description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
-   },
- ]
-users.each do |us|
-   r=User.create(us)
-   puts "Some magic just craete a #{ r.username } with id #{ r.id }!"
-end
-#
-# post_types = [
+#  users = [
 #    {
-#      name: "Новости",
-#    }
+#      email: "natasha@gmail.com",
+#      username: "Natashka Gnom",
+#      admin: true,
+#      ismoderator: false,
+#      isdeveloper: false,
+#      password: "nata2001",
+#      description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
+#    },
 #    {
-#      name: "Статьи",
-#    }
+#      email: "mitya@gmail.com",
+#      username: "King_game",
+#      admin: false,
+#      ismoderator: true,
+#      isdeveloper: false,
+#      password: "mitya1993",
+#      description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
+#    },
 #    {
-#      name: "Обзоры",
-#    }
-#    {
-#      name: "Мастерская",
-#    }
-#    {
-#      name: "Кладбище проектов",
-#    }
+#      email: "slava@gmail.com",
+#      username: "Gamer 3000",
+#      admin: false,
+#      ismoderator: false,
+#      isdeveloper: true,
+#      password: "nata2001",
+#      description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
+#    },
 #  ]
-#  post_types.each do |pt|
-#    p=PostType.create(pt)
-#    puts "Some magic just craete a #{ p.name } with id #{ p.id }!"
-#  end
+# users.each do |us|
+#    r=User.create(us)
+#    puts "Some magic just craete a #{ r.username } with id #{ r.id }!"
+# end
+#
+post_types = [
+   {
+     name: "Новости",
+   }
+   {
+     name: "Статьи",
+   }
+   {
+     name: "Обзоры",
+   }
+   {
+     name: "Мастерская",
+   }
+   {
+     name: "Кладбище проектов",
+   }
+ ]
+ post_types.each do |pt|
+   p=PostType.create(pt)
+   puts "Some magic just craete a #{ p.name } with id #{ p.id }!"
+ end
 #
 #  categories = [
 #     {
