@@ -56,6 +56,7 @@ post_types = [
    p=PostType.create(pt)
    puts "Some magic just craete a #{ p.name } with id #{ p.id }!"
  end
+ 
 #
 #  categories = [
 #     {
