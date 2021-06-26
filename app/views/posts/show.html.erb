@@ -24,24 +24,4 @@
 
   </div>
 
-      <div class="comments">
-
-      <h2>Комментарии</h2>
-      <% topComments = @post.comments.select{|c| ! c.parent_id} %>
-      <%= render topComments %>
-
-
-      <h2>Добавить комментарий:</h2>
-      <% if user_signed_in? %>
-        <%= render "comments/form" %>
-      <% else %>
-        <p>Пожалуйста, <%= link_to 'login', new_user_session_path %> or <%= link_to 'register', new_user_registration_path %> чтобы прокоменнтировать.</p>
-      <% end %>
-
-      <% if user_signed_in? %>
-      <%= link_to 'Редактировать', edit_post_path(@post) %> |
-      <% end %>
-      <%= link_to 'Назад', admin_context_path(curatorposts: "") %>
-      </div>
-
 </body>

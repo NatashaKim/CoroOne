@@ -38,12 +38,18 @@
       .Dates_of_life {
         margin-bottom: 8px;
       }
-      .Category {
+      .Genres{
         height: 34px;
         text-align: center;
         margin-bottom: 12px;
-        &:hover {
-          color: #BBE539;
+        display: flex;
+        .Genre {
+          width: 34px;
+          height: 34px;
+          .Genre_img {
+            width: 34px;
+            height: 34px;
+          }
         }
       }
       .Necro_user {

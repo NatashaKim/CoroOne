@@ -6,6 +6,7 @@ import A_button from "./A_button"
 import A_text from "./A_text"
 import A_username from "./A_username"
 import A_dates_of_life from "./A_dates_of_life"
+import A_genre from "./A_genre"
 import '../../assets/stylesheets/M_necrologypost_preview.scss'
 import {getuser} from './Api.js';
 
@@ -47,9 +48,15 @@ class M_necrologypost_preview extends React.Component {
              headingColor = 'navy-blue'
              headingAlign = 'center_align'/>
            <A_dates_of_life post = {this.props.post}/>
-           <A_category
-           category = {this.props.post.category}
-           categoryTypes = "image"/>
+
+           <div className = "Genres">
+            {this.props.post.genres.map(genre => (
+                <A_genre
+                genreType = 'image'
+                genre = {genre}
+                />
+             ))}
+            </div>
 
 
            <div className = "Necro_user">
