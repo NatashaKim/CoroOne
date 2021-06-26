@@ -19,7 +19,7 @@ class M_project_checklist extends React.Component {
         <div className="project_cheklist_row">
           <div><A_title
             headingStyle = 'small3'
-            headingColor = 'ice-white'
+            headingColor = 'mineral-gray'
             headingAlign = 'left_align'
             title = "Диздок"
           />
@@ -43,7 +43,7 @@ class M_project_checklist extends React.Component {
          <div className="project_cheklist_row">
            <div><A_title
              headingStyle = 'small3'
-             headingColor = 'ice-white'
+             headingColor = 'mineral-gray'
              headingAlign = 'left_align'
              title = "Звук"
            />
@@ -70,7 +70,7 @@ class M_project_checklist extends React.Component {
           <div className="project_cheklist_row">
             <div><A_title
               headingStyle = 'small3'
-              headingColor = 'ice-white'
+              headingColor = 'mineral-gray'
               headingAlign = 'left_align'
               title = "Код"
             />
@@ -99,7 +99,7 @@ class M_project_checklist extends React.Component {
            <div className="project_cheklist_row">
              <div><A_title
                headingStyle = 'small3'
-               headingColor = 'ice-white'
+               headingColor = 'mineral-gray'
                headingAlign = 'left_align'
                title = "Графика"
              />

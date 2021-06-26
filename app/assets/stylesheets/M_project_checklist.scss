@@ -9,51 +9,42 @@
      margin-bottom: 10px;
    }
   .project_cheklist_body {
-    padding: 30px 60px 30px 30px;
+    padding: 30px;
     width: 638px;
-    height: 218px;
-    background-color: #ffffff;
+    background-color: var(--ice-white);
     border-radius: 32px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     .project_cheklist_row {
-      margin-bottom: 20px;
       display: flex;
-      flex-direction: row;
-      align-items: center;
-      div {
-        width: 90px;
-        span {
-          font-size: 14px;
-          font-family: "RedRing";
-          font-weight: bold;
-          color: #9896AE;
-        }
+      flex-direction: column;
+      margin-right: 12px;
+      .heading {
+        margin-bottom: 10px;
+        display: block;
       }
-
-      display: flex;
-      flex-direction: row;
       .Project_checklist_block {
-        align-items: center;
-        width: fit-content;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
+        height: 95px;
         .Checklist_option {
           font-size: 14px;
           font-family: "RedRing";
           font-weight: normal;
           color: #9896AE;
           margin-right: 16px;
+          white-space: nowrap;
+          height: 25px;
+          border-radius: 8px;
           &.default {
             opacity: 0.4;
             width: fit-content;
+            padding: 2px 12px 3px 0;
           }
           &.shozen {
-            width: fit-content;
-            padding: 3px 12px 4px 12px;
-            border-radius: 8px;
             border: 1.5px solid #9896AE;
+            padding: 2px 12px 3px 12px;
           }
 
         }

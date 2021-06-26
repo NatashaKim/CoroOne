@@ -1,6 +1,8 @@
-
-.Favorites {
+.Favorites_page {
+  display: flex;
+  justify-content: center;
   .Favorites_wrapper {
+    margin-top: 92px;
     display: flex;
     flex-direction: row;
     width: 1220px;
@@ -9,6 +11,14 @@
     .Favorites_release {
       h2 {
         color: var(--navy-blue);
+      }
+    }
+    .Favorites_posts {
+      .Post_preview_default {
+         width: 853px;
+         .Postcover_container {
+           width: 328px;
+         }
       }
     }
   }

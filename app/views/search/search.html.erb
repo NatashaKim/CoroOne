@@ -3,7 +3,7 @@
   <div class="search">
     <%= render 'search/form' %>
   </div>
-  <h2>Результаты по запросу: «<i><%= params[:term] %></i>»</h2>
+  <h2>Результаты по запросу: </h2>
 
   <% current_user_id = -1 %>
   <%if current_user%>
@@ -14,19 +14,9 @@
 
     <%= react_component 'O_posts_preview', { posts: @posts, current_user_id: current_user_id} %>
 
-  <ul class="search_results">
-    <% @posts.each do |post| %>
-      <li>
-        <%= image_tag(post.image.thumb.url, alt: 'Image') if post.image? %>
-         <h3>
-           <%= link_to post.title, controller: "posts", action: "show", id: post.id %>
-         </h3>
-      </li>
-    <% end %>
-  </ul>
   <% else %>
     <p>Ничего не нашлось(</p>
+    <div class="T_search_search_img"></div>
   <% end %>
-  <div class="T_search_search_img"></div>
 
 </div>
