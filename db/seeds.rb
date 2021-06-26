@@ -1,24 +1,50 @@
-Post.destroy_all
-puts "Destroyed everything you touch"
+# Post.destroy_all
+# puts "Destroyed everything you touch"
 
 #  users = [
 #    {
 #      email: "natasha@gmail.com",
 #      username: "Natashka Gnom",
-#      isadmin: true,
+#      admin: true,
+#      ismoderator: false,
+#      isdeveloper: false,
 #      password: "nata2001",
+#      image: File.open(Rails.root.join('public', 'images', 's1.png')),
+#      account_cover: File.open(Rails.root.join('public', 'images', 's2.png')),
+#      description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
 #    },
 #    {
 #      email: "mitya@gmail.com",
 #      username: "King_game",
-#      isadmin: false,
+#      admin: false,
+#      ismoderator: true,
+#      isdeveloper: false,
 #      password: "mitya1993",
+#      image: File.open(Rails.root.join('public', 'images', 's2.png')),
+#      account_cover: File.open(Rails.root.join('public', 'images', 's4.png')),
+#      description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
 #    },
 #    {
 #      email: "slava@gmail.com",
 #      username: "Gamer 3000",
-#      isadmin: false,
+#      admin: false,
+#      ismoderator: false,
+#      isdeveloper: true,
 #      password: "nata2001",
+#      image: File.open(Rails.root.join('public', 'images', 's5.png')),
+#      account_cover: File.open(Rails.root.join('public', 'images', 's6.png')),
+#      description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
+#    },
+#    {
+#      email: "slava@gmail.com",
+#      username: "Gamer 3000",
+#      admin: false,
+#      ismoderator: false,
+#      isdeveloper: false,
+#      password: "nata2001",
+#      image: File.open(Rails.root.join('public', 'images', 's7.png')),
+#      account_cover: File.open(Rails.root.join('public', 'images', 's8.png')),
+#      description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
 #    },
 #  ]
 # users.each do |us|
@@ -97,11 +123,6 @@ puts "Destroyed everything you touch"
 #     {
 #       name: "Казуальная",
 #       description: "Обзор игр, предназначенных для широкого круга пользователей",
-#       post_type_id: "3",
-#     },
-#     {
-#       name: "Экшен",
-#       description: "Обзор компьютерных игр, в которых делается упор на эксплуатацию физических возможностей игрока, в том числе координации глаз и рук и скорости реакции",
 #       post_type_id: "3",
 #     },
 #     {
@@ -218,13 +239,41 @@ puts "Destroyed everything you touch"
 #      },
 #
 #    ]
-#    genres.each do |pt|
-#      p=Genre.create(pt)
-#      puts "Some magic just craete a #{ p.name } with id #{ p.id }!"
+#    genres.each do |gen|
+#      genre=Genre.create(gen)
+#      puts "Some magic just craete a #{ genre.name } with id #{ genre.id }!"
 #    end
 #
 #
 #    genres_to_smths = [
+#       {
+#         genre_id: "2",
+#         post_id: "1",
+#       },
+#       {
+#         genre_id: "3",
+#         post_id: "1",
+#       },
+#       {
+#         genre_id: "",
+#         post_id: "",
+#         project_id: "",
+#       },
+#       {
+#         genre_id: "",
+#         post_id: "",
+#         project_id: "",
+#       },
+#       {
+#         genre_id: "",
+#         post_id: "",
+#         project_id: "",
+#       },
+#       {
+#         genre_id: "",
+#         post_id: "",
+#         project_id: "",
+#       },
 #       {
 #         genre_id: "",
 #         post_id: "",
@@ -244,42 +293,42 @@ puts "Destroyed everything you touch"
 #     #РЕЛИЗЫ
 #     {
 #       user_id: "1",
-#       account_cover: "a1.png",
 #       category_id: "2",
 #       post_type_id: "1",
 #       title: "17 декабря мы снова увидим эту игру на платформе",
 #       author: "Андрей Маковеев",
+#       lid: "Согласно одной из главных игровых теорий заговора в этом году, хоррор Abandoned — это новый проект Хидео Кодзимы (Hideo Kojima)."
 #       release_date: "2021-12-17",
 #       game_name: "Shine wood 2",
 #       content: "Согласно одной из главных игровых теорий заговора в этом году, хоррор Abandoned — это новый проект Хидео Кодзимы (Hideo Kojima). Правда, в данной версии есть несколько фатальных брешей, о которых мы писали здесь. Сегодня сотрудники Blue Box Game Studios собирались запустить приложение, посвящённое таинственной игре, но что-то пошло не так.
 #       В коротком обращении глава Blue Box Хасан Кахраман (Hasan Kahraman) объявил, что старт приложения откладывается до августа. По его словам, приложение пока не готово к публичной демонстрации — в последний момент обнаружились баги, и локализация ещё не завершена.
 #       Тогда же, в августе, состоится премьера геймплейного трейлера Abandoned.
-#       Сообщество восприняло известие неоднозначно. Сочувствующие считают, что студия просто не знает, как себя вести в свете сплетен о причастности Кодзимы, и откусила больше, чем может прожевать. По мнению других, Blue Box мутит воду или откровенно троллит — странно, что она сообщила о задержке только сегодня.",
+#       Сообщество восприняло известие неоднозначно. Сочувствующие считают, что студия просто не знает, как себя вести в свете сплетен о причастности Кодзимы, и откусила больше, чем может прожевать. По мнению других, Blue Box мутит воду или откровенно троллит — странно, что она сообщила о задержке только сегодня. #момент #хоррор #трейлер #известие #премьера #баги #август #сегодня #сплетни #сообщество  #локализация  #игра  #проект  #геймплей  #фича ",
 #       image: File.open(Rails.root.join('public', 'images', 's1.jpg'))
 #     },
 #
 #     {
 #       user_id: "1",
-#       account_cover: "a1.png",
 #       category_id: "2",
 #       post_type_id: "1",
 #       title: "Ждем, ждем, ждем! Релиз Last of Us",
+#       lid: "Согласно одной из главных игровых теорий заговора в этом году, хоррор Abandoned — это новый проект Хидео Кодзимы (Hideo Kojima)."
 #       author: "Андрей Маковеев",
 #       release_date: "2021-10-10",
 #       game_name: "Last of Us",
 #       content: "Согласно одной из главных игровых теорий заговора в этом году, хоррор Abandoned — это новый проект Хидео Кодзимы (Hideo Kojima). Правда, в данной версии есть несколько фатальных брешей, о которых мы писали здесь. Сегодня сотрудники Blue Box Game Studios собирались запустить приложение, посвящённое таинственной игре, но что-то пошло не так.
 #       В коротком обращении глава Blue Box Хасан Кахраман (Hasan Kahraman) объявил, что старт приложения откладывается до августа. По его словам, приложение пока не готово к публичной демонстрации — в последний момент обнаружились баги, и локализация ещё не завершена.
 #       Тогда же, в августе, состоится премьера геймплейного трейлера Abandoned.
-#       Сообщество восприняло известие неоднозначно. Сочувствующие считают, что студия просто не знает, как себя вести в свете сплетен о причастности Кодзимы, и откусила больше, чем может прожевать. По мнению других, Blue Box мутит воду или откровенно троллит — странно, что она сообщила о задержке только сегодня.",
+#       Сообщество восприняло известие неоднозначно. Сочувствующие считают, что студия просто не знает, как себя вести в свете сплетен о причастности Кодзимы, и откусила больше, чем может прожевать. По мнению других, Blue Box мутит воду или откровенно троллит — странно, что она сообщила о задержке только сегодня. #момент #хоррор #трейлер #известие #премьера #баги #август #сегодня #сплетни #сообщество  #локализация #игра #проект #геймплей #фича",
 #       image: File.open(Rails.root.join('public', 'images', 's1.png'))
 #     },
 #
 #     {
 #       user_id: "1",
-#       account_cover: "a1.png",
 #       category_id: "2",
 #       post_type_id: "1",
 #       title: "А вы с нами копите деньги на Skyrim?",
+#       lid: "Согласно одной из главных игровых теорий заговора в этом году, хоррор Abandoned — это новый проект Хидео Кодзимы (Hideo Kojima)."
 #       author: "Андрей Маковеев",
 #       release_date: "2021-12-10",
 #       game_name: "Skyrim",
