@@ -36,8 +36,6 @@
      ismoderator: false,
      isdeveloper: false,
      password: "nata2001",
-     image: File.open(Rails.root.join('public', 'images', 's7.png')),
-     account_cover: File.open(Rails.root.join('public', 'images', 's8.png')),
      description: "Всем хай! Я инди-разработчик, который все время тратит на создание игры  Heaven. Скоро она выпустится на платформе Tsusew.",
    },
  ]
